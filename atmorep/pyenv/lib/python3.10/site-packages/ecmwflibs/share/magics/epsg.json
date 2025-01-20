@@ -1,0 +1,257 @@
+{
+    "definitions": [
+        {
+            "polar_north": {
+                "definition": "+proj=ups +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "polar",
+                "min_latitude": -20,
+                "min_longitude": -180
+            }
+        },
+        {
+            "polar_south": {
+                "definition": "+proj=ups +south +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+                "max_latitude": -90,
+                "max_longitude": 180,
+                "method": "polar",
+                "min_latitude": 20,
+                "min_longitude": -180
+            }
+        },
+        {
+            "polar_north_america": {
+                "definition": "+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "conic",
+                "min_latitude": -20,
+                "min_longitude": -180
+            }
+        },
+        {
+            "lambert": { 
+                "definition": "+proj=lcc +lat_1=43 +lat_2=62 +lat_0=30 +lon_0=10 +x_0=0 +y_0=0 +ellps=intl +units=m",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "conic",
+                "min_latitude": -20,
+                "min_longitude": -180
+            }
+        },
+         {
+            "mercator": {
+                "definition": "+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +over +units=m +no_defs",
+                "max_latitude": 84,
+                "max_longitude": 180,
+                "method": "simple",
+                "min_latitude": -80,
+                "min_longitude": -180,
+                "default_max_longitude" : 180
+            }
+        },
+        {
+            "EPSG:32661": {
+                "definition": "+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "conic",
+                "min_latitude": -20,
+                "min_longitude": -180
+            }
+        },
+        {
+        "EPSG:32761": {
+                "definition": "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs ",
+                "max_latitude": -90,
+                "max_longitude": 180,
+                "method": "polar",
+                "min_latitude": 20,
+                "min_longitude": -180
+            }
+        },
+        {
+            "EPSG:4326": {
+                "definition": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "simple",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "EPSG:3857": {
+               "definition": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs",
+                "max_latitude": 84,
+                "max_longitude": 180,
+                "method": "simple",
+                "min_latitude": -80,
+                "min_longitude": -180
+            }
+        },
+        {
+            "cylindrical": {
+                "definition": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "simple",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "geos": {
+                "definition": "+proj=geos +h=42164000 +x_0=0 +y_0=40 +ellps=WGS84 ",
+                "max_latitude": 89,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -89,
+                "min_longitude": -180
+            }
+        },
+        {
+            "tpers": {
+                "definition": "+proj=tpers +h=42164000  +ellps=WGS84 ",
+                "max_latitude": 89,
+                "max_longitude": 180,
+                "method": "tpers",
+                "min_latitude": -89,
+                "min_longitude": -180
+            }
+        },
+        {
+            "meteosat_0": {
+                "definition": "+proj=geos +h=42164000 +ellps=WGS84 +lon_0=0",
+                "max_latitude": 80,
+                "max_longitude": 70,
+                "method": "geos",
+                "min_latitude": -80,
+                "min_longitude": -70
+            }
+        },
+        {
+            "meteosat_575": {
+                "definition": "+proj=geos +h=42164000 +ellps=WGS84 +lon_0=57.5",
+                "max_latitude": 80,
+                "max_longitude": 130,
+                "method": "geos",
+                "min_latitude": -80,
+                "min_longitude": -10
+            }
+        },
+        {
+            "meteosat_145": {
+                "definition": "+proj=geos +h=42164000 +ellps=WGS84 +lon_0=145",
+                "max_latitude": 80,
+                "max_longitude": 215,
+                "method": "geos",
+                "min_latitude": -80,
+                "min_longitude": 75
+            }
+        },
+        {
+            "goes-e": {
+                "definition": "+proj=geos +h=42164000 +ellps=WGS84 +lon_0=-75",
+                "max_latitude": 80,
+                "max_longitude": -5,
+                "method": "geos",
+                "min_latitude": -80,
+                "min_longitude": -145
+            }
+        },
+        {
+            "goes-w": {
+                "definition": "+proj=geos +h=42164000 +ellps=WGS84 +lon_0=-135",
+                "max_latitude": 80,
+                "max_longitude": -65,
+                "method": "geos",
+                "min_latitude": -80,
+                "min_longitude": -205
+            }
+        },
+        {
+            "goode": {
+                "definition": "+proj=goode +ellps=WGS84",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "collignon": {
+                "definition": "+proj=collg +ellps=WGS84",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "mollweide": {
+                "definition": "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "robinson": {
+                "definition": "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_def",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "google": {
+                "definition": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m",
+                "max_latitude": 90,
+                "max_longitude": 180,
+                "method": "simple",
+                "min_latitude": -90,
+                "min_longitude": -180
+            }
+        },
+        {
+            "efas": {
+                "definition": "+proj=laea +lat_0=48.0000000000 +lon_0=9.0000000000 +x_0=0.0000000000 +y_0=0.0000000000 +datum=WGS84 +a=6378388 +b=6378388 +no_defs",
+                "max_latitude": 89,
+                "max_longitude": 180,
+                "method": "conic",
+                "min_latitude": -20,
+                "min_longitude": -180
+            }
+        },
+        {
+            "EPSG:3035": {
+                "definition": "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
+                "max_latitude": 89,
+                "max_longitude": 180,
+                "method": "conic",
+                "min_latitude":  20,
+                "min_longitude": -180
+            }
+        },
+        
+ 
+        {
+            "bonne": {
+                "definition": "+proj=bonne +lon_0=0 +x_0=0 +y_0=0 +lat_1=60 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+                "max_latitude": 89,
+                "max_longitude": 180,
+                "method": "geos",
+                "min_latitude": -89,
+                "min_longitude": -180
+            }
+        }
+    ]
+}

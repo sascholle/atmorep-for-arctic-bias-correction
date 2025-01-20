@@ -1,0 +1,24 @@
+[
+  {
+    "eccharts_layer": [
+      "500pv",
+      "300pv"
+    ],
+    "prefered_units": "pv units",
+    "styles": [
+      "ct_magenta_i2_t3",
+      "sh_blu_f02t30",
+      "sh_gry_f0t20lst",
+      "ct_vio_i1_t1"
+    ],
+    "match": [
+      {
+        "paramId": "60",
+        "shortName": "pv"
+      },
+      {
+        "long_name": "Potential vorticity"
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+Enter SSH:AWI
+
+source pyenv/bin/activate
+
+pip install -e . # really? everytime? 
+
+
+sbatch slurm_atmorep.sh
+sbatch slurm_atmorep_evaluate.sh
+watch squeue --me
+
+
+
+
+##### OLD COMMANDS #####
+salloc --account=ab1412 --partition=gpu --time=01:10:00 --nodes=2 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4
+salloc --partition=gpu --time=01:00:00 --nodes=2 --ntasks-per-node=1 --cpus-per-task=32 --gpus-per-node=2 --account=ab1412
+
+conda init bash
+. ~/.bashrc
+
+conda activate atmo2
+
+srun python -m torch.distributed.launch --nproc_per_node=2 atmorep/core/evaluate.py
+
+squeue -u $USER
+
+sbatch slurm_atmorep.sh
+squeue --me
+watch squeue --me
+
+(pyenv) bash-4.4$ ssh-keygen -t ed25519 -C "sascholle@uni-osnabrueck.de"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/a/a270277/.ssh/id_ed25519): 
+Created directory '/home/a/a270277/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/a/a270277/.ssh/id_ed25519
+Your public key has been saved in /home/a/a270277/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:/b082J0JXLKzDeY8r4DHntAtWNrIpVoczOZJ49IApjQ sascholle@uni-osnabrueck.de
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|                 |
+|   E o           |
+|  . + . o.   . . |
+|   .   .SB.o. +  |
+|        X /..O   |
+|       . / B=+B.o|
+|        + + =*o=.|
+|       .   o .*o |
++----[SHA256]-----+
+(pyenv) bash-4.4$ 
