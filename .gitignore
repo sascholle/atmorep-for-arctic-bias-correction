@@ -1,0 +1,11 @@
+# Ignore GRIB files
+*.grib
+*.grib1
+*.grib2
+
+# Ignore Zarr directories
+*.zarr/
+
+*.tar
+
+atmorep/data
