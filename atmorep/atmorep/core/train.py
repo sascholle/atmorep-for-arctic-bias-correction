@@ -35,7 +35,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   with_ddp = True
   par_rank, par_size = setup_ddp( with_ddp)
 
-  cf = Config().load_json( wandb_id) #load model
+  cf = Config().load_json( wandb_id) # load model
 
   cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
   cf.with_ddp = with_ddp
