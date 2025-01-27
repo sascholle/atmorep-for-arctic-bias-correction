@@ -1,9 +1,9 @@
 #!/bin/bash -x
 #SBATCH --account=ab1412
 #SBATCH --partition=gpu
-#SBATCH --time=00:30:00
+#SBATCH --time=01:10:00
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
 #SBATCH --chdir=.
@@ -39,7 +39,7 @@ date
 
 export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
 
-CONFIG_DIR=${SLURM_SUBMIT_DIR}/train_models_slurm_jobid/atmorep_train_${SLURM_JOBID}
+CONFIG_DIR=${SLURM_SUBMIT_DIR}/atmorep_models_slurmid/atmorep_train_${SLURM_JOBID}
 mkdir ${CONFIG_DIR}
 cp ${SLURM_SUBMIT_DIR}/atmorep/core/train.py ${CONFIG_DIR}
 echo "${CONFIG_DIR}/train.py"

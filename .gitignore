@@ -8,6 +8,14 @@
 
 atmorep/data
 
+atmorep/atmorep_models_slurmid
+
+atmorep/logs
+
+atmorep/models  
+
+atmorep/output  
+
 #################################################
 
 # Byte-compiled / optimized / DLL files

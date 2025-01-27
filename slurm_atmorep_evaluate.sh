@@ -1,5 +1,5 @@
 #!/bin/bash -x
-#SBATCH --account=ehpc03
+#SBATCH --account=ab1412
 #SBATCH --time=0-3:30:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=40

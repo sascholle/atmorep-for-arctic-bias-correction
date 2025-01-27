@@ -54,6 +54,8 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.batch_size = cf.batch_size_test
   if not hasattr(cf, 'batch_size_validation'):
     cf.batch_size_validation = 1
+  if not hasattr(cf, 'model_log_frequency'):
+    cf.model_log_frequency = 256 #save checkpoint every X batches
 
 
   if not hasattr( cf, 'n_size'):
@@ -66,6 +68,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.with_mixed_precision = True
   if not hasattr(cf, 'years_val'):
     cf.years_val = cf.years_test
+
 
 
 
@@ -222,6 +225,7 @@ def train() :
   cf.lr_decay_rate = 1.025
   cf.lr_start_epochs = 3
   cf.model_log_frequency = 256 #save checkpoint every X batches
+
   # BERT
   # strategies: 'BERT', 'forecast', 'temporal_interpolation'
   cf.BERT_strategy = 'forecast'
