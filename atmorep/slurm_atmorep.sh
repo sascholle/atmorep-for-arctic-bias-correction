@@ -1,7 +1,7 @@
 #!/bin/bash -x
 #SBATCH --account=ab1412
 #SBATCH --partition=gpu
-#SBATCH --time=01:10:00
+#SBATCH --time=01:00:00
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32

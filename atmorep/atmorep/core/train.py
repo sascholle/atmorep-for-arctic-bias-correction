@@ -47,16 +47,14 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # name has changed but ensure backward compatibility
   if hasattr( cf, 'loader_num_workers') :
     cf.num_loader_workers = cf.loader_num_workers
-
   if not hasattr(cf, 'file_path'):
-    cf.file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
+    cf.file_path = '/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr'
   if not hasattr(cf, 'batch_size'):
-    cf.batch_size = cf.batch_size_test
+    cf.batch_size = 96
   if not hasattr(cf, 'batch_size_validation'):
     cf.batch_size_validation = 1
   if not hasattr(cf, 'model_log_frequency'):
     cf.model_log_frequency = 256 #save checkpoint every X batches
-
 
   if not hasattr( cf, 'n_size'):
     cf.n_size = [36, 0.25*9*6, 0.25*9*12] 
@@ -77,16 +75,41 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # cf.fields = [ [ 'specific_humidity', [ 1, 2048, [ ], 0 ], 
   #                               [ 96, 105, 114, 123, 137 ], 
   #                               [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.1, 0.05] ] ]
-  cf.fields = [
-    [
-        'vorticity',  # Name
-        [1, 2048, [], 0],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
-        [137],  # Vertical Levels (highlighted code)
-        [12, 6, 12],  # Number of Tokens
-        [3, 9, 9],  # Token Size
-        [0.5, 0.9, 0.1, 0.05]  # Masking and Noising Rates
-    ]
-]
+  # for field in cf.fields: 
+  #   field[2] = [137]
+  # for field in cf.fields: 
+  #   print(field)
+    
+#   cf.fields = [
+#     [
+#         'velocity_u',  # Name
+#         [1, 2048, [], 0, ],  # Field Properties
+#         [137],  # Vertical Levels
+#         [12, 6, 12],  # Number of Tokens
+#         [3, 9, 9],  # Token Size
+#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+#         'local'  # Norm
+#     ],
+#     [
+#         'velocity_v',  # Name
+#         [1, 2048, [], 0 ],  # Field Properties
+#         [137],  # Vertical Levels
+#         [12, 6, 12],  # Number of Tokens
+#         [3, 9, 9],  # Token Size
+#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+#         'local'  # Norm
+#     ],
+#       [
+#         'temperature',  # Name
+#         [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
+#         [137],  # Vertical Levels
+#         [12, 6, 12],  # Number of Tokens
+#         [3, 9, 9],  # Token Size
+#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+#         'local'  # Norm
+#     ]
+# ]
+  
   
   cf.years_train = list( range(2021, 2022))
   cf.years_test = [2021]
@@ -283,9 +306,12 @@ if __name__ == '__main__':
   try :
 
     #train()
- 
-     wandb_id, epoch, epoch_continue = '4nvwbetz', 127, 127
-     Trainer = Trainer_BERT
+
+    # 4nvwbetz - Vorticity
+    # 3cizyl1q - multi3-uv
+    # 3qou60es - temperature
+     wandb_id, epoch, epoch_continue = '3cizyl1q', 127, 127
+     Trainer = Trainer_BERT   #strategy=BERT 
      train_continue( wandb_id, epoch, Trainer, epoch_continue)
 
   except :

@@ -1,11 +1,9 @@
 import os
 import zarr
+import torch
 
-file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
-
-assert os.path.exists(file_path), f"File path {file_path} does not exist"
-ds = zarr.open( file_path, mode='r')
-
-# Print available keys
-print("Available keys in the Zarr dataset:", list(ds.array_keys()))
-        
+checkpoint_path = '/work/ab1412/atmorep/models/id3cizyl1q/AtmoRep_id3cizyl1q.mod'
+checkpoint = torch.load(checkpoint_path)
+filtered_keys = [key for key in checkpoint.keys() if not (key.startswith('tails') or key.startswith('decoders') or key.startswith('encoders'))]
+for key in filtered_keys:
+    print(key)

@@ -218,7 +218,18 @@ class MultiInterAttentionHead(torch.nn.Module):
 
   #####################################
   def forward( self, *args) :
-    '''Evaluate block'''
+    '''
+    Evaluate block.
+
+    Parameters:
+    *args: Variable length argument list. The first argument is expected to be the input tensor `x_in`, 
+           followed by additional tensors representing different fields.
+
+    Returns:
+    tuple: A tuple containing:
+        - The output tensor after applying multi-head attention and dropout.
+        - A list of attention weights (currently empty).
+    '''
     
     x_in, atts = args[0], []
 
@@ -226,16 +237,25 @@ class MultiInterAttentionHead(torch.nn.Module):
     fields_lnormed = []
     for ifield, field in enumerate( args) :
       fields_lnormed.append( self.lnorms[ifield](field) )
+      
+      print(f"fields_lnormed[{ifield}]: {fields_lnormed[ifield].shape}")
+      for i in range(min(3, fields_lnormed[ifield].shape[0])):
+        print(fields_lnormed[ifield][i])
 
     # project onto heads and q,k,v and ensure these are 4D tensors as required for flash attention
     # collapse three space and time dimensions for dense space-time attention
     #proj_heads: torch.Size([16, 3, 128, 2048])
+
+    #self-attention
     field_proj = self.proj_heads( fields_lnormed[0].flatten(1,-2))
     s = [ *field_proj.shape[:-1], self.num_heads_self, -1 ]
     qs, ks, vs = torch.tensor_split( field_proj.reshape(s).transpose(-3,-2), 3, dim=-1)
 
     qs, ks = self.ln_qk[0]( qs), self.ln_qk[1]( ks)
+
+    # cross-attention
     if len(fields_lnormed) > 1 :
+      print(f"this should be all the cross attention fields: length of fields_lnormed: {len(fields_lnormed)}")
 
       field_proj = self.proj_heads_other[0]( fields_lnormed[0].flatten(1,-2))
       s = [ *field_proj.shape[:-1], len(fields_lnormed)-1, self.num_heads_coupling_per_field, -1 ]
@@ -243,6 +263,8 @@ class MultiInterAttentionHead(torch.nn.Module):
     
       ofields_projs = []
       for i,f in enumerate(fields_lnormed[1:]) :
+        print(f"this should be the other cross attention fields. field_lnormed[1:] shape: {fields_lnormed[1:].shape}")
+        print(f"self.proj_heads_other shape: {self.proj_heads_other.shape}. This can't be more than 3 because there is an index error at 3")
         f_proj = self.proj_heads_other[i+1](f.flatten(1,-2)) 
         s = [ *f_proj.shape[:-1], self.num_heads_coupling_per_field, -1 ]
         ks_o, vs_o = torch.tensor_split( f_proj.reshape(s).transpose(-3,-2), 2, dim=-1)
