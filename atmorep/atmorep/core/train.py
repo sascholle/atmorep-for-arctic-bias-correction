@@ -48,7 +48,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   if hasattr( cf, 'loader_num_workers') :
     cf.num_loader_workers = cf.loader_num_workers
   if not hasattr(cf, 'file_path'):
-    cf.file_path = '/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr'
+    cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8.zarr'
   if not hasattr(cf, 'batch_size'):
     cf.batch_size = 96
   if not hasattr(cf, 'batch_size_validation'):

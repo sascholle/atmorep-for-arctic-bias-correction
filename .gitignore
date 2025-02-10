@@ -16,7 +16,11 @@ atmorep/models
 
 atmorep/output  
 
-atmorep/packages
+atmorep/pkgs
+
+atmorep/wandb
+
+atmorep/results 
 
 
 #################################################
