@@ -152,7 +152,6 @@ class Trainer_Base() :
     self.grad_scaler = torch.cuda.amp.GradScaler(enabled=cf.with_mixed_precision)
 
     if 0 == cf.par_rank :
-      # print( self.model.net)
       model_parameters = filter(lambda p: p.requires_grad, self.model_ddp.parameters())
       num_params = sum([np.prod(p.size()) for p in model_parameters])
       print( f'Number of trainable parameters: {num_params:,}')
@@ -366,6 +365,7 @@ class Trainer_Base() :
       
     # run test set evaluation
     with torch.no_grad() : 
+
       for it in range( self.model.len( NetMode.test)) :
         batch_data = self.model.next()
         if cf.par_rank < cf.log_test_num_ranks :
@@ -381,13 +381,11 @@ class Trainer_Base() :
         loss = torch.tensor( 0.)
         ifield = 0
         for pred, idx in zip( preds, self.fields_prediction_idx) :
-          
           target = self.targets[idx]
           # hook for custom test loss
-          self.test_loss( pred, target)
-          # base line loss
+          self.test_loss( pred, target)          # base line loss
           cur_loss = self.MSELoss( pred[0], target = target ).cpu().item()
-    
+
           loss += cur_loss 
           total_losses[ifield] += cur_loss
           ifield += 1
@@ -403,6 +401,7 @@ class Trainer_Base() :
             self.log_attention( epoch, it, atts)
                              
     # average over all nodes
+    print('Here at test length and fields predictions', test_len, len(self.cf.fields_prediction))
     total_loss /= test_len * len(self.cf.fields_prediction)
     total_losses /= test_len
 

@@ -294,6 +294,12 @@ def tokenize( data, token_size = [-1,-1,-1]) :
     tok_tot_t = int( data_shape[-3] / token_size[0])
     tok_tot_x = int( data_shape[-2] / token_size[1])
     tok_tot_y = int( data_shape[-1] / token_size[2])
+    
+# data.shape: torch.Size([36, 54, 108])
+# 0: token_size: [3, 9, 9]
+# 0: tok_tot_t: 12
+# 0: tok_tot_x: 6
+# 0: tok_tot_y: 12
 
     if 5 == len(data_shape) :
       t2 = torch.reshape( data, (data.shape[0], data.shape[1], tok_tot_t, token_size[0], 

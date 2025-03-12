@@ -11,6 +11,24 @@ watch squeue --me
 
 geo_range_sampling : [[66.5, 90.0], [0.0, 360.0]]
 
+AWI PATHS
+/work/ab1412
+/home/a/a270277/
+/work/ab1385/a270082/era_corrected/T2M_2021_xr1.nc
+coordinate information in: /work/ab1385/a270164/2024-sebai/data/arctic_era5/E5_T2M_sf121H_199410_202409_Arc.nc
+
+JUDAC PATHS
+/p/data1/slmet/met_data/ecmwf/era5/zarr/era5_y2010_2021_res025.zarr
+
+CHECK DIR CONTENT ON UFTP SERVER
+uftp ls -u a270277 -i ./uftpkey -v https://uftp.dkrz.de:9000/rest/auth/HPCDATA:/scratch/a/a270277
+
+COPY FILE FROM REMOTE JUDAC TO CLIENT LEVANTE FROM LEVANTE 
+uftp cp -u scholle1 -r -i $HOME/uftpkey -t4 https://uftp.fz-juelich.de:9112/UFTP_Auth/rest/auth/JUDAC:/p/data1/slmet/met_data/ecmwf/era5/zarr/era5_y1979_2021_res025.zarr /sc
+ratch/a/a270277/era5_y1979_2021_res025.zarr
+
+
+
 ##### OLD COMMANDS #####
 salloc --account=ab1412 --partition=gpu --time=01:10:00 --nodes=2 --ntasks-per-node=1 --cpus-per-task=32 --gres=gpu:4
 salloc --partition=gpu --time=01:00:00 --nodes=2 --ntasks-per-node=1 --cpus-per-task=32 --gpus-per-node=2 --account=ab1412
@@ -96,3 +114,568 @@ The key's randomart image is:
 |o+BB+.           |
 +----[SHA256]-----+
 (base) PS C:\Users\Sabine Scholle> 
+
+
+
+
+Module Summary 
+
+0:   (embeds): ModuleList(
+0:     (0-1): 2 x Linear(in_features=243, out_features=2032, bias=True)
+0:     (2): Linear(in_features=243, out_features=1008, bias=True)
+0:   )
+0:   (encoders): ModuleList(
+0:     (0-1): 2 x TransformerEncoder(
+0:       (embed): Linear(in_features=243, out_features=2032, bias=True)
+0:       (heads): ModuleList(
+0:         (0-9): 10 x MultiInterAttentionHead(
+0:           (lnorms): ModuleList(
+0:             (0-2): 3 x LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:             (3-4): 2 x LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           )
+0:           (proj_out): Linear(in_features=2560, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=6144, bias=False)
+0:           (proj_heads_other): ModuleList(
+0:             (0-2): 3 x Linear(in_features=2048, out_features=512, bias=False)
+0:           )
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:       )
+0:       (mlps): ModuleList(
+0:         (0-9): 10 x MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:       )
+0:     )
+0:     (2): TransformerEncoder(
+0:       (embed): Linear(in_features=243, out_features=1008, bias=True)
+0:       (heads): ModuleList(
+0:         (0-9): 10 x MultiInterAttentionHead(
+0:           (lnorms): ModuleList(
+0:             (0): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:             (1-4): 4 x LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           )
+0:           (proj_out): Linear(in_features=1280, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=3072, bias=False)
+0:           (proj_heads_other): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=256, bias=False)
+0:             (1-2): 2 x Linear(in_features=2048, out_features=256, bias=False)
+0:           )
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:       )
+0:       (mlps): ModuleList(
+0:         (0-9): 10 x MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:       )
+0:     )
+0:   )
+0:   (decoders): ModuleList(
+0:     (0-1): 2 x TransformerDecoder(
+0:       (blocks): ModuleList(
+0:         (0): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (1): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (2): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (3): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (4): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (5): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (6): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (7): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (8): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (9): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (10): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (11): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (12): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (13): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (14): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (15): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (16): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (17): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (18): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=2048, out_features=3072, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=2048, out_features=1024, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (ln_q): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=2048, out_features=2048, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (19): MLP(
+0:           (lnorm): LayerNorm((2048,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=2048, out_features=4096, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=4096, out_features=2048, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:       )
+0:     )
+0:     (2): TransformerDecoder(
+0:       (blocks): ModuleList(
+0:         (0): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (1): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (2): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (3): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (4): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (5): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (6): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (7): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (8): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (9): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (10): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (11): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (12): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (13): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (14): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (15): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (16): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (17): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:         (18): MultiCrossAttentionHead(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (lnorm_other): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (proj_heads): Linear(in_features=1024, out_features=1536, bias=False)
+0:           (proj_heads_o_q): Linear(in_features=1024, out_features=512, bias=False)
+0:           (proj_heads_o_kv): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (ln_q): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (ln_k): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+0:           (proj_out): Linear(in_features=1024, out_features=1024, bias=False)
+0:           (dropout): Dropout(p=0.05, inplace=False)
+0:           (softmax): Softmax(dim=-1)
+0:         )
+0:         (19): MLP(
+0:           (lnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=False)
+0:           (blocks): ModuleList(
+0:             (0): Linear(in_features=1024, out_features=2048, bias=True)
+0:             (1): GELU(approximate='none')
+0:             (2): Dropout(p=0.05, inplace=False)
+0:             (3): Linear(in_features=2048, out_features=1024, bias=True)
+0:             (4): GELU(approximate='none')
+0:           )
+0:           (proj_residual): Identity()
+0:         )
+0:       )
+0:     )
+0:   )
+0:   (tails): ModuleList(
+0:     (0-1): 2 x TailEnsemble(
+0:       (tail_nets): ModuleList(
+0:         (0-15): 16 x ModuleList(
+0:           (0): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+0:           (1): Linear(in_features=2048, out_features=243, bias=True)
+0:         )
+0:       )
+0:     )
+0:     (2): TailEnsemble(
+0:       (tail_nets): ModuleList(
+0:         (0-15): 16 x ModuleList(
+0:           (0): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+0:           (1): Linear(in_features=1024, out_features=243, bias=True)
+0:         )
+0:       )
+0:     )
+0:   )
+0: )
+0: Nu

@@ -20,6 +20,7 @@ import sys
 import traceback
 import pdb
 import wandb
+import zarr
 
 from atmorep.core.trainer import Trainer_BERT
 from atmorep.utils.utils import Config
@@ -27,6 +28,7 @@ from atmorep.utils.utils import setup_ddp
 from atmorep.utils.utils import setup_wandb
 from atmorep.utils.utils import init_torch
 
+from torchinfo import torchinfo
 
 ####################################################################################################
 def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
@@ -47,28 +49,42 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # name has changed but ensure backward compatibility
   if hasattr( cf, 'loader_num_workers') :
     cf.num_loader_workers = cf.loader_num_workers
+    
   if not hasattr(cf, 'file_path'):
-    cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8.zarr'
+    cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr'
+
+  
+    #/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr
+    #/work/ab1412/atmorep/data/era5_y2010_2021_res025.zarr
+    #atmorep/data/era5_y2010_2020_res100.zarr or /work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr
+    #'/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'  
+
   if not hasattr(cf, 'batch_size'):
     cf.batch_size = 96
   if not hasattr(cf, 'batch_size_validation'):
     cf.batch_size_validation = 1
   if not hasattr(cf, 'model_log_frequency'):
     cf.model_log_frequency = 256 #save checkpoint every X batches
+  if not hasattr(cf, 'forecast_num_tokens'):
+    cf.forecast_num_tokens = 2 #  only needed / used for BERT_strategy 'forecast
 
   if not hasattr( cf, 'n_size'):
-    cf.n_size = [36, 0.25*9*6, 0.25*9*12] 
+    cf.n_size = [36, 1*9*6, 1*9*12] # in steps x lat_degrees x lon_degrees
   if not hasattr(cf, 'num_samples_per_epoch'):
-    cf.num_samples_per_epoch = 1024
+    cf.num_samples_per_epoch = 4096*12 # 1024 
   if not hasattr(cf, 'num_samples_validate'):
-    cf.num_samples_validate = 128
+    cf.num_samples_validate = 128*12 #128
   if not hasattr(cf, 'with_mixed_precision'):
     cf.with_mixed_precision = True
   if not hasattr(cf, 'years_val'):
     cf.years_val = cf.years_test
 
-
-
+# Check if field configurations match proj_heads setup
+  print("Field configuration:")
+  print(f"Number of fields: {len(cf.fields)}")
+  print(f"Fields: {[field[0] for field in cf.fields]}")
+  print(f"Coupling heads per field: {cf.coupling_num_heads_per_field}")
+    
 
   # any parameter in cf can be overwritten when training is continued, e.g. we can increase the 
   # masking rate 
@@ -99,21 +115,23 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
 #         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
 #         'local'  # Norm
 #     ],
-#       [
-#         'temperature',  # Name
-#         [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
-#         [137],  # Vertical Levels
-#         [12, 6, 12],  # Number of Tokens
-#         [3, 9, 9],  # Token Size
-#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-#         'local'  # Norm
-#     ]
+    #   [
+    #     'temperature',  # Name
+    #     [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
+    #     [137],  # Vertical Levels
+    #     [12, 6, 12],  # Number of Tokens
+    #     [3, 9, 9],  # Token Size
+    #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+    #     'local'  # Norm
+    # ]
 # ]
   
+  cf.BERT_strategy = 'forecast'
+  cf.num_epochs = 400
   
-  cf.years_train = list( range(2021, 2022))
-  cf.years_test = [2021]
-  cf.years_val = [2021]  #[2018] 
+  cf.years_train = list( range(2010, 2020))
+  cf.years_test = [2020]
+  cf.years_val = [2020] 
   
   setup_wandb( cf.with_wandb, cf, par_rank, project_name='train', mode='offline')  
   # resuming a run requires online mode, which is not available everywhere
@@ -129,6 +147,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # run
   trainer = Trainer.load( cf, wandb_id, epoch, devices)
   print( 'Loaded run \'{}\' at epoch {}.'.format( wandb_id, epoch))
+
   trainer.run( epoch_continue)
 
 ####################################################################################################
@@ -282,7 +301,7 @@ def train() :
   # # # cf.file_path = '/p/scratch/atmo-rep/data/era5_1deg/months/era5_y2021_res025_chunk8.zarr'
   # # cf.file_path = '/ec/res4/scratch/nacl/atmorep/era5_y2021_res025_chunk8_lat180_lon180.zarr'
   # # # cf.file_path = '/ec/res4/scratch/nacl/atmorep/era5_y2021_res025_chunk16.zarr'
-  #f.file_path = '/gpfs/scratch/ehpc03/era5_y1979_2021_res025_chunk8.zarr/'
+  #cf.file_path = '/gpfs/scratch/ehpc03/era5_y1979_2021_res025_chunk8.zarr/'
   # cf.file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_vorticity_y2021_m01_ml137.grib'
   cf.file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
   
@@ -310,9 +329,10 @@ if __name__ == '__main__':
     # 4nvwbetz - Vorticity
     # 3cizyl1q - multi3-uv
     # 3qou60es - temperature
-     wandb_id, epoch, epoch_continue = '3cizyl1q', 127, 127
-     Trainer = Trainer_BERT   #strategy=BERT 
-     train_continue( wandb_id, epoch, Trainer, epoch_continue)
+    # 1v4qk0qx - forecasting 3 hours 
+    wandb_id, epoch, epoch_continue = '3cizyl1q', 0, 1 
+    Trainer = Trainer_BERT   #running BERT
+    train_continue( wandb_id, epoch, Trainer, epoch_continue)
 
   except :
     
