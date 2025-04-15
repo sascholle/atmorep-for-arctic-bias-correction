@@ -1,10 +1,11 @@
 #!/bin/bash -x
 #SBATCH --account=ab1412
 #SBATCH --partition=gpu
-#SBATCH --time=01:00:00
-#SBATCH --nodes=2
+#SBATCH --time=04:00:00
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=34
+#SBATCH --mem=128G
 #SBATCH --gres=gpu:4
 #SBATCH --chdir=.
 #SBATCH --output=logs/atmorep-%x.%j.out
@@ -18,6 +19,7 @@ export UCX_TLS="^cma"
 export UCX_NET_DEVICES=mlx5_0:1,mlx5_1:1,mlx5_4:1,mlx5_5:1
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 # so processes know who to talk to

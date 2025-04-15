@@ -30,125 +30,6 @@ from atmorep.utils.utils import init_torch
 
 from torchinfo import torchinfo
 
-####################################################################################################
-def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
-
-  devices = init_torch()
-  with_ddp = True
-  par_rank, par_size = setup_ddp( with_ddp)
-
-  cf = Config().load_json( wandb_id) # load model and point to file path for data
-
-  cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
-  cf.with_ddp = with_ddp
-  cf.par_rank = par_rank
-  cf.par_size = par_size
-  cf.optimizer_zero = False
-  cf.attention = False
-
-  # name has changed but ensure backward compatibility
-  if hasattr( cf, 'loader_num_workers') :
-    cf.num_loader_workers = cf.loader_num_workers
-    
-  if not hasattr(cf, 'file_path'):
-    cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr'
-
-  
-    #/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr
-    #/work/ab1412/atmorep/data/era5_y2010_2021_res025.zarr
-    #atmorep/data/era5_y2010_2020_res100.zarr or /work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr
-    #'/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'  
-
-  if not hasattr(cf, 'batch_size'):
-    cf.batch_size = 96
-  if not hasattr(cf, 'batch_size_validation'):
-    cf.batch_size_validation = 1
-  if not hasattr(cf, 'model_log_frequency'):
-    cf.model_log_frequency = 256 #save checkpoint every X batches
-  if not hasattr(cf, 'forecast_num_tokens'):
-    cf.forecast_num_tokens = 2 #  only needed / used for BERT_strategy 'forecast
-
-  if not hasattr( cf, 'n_size'):
-    cf.n_size = [36, 1*9*6, 1*9*12] # in steps x lat_degrees x lon_degrees
-  if not hasattr(cf, 'num_samples_per_epoch'):
-    cf.num_samples_per_epoch = 4096*12 # 1024 
-  if not hasattr(cf, 'num_samples_validate'):
-    cf.num_samples_validate = 128*12 #128
-  if not hasattr(cf, 'with_mixed_precision'):
-    cf.with_mixed_precision = True
-  if not hasattr(cf, 'years_val'):
-    cf.years_val = cf.years_test
-
-# Check if field configurations match proj_heads setup
-  print("Field configuration:")
-  print(f"Number of fields: {len(cf.fields)}")
-  print(f"Fields: {[field[0] for field in cf.fields]}")
-  print(f"Coupling heads per field: {cf.coupling_num_heads_per_field}")
-    
-
-  # any parameter in cf can be overwritten when training is continued, e.g. we can increase the 
-  # masking rate 
-  # cf.fields = [ [ 'specific_humidity', [ 1, 2048, [ ], 0 ], 
-  #                               [ 96, 105, 114, 123, 137 ], 
-  #                               [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.1, 0.05] ] ]
-  # for field in cf.fields: 
-  #   field[2] = [137]
-  # for field in cf.fields: 
-  #   print(field)
-    
-#   cf.fields = [
-#     [
-#         'velocity_u',  # Name
-#         [1, 2048, [], 0, ],  # Field Properties
-#         [137],  # Vertical Levels
-#         [12, 6, 12],  # Number of Tokens
-#         [3, 9, 9],  # Token Size
-#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-#         'local'  # Norm
-#     ],
-#     [
-#         'velocity_v',  # Name
-#         [1, 2048, [], 0 ],  # Field Properties
-#         [137],  # Vertical Levels
-#         [12, 6, 12],  # Number of Tokens
-#         [3, 9, 9],  # Token Size
-#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-#         'local'  # Norm
-#     ],
-    #   [
-    #     'temperature',  # Name
-    #     [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
-    #     [137],  # Vertical Levels
-    #     [12, 6, 12],  # Number of Tokens
-    #     [3, 9, 9],  # Token Size
-    #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-    #     'local'  # Norm
-    # ]
-# ]
-  
-  cf.BERT_strategy = 'forecast'
-  cf.num_epochs = 400
-  
-  cf.years_train = list( range(2010, 2020))
-  cf.years_test = [2020]
-  cf.years_val = [2020] 
-  
-  setup_wandb( cf.with_wandb, cf, par_rank, project_name='train', mode='offline')  
-  # resuming a run requires online mode, which is not available everywhere
-  #setup_wandb( cf.with_wandb, cf, par_rank, wandb_id = wandb_id) 
-  
-  if cf.with_wandb and 0 == cf.par_rank :
-    cf.write_json( wandb)
-    cf.print()
-
-  if -1 == epoch_continue :
-    epoch_continue = epoch
-
-  # run
-  trainer = Trainer.load( cf, wandb_id, epoch, devices)
-  print( 'Loaded run \'{}\' at epoch {}.'.format( wandb_id, epoch))
-
-  trainer.run( epoch_continue)
 
 ####################################################################################################
 def train() :
@@ -215,6 +96,7 @@ def train() :
 
   #cf.years_train = list( range( 1979, 2021))
   cf.years_train = list( range(2021, 2022))
+  cf.years_train = []
   cf.years_val = [2021]  #[2018] 
   cf.month = None
   cf.geo_range_sampling = [[ -90., 90.], [ 0., 360.]]
@@ -302,7 +184,6 @@ def train() :
   # # cf.file_path = '/ec/res4/scratch/nacl/atmorep/era5_y2021_res025_chunk8_lat180_lon180.zarr'
   # # # cf.file_path = '/ec/res4/scratch/nacl/atmorep/era5_y2021_res025_chunk16.zarr'
   #cf.file_path = '/gpfs/scratch/ehpc03/era5_y1979_2021_res025_chunk8.zarr/'
-  # cf.file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_vorticity_y2021_m01_ml137.grib'
   cf.file_path = '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
   
   # # # in steps x lat_degrees x lon_degrees
@@ -319,7 +200,267 @@ def train() :
   trainer = Trainer_BERT( cf, devices).create()
   trainer.run()
 
+
 ####################################################################################################
+
+
+def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
+
+  devices = init_torch()
+  with_ddp = True
+  par_rank, par_size = setup_ddp( with_ddp)
+
+  cf = Config().load_json( wandb_id) # load model and point to file path for data
+
+  cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
+  cf.with_ddp = with_ddp
+  cf.par_rank = par_rank
+  cf.par_size = par_size
+  cf.optimizer_zero = False
+  cf.attention = False
+  # name has changed but ensure backward compatibility
+  if hasattr( cf, 'loader_num_workers') :
+    cf.num_loader_workers = cf.loader_num_workers
+  if not hasattr( cf, 'n_size'):
+    cf.n_size = [36, 0.25*9*6, 0.25*9*12] # in steps x lat_degrees x lon_degrees
+  if not hasattr(cf, 'num_samples_per_epoch'):
+    cf.num_samples_per_epoch = 1 #1024
+  if not hasattr(cf, 'num_samples_validate'):
+    cf.num_samples_validate = 16 #128
+  if not hasattr(cf, 'with_mixed_precision'):
+    cf.with_mixed_precision = True
+  if not hasattr(cf, 'years_val'):
+    cf.years_val = cf.years_test
+
+# Check if field configurations match proj_heads setup
+  print("Field configuration:")
+  print(f"Number of fields: {len(cf.fields)}")
+  print(f"Fields: {[field[0] for field in cf.fields]}")
+  print(f"Coupling heads per field: {cf.coupling_num_heads_per_field}")
+    
+
+  # any parameter in cf can be overwritten when training is continued, e.g. we can increase the 
+  # masking rate 
+
+  # cf.fields = [ [ 'specific_humidity', [ 1, 2048, [ ], 0 ], 
+  #                               [ 96, 105, 114, 123, 137 ], 
+  #                               [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.1, 0.05] ] ]
+    
+#   cf.fields = [
+#     [
+#         'velocity_u',  # Name
+#         [1, 2048, [], 0, ],  # Field Properties
+#         [137],  # Vertical Levels
+#         [12, 6, 12],  # Number of Tokens
+#         [3, 9, 9],  # Token Size
+#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+#         'local'  # Norm
+#     ],
+#     [
+#         'velocity_v',  # Name
+#         [1, 2048, [], 0 ],  # Field Properties
+#         [137],  # Vertical Levels
+#         [12, 6, 12],  # Number of Tokens
+#         [3, 9, 9],  # Token Size
+#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+#         'local'  # Norm
+#     ],
+    #   [
+    #     'temperature',  # Name
+    #     [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
+    #     [137],  # Vertical Levels
+    #     [12, 6, 12],  # Number of Tokens
+    #     [3, 9, 9],  # Token Size
+    #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+    #     'local'  # Norm
+    # ]
+# ]
+
+######################################################
+# Parameters changed by me
+######################################################
+
+#for 3 field model 
+
+  # cf.fields = [
+  #   [
+  #     'velocity_u',  # Name
+  #     [1, 2048, ['velocity_v', 'temperature'], 0, ['3k6e6p7o', 141]],  # Field Properties
+  #     [96, 105, 114, 123, 137],  # Vertical Levels
+  #     [12, 6, 12],  # Number of Tokens
+  #     [3, 9, 9],  # Token Size
+  #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+  #     'local'  # Norm
+  #   ],
+  #   [
+  #     'velocity_v',  # Name
+  #     [1, 2048, ['velocity_u', 'temperature'], 1, ['brxmevmt', 141]],  # Field Properties
+  #     [96, 105, 114, 123, 137],  # Vertical Levels
+  #     [12, 6, 12],  # Number of Tokens
+  #     [3, 9, 9],  # Token Size
+  #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+  #     'local'  # Norm
+  #   ],
+  #   [
+  #     'temperature',  # Name
+  #     [1, 1024, ['velocity_u', 'velocity_v'], 2, ['1za45vud', 155]],  # Field Properties
+  #     [96, 105, 114, 123, 137],  # Vertical Levels
+  #     [12, 6, 12],  # Number of Tokens
+  #     [3, 9, 9],  # Token Size
+  #     [0.0, 0.0, 0.0, 0.0],  # Masking and Noising Rates
+  #     'local'  # Norm
+  #   ]
+  # ]
+
+# for temp model
+  # cf.fields = [
+  #   [
+  #     'temperature',  # input
+  #     [1, 1536, [], 0], 
+  #     [96, 105, 114, 123, 137], 
+  #     [12, 2, 4], # nr of tokens
+  #     [3, 27, 27],  # token size 
+  #     [0.95, 0.9, 0.1, 0.05], 
+  #     'local'
+  #     ], 
+  #     [
+  #       'total_precip',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0],  # Field Properties
+  #       [0],  # Vertical Levels
+  #       [12, 6, 12],  # Number of Tokens
+  #       [3, 9, 9],  # Token Size
+  #       [0.0, 0.0, 0.0, 0.0]  # Masking and Noising Rates
+  #   ]
+  # ]
+
+  # for 6 field model
+
+  # cf.fields = [
+  #   [
+  #       'velocity_u',  # Name
+  #       [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'velocity_v',  # Name 
+  #       [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size 
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'specific_humidity',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'velocity_z',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'temperature',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 2, 4],  # Number of Tokens
+  #       [3, 27, 27],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+  #       'local'  # Norm
+  #   ],
+  #   [
+  #       'total_precip',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0],  # Field Properties
+  #       [0],  # Vertical Levels
+  #       [12, 6, 12],  # Number of Tokens
+  #       [3, 9, 9],  # Token Size
+  #       [0.0, 0.0, 0.0, 0.0]  # Masking and Noising Rates
+  #   ]
+  # ]
+  #cf.fields_prediction = [ ["velocity_u", 0.0], ["velocity_v", 0.0], ["temperature", 1.0] ]
+
+  cf.fields_prediction = [
+      [
+          "velocity_u",
+          0.0
+      ],
+      [
+          "velocity_v",
+          0.0
+      ],
+      [
+          "specific_humidity",
+          0.0
+      ],
+      [
+          "velocity_z",
+          0.0
+      ],
+      [
+          "temperature",
+          0.0
+      ],
+      [
+          "total_precip",
+          1.0
+      ]
+  ]
+
+  cf.batch_size = 96
+  cf.num_loader_workers = 5
+  cf.num_samples_per_epoch = 96
+  
+  if not hasattr(cf, 'batch_size_validation'):
+    cf.batch_size_validation = 1
+  if not hasattr(cf, 'model_log_frequency'):
+    cf.model_log_frequency = 256 #save checkpoint every X batches
+  if not hasattr(cf, 'forecast_num_tokens'):
+    cf.forecast_num_tokens = 2 #  only needed / used for BERT_strategy 'forecast'
+
+  cf.BERT_strategy = 'forecast'
+  cf.num_epochs = 5
+  cf.years_train = list( range(2010, 2020))
+  #cf.years_train = [2010, 2011, 2013, 2014, 2015, 2017, 2018, 2019]		
+  cf.years_test = [2020]
+  cf.years_val = [2020] 
+  cf.geo_range_sampling = [[ 70., 90.], [ 0., 360.]]
+ 
+  cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
+  #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr'
+  #cf.file_path = '/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr'
+  #cf.file_path = "/work/ab1412/atmorep/data/era_corrected/T2M_y2010-2021_no_leap_res025.zarr"
+
+  
+
+  setup_wandb( cf.with_wandb, cf, par_rank, project_name='train', mode='offline')  
+
+  # resuming a run requires online mode, which is not available everywhere
+  #setup_wandb( cf.with_wandb, cf, par_rank, wandb_id = wandb_id) 
+  
+  if cf.with_wandb and 0 == cf.par_rank :
+    cf.write_json( wandb)
+    cf.print()
+
+  if -1 == epoch_continue :
+    epoch_continue = epoch
+
+  # run
+  trainer = Trainer.load( cf, wandb_id, epoch, devices)
+  print( 'Loaded run \'{}\' at epoch {}.'.format( wandb_id, epoch))
+
+  trainer.run( epoch_continue)
+
+####################################################################################################
+
 if __name__ == '__main__':
   
   try :
@@ -330,8 +471,9 @@ if __name__ == '__main__':
     # 3cizyl1q - multi3-uv
     # 3qou60es - temperature
     # 1v4qk0qx - forecasting 3 hours 
-    wandb_id, epoch, epoch_continue = '3cizyl1q', 0, 1 
-    Trainer = Trainer_BERT   #running BERT
+    # wc5e2i3t - multi6 
+    wandb_id, epoch, epoch_continue = 'wc5e2i3t', 0, 1 
+    Trainer = Trainer_BERT   #running forecast
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 
   except :

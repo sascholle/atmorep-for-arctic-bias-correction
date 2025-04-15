@@ -167,12 +167,12 @@ class MultiInterAttentionHead(torch.nn.Module):
 
 
 #######
-    print("\nMultiInterAttentionHead Initialization:")
-    print(f"num_heads_self: {num_heads_self}")
-    print(f"num_fields_other: {num_fields_other}")
-    print(f"num_heads_coupling_per_field: {num_heads_coupling_per_field}")
-    print(f"dims_embed: {dims_embed}")
-    print(f"Number of fields configured: {len(dims_embed)}")
+    # print("\nMultiInterAttentionHead Initialization:")
+    # print(f"num_heads_self: {num_heads_self}")
+    # print(f"num_fields_other: {num_fields_other}")
+    # print(f"num_heads_coupling_per_field: {num_heads_coupling_per_field}")
+    # print(f"dims_embed: {dims_embed}")
+    # print(f"Number of fields configured: {len(dims_embed)}")
 
 
     # GENERAL VARIABLES
@@ -189,6 +189,7 @@ class MultiInterAttentionHead(torch.nn.Module):
 
     # PROJECTIONS 
     # proj_heads: Linear(in_features=2048, out_features=6144, bias=False)
+    # or proj_heads: Linear(in_features=1024, out_features=3072, bias=False)
     # proj_heads_other: ModuleList((0-2): 3 x Linear(in_features=2048, out_features=512, bias=False)) 
     # or proj_heads_other: ModuleList((0): Linear(in_features=1024, out_features=256, bias=False) (1-2): 2 x Linear(in_features=2048, out_features=256, bias=False)
    
@@ -222,18 +223,18 @@ class MultiInterAttentionHead(torch.nn.Module):
       nhc_dim = num_heads_coupling_per_field * self.dim_head_proj # 2*128 dimension of coupled heads over all fields
       self.proj_heads_other = torch.nn.ModuleList()
       # queries from primary source/target field
-      self.proj_heads_other.append( torch.nn.Linear( dims_embed[0], nhc_dim*nfo, #CHANGED this from nfo to nnc
+      self.proj_heads_other.append( torch.nn.Linear( dims_embed[0], nhc_dim*nfo, 
                                                    bias=False)) # 2048, 256*2
 
       # keys, values for other fields
-      for i in range(nfo) : #2 CHANGED this from nfo to nnc
-        self.proj_heads_other.append( torch.nn.Linear( dims_embed[i+1], 2*nhc_dim, bias=False)) # 2048, 256*2
+      for i in range(nfo) : # 2
+        self.proj_heads_other.append( torch.nn.Linear( dims_embed[i+1], 2*nhc_dim, bias=False)) # 2048 or 1024, 256 * 2
 
     ln = torch.nn.LayerNorm if with_qk_lnorm else torch.nn.Identity
     self.ln_qk = (ln( self.dim_head_proj, elementwise_affine=False), 
                   ln( self.dim_head_proj, elementwise_affine=False))
     
-    self.ln_k_other = [ln(self.dim_head_proj,elementwise_affine=False) for _ in range(nfo)] # CHANGED this as well from nfo to nnc
+    self.ln_k_other = [ln(self.dim_head_proj,elementwise_affine=False) for _ in range(nfo)] 
     
     if with_flash :
       self.att = torch.nn.functional.scaled_dot_product_attention
@@ -261,11 +262,6 @@ class MultiInterAttentionHead(torch.nn.Module):
         - A list of attention weights (currently empty).
     '''
 
-    print('DEBUG PRINTS:')
-    print('args breakdown:')
-    for i, arg in enumerate(args):
-        print(f"arg {i} shape: {arg.shape if torch.is_tensor(arg) else type(arg)}")
-
   #   DEBUG PRINTS:
   # 0: args breakdown:
   # 0: arg 0 shape: torch.Size([1, 5, 12, 72, 2048])
@@ -290,7 +286,6 @@ class MultiInterAttentionHead(torch.nn.Module):
     # self-attention
     field_proj = self.proj_heads( fields_lnormed[0].flatten(1,-2)) # [batch_size, time*lat*lon, embedding_dim] - torch.Size([1, 5, 12, 72, 2048]) -> torch.Size([1, 4320, 2048])
     s = [ *field_proj.shape[:-1], self.num_heads_self, -1 ]   # [1, 4320, 16, -1]
-    print(f'is s self attention 1, 4320, 16, -1]? {s}')
     qs, ks, vs = torch.tensor_split( field_proj.reshape(s).transpose(-3,-2), 3, dim=-1) # queries, keys, values reorder 
     qs, ks = self.ln_qk[0]( qs), self.ln_qk[1]( ks)
 
@@ -300,19 +295,16 @@ class MultiInterAttentionHead(torch.nn.Module):
       # Project primary field to create queries for cross-attention
       field_proj = self.proj_heads_other[0]( fields_lnormed[0].flatten(1,-2)) 
       s = [ *field_proj.shape[:-1], len(fields_lnormed)-1, self.num_heads_coupling_per_field, -1 ] # [1, 4320, 4, 2, -1]
-      print(f'is s cross query 1, 4320, 4, 2, -1]? {s}')
       qs_other = field_proj.reshape(s).permute( [-3, 0, -2, 1, -1])
     
-    # PROBLEM STARTS HERE
       ofields_projs = []
       for i,f in enumerate(fields_lnormed[1:]): # fields_lnormed[1:] is a list of 4 tensors
         f_proj = self.proj_heads_other[i+1](f.flatten(1,-2)) # proj_heads_other is a set of Linear layers of len 3. f_proj is a tensor of torch.Size([1, 4320, 512])
         s = [ *f_proj.shape[:-1], self.num_heads_coupling_per_field, -1 ] # [1, 4320, 2, -1]
-        print(f'is s cross value keys 1, 4320, 2, -1]? {s}')
         ks_o, vs_o = torch.tensor_split( f_proj.reshape(s).transpose(-3,-2), 2, dim=-1)
         ofields_projs += [ (self.ln_k_other[i]( ks_o), vs_o) ]
 
-      print('Cross attention complete!')
+    
 
     # correct ordering of tensors with seq dimension second but last is critical
     with torch.nn.attention.sdpa_kernel( torch.nn.attention.SDPBackend.FLASH_ATTENTION) :

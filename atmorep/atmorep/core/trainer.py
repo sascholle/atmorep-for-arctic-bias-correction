@@ -188,13 +188,14 @@ class Trainer_Base() :
       if cf.with_wandb and 0 == cf.par_rank :
         self.save( epoch)
 
-      cur_test_loss = self.validate( epoch, cf.BERT_strategy).cpu().numpy()
-      # self.validate( epoch, 'forecast')
+      if epoch % 10 == 0 :
+        cur_test_loss = self.validate( epoch, cf.BERT_strategy).cpu().numpy()
+        # self.validate( epoch, 'forecast')
 
-      # save model 
-      if cur_test_loss < test_loss.min() :
-        self.save( -2)
-      test_loss = np.append( test_loss, [cur_test_loss])
+        # save model 
+        if cur_test_loss < test_loss.min() :
+          self.save( -2)
+        test_loss = np.append( test_loss, [cur_test_loss])
 
       epoch += 1
 

@@ -301,7 +301,6 @@ class AtmoRep( torch.nn.Module) :
     
     self.tails = torch.nn.ModuleList()
     for ifield, field in enumerate(cf.fields_prediction) :
-
       field_idx = self.field_pred_idxs[ifield]
       field_info = cf.fields[field_idx]
       self.tails.append( TailEnsemble( cf, field_info[1][1], np.prod(field_info[4]) ).create())

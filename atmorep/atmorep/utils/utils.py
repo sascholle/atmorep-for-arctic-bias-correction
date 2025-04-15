@@ -103,6 +103,7 @@ class Config :
       fname = wandb_id
     else :
       fname = Path( config.path_models, 'id{}/model_id{}.json'.format( wandb_id, wandb_id))
+      print(f'FNAME HERE: {fname}')
     try :
       with open(fname, 'r') as f :
         json_str = f.readlines() 
@@ -255,13 +256,14 @@ def get_model_filename( model = None, model_id = '', epoch=-2, with_model_path =
 
   mpath = 'id{}'.format(model_id) if with_model_path else ''
 
-  if epoch > -2 :
-    # model_file = Path( config.path_results, 'models/id{}/{}_id{}_epoch{}.mod'.format(
-    #                                                        model_id, name, model_id, epoch))
-    model_file = Path( config.path_models, mpath, '{}_id{}_epoch{}.mod'.format(
-                                                           name, model_id, epoch))
-  else :
-    model_file = Path( config.path_models, mpath, '{}_id{}.mod'.format( name, model_id))
+  # if epoch > -2 :
+  #   #model_file = Path( config.path_results, 'models/id{}/{}_id{}_epoch{}.mod'.format(
+  #   #                                                       model_id, name, model_id, epoch))
+  #   model_file = Path( config.path_models, mpath, '{}_id{}_epoch{}.mod'.format(
+  #                                                          name, model_id, epoch))
+  #   print( f'Model file: {model_file}')
+  # else :
+  model_file = Path( config.path_models, mpath, '{}_id{}.mod'.format( name, model_id))
       
   return model_file
 
@@ -300,6 +302,19 @@ def tokenize( data, token_size = [-1,-1,-1]) :
 # 0: tok_tot_t: 12
 # 0: tok_tot_x: 6
 # 0: tok_tot_y: 12
+
+# 1: data.shape: torch.Size([36, 54, 108])
+# 1: 0: token_size: [3, 27, 27]
+# 1: 0: tok_tot_t: 12
+# 1: 0: tok_tot_x: 2
+# 1: 0: tok_tot_y: 4
+  
+    # print data shape and token size fot t,x and y
+    # print(f'data.shape: {data.shape}')
+    # print(f'0: token_size: {token_size}')
+    # print(f'0: tok_tot_t: {tok_tot_t}')
+    # print(f'0: tok_tot_x: {tok_tot_x}')
+    # print(f'0: tok_tot_y: {tok_tot_y}')
 
     if 5 == len(data_shape) :
       t2 = torch.reshape( data, (data.shape[0], data.shape[1], tok_tot_t, token_size[0], 
