@@ -103,7 +103,6 @@ class Config :
       fname = wandb_id
     else :
       fname = Path( config.path_models, 'id{}/model_id{}.json'.format( wandb_id, wandb_id))
-      print(f'FNAME HERE: {fname}')
     try :
       with open(fname, 'r') as f :
         json_str = f.readlines() 

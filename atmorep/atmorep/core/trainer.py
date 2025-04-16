@@ -188,7 +188,7 @@ class Trainer_Base() :
       if cf.with_wandb and 0 == cf.par_rank :
         self.save( epoch)
 
-      if epoch % 10 == 0 :
+      if epoch % 1 == 0 :
         cur_test_loss = self.validate( epoch, cf.BERT_strategy).cpu().numpy()
         # self.validate( epoch, 'forecast')
 
@@ -402,7 +402,6 @@ class Trainer_Base() :
             self.log_attention( epoch, it, atts)
                              
     # average over all nodes
-    print('Here at test length and fields predictions', test_len, len(self.cf.fields_prediction))
     total_loss /= test_len * len(self.cf.fields_prediction)
     total_losses /= test_len
 
