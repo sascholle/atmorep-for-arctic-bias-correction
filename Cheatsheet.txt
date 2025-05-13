@@ -1,6 +1,7 @@
 Enter SSH:AWI
 
-source pyenv/bin/activate
+source /work/ab1412/atmorep/pyenv/bin/activate
+module load python3
 
 pip install -e . # really? everytime? 
 
@@ -16,6 +17,8 @@ AWI PATHS
 /home/a/a270277/
 /work/ab1385/a270082/era_corrected/T2M_2021_xr1.nc
 coordinate information in: /work/ab1385/a270164/2024-sebai/data/arctic_era5/E5_T2M_sf121H_199410_202409_Arc.nc
+
+corrected grid formatting to work/ab1385/a270082/era_corrected
 
 uftp command: 
 uftp cp -r -v -u $UFTP_USER --identity $UFTP_KEY -t8 $UFTP_AUTH_URL/p/data1/slmet/met_data/ecmwf/era5/zarr/era5_y2010_2021_res025.zarr UFTP_DEST

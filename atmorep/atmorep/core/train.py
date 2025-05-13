@@ -231,12 +231,6 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.with_mixed_precision = True
   if not hasattr(cf, 'years_val'):
     cf.years_val = cf.years_test
-
-# Check if field configurations match proj_heads setup
-  print("Field configuration:")
-  print(f"Number of fields: {len(cf.fields)}")
-  print(f"Fields: {[field[0] for field in cf.fields]}")
-  print(f"Coupling heads per field: {cf.coupling_num_heads_per_field}")
     
 
   # any parameter in cf can be overwritten when training is continued, e.g. we can increase the 
@@ -313,79 +307,80 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # ]
 
 # for temp model
+  cf.fields = [
+    [
+      'temperature',  # input
+      [1, 1536, [], 0], 
+      [137], 
+      [12, 2, 4], # nr of tokens
+      [3, 27, 27],  # token size 
+      [0.1, 0.1, 0.1, 0.1], 
+      'local'
+      ],
+      [
+        't2m',  # Name
+        [1, 1024, [], 0],  # Field Properties
+        [0],  # Vertical Levels
+        [12, 6, 12],  # Number of Tokens
+        [3, 9, 9],  # Token Size
+        [0.9, 0.9, 0.1, 0.05],  # Masking and Noising Rates
+        'local'
+    ]
+   ]
+
+  # for 6 field model
+
   # cf.fields = [
   #   [
-  #     'temperature',  # input
-  #     [1, 1536, [], 0], 
-  #     [96, 105, 114, 123, 137], 
-  #     [12, 2, 4], # nr of tokens
-  #     [3, 27, 27],  # token size 
-  #     [0.95, 0.9, 0.1, 0.05], 
-  #     'local'
-  #     ], 
-  #     [
+  #       'velocity_u',  # Name
+  #       [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05] # [ total masking rate, rate masking, rate noising, rate for multi-res distortion]
+  #   ],
+  #   [
+  #       'velocity_v',  # Name 
+  #       [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size 
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'specific_humidity',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'velocity_z',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 3, 6],  # Number of Tokens
+  #       [3, 18, 18],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
+  #   ],
+  #   [
+  #       'temperature',  # Name
+  #       [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]],  # Field Properties
+  #       [96, 105, 114, 123, 137],  # Vertical Levels
+  #       [12, 2, 4],  # Number of Tokens
+  #       [3, 27, 27],  # Token Size
+  #       [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
+  #       'local'  # Norm
+  #   ],
+  #   [
   #       'total_precip',  # Name
   #       [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0],  # Field Properties
   #       [0],  # Vertical Levels
   #       [12, 6, 12],  # Number of Tokens
   #       [3, 9, 9],  # Token Size
-  #       [0.0, 0.0, 0.0, 0.0]  # Masking and Noising Rates
+  #       [0.25,0.9,0.1,0.05 ]# Masking and Noising Rates [0.25,0.9,0.1,0.05]
   #   ]
   # ]
-
-  # for 6 field model
-
-  cf.fields = [
-    [
-        'velocity_u',  # Name
-        [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]],  # Field Properties
-        [96, 105, 114, 123, 137],  # Vertical Levels
-        [12, 3, 6],  # Number of Tokens
-        [3, 18, 18],  # Token Size
-        [0.5, 0.9, 0.2, 0.05] # [ total masking rate, rate masking, rate noising, rate for multi-res distortion]
-    ],
-    [
-        'velocity_v',  # Name 
-        [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]],  # Field Properties
-        [96, 105, 114, 123, 137],  # Vertical Levels
-        [12, 3, 6],  # Number of Tokens
-        [3, 18, 18],  # Token Size 
-        [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
-    ],
-    [
-        'specific_humidity',  # Name
-        [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]],  # Field Properties
-        [96, 105, 114, 123, 137],  # Vertical Levels
-        [12, 3, 6],  # Number of Tokens
-        [3, 18, 18],  # Token Size
-        [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
-    ],
-    [
-        'velocity_z',  # Name
-        [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]],  # Field Properties
-        [96, 105, 114, 123, 137],  # Vertical Levels
-        [12, 3, 6],  # Number of Tokens
-        [3, 18, 18],  # Token Size
-        [0.5, 0.9, 0.2, 0.05]  # Masking and Noising Rates
-    ],
-    [
-        'temperature',  # Name
-        [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]],  # Field Properties
-        [96, 105, 114, 123, 137],  # Vertical Levels
-        [12, 2, 4],  # Number of Tokens
-        [3, 27, 27],  # Token Size
-        [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-        'local'  # Norm
-    ],
-    [
-        'total_precip',  # Name
-        [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0],  # Field Properties
-        [0],  # Vertical Levels
-        [12, 6, 12],  # Number of Tokens
-        [3, 9, 9],  # Token Size
-        [0.25,0.9,0.1,0.05 ]# Masking and Noising Rates [0.25,0.9,0.1,0.05]
-    ]
-  ]
   #cf.fields_prediction = [ ["velocity_u", 0.0], ["velocity_v", 0.0], ["temperature", 1.0] ]
 
   cf.fields_prediction = [
@@ -393,20 +388,24 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     # ["velocity_v", 0.0], 
     # ["specific_humidity", 0.0], 
     # ["velocity_z", 0.0], 
-    # ["temperature", 0.0], 
-    # ["total_precip", 1.0]
-    # ]
+     ["temperature", 0.0], 
+     ["t2m", 1.0]
+     ]
   
-  ["velocity_u",0.225],["velocity_v",0.225],["specific_humidity",0.15],["velocity_z",0.1],["temperature",0.2],["total_precip",0.1]
-  ]
+  #["velocity_u",0.225],["velocity_v",0.225],["specific_humidity",0.15],["velocity_z",0.1],["temperature",0.2],["total_precip",0.1]
+  # ["total_precip", 1.0]
+  # ]
 
-  #cf.fields_targets = ["total_precip"]
+  
+
+  cf.fields_targets = ["t2m"]
+  cf.losses = ['mse_ensemble', 'stats'] # mse, mse_ensemble, stats, crps, weighted_mse
 
   cf.batch_size = 96
   cf.num_loader_workers = 5
   cf.num_samples_per_epoch = 480
   cf.num_samples_validate = 96
-  cf.num_epochs = 50
+  cf.num_epochs = 5
   
   if not hasattr(cf, 'batch_size_validation'):
     cf.batch_size_validation = 1
@@ -414,15 +413,25 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.model_log_frequency = 256 #save checkpoint every X batches
   if not hasattr(cf, 'forecast_num_tokens'):
     cf.forecast_num_tokens = 2 #  only needed / used for BERT_strategy 'forecast'
+  
+  # Check if field configurations match proj_heads setup
+  print("Field configuration:")
+  print(f"Number of fields: {len(cf.fields)}")
+  print(f"Fields: {[field[0] for field in cf.fields]}")
+  print(f"Coupling heads per field: {cf.coupling_num_heads_per_field}")
 
-  cf.BERT_strategy = 'forecast'
-  cf.years_train = list( range(2010, 2020))
+  cf.BERT_strategy = 'forecast' #BERT
+  cf.years_train = [2021]
+  #cf.years_train = list( range(2010, 2020))
   #cf.years_train = [2010, 2011, 2013, 2014, 2015, 2017, 2018, 2019]		
-  cf.years_test = [2020]
-  cf.years_val = [2020] 
+  cf.years_test = [2021]
+  cf.years_val = [2021] 
   cf.geo_range_sampling = [[ 70., 90.], [ 0., 360.]]
  
-  cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
+  #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
+  cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8_with_t2m.zarr'
+  #cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8.zarr'
+
   #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr'
   #cf.file_path = '/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr'
   #cf.file_path = "/work/ab1412/atmorep/data/era_corrected/T2M_y2010-2021_no_leap_res025.zarr"
@@ -458,7 +467,7 @@ if __name__ == '__main__':
     # 3qou60es - temperature
     # 1v4qk0qx - forecasting 3 hours 
     # wc5e2i3t - multi6 
-    wandb_id, epoch, epoch_continue = 'wc5e2i3t', 0, 1 
+    wandb_id, epoch, epoch_continue = '3qou60es', 0, 0 
     Trainer = Trainer_BERT   #running forecast
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 
