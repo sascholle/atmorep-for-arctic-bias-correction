@@ -26,8 +26,8 @@ matplotlib.rcParams['axes.linewidth'] = 0.1
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
-model_id = '4dropnio'
-field = 'vorticity'
+model_id = 'tzs2378j'
+field = 'total_precip'
 
 store = zarr.ZipStore( f'results/id{model_id}/results_id{model_id}_epoch00000_pred.zarr')
 ds = zarr.group( store=store)
@@ -64,3 +64,10 @@ for k in range( 3) :
   fig.colorbar( im, cax=axins, orientation="horizontal")
   plt.savefig( f'/results/id{model_id}/example_{k:03d}.png')
   plt.close()
+
+  '''
+source /work/ab1412/atmorep/pyenv/bin/activate
+module load python3
+python /work/ab1412/atmorep/plotting/plot_forecast.py
+
+'''

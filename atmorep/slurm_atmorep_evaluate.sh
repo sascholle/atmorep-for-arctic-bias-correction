@@ -3,8 +3,9 @@
 #SBATCH --partition=gpu
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=40
-#SBATCH --gres=gpu:2
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=34
+#SBATCH --gres=gpu:4
 #SBATCH --chdir=.
 #SBATCH --output=logs/atmorep-%x.%j.out
 #SBATCH --error=logs/atmorep-%x.%j.err

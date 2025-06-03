@@ -64,7 +64,7 @@ class Trainer_Base() :
           break
     self.loss_weights = self.loss_weights.to( self.device_out)
 
-    self.MSELoss = torch.nn.MSELoss()
+    #self.MSELoss = torch.nn.MSELoss()
 
     # transformation for token infos
     if hasattr( cf, 'token_infos_transformation') :
@@ -81,6 +81,23 @@ class Trainer_Base() :
         os.makedirs( directory)
 
   ###################################################
+##### IVE ADDED THIS ####
+  def MSELoss(self, x, target=None):
+      """MSE loss that ignores NaN values"""
+      if target is None:
+        return torch.tensor(0., device=x.device)
+  
+      # Create mask for valid (non-NaN) values
+      valid_mask = ~torch.isnan(target)
+      # If we have any valid points, compute loss on those only
+      if torch.any(valid_mask):
+        return torch.mean((x[valid_mask] - target[valid_mask]) ** 2)
+      else:
+          # If all targets are NaN, return zero loss
+        return torch.tensor(0., device=x.device)
+      
+  ###################################################
+
   def create( self, load_embeds=True) :
     net = AtmoRep( self.cf) 
     self.model = AtmoRepData( net)
@@ -501,15 +518,15 @@ class Trainer_Base() :
         kcrps_loss = torch.mean( kernel_crps( target,torch.transpose( pred[2], 1, 0)))
         losses['kernel_crps'].append( kcrps_loss)
     
-    #TODO: uncomment it and add it when running in debug mode
-    # field_losses = ""
-    # for ifield, field in enumerate(cf.fields):
-    #   ifield_loss = 0
-    #   for key in losses :  
-    #     ifield_loss += losses[key][ifield].to(self.device_out)
-    #   ifield_loss /= len(losses.keys())
-    #   field_losses +=  f"{field[0]}: {ifield_loss}; "
-    # print(field_losses, flush = True)
+  #  TODO: uncomment it and add it when running in debug mode
+    field_losses = ""
+    for ifield, field in enumerate(cf.fields):
+      ifield_loss = 0
+      for key in losses :  
+        ifield_loss += losses[key][ifield].to(self.device_out)
+      ifield_loss /= len(losses.keys())
+      field_losses +=  f"{field[0]}: {ifield_loss}; "
+    print(field_losses, flush = True)
           
     loss = torch.tensor( 0., device=self.device_out)
     tot_weight = torch.tensor( 0., device=self.device_out)
@@ -546,7 +563,43 @@ class Trainer_BERT( Trainer_Base) :
     self.pre_batch = functools.partial( prepare_batch_BERT_multifield, self.cf, self.rngs, 
                                                           self.cf.fields, self.cf.BERT_strategy )
 
-  ###################################################
+  ################################################### 
+  # IVE ADDED THIS #####
+  def create_sparse_target_mask(self, target_field='total_precip', sparsity=0.7):
+    """Creates a sparsity mask for the target field by replacing masked values with NaN
+    
+    Args:
+        target_field: Name of the field to add sparsity to
+        sparsity: Fraction of data to mask (0-1)
+    """
+    # Find the field index
+    field_idx = None
+    for i, field in enumerate(self.cf.fields):
+        if field[0] == target_field:
+            field_idx = i
+            break
+            
+    if field_idx is not None and field_idx in self.fields_prediction_idx:
+        # Get the target index in the prediction list
+        target_idx = self.fields_prediction_idx.index(field_idx)
+        
+        # Create random sparsity mask
+        target = self.targets[target_idx]
+        mask_shape = target.shape
+        mask = torch.rand(mask_shape, device=target.device) > sparsity
+        
+        # Create a new tensor with NaN values where mask is False
+        sparse_target = target.clone()
+        sparse_target[~mask] = float('nan')
+        
+        # Store the sparse target
+        self.targets[target_idx] = sparse_target
+        
+        print(f"Created sparse mask for {target_field} with {(1-sparsity)*100:.1f}% data retained")
+
+
+  ####################################################
+
   def prepare_batch( self, xin) :
     '''Move data to device and some additional final preprocessing before model eval'''
 
@@ -572,6 +625,16 @@ class Trainer_BERT( Trainer_Base) :
     self.targets = []
     for ifield in self.fields_prediction_idx :
       self.targets.append( targets[ifield].to( devs[cf.fields[ifield][1][3]], non_blocking=True ))
+
+    ######## IVE ADDED THIS
+
+    # Create sparse mask for precipitation data if it's in prediction targets
+    if hasattr(self.cf, 'sparse_target') and self.cf.sparse_target:
+        target_field = self.cf.sparse_target_field if hasattr(self.cf, 'sparse_target_field') else 'total_precip'
+        sparsity = self.cf.sparse_target_sparsity if hasattr(self.cf, 'sparse_target_sparsity') else 0.7
+        self.create_sparse_target_mask(target_field=target_field, sparsity=sparsity)
+
+    ##########
 
     # idxs of masked tokens
     tmi_out = [ ]
@@ -860,3 +923,5 @@ class Trainer_BERT( Trainer_Base) :
     levels = [[np.array(l) for l in field[2]] for field in cf.fields]
     write_attention(cf.wandb_id, epoch,
                     bidx, levels, attn_out,  coords_b )
+
+

@@ -143,8 +143,8 @@ def init_torch() :
 
   use_cuda = torch.cuda.is_available()
   if not use_cuda :
-    return torch.device( 'cpu')
-
+   return torch.device( 'cpu')
+ 
   num_accs_per_task = torch.cuda.device_count()
   if num_accs_per_task == '1' :
     devices = ['cuda']
@@ -155,6 +155,22 @@ def init_torch() :
   torch.backends.cuda.matmul.allow_tf32 = True
 
   return devices 
+
+##### ADDED THIS ''''''
+  # With --gpus-per-task=1, SLURM sets CUDA_VISIBLE_DEVICES to a single GPU per process,
+  # so cuda:0 is always the correct device.
+  # torch.set_printoptions( linewidth=120)
+
+  # use_cuda = torch.cuda.is_available()
+  # if not use_cuda :
+  #  device = torch.device( 'cpu')
+  # else:
+  #   device = torch.device( 'cuda')
+  # logger.info(f'Using device : {device}')
+
+  # torch.backends.cuda.matmul.allow_tf32 = True
+
+  # return device
 
 ####################################################################################################
 def setup_ddp( with_ddp = True) :

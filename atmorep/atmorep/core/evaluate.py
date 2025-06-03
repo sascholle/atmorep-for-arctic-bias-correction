@@ -19,8 +19,11 @@ import time
 
 if __name__ == '__main__':
 
+  model_id = 'wc5e2i3t' # 6 field OOTB
+  #model_id = 'tzs2378j'  # Bert Arctic, target precip and no masking of other fields.
+
   # arXiv 2023: models for individual fields
-  model_id = '4nvwbetz'     # vorticity
+  #model_id = '4nvwbetz'     # vorticity
   #model_id = 'oxpycr7w'     # divergence
   #model_id = '1565pb1f'     # specific_humidity
   #model_id = '3kdutwqb'     # total precip
@@ -45,7 +48,7 @@ if __name__ == '__main__':
   #Add 'attention' : True to options to store the attention maps. NB. supported only for single field runs. 
   
   # BERT masked token model
-  #mode, options = 'BERT', {'years_val' : [2021], 'num_samples_validate' : 128, 'with_pytest' : True}
+  mode, options = 'BERT', {'years_val' : [2021], 'num_samples_validate' : 128, 'with_pytest' : True}
 
   # BERT forecast mode
   #mode, options = 'forecast', {'forecast_num_tokens' : 2, 'num_samples_validate' : 128, 'with_pytest' : True }
@@ -67,14 +70,16 @@ if __name__ == '__main__':
   #                                     'forecast_num_tokens' : 2,
   #                                     'with_pytest' : True }
 
-  mode, options = 'global_forecast', { 'fields[0][2]' : [137],
-                                     'dates' : [ [2021, 9, 26, 12] ],
-                                     'token_overlap' : [0, 0],
-                                     'forecast_num_tokens' : 1, 
-                                     'attention' : False}
+  #mode, options = 'global_forecast', { 'fields[0][2]' : [137],
+                                    #  'dates' : [ [2021, 9, 26, 12] ],
+                                    #  'token_overlap' : [0, 0],
+                                    #  'forecast_num_tokens' : 1, 
+                                    #  'attention' : False}
 
   # file_path = '/gpfs/scratch/ehpc03/era5_y1979_2021_res025_chunk8.zarr'
-  file_path= '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
+  #file_path= '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
+  file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
+
   
   now = time.time()
   Evaluator.evaluate( mode, model_id, file_path, options)

@@ -3,9 +3,6 @@ Enter SSH:AWI
 source /work/ab1412/atmorep/pyenv/bin/activate
 module load python3
 
-pip install -e . # really? everytime? 
-
-
 sbatch slurm_atmorep.sh
 sbatch slurm_atmorep_evaluate.sh
 watch squeue --me
