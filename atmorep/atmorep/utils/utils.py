@@ -156,7 +156,37 @@ def init_torch() :
 
   return devices 
 
-##### ADDED THIS ''''''
+##### ADDED THIS ########
+
+# this works to create other IDs! 
+# but causes the length of the devices array to be 1, which causes problems with max length devices 
+# # 0:     assert field_info[1][3] < len(devices), 'Per field device id larger than max devices'
+
+    # if torch.cuda.is_available():
+    #     local_rank = int(os.environ.get("SLURM_LOCALID", 0))
+    #     torch.cuda.set_device(local_rank)
+    #     device = f'cuda:{local_rank}'
+    #     logger.info(f'Using device: {device}')
+    #     return [device]  # Return array with single device
+    # else:
+    #     return ['cpu']
+
+# this also causes duplicate gpu error to return 0: Duplicate GPU detected : rank 0 and rank 1 both on CUDA device 3000
+
+    # # Use only the GPU corresponding to local rank
+    # if torch.cuda.is_available():
+    #   # With CUDA_VISIBLE_DEVICES=${SLURM_LOCALID}, each process will only see one GPU as cuda:0
+
+    #   torch.cuda.set_device(0)  # Always use device 0 (which is the only one visible to this process)
+    #   logger.info(f'Using device : cuda:0')
+    #   return ['cuda:0']  # Return a list with single device
+    # else:
+    #     logger.info('Using device : cpu')
+    #     return ['cpu']
+
+
+# this causes 0: TypeError: object of type 'torch.device' has no len()
+
   # With --gpus-per-task=1, SLURM sets CUDA_VISIBLE_DEVICES to a single GPU per process,
   # so cuda:0 is always the correct device.
   # torch.set_printoptions( linewidth=120)
@@ -171,6 +201,34 @@ def init_torch() :
   # torch.backends.cuda.matmul.allow_tf32 = True
 
   # return device
+
+  # if torch.cuda.is_available():
+  #     # Get the local rank from SLURM_LOCALID or default to 0
+  #     local_rank = int(os.environ.get("SLURM_LOCALID", "0"))
+      
+  #     # Check which devices are available
+  #     device_count = torch.cuda.device_count()
+  #     print(f"Rank {local_rank} sees {device_count} CUDA devices")
+      
+  #     # Ensure we use the right device
+  #     if device_count > local_rank:
+  #         # Use the device matching this process's local rank
+  #         torch.cuda.set_device(local_rank)
+  #         device = f"cuda:{local_rank}"
+  #     else:
+  #         # Fallback - just use the first device
+  #         torch.cuda.set_device(0)
+  #         device = "cuda:0"
+          
+  #     # Debug info
+  #     print(f"Rank {local_rank} using device {device} with properties:")
+  #     print(f"  Name: {torch.cuda.get_device_name(torch.cuda.current_device())}")
+      
+  #     logger.info(f"Using device : {device}")
+  #     return [device]
+  # else:
+  #     logger.info("Using device : cpu")
+  #     return ["cpu"]
 
 ####################################################################################################
 def setup_ddp( with_ddp = True) :
@@ -271,14 +329,14 @@ def get_model_filename( model = None, model_id = '', epoch=-2, with_model_path =
 
   mpath = 'id{}'.format(model_id) if with_model_path else ''
 
-  # if epoch > -2 :
-  #   #model_file = Path( config.path_results, 'models/id{}/{}_id{}_epoch{}.mod'.format(
-  #   #                                                       model_id, name, model_id, epoch))
-  #   model_file = Path( config.path_models, mpath, '{}_id{}_epoch{}.mod'.format(
-  #                                                          name, model_id, epoch))
-  #   print( f'Model file: {model_file}')
-  # else :
-  model_file = Path( config.path_models, mpath, '{}_id{}.mod'.format( name, model_id))
+  if epoch > -2 :
+    #model_file = Path( config.path_results, 'models/id{}/{}_id{}_epoch{}.mod'.format(
+    #                                                       model_id, name, model_id, epoch))
+    model_file = Path( config.path_models, mpath, '{}_id{}_epoch{}.mod'.format(
+                                                           name, model_id, epoch))
+    print( f'Model file: {model_file}')
+  else :
+    model_file = Path( config.path_models, mpath, '{}_id{}.mod'.format( name, model_id))
       
   return model_file
 

@@ -89,7 +89,9 @@ class Evaluator( Trainer_BERT) :
       print( 'Running Evaluate.evaluate with mode =', mode)
 
     # if not hasattr( cf, 'num_loader_workers'):
-    cf.num_loader_workers = 12 #cf.loader_num_workers
+    #cf.num_loader_workers = 12 #cf.loader_num_workers
+    cf.num_loader_workers = 5 # CHANGED
+
     cf.rng_seed = None 
     
     #backward compatibility
@@ -97,7 +99,8 @@ class Evaluator( Trainer_BERT) :
       cf.n_size = [36, 0.25*9*6, 0.25*9*12]
       #cf.n_size = [36, 0.25*27*2, 0.25*27*4] 
     if not hasattr(cf, 'num_samples_per_epoch'):
-      cf.num_samples_per_epoch = 1024
+      #cf.num_samples_per_epoch = 1024
+      cf.num_samples_per_epoch = 480 # CHANGED
     if not hasattr(cf, 'with_mixed_precision'):
       cf.with_mixed_precision = False
     if not hasattr(cf, 'with_pytest'):

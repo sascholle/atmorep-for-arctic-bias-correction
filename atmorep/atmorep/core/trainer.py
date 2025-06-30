@@ -64,7 +64,7 @@ class Trainer_Base() :
           break
     self.loss_weights = self.loss_weights.to( self.device_out)
 
-    #self.MSELoss = torch.nn.MSELoss()
+    self.MSELoss = torch.nn.MSELoss()
 
     # transformation for token infos
     if hasattr( cf, 'token_infos_transformation') :
@@ -82,19 +82,19 @@ class Trainer_Base() :
 
   ###################################################
 ##### IVE ADDED THIS ####
-  def MSELoss(self, x, target=None):
-      """MSE loss that ignores NaN values"""
-      if target is None:
-        return torch.tensor(0., device=x.device)
+  # def MSELoss(self, x, target=None):
+  #     """MSE loss that ignores NaN values"""
+  #     if target is None:
+  #       return torch.tensor(0., device=x.device)
   
-      # Create mask for valid (non-NaN) values
-      valid_mask = ~torch.isnan(target)
-      # If we have any valid points, compute loss on those only
-      if torch.any(valid_mask):
-        return torch.mean((x[valid_mask] - target[valid_mask]) ** 2)
-      else:
-          # If all targets are NaN, return zero loss
-        return torch.tensor(0., device=x.device)
+  #     # Create mask for valid (non-NaN) values
+  #     valid_mask = ~torch.isnan(target)
+  #     # If we have any valid points, compute loss on those only
+  #     if torch.any(valid_mask):
+  #       return torch.mean((x[valid_mask] - target[valid_mask]) ** 2)
+  #     else:
+  #         # If all targets are NaN, return zero loss
+  #       return torch.tensor(0., device=x.device)
       
   ###################################################
 
@@ -244,10 +244,61 @@ class Trainer_Base() :
     for batch_idx in range( model.len( NetMode.train)) :
       
       batch_data = self.model.next()
+
+
       _, _, _, tmksd_list, weight_list = batch_data[0]
       with torch.autocast(device_type='cuda', dtype=torch.float16, enabled=cf.with_mixed_precision):
         batch_data = self.prepare_batch( batch_data)
         preds, _ = self.model_ddp( batch_data)
+
+
+        ######## IVE ADDED THIS #########
+
+        # Print first input batch of each epoch
+        if batch_idx == 0:
+            print(f"[DEBUG] INPUT BATCH")
+            print(f"Epoch {epoch}, first input batch shapes / sample data:")
+            for i, field_info in enumerate(cf.fields):
+                input_data, tok_info = batch_data[i]  # input_data is the tensor, tok_info is token_infos
+                print(f"  └─ Field: '{field_info[0]}' shape: {input_data.shape}")
+                print(f"     first 25 values: {input_data.flatten()[:25]}")
+
+
+        # Print an example of the sparse-masked precipitation data 
+        # only once per epoch (i.e., batch_idx == 0)
+        if batch_idx == 0:
+            precip_field = 'total_precip'
+            # Find index of the precip field in prediction targets
+            field_idx = None
+            for i, field in enumerate(self.cf.fields):
+                if field[0] == precip_field:
+                    field_idx = i
+                    break
+
+            if field_idx is not None and field_idx in self.fields_prediction_idx:
+                target_idx = self.fields_prediction_idx.index(field_idx)
+                target_data = self.targets[target_idx].detach().cpu()  # shape: [batch, level, ...]
+
+                # Print target shape and first 243 elements, just as an example
+                print(f"[DEBUG] TARGET BATCH")
+                print(f"Epoch {epoch}, batch {batch_idx} - Sparse-masked '{precip_field}' shape target data: {target_data.shape}")
+                print(f"[DEBUG] First 243 batch values:\n{target_data.flatten()[:243]}")
+
+
+        # Print first predictions of each epoch
+        if batch_idx == 0:
+            print(f"[DEBUG] PREDICTIONS TRAIN BATCH")
+            print(f"Epoch {epoch}, first predictions sample:")
+            for p_idx, field_idx in enumerate(self.fields_prediction_idx):
+                field_name = cf.fields[field_idx][0]
+                print(f"  └─ Predictions for '{field_name}' shape: {preds[p_idx][0].shape}")
+                print(f"     first 25 pred values: {preds[p_idx][0].flatten()[:25]}")
+
+
+
+
+        ###########################
+
         loss, mse_loss, losses = self.loss( preds, batch_idx, tmksd_list, weight_list)
       
       self.grad_scaler.scale(loss).backward()
@@ -413,11 +464,35 @@ class Trainer_Base() :
         
         # store detailed results on current test set for book keeping
         if cf.par_rank < cf.log_test_num_ranks :
+
           log_preds = [[p.detach().clone().cpu() for p in pred] for pred in preds]
           self.log_validate( epoch, it, log_sources, log_preds)
           if cf.attention:
             self.log_attention( epoch, it, atts)
-                             
+
+          ######## I'VE ADDED THIS ########
+          
+          # after log_validate call, print a small subset of one predicted field
+          # after log_validate call, print a small subset of one predicted field
+          if it == 0:  # only print once
+            # Find total_precip field index
+            precip_idx = None
+            for idx, field_idx in enumerate(self.fields_prediction_idx):
+                if self.cf.fields[field_idx][0] == 'total_precip':
+                    precip_idx = idx
+                    break
+          
+            if precip_idx is not None:
+                field_name = 'total_precip'
+                pred_data = log_preds[precip_idx][0]  # the predicted mean
+                print(f"[DEBUG] PREDICTIONS VALIDATION BATCH")
+                print(f"Normalised validation prediction values for '{field_name}' with shape: {pred_data.shape}")
+                print(f"         min = {pred_data.min():.3f}, max = {pred_data.max():.3f}, mean = {pred_data.mean():.3f}")
+                print(f"         sample (first 20): {pred_data.flatten()[:20]}")
+                    
+          ################################################
+
+          
     # average over all nodes
     total_loss /= test_len * len(self.cf.fields_prediction)
     total_losses /= test_len
@@ -519,14 +594,14 @@ class Trainer_Base() :
         losses['kernel_crps'].append( kcrps_loss)
     
   #  TODO: uncomment it and add it when running in debug mode
-    field_losses = ""
-    for ifield, field in enumerate(cf.fields):
-      ifield_loss = 0
-      for key in losses :  
-        ifield_loss += losses[key][ifield].to(self.device_out)
-      ifield_loss /= len(losses.keys())
-      field_losses +=  f"{field[0]}: {ifield_loss}; "
-    print(field_losses, flush = True)
+    # field_losses = ""
+    # for ifield, field in enumerate(cf.fields):
+    #   ifield_loss = 0
+    #   for key in losses :  
+    #     ifield_loss += losses[key][ifield].to(self.device_out)
+    #   ifield_loss /= len(losses.keys())
+    #   field_losses +=  f"{field[0]}: {ifield_loss}; "
+    # print(field_losses, flush = True)
           
     loss = torch.tensor( 0., device=self.device_out)
     tot_weight = torch.tensor( 0., device=self.device_out)
@@ -610,7 +685,27 @@ class Trainer_BERT( Trainer_Base) :
     # xin[0] since BERT does not have targets
     (sources, token_infos, targets, fields_tokens_masked_idx_list, _) = xin[0]
     (self.sources_idxs, self.sources_info) = xin[2]
+
+
+
+    ######## IVE ADDED THIS #########
+
+    # MASK INPUT TOKENS
+    if hasattr(self.cf, 'mask_input_field') and self.cf.mask_input_field:
+        field_to_mask = self.cf.mask_input_field if isinstance(self.cf.mask_input_field, str) else 'total_precip'
+        mask_value = float('nan') if not hasattr(self.cf, 'mask_input_value') else self.cf.mask_input_value
+        
+        for i, field_info in enumerate(cf.fields):
+            if field_info[0] == field_to_mask:
+                # Create a mask for the entire field
+                sources[i].fill_(mask_value)
+                #print(f"[CHECK] Masked all input tokens for field '{field_to_mask}'")
+                break
     
+    ##############
+
+
+
     # network input
     batch_data = [ ( sources[i].to( devs[ cf.fields[i][1][3] ], non_blocking=True), 
                     self.tok_infos_trans(token_infos[i]).to( self.devices[0], non_blocking=True)) 
@@ -628,7 +723,7 @@ class Trainer_BERT( Trainer_Base) :
 
     ######## IVE ADDED THIS
 
-    # Create sparse mask for precipitation data if it's in prediction targets
+    # Create sparse mask for a target field data, precip is default 
     if hasattr(self.cf, 'sparse_target') and self.cf.sparse_target:
         target_field = self.cf.sparse_target_field if hasattr(self.cf, 'sparse_target_field') else 'total_precip'
         sparsity = self.cf.sparse_target_sparsity if hasattr(self.cf, 'sparse_target_sparsity') else 0.7
@@ -636,6 +731,7 @@ class Trainer_BERT( Trainer_Base) :
 
     ##########
 
+  
     # idxs of masked tokens
     tmi_out = [ ]
     for i,tmi in enumerate(fields_tokens_masked_idx_list) :
@@ -730,6 +826,12 @@ class Trainer_BERT( Trainer_Base) :
           source[bidx,vidx] = denormalize( source[bidx,vidx], normalizer, dates, year_base)
           target[bidx,vidx] = denormalize( target[bidx,vidx], normalizer, dates_t, year_base)
 
+        # # DENORMALISED Printing first 20 denormalized source/target values for first batch/level
+        #   if batch_idx == 0 and bidx == 0 and vidx == 0 and field_info[0] == 'total_precip':
+        #       print(f"\n[DEBUG] Log Validate Forecast Denormalized values for {field_info[0]}:")
+        #       print(f"Source values (first 20):\n{source[bidx,vidx].flatten()[:20]}")
+        #       print(f"Target values (first 20):\n{target[bidx,vidx].flatten()[:20]}")
+
         coords_b += [[dates, 90.-lats, lons, dates_t]]
 
       # append
@@ -760,6 +862,14 @@ class Trainer_BERT( Trainer_Base) :
           normalizer, year_base = self.model.normalizer( self.fields_prediction_idx[fidx], vidx, lats_idx, lons_idx)
           pred[bidx,vidx] = denormalize( pred[bidx,vidx], normalizer, dates_t, year_base)
           ensemble[bidx,:,vidx] = denormalize(ensemble[bidx,:,vidx], normalizer, dates_t, year_base)
+        
+        #######################
+
+          # # DENORMALISED: Print first 20 denormalized prediction values for first batch/level
+          # if bidx == 0 and vidx == 0 and fidx == 0:
+          #     print(f"Prediction values (first 20):\n{pred[bidx,vidx].flatten()[:20]}")
+
+        #################################
 
       # append
       preds_out.append( [fn[0], pred])

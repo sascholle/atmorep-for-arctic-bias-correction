@@ -26,8 +26,11 @@ matplotlib.rcParams['axes.linewidth'] = 0.1
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
-model_id = 'tzs2378j'
+model_id = '8e9sltzr' 
 field = 'total_precip'
+
+# 4dropnio - OG Vorticity 
+# Wandb run: atmorep-wvwb4fxy-17555290 -   
 
 store = zarr.ZipStore( f'results/id{model_id}/results_id{model_id}_epoch00000_pred.zarr')
 ds = zarr.group( store=store)

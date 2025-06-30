@@ -20,6 +20,8 @@ import time
 if __name__ == '__main__':
 
   model_id = 'wc5e2i3t' # 6 field OOTB
+  #model vkfqvtsq - fine-tuned baseline forecast Arctic 
+
   #model_id = 'tzs2378j'  # Bert Arctic, target precip and no masking of other fields.
 
   # arXiv 2023: models for individual fields
@@ -48,7 +50,7 @@ if __name__ == '__main__':
   #Add 'attention' : True to options to store the attention maps. NB. supported only for single field runs. 
   
   # BERT masked token model
-  mode, options = 'BERT', {'years_val' : [2021], 'num_samples_validate' : 128, 'with_pytest' : True}
+  mode, options = 'BERT', {'years_val' : [2021], 'num_samples_validate' : 96, 'with_pytest' : True}
 
   # BERT forecast mode
   #mode, options = 'forecast', {'forecast_num_tokens' : 2, 'num_samples_validate' : 128, 'with_pytest' : True }

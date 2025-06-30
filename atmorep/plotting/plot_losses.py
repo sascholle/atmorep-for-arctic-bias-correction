@@ -2,8 +2,36 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 import numpy as np
 import re
+
+'''
+source /work/ab1412/atmorep/pyenv/bin/activate
+python /work/ab1412/atmorep/plotting/plot_losses.py
+
+'''
+
  
-output_id =  17413071
+output_id =  17850993 
+
+## Forecast and BERT Baseline search
+
+# 17850993 - BERT and plan mse (not ensemble)
+# 17831587 - BERT and only MSE, 480 samples and 10 hours to check training 
+# 17828425 - BERT and only MSE, 1024 samples per epoch - weird training plotting...
+# 17824426 - BERT and only MSE as the paper has
+
+# 17767562 - BERT and global like 17720794
+# 17767305 - forecast and global like 17720895
+
+# 17720895 - forecast baseline global, 128 epochs 
+# 17720794 - bert baseline global, 128 epochs
+# 17720340 - precip target forecast baseline global, 128 epochs 
+# 17714187 - precip target forecast baseline global with updated config to match old models as best as possible (only prediction rations changed)
+# 17698436 - precip target forecast baseline global no target or input masking, normal prediction ratios
+# 17691529 - precip target forecast baseline arctic, no target or input masking, normal prediction ratios
+
+## Forecast Arctic
+# 17555479 - 0's input double check 
+# 17546671 - 0's for input in precip
 # 17398874 - 0%
 # 17398873 - 10%
 # 17413071 - 50%
@@ -15,7 +43,7 @@ output_id =  17413071
 # 17307463 - baseline Forecast, Arctic, Mse and stats, fully masked precip though this shouldnt change anything. 
 # 17307451 - Baseline stats and mse for Forecast arctic with minimal masking (hopefully same as above masking doesn't change anything)
 
-# BERT ERA
+## BERT ERA
 # 17254410 - Bert Arctic, target precip and no masking of other fields. 
 # 17254035 - OOTB, old MSE 4th chech 
 # 17191348 - OOTB, old MSE as well 3rd check 
@@ -24,7 +52,7 @@ output_id =  17413071
 # 17159066 - total default, no Arctic? But still sparsity setting - could be messing up precip
 # 17138477 - Bert local, arctic, default masking and prediction ratios MSE and Ensemble - Should be the absolute baseline for BERT for 2021
 # 17138473 - Bert local, default masking and prediction ratios MSE only
-# 17133443 - Bert local, default masking, precip rediction and target 
+# 17133443 - Bert local, default masking, precip prediction and target 
 # 17116108 - Bert and global temp 
 # 17116097 - Bert and local temp 
 # 17112711 - Forecast and local temp
@@ -126,6 +154,11 @@ def extract_config_parameters(file_path):
         if geo_range_match:
             params['geo_range_sampling'] = geo_range_match.group(1).strip()
 
+        # add if sparse_target is set to true or false
+        sparse_target_match = re.search(r'0: sparse_target : (.*?)$', content, re.MULTILINE)
+        if sparse_target_match:
+            params['sparse_target'] = sparse_target_match.group(1).strip()
+
         # add sparse_target_field
         sparse_target_match = re.search(r'0: sparse_target_field : (.*?)$', content, re.MULTILINE)
         if sparse_target_match:
@@ -135,6 +168,16 @@ def extract_config_parameters(file_path):
         sparse_sparsity_match = re.search(r'0: sparse_target_sparsity : (.*?)$', content, re.MULTILINE)
         if sparse_sparsity_match:
             params['sparse_target_sparsity'] = sparse_sparsity_match.group(1).strip()
+
+        # add mask input field 
+        mask_input_field_match = re.search(r'0: mask_input_field : (.*?)$', content, re.MULTILINE)
+        if mask_input_field_match:  
+            params['mask_input_field'] = mask_input_field_match.group(1).strip()
+
+        # add mask input value
+        mask_input_value_match = re.search(r'0: mask_input_value : (.*?)$', content, re.MULTILINE)
+        if mask_input_value_match:
+            params['mask_input_value'] = mask_input_value_match.group(1).strip()            
         
     return params
 
@@ -268,6 +311,37 @@ ax.set_axisbelow(True)
 # Add text box for hyperparameters
 fig.text(0.93, 0.13, param_text, fontsize=12, bbox=dict(facecolor='lightblue', alpha=0.8))
 
+
+# Calculate mean values of variables (excluding first 10 values if requested)
+# Add this section
+means = {}
+variables = ["velocity_u", "velocity_v", "velocity_z", "temperature", "specific_humidity", "total_precip", "total_loss"]
+data = {
+    "velocity_u": u_values,
+    "velocity_v": v_values,
+    "velocity_z": z_values,
+    "temperature": temp_values,
+    "specific_humidity": q_values,
+    "total_precip": precip_values,
+    "total_loss": total_loss_values
+}
+
+# Calculate means
+for var_name in variables:
+    if var_name in data:
+        means[var_name] = np.mean(data[var_name])
+
+# Create mean values text
+mean_text = "Mean Values:\n"
+for var, val in means.items():
+    mean_text += f"{var}: {val:.4f}\n"
+
+# Add text box with mean values
+props = dict(boxstyle='round', facecolor='white', alpha=0.7)
+ax.text(0.02, 0.98, mean_text, transform=ax.transAxes, fontsize=9,
+        verticalalignment='top', bbox=props)
+
+
 # Adjust layout to make room for the text box
 #plt.subplots_adjust(right=0.75)
 
@@ -286,7 +360,7 @@ ax.plot(epochs_val, temp_values, label='Temperature Loss', color='pink')
 training_x = [e + (b-1)/5 for e, b in zip(training_loss_epochs, training_batch_indices)]  # adjust denominator if not 5 batches/epoch
 ax.plot(training_x, training_loss_values, marker='o', label='Training Grad Loss', color='black', linewidth=1,linestyle='--', markersize=2)
 ax.plot(training_x, training_loss_mse, marker='o', label='Training MSE', color='gray', linewidth=1, linestyle='--', markersize=2)
-#ax.plot(training_x, training_loss_stddev, 'o-', label='Training Stddev', color='brown', markersize=3)
+ax.plot(training_x, training_loss_stddev, 'o-', label='Training Stddev', color='lightgray', markersize=3)
 
 # Add labels and title
 ax.set_xlabel('Epoch', fontsize=18)
@@ -295,7 +369,11 @@ ax.set_ylabel('Loss', fontsize=18)
 ax.set_title(f'AtmoRep Validation Losses over Epochs (Run ID: {output_id})', fontsize=23)
 ax.legend(loc='upper right', fontsize=12)
 
-ax.set_ylim(0,3)
+
+
+#ax.set_ylim(0,1)
+
+
 ax.xaxis.set_minor_locator(MultipleLocator(1))  # or 1 for epochs
 ax.tick_params(axis='x', which='minor', length=5)  # adjust length as needed
 ax.tick_params(axis='x', which='minor', labelbottom=False)  # hide minor tick labels
@@ -307,8 +385,3 @@ plt.close(fig)
 
 print(f"Plot saved as {output_file}")
 
-'''
-source /work/ab1412/atmorep/pyenv/bin/activate
-python /work/ab1412/atmorep/plotting/plot_losses.py
-
-'''
