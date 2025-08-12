@@ -83,6 +83,16 @@ class Evaluator( Trainer_BERT) :
     cf.par_size = par_size
     cf.losses = cf.losses
     # overwrite old config
+  #   cf.fields = [
+  #     ['t2m',  # Name
+  #     [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0],  # Field Properties # was 1024 / 1536
+  #     [0],  # Vertical Levels
+  #     [12, 2, 4],  # Number of Tokens
+  #     [3, 27, 27],  # Token Size
+  #     #[1, 0, 0, 0] # Masking and Noising Rates
+  #     [0.5, 0.9, 0.2, 0.05], 
+  #     'Local']
+  # ]
     cf.attention = False
     setup_wandb( cf.with_wandb, cf, par_rank, '', mode='offline')
     if 0 == cf.par_rank :

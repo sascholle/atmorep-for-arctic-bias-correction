@@ -402,7 +402,17 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
       [12, 2, 4],  # Number of Tokens
       [3, 27, 27],  # Token Size
       #[1, 0, 0, 0], # Masking and Noising Rates
-      [0.01, 0.9, 0.2, 0.05], 
+      [0.5, 0.9, 0.2, 0.05], 
+      'Local'
+    ], 
+    [
+      'corrected_t2m',  # Name
+      [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 2],  # Field Properties # was 1024 / 1536
+      [0],  # Vertical Levels
+      [12, 2, 4],  # Number of Tokens
+      [3, 27, 27],  # Token Size
+      #[1, 0, 0, 0], # Masking and Noising Rates
+      [0.5, 0.9, 0.2, 0.05], 
       'Local'
     ]
   ]
@@ -422,7 +432,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
 
   #["velocity_u", 0.225], ["velocity_v", 0.225], ["specific_humidity", 0.1125], ["velocity_z", 0.01875], ["temperature", 0.15], ["total_precip", 0.01875], ["t2m", 0.25] ]
 
-  ["velocity_u", 0.125], ["velocity_v", 0.125], ["specific_humidity", 0.05], ["velocity_z", 0.01], ["temperature", 0.1], ["total_precip", 0.01], ["t2m", 0.2]]
+  ["velocity_u", 0.125], ["velocity_v", 0.125], ["specific_humidity", 0.05], ["velocity_z", 0.01], ["temperature", 0.1], ["total_precip", 0.01], ["t2m", 0.2], ["corrected_t2m", 0.38] ]
 
   #cf.fields_targets = ["t2m"]
   cf.losses = ['mse_ensemble', 'stats'] # mse, mse_ensemble, stats, crps, weighted_mse
@@ -453,10 +463,10 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   cf.years_train = list( range(2010, 2021))
   cf.years_test = [2021]
   cf.years_val = [2021] 
-  cf.geo_range_sampling = None # [[ -90., 90.], [ 0., 360.]] #[[ 0., 360.], [ 0., 360.]]
+  cf.geo_range_sampling = [[ 72.27, 90.], [ 0., 360.]] #[[ -90., 90.], [ 0., 360.]]
 
-  # cf.file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr' 
-  cf.file_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
+  cf.file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr' 
+  #cf.file_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
   #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
   #cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8_with_t2m.zarr'
   #cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8.zarr'
@@ -506,17 +516,15 @@ if __name__ == '__main__':
     # 0rmiio09 - v4 t2m fine-tuned on 58ipo6bs again to find convergence  0: Wandb run: atmorep-0rmiio09-18677812
     # qw047nnt - v5 t2m fine_tuned on 0rmiio09 again to find convergence  0: Wandb run: atmorep-qw047nnt-18909849
     # b9h8xdoz - v6 t2m trained on qw047nnt     0: Wandb run: atmorep-b9h8xdoz-18941949
-    # ugqn2s9m - v7 t2m trained on b9h8xdoz     0: Wandb run: atmorep-ugqn2s9m-19031053
-    # df9i2pq3 - v8.3 t2m fine-tuned on ugqn2s9m  0: Wandb run: atmorep-df9i2pq3-19062136
+    # ugqn2s9m - v7 trained on b9h8xdoz
+
+    # corrected training 
+    # 0: Wandb run: atmorep-eg3ztaai-19017100 on b9h8xdoz
+    # 0: Wandb run: atmorep-f1ct6gx3-19062418 on ugqn2s9m
 
 
 
-    
-    # full lat globe repretraining
-    # 18994795 - training on wc5e2i3t
-    # 18994864 - training on b9h8xdoz
-
-    wandb_id, epoch, epoch_continue = 'df9i2pq3', -2, -2 
+    wandb_id, epoch, epoch_continue = 'ugqn2s9m', -2, -2 
     Trainer = Trainer_BERT  
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 

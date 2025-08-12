@@ -1,10 +1,11 @@
 #!/bin/bash -x
 #SBATCH --account=ab1412
 #SBATCH --partition=gpu
-#SBATCH --time=00:10:00
+#SBATCH --time=01:10:00
 #SBATCH --nodes=1
+#SBATCH --mem=0
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=34
+#SBATCH --cpus-per-task=127 # changed from 34
 #SBATCH --gres=gpu:4
 #SBATCH --chdir=.
 #SBATCH --output=logs/atmorep-%x.%j.out

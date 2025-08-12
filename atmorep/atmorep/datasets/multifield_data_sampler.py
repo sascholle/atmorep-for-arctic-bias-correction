@@ -32,7 +32,7 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
   ###################################################
   def __init__( self, file_path, fields, years, batch_size, pre_batch, n_size,
                 num_samples, with_shuffle = False, time_sampling = 1, with_source_idxs = False, compute_weights = False, 
-                fields_targets = None, pre_batch_targets = None ) :
+                fields_targets = None, pre_batch_targets = None, geo_range_sampling = None ) :
     '''
       Data set for single dynamic field at an arbitrary number of vertical levels
 
@@ -48,6 +48,7 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
     self.compute_weights = compute_weights
     self.with_shuffle = with_shuffle
     self.pre_batch = pre_batch
+    self.geo_range_sampling = geo_range_sampling
     
     assert os.path.exists(file_path), f"File path {file_path} does not exist"
     self.ds = zarr.open( file_path, mode='r')
@@ -61,7 +62,11 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
 
     self.ds_global = self.ds.attrs['is_global']
 
-    self.lats = np.array( self.ds['lats'])
+    #print("WHAT IS GEO RANGE SAMPLING", geo_range_sampling)
+    #if geo_range_sampling is not None :
+    self.lats = np.array( self.ds['lats'][:71])
+    #else :
+      #self.lats = np.array( self.ds['lats'])
     self.lons = np.array( self.ds['lons'])
     
     sh = self.ds['data'].shape
@@ -214,6 +219,7 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
                 #cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
             #else:
             cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
+            
             
             source_data = tokenize( torch.from_numpy( cdata), tok_size )    
             # token_infos uses center of the token: *last* datetime and center in space

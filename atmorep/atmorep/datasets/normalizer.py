@@ -26,6 +26,7 @@ import atmorep.config.config as config
 def normalize( data, norm, dates, year_base = 1979) :
   corr_data = np.array([norm[12*(dt.year-year_base) + dt.month-1] for dt in dates])
   mean, var = corr_data[:, 0], corr_data[:, 1]
+  #print(f"[DEBUG] Normalizer: mean sample {mean.flatten()[:5]}, std sample {var.flatten()[:5]}")
   if (var == 0.).all() :
     print( f'Warning: var == 0') 
     assert False

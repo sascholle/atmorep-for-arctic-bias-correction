@@ -256,38 +256,49 @@ class Trainer_Base() :
 
         # Print first input batch of each epoch
         if batch_idx == 0:
-            print(f"[DEBUG] INPUT BATCH")
+            print(f"[DEBUG] TRAIN INPUT BATCH")
             print(f"Epoch {epoch}, first input batch shapes / sample data:")
             for i, field_info in enumerate(cf.fields):
                 input_data, tok_info = batch_data[i]  # input_data is the tensor, tok_info is token_infos
                 print(f"  └─ Field: '{field_info[0]}' shape: {input_data.shape}")
-                print(f"     first 25 values: {input_data.flatten()[:25]}")
+                print(f"     first 25 values: {input_data.flatten()[:25]}")#
 
+            print(f"[DEBUG] TRAIN TARGET BATCH")
+            print(f"Epoch {epoch}, first target batch shapes / sample data:")
+            for i, field_info in enumerate(cf.fields):
+                 # Find if this field is in fields_prediction_idx
+              if i in self.fields_prediction_idx:
+                  target_idx = self.fields_prediction_idx.index(i)
+                  target_data = self.targets[target_idx]
+                  print(f"  └─ Field: '{field_info[0]}' target shape: {target_data.shape}")
+                  print(f"     first 25 target values: {target_data.flatten()[:25]}")
+              else:
+                  print(f"  └─ Field: '{field_info[0]}' is not a prediction target.")
 
-        # Print an example of the sparse-masked precipitation data 
-        # only once per epoch (i.e., batch_idx == 0)
-        if batch_idx == 0:
-            precip_field = 'total_precip'
-            # Find index of the precip field in prediction targets
-            field_idx = None
-            for i, field in enumerate(self.cf.fields):
-                if field[0] == precip_field:
-                    field_idx = i
-                    break
+        # # Print an example of the sparse-masked target data 
+        # # only once per epoch (i.e., batch_idx == 0)
+        # if batch_idx == 0:
+        #     target_field = 't2m'
+        #     # Find index of the precip field in prediction targets
+        #     field_idx = None
+        #     for i, field in enumerate(self.cf.fields):
+        #         if field[0] == target_field:
+        #             field_idx = i
+        #             break
 
-            if field_idx is not None and field_idx in self.fields_prediction_idx:
-                target_idx = self.fields_prediction_idx.index(field_idx)
-                target_data = self.targets[target_idx].detach().cpu()  # shape: [batch, level, ...]
+        #     if field_idx is not None and field_idx in self.fields_prediction_idx:
+        #         target_idx = self.fields_prediction_idx.index(field_idx)
+        #         target_data = self.targets[target_idx].detach().cpu()  # shape: [batch, level, ...]
 
-                # Print target shape and first 243 elements, just as an example
-                print(f"[DEBUG] TARGET BATCH")
-                print(f"Epoch {epoch}, batch {batch_idx} - Sparse-masked '{precip_field}' shape target data: {target_data.shape}")
-                print(f"[DEBUG] First 243 batch values:\n{target_data.flatten()[:243]}")
+        #         # Print target shape and first 25 elements, just as an example
+        #         print(f"[DEBUG] TRAIN TARGET BATCH")
+        #         print(f"Epoch {epoch}, batch {batch_idx} - Sparse-masked '{target_field}' shape target data: {target_data.shape}")
+        #         print(f"    First 25 batch values:\n{target_data.flatten()[:25]}")
 
 
         # Print first predictions of each epoch
         if batch_idx == 0:
-            print(f"[DEBUG] PREDICTIONS TRAIN BATCH")
+            print(f"[DEBUG] TRAIN PREDICTIONS BATCH")
             print(f"Epoch {epoch}, first predictions sample:")
             for p_idx, field_idx in enumerate(self.fields_prediction_idx):
                 field_name = cf.fields[field_idx][0]
@@ -473,18 +484,19 @@ class Trainer_Base() :
           ######## I'VE ADDED THIS ########
           
           # after log_validate call, print a small subset of one predicted field
-          # after log_validate call, print a small subset of one predicted field
           if it == 0:  # only print once
-            # Find total_precip field index
-            precip_idx = None
+            print(f"it == 0 and starting val norms printouts")
+
+            # Find field index
+            pred_idx = None
             for idx, field_idx in enumerate(self.fields_prediction_idx):
-                if self.cf.fields[field_idx][0] == 'total_precip':
-                    precip_idx = idx
+                if self.cf.fields[field_idx][0] == 't2m':
+                    pred_idx = idx
                     break
-          
-            if precip_idx is not None:
-                field_name = 'total_precip'
-                pred_data = log_preds[precip_idx][0]  # the predicted mean
+
+            if pred_idx is not None:
+                field_name = 't2m'
+                pred_data = log_preds[pred_idx][0]  # the predicted mean
                 print(f"[DEBUG] PREDICTIONS VALIDATION BATCH")
                 print(f"Normalised validation prediction values for '{field_name}' with shape: {pred_data.shape}")
                 print(f"         min = {pred_data.min():.3f}, max = {pred_data.max():.3f}, mean = {pred_data.mean():.3f}")
@@ -670,7 +682,7 @@ class Trainer_BERT( Trainer_Base) :
         # Store the sparse target
         self.targets[target_idx] = sparse_target
         
-        print(f"Created sparse mask for {target_field} with {(1-sparsity)*100:.1f}% data retained")
+        #print(f"Created sparse mask for {target_field} with {(1-sparsity)*100:.1f}% data retained")
 
 
   ####################################################

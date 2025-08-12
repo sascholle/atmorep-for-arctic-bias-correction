@@ -8,8 +8,8 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --mem=0
 #SBATCH --chdir=.
-#SBATCH --output=logs/atmorep-%x.%j.out
-#SBATCH --error=logs/atmorep-%x.%j.err
+#SBATCH --output=logs/corrected-%x.%j.out
+#SBATCH --error=logs/corrected-%x.%j.err
 
 # import modules at dkrz
 module load python3/2023.01-gcc-11.2.0 nvhpc/23.9-gcc-11.2.0
@@ -58,18 +58,10 @@ export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
 
 CONFIG_DIR=${SLURM_SUBMIT_DIR}/atmorep_models_slurmid/atmorep_train_${SLURM_JOBID}
 mkdir ${CONFIG_DIR}
-cp ${SLURM_SUBMIT_DIR}/atmorep/core/train.py ${CONFIG_DIR}
-echo "${CONFIG_DIR}/train.py"
+cp ${SLURM_SUBMIT_DIR}/atmorep/core/train_corrected_era5.py ${CONFIG_DIR}
+echo "${CONFIG_DIR}/train_corrected_era5.py"
 
-# Launch with explicit srun to ensure proper SLURM_LOCALID assignment - nvmlDeviceGetHandleByPciBusId() failed: Not Found
-
-# with this srun I get Rank 0,1,2,3 sees 1 CUDA devices which seems right but ID not found
-
-# srun --ntasks=4 --ntasks-per-node=4 --gpus=4 --gpus-per-task=1 \
-#      --export=ALL \
-#      ${SLURM_SUBMIT_DIR}/pyenv/bin/python -u ${CONFIG_DIR}/train.py > output/output_${SLURM_JOBID}.txt
-     
-srun --label --accel-bind=v --cpu-bind=v ${SLURM_SUBMIT_DIR}/pyenv/bin/python -u ${CONFIG_DIR}/train.py > output/output_${SLURM_JOBID}.txt
+srun --label --accel-bind=v --cpu-bind=v ${SLURM_SUBMIT_DIR}/pyenv/bin/python -u ${CONFIG_DIR}/train_corrected_era5.py > output/output_${SLURM_JOBID}.txt
 #srun --label --cpu-bind=cores --gpus-per-task=1 ${SLURM_SUBMIT_DIR}/pyenv/bin/python -u ${CONFIG_DIR}/train.py > output/output_${SLURM_JOBID}.txt
 
 echo "Finished job."

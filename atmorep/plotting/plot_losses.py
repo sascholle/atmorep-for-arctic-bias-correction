@@ -10,10 +10,37 @@ python /work/ab1412/atmorep/plotting/plot_losses.py
 '''
 
  
-output_id =  17850993 
+output_id = 19062136
+
+## corrected t2m model training
+# 19017100 - t2m corrected run
+# 19062614 - loaded model 0: model_id : ugqn2s9m
+
+
+## t2m full longitude range -90-90
+# 18994864 - re-trained t2m model b9h8xdoz on full lat range
+# 18994795 - training on wc5e2i3t again to see improvement 
+
+## t2m tests 
+# 19062136 - v8.3 normal t2m masking 
+# 19062198 - v8.2 no t2m masking 0.001
+# 19058384 - v8.1 much higher masking at 0.9
+# 19031053 - v7
+# 18941949 - v6
+# 18909849 - v5 
+# 18719337 - 50% masked with target set to t2m bert 
+# 18717159 - 50% masked t2m bert
+# 18685688 - completely masked input t2m bert, all others not. No target sparsity because forecast, but full input sparsity  
+
+# 18677812 - and again t2m bert v4
+# 18612021 - and again t2m bert v3, third time continued fine tuning on t2m using 18584657
+# 18584657 - t2m bert v2, continued t2m fine tuning, not converged yet 
+# 18543509 - t2m bert v1, really high t2m loss weighting, mse and stats - solid learning, not converged yet 
+# 18524597 - t2m bert, sparsity input and target 90% - no learning 
+# 18522685 - t2m bert, mid t2m weight - good learning - t2m has values 
+# 18347853 - t2m bert
 
 ## Forecast and BERT Baseline search
-
 # 17850993 - BERT and plan mse (not ensemble)
 # 17831587 - BERT and only MSE, 480 samples and 10 hours to check training 
 # 17828425 - BERT and only MSE, 1024 samples per epoch - weird training plotting...
@@ -76,11 +103,22 @@ def extract_config_parameters(file_path):
     
     with open(file_path, 'r') as file:
         content = file.read()
+
+        # Extract Wandb run information
+        wandb_run_match = re.search(r'0: Wandb run: (.*?)$', content, re.MULTILINE)
+        if wandb_run_match:
+            params['wandb_run'] = wandb_run_match.group(1)
         
+        # extract loaded model id
+        loaded_model_match = re.search(r'0: Loaded model id = (\w+)', content)
+        if loaded_model_match:
+            params['loaded_model'] = loaded_model_match.group(1)
+
         # Extract Fields
-        fields_match = re.search(r'0: Fields: \[(.*?)\]', content)
+        # Extract multi-line Fields (everything up to fields_prediction)
+        fields_match = re.search(r'0: fields : \[(.*?)]\s*(?:0: fields_prediction|0: fields_targets|$)', content, re.DOTALL)
         if fields_match:
-            params['Fields'] = fields_match.group(1)
+            params['fields'] = fields_match.group(1).strip()
         
         # Simple approach for fields_prediction - just get the whole line
         for line in content.split('\n'):
@@ -95,10 +133,10 @@ def extract_config_parameters(file_path):
         if targets_match:
             params['fields_targets'] = targets_match.group(1)
         
-        # More detailed fields info 
-        fields_info_match = re.search(r'0: fields : (.*?)$', content, re.MULTILINE)
-        if fields_info_match:
-            params['fields_info_detailed'] = fields_info_match.group(1)
+        # # More detailed fields info 
+        # fields_info_match = re.search(r'0: fields : (.*?)$', content, re.MULTILINE)
+        # if fields_info_match:
+        #     params['fields_info_detailed'] = fields_info_match.group(1)
             
         # Extract batch size and epochs
         batch_match = re.search(r'0: batch_size : (\d+)', content)
@@ -153,6 +191,16 @@ def extract_config_parameters(file_path):
         geo_range_match = re.search(r'0: geo_range_sampling : (.*?)$', content, re.MULTILINE)
         if geo_range_match:
             params['geo_range_sampling'] = geo_range_match.group(1).strip()
+        
+        # add 0: self.lats : (71,)
+        lats_match = re.search(r'0: self.lats : \((\d+),\)', content)
+        if lats_match:
+            params['lats_shape'] = int(lats_match.group(1))
+            
+        # add 0: self.lons : (1440,)
+        lons_match = re.search(r'0: self.lons : \((\d+),\)', content)
+        if lons_match:
+            params['lons_shape'] = int(lons_match.group(1))
 
         # add if sparse_target is set to true or false
         sparse_target_match = re.search(r'0: sparse_target : (.*?)$', content, re.MULTILINE)
@@ -221,6 +269,7 @@ q_loss = 'validation loss for specific_humidity :'
 z_loss = 'validation loss for velocity_z :'
 temp_loss = 'validation loss for temperature :'
 t2m = 'validation loss for t2m :'
+corrected_t2m = 'validation loss for corrected_t2m :'
 training_loss_pattern = r'0: epoch: (\d+) \[(\d+)/(\d+) \((\d+)%\)\]\s+Loss: ([\d.]+) : ([\d.]+) :: ([\d.]+)'
 
 # Initialize lists for all variables
@@ -232,6 +281,7 @@ q_values = []
 z_values = []
 temp_values = []
 t2m_values = []
+corrected_t2m_values = []
 
 training_loss_epochs = []
 training_batch_indices = []
@@ -281,6 +331,9 @@ with open(output_path, 'r') as file:
         elif t2m in line:
             value = float(line.split(t2m)[1].strip())
             t2m_values.append(value)
+        elif corrected_t2m in line:
+            value = float(line.split(corrected_t2m)[1].strip())
+            corrected_t2m_values.append(value)
         
 
 # Convert lists to arrays
@@ -292,6 +345,7 @@ q_values = np.array(q_values)
 z_values = np.array(z_values)
 temp_values = np.array(temp_values)
 t2m_values = np.array(t2m_values)
+corrected_t2m_values = np.array(corrected_t2m_values)
 training_loss_epochs = np.array(training_loss_epochs)
 training_loss_values = np.array(training_loss_values)
 training_loss_mse = np.array(training_loss_mse)
@@ -315,7 +369,7 @@ fig.text(0.93, 0.13, param_text, fontsize=12, bbox=dict(facecolor='lightblue', a
 # Calculate mean values of variables (excluding first 10 values if requested)
 # Add this section
 means = {}
-variables = ["velocity_u", "velocity_v", "velocity_z", "temperature", "specific_humidity", "total_precip", "total_loss"]
+variables = ["velocity_u", "velocity_v", "velocity_z", "temperature", "specific_humidity", "total_precip", "total_loss", "t2m", "corrected_t2m"]
 data = {
     "velocity_u": u_values,
     "velocity_v": v_values,
@@ -323,7 +377,9 @@ data = {
     "temperature": temp_values,
     "specific_humidity": q_values,
     "total_precip": precip_values,
-    "total_loss": total_loss_values
+    "total_loss": total_loss_values,
+    "t2m": t2m_values,
+    "corrected_t2m": corrected_t2m_values
 }
 
 # Calculate means
@@ -354,11 +410,13 @@ ax.plot(epochs_val, v_values, label='V Velocity Loss', color='orange')
 ax.plot(epochs_val, z_values, label='Z Velocity Loss', color='brown')
 ax.plot(epochs_val, q_values, label='Specific Humidity Loss', color='purple')
 ax.plot(epochs_val, temp_values, label='Temperature Loss', color='pink')
-#ax.plot(epochs_val, t2m_values, label='T2M Loss', color='gray')
+ax.plot(epochs_val, t2m_values, label='T2M Loss', color='gray')
+if corrected_t2m_values.size > 0:  # Check if there are any corrected T2M values
+    ax.plot(epochs_val, corrected_t2m_values, label='Corrected T2M Loss', color='cyan') 
 
 # Plot all training stats per batch (x = epoch + batch_idx/total_batches)
 training_x = [e + (b-1)/5 for e, b in zip(training_loss_epochs, training_batch_indices)]  # adjust denominator if not 5 batches/epoch
-ax.plot(training_x, training_loss_values, marker='o', label='Training Grad Loss', color='black', linewidth=1,linestyle='--', markersize=2)
+ax.plot(training_x, training_loss_values, marker='o', label='Training Grad Loss', color='black', linewidth=1, linestyle='--', markersize=2)
 ax.plot(training_x, training_loss_mse, marker='o', label='Training MSE', color='gray', linewidth=1, linestyle='--', markersize=2)
 ax.plot(training_x, training_loss_stddev, 'o-', label='Training Stddev', color='lightgray', markersize=3)
 

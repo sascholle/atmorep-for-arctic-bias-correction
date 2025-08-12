@@ -72,6 +72,7 @@ def get_max_RMSE(field):
               "divergence": 10.2,    #???? 0.2
               "specific_humidity": 10.2,  #???? 0.2
               "total_precip": 10, #????? 
+              "t2m" : 10, #?????
             }
     
     return values[field]

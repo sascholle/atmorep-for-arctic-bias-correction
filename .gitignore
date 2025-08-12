@@ -1,5 +1,15 @@
 # Sabine edits:
 
+# Absolute paths for VS Code
+/work/ab1412/atmorep/data/
+/work/ab1412/atmorep/atmorep_models_slurmid/
+/work/ab1412/atmorep/logs/
+/work/ab1412/atmorep/models/
+/work/ab1412/atmorep/output/
+/work/ab1412/atmorep/pkgs/
+/work/ab1412/atmorep/wandb/
+/work/ab1412/atmorep/results/
+
 *.grib
 *.grib1
 *.grib2

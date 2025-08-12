@@ -334,7 +334,6 @@ def get_model_filename( model = None, model_id = '', epoch=-2, with_model_path =
     #                                                       model_id, name, model_id, epoch))
     model_file = Path( config.path_models, mpath, '{}_id{}_epoch{}.mod'.format(
                                                            name, model_id, epoch))
-    print( f'Model file: {model_file}')
   else :
     model_file = Path( config.path_models, mpath, '{}_id{}.mod'.format( name, model_id))
       
