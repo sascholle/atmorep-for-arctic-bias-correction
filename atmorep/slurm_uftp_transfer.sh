@@ -19,7 +19,7 @@ UFTP_SOURCE="/p/data1/slmet/met_data/ecmwf/era5/zarr/era5_y2010_2021_res025.zarr
 UFTP_DEST="/work/ab1412/atmorep/data/era5_y2010_2021_res025.zarr"
 
 # Create destination directory if it doesn't exist
-mkdir -p "$(dirname "$UFTP_DEST")"
+mkdir -p "$(dirname "$UFTP_DEST")
 
 # Load any necessary modules
 module load uftp-client || echo "No UFTP module found, using system installation"

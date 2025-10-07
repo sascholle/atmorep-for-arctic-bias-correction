@@ -80,16 +80,25 @@ class AtmoRepData( torch.nn.Module) :
     self._set_data( dataset, mode, batch_size, num_loader_workers)
 
   ###################################################
-  def set_location( self, mode : NetMode, pos, years, months, num_t_samples_per_month, 
+  def set_location( self, mode : NetMode, time_pos, 
                           batch_size = -1, num_loader_workers = -1) :
-
+    '''
+    
+    set_data [(self, times_pos, batch_size = None)]
+        times_pos = np.array( [ [year, month, day, hour, lat, lon], ...]  )
+          - lat \in [90,-90] = [90N, 90S]
+          - lon \in [0,360]
+          - (year,month) pairs should be a limited number since all data for these is loaded
+    '''
+    
     cf = self.net.cf
     if batch_size < 0 :
       batch_size = cf.batch_size_train if mode == NetMode.train else cf.batch_size_test
     
     dataset = self.dataset_train if mode == NetMode.train else self.dataset_test
-    dataset.set_location( pos, years, months, num_t_samples_per_month, batch_size)
+    #dataset.set_location( pos, years, months, num_t_samples_per_month, batch_size)
 
+    dataset.set_data(time_pos, batch_size)
     self._set_data( dataset, mode, batch_size, num_loader_workers)
 
   ###################################################
@@ -189,7 +198,9 @@ class AtmoRepData( torch.nn.Module) :
                                                 pre_batch, cf.n_size, cf.num_samples_per_epoch,
                                                 with_shuffle = (cf.BERT_strategy != 'global_forecast'), 
                                                 with_source_idxs = True, 
-                                                compute_weights = (cf.losses.count('weighted_mse') > 0) )
+                                                compute_weights = (cf.losses.count('weighted_mse') > 0),
+                                                geo_range_sampling= cf.geo_range_sampling)              
+
     self.data_loader_train = torch.utils.data.DataLoader( self.dataset_train, **loader_params,
                                                           sampler = None)
 
@@ -198,7 +209,8 @@ class AtmoRepData( torch.nn.Module) :
                                                pre_batch, cf.n_size, cf.num_samples_validate,
                                                with_shuffle = (cf.BERT_strategy != 'global_forecast'),
                                                with_source_idxs = True, 
-                                               compute_weights = (cf.losses.count('weighted_mse') > 0) )                                               
+                                               compute_weights = (cf.losses.count('weighted_mse') > 0), 
+                                               geo_range_sampling= cf.geo_range_sampling)                                               
     self.data_loader_test = torch.utils.data.DataLoader( self.dataset_test, **loader_params,
                                                           sampler = None)
 
@@ -452,7 +464,13 @@ class AtmoRep( torch.nn.Module) :
       cf.load_json( model_id)
 
     model = AtmoRep( cf).create( devices, load_pretrained=False)
-    mloaded = torch.load( utils.get_model_filename( model, model_id, epoch) )
+    #mloaded = torch.load( utils.get_model_filename( model, model_id, epoch) )
+
+    mloaded = torch.load(
+    utils.get_model_filename(model, model_id, epoch),
+    map_location=lambda storage, loc: storage.cuda(0)
+    )
+
     mkeys, ukeys = model.load_state_dict( mloaded, False )
     if (f'encoders.0.heads.0.proj_heads.weight') in mkeys:
       mloaded = model.translate_weights(mloaded, mkeys, ukeys)

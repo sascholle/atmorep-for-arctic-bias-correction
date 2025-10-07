@@ -1,11 +1,12 @@
 # Sabine edits:
 
 # Absolute paths for VS Code
+/work/ab1412/a270294/
 /work/ab1412/atmorep/data/
 /work/ab1412/atmorep/atmorep_models_slurmid/
 /work/ab1412/atmorep/logs/
 /work/ab1412/atmorep/models/
-/work/ab1412/atmorep/output/
+#/work/ab1412/atmorep/output/
 /work/ab1412/atmorep/pkgs/
 /work/ab1412/atmorep/wandb/
 /work/ab1412/atmorep/results/
@@ -16,6 +17,8 @@
 
 *.tar
 
+*.nc
+
 atmorep/data
 
 atmorep/atmorep_models_slurmid
@@ -24,7 +27,7 @@ atmorep/logs
 
 atmorep/models  
 
-atmorep/output  
+#atmorep/output  
 
 atmorep/pkgs
 
@@ -32,6 +35,11 @@ atmorep/wandb
 
 atmorep/results 
 
+a270294
+
+wandb/
+
+backup_files/
 
 #################################################
 
@@ -202,3 +210,5 @@ cython_debug/
 
 # image files
 *.png
+
+

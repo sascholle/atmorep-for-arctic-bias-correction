@@ -73,6 +73,7 @@ def get_max_RMSE(field):
               "specific_humidity": 10.2,  #???? 0.2
               "total_precip": 10, #????? 
               "t2m" : 10, #?????
+              "corrected_t2m": 10, #?????
             }
     
     return values[field]

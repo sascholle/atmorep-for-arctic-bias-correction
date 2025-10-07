@@ -64,7 +64,7 @@ class Trainer_Base() :
           break
     self.loss_weights = self.loss_weights.to( self.device_out)
 
-    self.MSELoss = torch.nn.MSELoss()
+    #self.MSELoss = torch.nn.MSELoss()
 
     # transformation for token infos
     if hasattr( cf, 'token_infos_transformation') :
@@ -82,19 +82,19 @@ class Trainer_Base() :
 
   ###################################################
 ##### IVE ADDED THIS ####
-  # def MSELoss(self, x, target=None):
-  #     """MSE loss that ignores NaN values"""
-  #     if target is None:
-  #       return torch.tensor(0., device=x.device)
+  def MSELoss(self, x, target=None):
+      """MSE loss that ignores NaN values"""
+      if target is None:
+        return torch.tensor(0., device=x.device)
   
-  #     # Create mask for valid (non-NaN) values
-  #     valid_mask = ~torch.isnan(target)
-  #     # If we have any valid points, compute loss on those only
-  #     if torch.any(valid_mask):
-  #       return torch.mean((x[valid_mask] - target[valid_mask]) ** 2)
-  #     else:
-  #         # If all targets are NaN, return zero loss
-  #       return torch.tensor(0., device=x.device)
+      # Create mask for valid (non-NaN) values
+      valid_mask = ~torch.isnan(target)
+      # If we have any valid points, compute loss on those only
+      if torch.any(valid_mask):
+        return torch.mean((x[valid_mask] - target[valid_mask]) ** 2)
+      else:
+          # If all targets are NaN, return zero loss
+        return torch.tensor(0., device=x.device)
       
   ###################################################
 
@@ -490,12 +490,12 @@ class Trainer_Base() :
             # Find field index
             pred_idx = None
             for idx, field_idx in enumerate(self.fields_prediction_idx):
-                if self.cf.fields[field_idx][0] == 't2m':
+                if self.cf.fields[field_idx][0] == 'corrected_t2m':  # change to desired field name
                     pred_idx = idx
                     break
 
             if pred_idx is not None:
-                field_name = 't2m'
+                field_name = 'corrected_t2m'
                 pred_data = log_preds[pred_idx][0]  # the predicted mean
                 print(f"[DEBUG] PREDICTIONS VALIDATION BATCH")
                 print(f"Normalised validation prediction values for '{field_name}' with shape: {pred_data.shape}")
@@ -704,16 +704,20 @@ class Trainer_BERT( Trainer_Base) :
 
     # MASK INPUT TOKENS
     if hasattr(self.cf, 'mask_input_field') and self.cf.mask_input_field:
-        field_to_mask = self.cf.mask_input_field if isinstance(self.cf.mask_input_field, str) else 'total_precip'
-        mask_value = float('nan') if not hasattr(self.cf, 'mask_input_value') else self.cf.mask_input_value
-        
-        for i, field_info in enumerate(cf.fields):
-            if field_info[0] == field_to_mask:
-                # Create a mask for the entire field
-                sources[i].fill_(mask_value)
-                #print(f"[CHECK] Masked all input tokens for field '{field_to_mask}'")
-                break
-    
+      field_to_mask = self.cf.mask_input_field if isinstance(self.cf.mask_input_field, str) else 'total_precip'
+      mask_value = 0 if not hasattr(self.cf, 'mask_input_value') else self.cf.mask_input_value
+      mask_sparsity = getattr(self.cf, 'mask_input_sparsity', None)
+      for i, field_info in enumerate(cf.fields):
+          if field_info[0] == field_to_mask:
+              if mask_sparsity is not None:
+                  # Create a random mask for sparsity
+                  mask = torch.rand_like(sources[i]) > mask_sparsity
+                  sources[i][~mask] = mask_value
+              else:
+                  # Mask all tokens
+                  sources[i].fill_(mask_value)
+              break
+  
     ##############
 
 
@@ -838,11 +842,11 @@ class Trainer_BERT( Trainer_Base) :
           source[bidx,vidx] = denormalize( source[bidx,vidx], normalizer, dates, year_base)
           target[bidx,vidx] = denormalize( target[bidx,vidx], normalizer, dates_t, year_base)
 
-        # # DENORMALISED Printing first 20 denormalized source/target values for first batch/level
-        #   if batch_idx == 0 and bidx == 0 and vidx == 0 and field_info[0] == 'total_precip':
-        #       print(f"\n[DEBUG] Log Validate Forecast Denormalized values for {field_info[0]}:")
-        #       print(f"Source values (first 20):\n{source[bidx,vidx].flatten()[:20]}")
-        #       print(f"Target values (first 20):\n{target[bidx,vidx].flatten()[:20]}")
+        # DENORMALISED Printing first 20 denormalized source/target values for first batch/level
+          if batch_idx == 0 and bidx == 0 and vidx == 0 and field_info[0] == 'corrected_t2m':
+              print(f"\n[DEBUG] Log Validate Forecast Denormalized values for {field_info[0]}:")
+              print(f"Source values (first 20):\n{source[bidx,vidx].flatten()[:20]}")
+              print(f"Target values (first 20):\n{target[bidx,vidx].flatten()[:20]}")
 
         coords_b += [[dates, 90.-lats, lons, dates_t]]
 
@@ -893,6 +897,8 @@ class Trainer_BERT( Trainer_Base) :
                                  levels, sources_out,
                                  targets_out, preds_out,
                                  ensembles_out, coords)
+    
+    #print( 'validation forecast for strategy={} at epoch {} : batch {}'.format( cf.BERT_strategy, epoch, batch_idx), flush=True)
   
   ###################################################
   

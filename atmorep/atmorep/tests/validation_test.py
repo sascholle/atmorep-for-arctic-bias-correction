@@ -148,33 +148,37 @@ def test_coordinates(field, model_id, BERT, epoch = 0):
    
     store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
     target = zarr.group(store_t)
+    print(list(target.keys()))
 
     store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
     pred = zarr.group(store_p)
 
     nsamples = min(len(target[field]), 50)
     samples = rnd.sample(range(len(target[field])), nsamples)
-    #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
-    ##### new levels for surface fields - added this test ####
-    if field in ['t2m', 'total_precip']:
-        levels = [0]
-    elif 'ml' in target[f"{field}/sample=00000"]:
-        levels = target[f"{field}/sample=00000"].ml[:]
-    else:
-        levels = [0]
-    #####
+    levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+    
+    # ##### new levels for surface fields - added this test ####
+    # if field in ['t2m', 'total_precip', 'corrected_t2m']:
+    #     levels = [0]
+    # elif 'ml' in target[f"{field}/sample=00000"]:
+    #     levels = target[f"{field}/sample=00000"].ml[:]
+    # else:
+    #     levels = [0]
+    # #####
+
     get_data = get_BERT if BERT else get_forecast
 
     for level in levels:
-        ### also added this 
-        if len(levels) == 1:
-            level_idx = 0
-        else:
-            level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0]
+        # ### also added this 
+        # if len(levels) == 1:
+        #     level_idx = 0
+        # else:
+        # ####
+            
+        level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0]
         
         print(f"Field: {field}, levels: {levels}, level: {level}, level_idx: {level_idx}, samples: {samples}")
-
-        ####
+        
         for s in samples:
             _, datetime_target, lats_target, lons_target = get_data(target,field, s, level_idx)
             _, datetime_pred, lats_pred, lons_pred = get_data(pred, field, s, level_idx)
@@ -198,22 +202,22 @@ def test_rmse(field, model_id, BERT, epoch = 0):
     
     nsamples = min(len(target[field]), 50)
     samples = rnd.sample(range(len(target[field])), nsamples)
-    #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+    levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
     
-    ##added this 
-    if field in ['t2m', 'total_precip']:
-        levels = [0]
-    elif 'ml' in target[f"{field}/sample=00000"]:
-        levels = target[f"{field}/sample=00000"].ml[:]
-    else:
-        levels = [0]
-    #####
+    # ##added this 
+    # if field in ['t2m', 'total_precip', 'corrected_t2m']:
+    #     levels = [0]
+    # elif 'ml' in target[f"{field}/sample=00000"]:
+    #     levels = target[f"{field}/sample=00000"].ml[:]
+    # else:
+    #     levels = [0]
+    # #####
 
     get_data = get_BERT if BERT else get_forecast
     
     for level in levels:
-        #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
-        level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+        level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+        #level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
 
         for s in samples:
             sample_target, _, _, _ = get_data(target,field, s, level_idx)

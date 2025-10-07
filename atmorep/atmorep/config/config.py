@@ -3,9 +3,14 @@ from pathlib import Path
 
 fpath = os.path.dirname(os.path.realpath(__file__))
 
-path_models = Path( fpath, '../../models/')
-path_results = Path( fpath, '../../results')
-path_plots = Path( fpath, '../results/plots/')
+# path_models = Path( fpath, '../../models/')
+# path_results = Path( fpath, '../../results')
+# path_plots = Path( fpath, '../results/plots/')
+
+path_models = Path('/work/ab1412/atmorep/models/') #Path( fpath, '../../models/')
+path_results = Path('/work/ab1412/atmorep/results/') #Path( fpath, '../../results')
+path_plots = Path('/work/ab1412/atmorep/results/plots/') #Path( fpath, '../results/plots/')
+
 
 grib_index = { 'vorticity' : 'vo', 'divergence' : 'd', 'geopotential' : 'z',
                 'orography' : 'z', 'temperature': 't', 'specific_humidity' : 'q',

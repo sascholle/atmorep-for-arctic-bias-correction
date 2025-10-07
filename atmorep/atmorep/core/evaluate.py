@@ -16,10 +16,17 @@
 
 from atmorep.core.evaluator import Evaluator
 import time
+import datetime
 
 if __name__ == '__main__':
 
-  model_id = 'ugqn2s9m' # v7
+  model_id = 'iuw3ce3v'
+  # 'j2l0sz9j' # repretrained model v8
+  # 'iuw3ce3v' # t2m corrected v2.6
+
+  # 'u9vvriz7' # v2.4
+  # 'zxipahjj' # v1.2
+  # 'ugqn2s9m' # v7
   # 'qw047nnt' # v5
   # '0rmiio09' # v4 of the fine-tuned t2m model
   # '58ipo6bs' # later version of fine-tuned t2m model
@@ -55,7 +62,7 @@ if __name__ == '__main__':
   #Add 'attention' : True to options to store the attention maps. NB. supported only for single field runs. 
   
   # BERT masked token model
-  #mode, options = 'BERT', {'years_val' : [2021], 'num_samples_validate' : 96, 'with_pytest' : True}
+  #mode, options = 'BERT', {'years_val' : [2015], 'num_samples_validate' : 96, 'with_pytest' : True}
 
   # BERT forecast mode
   #mode, options = 'forecast', {'forecast_num_tokens' : 2, 'num_samples_validate' : 128, 'with_pytest' : True }
@@ -65,7 +72,7 @@ if __name__ == '__main__':
   #mode, options = 'temporal_interpolation', {'idx_time_mask': [5,6,7], 'num_samples_validate' : 128, 'with_pytest' : True}
 
   # BERT forecast with patching to obtain global forecast
-  #mode, options = 'global_forecast', { 
+  # mode, options = 'global_forecast', { 
   #                                     #'dates' : [[2021, 2, 10, 12]]
   #                                     'dates' : [
   #                                        [2021, 1, 10, 12] , [2021, 1, 11, 0], [2021, 1, 11, 12], [2021, 1, 12, 0], #[2021, 1, 12, 12], [2021, 1, 13, 0], 
@@ -79,24 +86,65 @@ if __name__ == '__main__':
 
   mode, options = 'global_forecast', { #'fields[0][2]' : [0],
                                      #'fields_prediction' : [['t2m', 1.0]],
+                                     'geo_range_sampling' :  None, #[71, 1440],
                                      'dates' : [ [2021, 9, 26, 12] ],
                                      'token_overlap' : [0, 0],
                                      'forecast_num_tokens' : 2, 
                                      'attention' : False, 
                                      'with_pytest' : False}
 
-  # file_path = '/gpfs/scratch/ehpc03/era5_y1979_2021_res025_chunk8.zarr'
-  #file_path= '/work/ab1412/atmorep/data/vorticity/ml137/era5_y2021_res025_chunk8.zarr'
-  file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr'
+  # mode, options = 'global_forecast_range', {
+  #                                    #'dates' : [ [2021, 9, 26, 12] ], 
+  #                                    'cur_date': [2015, 1, 22, 9],
+  #                                    'token_overlap' : [0, 0],
+  #                                    'geo_range_sampling' : None,
+  #                                    'forecast_num_tokens' : 1,
+  #                                    'attention' : False,
+  #                                    'with_pytest' : False}
 
-  
+
+  # mode, options = 'fixed_location', {   'time_pos': ([[2015, 1, 21, 0, 81, 18.25], [2015, 1, 21, 1, 81, 18.25]]),
+  #                                       'num_t_samples_per_month' : 1, 
+  #                                       'years_val' : [2015]
+
+  #                                       #'geo_range_sampling': [71, 1440], # now grid points for better overview
+  #                                       #'days' : [21], # not sure this is accepted
+  #                                       #'time' : [21] # not sure this is accepted either
+  # }
+
+  '''
+  set_data [(self, times_pos, batch_size = None)]
+      times_pos = np.array( [ [year, month, day, hour, lat, lon], ...]  )
+        - lat \in [90,-90] = [90N, 90S]
+        - lon \in [0,360]
+        - (year,month) pairs should be a limited number since all data for these is loaded
+  '''
+
+# prototype for fixed location forecast
+  # mode, options = 'fixed_location_forecast', {
+  #                                       'pos': [82, 18.25],
+  #                                       'years' : [2015],
+  #                                       'months' : [1],
+  #                                       'days' : [21], # not sure this is accepted
+  #                                       'time' : [21] # not sure this is accepted either
+  #                                   }
+
+  file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr'
+
   now = time.time()
   Evaluator.evaluate( mode, model_id, file_path, options)
   print("time", time.time() - now)
 
 
 '''
-source /work/ab1412/atmorep/pyenv/bin/activate
-python /work/ab1412/atmorep/atmorep/core/evaluate.py
+
+To Do: 
+
+1. evaluate only the samples from jan to june 2015 that are found in NICE. 
+- fixed location 
+- fixed time 
+2. Use Dask to parallelise the evaluation.
+3. compute the mean and standard deviation of the corrected t2m values for the evaluation period
+
 
 '''

@@ -97,6 +97,9 @@ class Evaluator( Trainer_BERT) :
     setup_wandb( cf.with_wandb, cf, par_rank, '', mode='offline')
     if 0 == cf.par_rank :
       print( 'Running Evaluate.evaluate with mode =', mode)
+      print('With config:')
+      print('model_id =', model_id)
+      print('time_pos =', args.get('time_pos', 'N/A'))
 
     # if not hasattr( cf, 'num_loader_workers'):
     #cf.num_loader_workers = 12 #cf.loader_num_workers
@@ -161,7 +164,7 @@ class Evaluator( Trainer_BERT) :
     
     cf.BERT_strategy = 'global_forecast'
     cf.batch_size_test = 24
-    cf.num_loader_workers = 12 #1
+    cf.num_loader_workers = 5 #changed from 12 because of memory issues
     cf.log_test_num_ranks = 1
 
     #TODO: temporary solution. Add support for batch_size > 1 
@@ -195,8 +198,13 @@ class Evaluator( Trainer_BERT) :
     cf.num_loader_workers = 1
     cf.log_test_num_ranks = 1
     cf.batch_size_start = 14
+
+    #TODO: temporary solution. Add support for batch_size > 1 
+    cf.batch_size_validation = 1 #64
+    cf.batch_size = 1
+
     if not hasattr(cf, 'num_samples_validate'):
-      cf.num_samples_validate = 196 
+      cf.num_samples_validate = 196
 
     Evaluator.parse_args( cf, args)
 
@@ -206,17 +214,20 @@ class Evaluator( Trainer_BERT) :
 
     # generate temporal sequence
     dates = [ ]
-    num_steps = 31*2 
-    cur_date = [2018, 1, 1, 0+6] #6h models
+    num_steps = 10
+    cur_date = [2015, 6, 1, 0]
     for _ in range(num_steps) :
       tdate = datetime.datetime( cur_date[0], cur_date[1], cur_date[2], cur_date[3])
       tdate += datetime.timedelta( hours = 12 )
       cur_date = [tdate.year, tdate.month, tdate.day, tdate.hour]
       dates += [cur_date]
+    print("Generated date sequence:", dates)
 
+    print( 'Running global_forecast_range for dates from', cf.start_date, 'to', cf.end_date)
     evaluator = Evaluator.load( cf, model_id, model_epoch, devices)
     evaluator.model.set_global( NetMode.test, np.array( dates))
-    evaluator.evaluate( 0, cf.BERT_strategy)
+    evaluator.validate( 0, cf.BERT_strategy)
+    print("Global forecast range evaluation completed.")
 
   ##############################################
   @staticmethod
@@ -239,6 +250,36 @@ class Evaluator( Trainer_BERT) :
     cf.num_files_test = 2
     cf.num_patches_per_t_test = 2
     cf.log_test_num_ranks = 4
+    cf.batch_size_test = 24
+
+    Evaluator.parse_args(cf, args)
+
+    time_pos = args.get('time_pos', [[2015, 1, 21, 0, 81, 18.25]])
+    num_t_samples_per_month = args.get('num_t_samples_per_month', 2)
+
+    evaluator = Evaluator.load( cf, model_id, model_epoch, devices)
+    evaluator.model.set_location( NetMode.test, time_pos)
+    if 0 == cf.par_rank :
+      cf.print()
+      cf.write_json( wandb)
+    evaluator.validate( 0, cf.BERT_strategy)
+
+
+##############################################
+##### ADDED THIS. PROTOTYPE #####
+
+
+  @staticmethod
+  def fixed_location_forecast( cf, model_id, model_epoch, devices, args = {}) :
+
+    # set/over-write options
+    cf.BERT_strategy = 'forecast'
+    cf.num_files_test = 2
+    cf.num_patches_per_t_test = 2
+    cf.log_test_num_ranks = 4
+    cf.forecast_num_tokens = 1
+    cf.batch_size_test = 24
+
 
     pos = [ 33.55 , 18.25 ]
     years = [2018]

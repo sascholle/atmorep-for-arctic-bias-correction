@@ -1,7 +1,7 @@
 #!/bin/bash -x
 #SBATCH --account=ab1412
-#SBATCH --partition=gpu
-#SBATCH --time=12:00:00
+#SBATCH --partition=compute
+#SBATCH --time=08:00:00
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1 #4 works but is it faster? efficient?
 #SBATCH --cpus-per-task=127

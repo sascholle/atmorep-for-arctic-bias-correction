@@ -26,13 +26,12 @@ import os
 
 from atmorep.datasets.normalizer import normalize
 from atmorep.utils.utils import tokenize, get_weights
-
 class MultifieldDataSampler( torch.utils.data.IterableDataset):
     
   ###################################################
   def __init__( self, file_path, fields, years, batch_size, pre_batch, n_size,
                 num_samples, with_shuffle = False, time_sampling = 1, with_source_idxs = False, compute_weights = False, 
-                fields_targets = None, pre_batch_targets = None, geo_range_sampling = None ) :
+                fields_targets = None, pre_batch_targets = None, geo_range_sampling = None) :
     '''
       Data set for single dynamic field at an arbitrary number of vertical levels
 
@@ -49,26 +48,25 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
     self.with_shuffle = with_shuffle
     self.pre_batch = pre_batch
     self.geo_range_sampling = geo_range_sampling
-    
+
     assert os.path.exists(file_path), f"File path {file_path} does not exist"
     self.ds = zarr.open( file_path, mode='r')
 
     # Print available keys
     print("Available keys in the Zarr dataset:", list(self.ds.array_keys()))
-        
    
     self.dask_array_data = da.from_zarr(self.ds['data'])
     self.dask_array_sfc  = da.from_zarr(self.ds['data_sfc'])
 
     self.ds_global = self.ds.attrs['is_global']
 
-    #print("WHAT IS GEO RANGE SAMPLING", geo_range_sampling)
-    #if geo_range_sampling is not None :
-    self.lats = np.array( self.ds['lats'][:71])
-    #else :
-      #self.lats = np.array( self.ds['lats'])
+  # Use geo range if provided, otherwise use full domain
+    if geo_range_sampling is not None :
+      self.lats = np.array( self.ds['lats'][:71])
+    else :
+      self.lats = np.array( self.ds['lats'])
     self.lons = np.array( self.ds['lons'])
-    
+
     sh = self.ds['data'].shape
     st = self.ds['time'].shape
     self.ds_len = st[0] 
@@ -138,144 +136,147 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
 
   ###################################################
   def __iter__(self):
-
-    if self.with_shuffle :
-      self.shuffle()
-
-    lats, lons = self.lats, self.lons
-    ts, n_size = self.time_sampling, self.n_size
-    ns_2 = np.array(self.n_size) / 2.
-    res = self.res
-
-    iter_start, iter_end = self.worker_workset()
-
-    for bidx in range( iter_start, iter_end) :
-
-      sources, token_infos = [[] for _ in self.fields], [[] for _ in self.fields]
-      sources_infos, source_idxs = [], []
-  
-      i_bidx = self.idxs_perm_t[bidx]
-      idxs_t = list(np.arange( i_bidx - n_size[0]*ts, i_bidx, ts, dtype=np.int64))
-      # data_tt_sfc = self.ds['data_sfc'].oindex[idxs_t]
-      # data_tt = self.ds['data'].oindex[idxs_t]
-      with dc.set(**{'array.slicing.split_large_chunks': True}):
-        data_tt_sfc = self.dask_array_sfc[idxs_t].compute()
-        data_tt     = self.dask_array_data[idxs_t].compute()
-
-
-      for sidx in range(self.batch_size) :
-        
-        idx = self.idxs_perm[bidx*self.batch_size+sidx]
-        # slight asymetry with offset by res/2 is required to match desired token count
-        lat_ran = np.where(np.logical_and(lats>idx[0]-ns_2[1]-res[0]/2.,lats<idx[0]+ns_2[1]))[0]
-        # handle periodicity of lon
-        assert not ((idx[1]-ns_2[2]) < 0. and (idx[1]+ns_2[2]) > 360.)
-        il, ir = (idx[1]-ns_2[2]-res[1]/2., idx[1]+ns_2[2])
-        if il < 0. :
-          lon_ran = np.concatenate( [np.where( lons > il+360)[0], np.where(lons < ir)[0]], 0)
-        elif ir > 360. :
-          lon_ran = np.concatenate( [np.where( lons > il)[0], np.where(lons < ir-360)[0]], 0)
-        else : 
-          lon_ran = np.where(np.logical_and( lons > il, lons < ir))[0]
-        
-        sources_infos += [ [ self.ds['time'][ idxs_t ].astype(datetime), 
-                             self.lats[lat_ran], self.lons[lon_ran], self.res ] ]
-
-        if self.with_source_idxs :
-          source_idxs += [ (idxs_t, lat_ran, lon_ran) ]
-
-        # extract data
-        for ifield, field_info in enumerate(self.fields):  
-          source_lvl, tok_info_lvl  = [], []
-          tok_size  = field_info[4]
-          num_tokens = field_info[3]
-          corr_type = 'global' if len(field_info) <= 6 else field_info[6]
-        
-          for ilevel, vl in enumerate(field_info[2]):
-            if vl == 0 : #surface level
-              field_idx = self.ds.attrs['fields_sfc'].index( field_info[0])
-              data_t = data_tt_sfc[ :, field_idx ]
-            else :
-              field_idx = self.ds.attrs['fields'].index( field_info[0])
-              vl_idx = self.ds.attrs['levels'].index(vl)
-              data_t = data_tt[ :, field_idx, vl_idx ]
-          
-            source_data, tok_info = [], []
-            # extract data, normalize and tokenize
-            cdata = data_t[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
-            
-            normalizer = self.normalizers[ifield][ilevel]
-
-            if corr_type != 'global': 
-              #normalizer = normalizer[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
-              if lat_ran[0] < lat_ran[-1] and lon_ran[0] < lon_ran[-1]:
-                lat_max, lat_min = max(lat_ran), min(lat_ran)
-                lon_max, lon_min = max(lon_ran), min(lon_ran)
-                normalizer = normalizer[:,:,lat_min:lat_max+1,lon_min:lon_max+1]
-                #normalizer_vu = normalizer[:,:,lat_min:lat_max+1,lon_min:lon_max+1]
-                #cdata = normalize(cdata, normalizer_vu, sources_infos[-1][0], year_base = self.year_base) 
-              else:
-                normalizer = normalizer[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
-                #cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
-            #else:
-            cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
-            
-            
-            source_data = tokenize( torch.from_numpy( cdata), tok_size )    
-            # token_infos uses center of the token: *last* datetime and center in space
-            dates = self.ds['time'][ idxs_t ].astype(datetime)
-            cdates = dates[tok_size[0]-1::tok_size[0]]
-            # use -1 is to start days from 0
-            dates = [(d.year, d.timetuple().tm_yday-1, d.hour) for d in cdates] 
-            lats_sidx = self.lats[lat_ran][ tok_size[1]//2 :: tok_size[1] ]
-            lons_sidx = self.lons[lon_ran][ tok_size[2]//2 :: tok_size[2] ]
-            # tensor product for token_infos
-            tok_info += [[[[[ year, day, hour, vl, lat, lon, vl, self.res[0]] for lon in lons_sidx]
-                                                                              for lat in lats_sidx]
-                                                                  for (year, day, hour) in dates]]
-
-            source_lvl += [ source_data ]
-            tok_info_lvl += [ torch.tensor(tok_info, dtype=torch.float32).flatten( 1, -2)]      
-          sources[ifield] += [ torch.stack(source_lvl, 0) ]
-          token_infos[ifield] += [ torch.stack(tok_info_lvl, 0) ]
       
-      # concatenate batches   
-      sources = [torch.stack(sources_field).transpose(1,0) for sources_field in sources]
-      token_infos = [torch.stack(tis_field).transpose(1,0) for tis_field in token_infos]
-      sources = self.pre_batch( sources, token_infos )
+      if self.with_shuffle :
+        self.shuffle()
 
-      tmidx_list = sources[-1]
-      weights_idx_list = []
-      if self.compute_weights:
-        for ifield, field_info in enumerate(self.fields): 
-          weights = []
-          for ilevel, vl in enumerate(field_info[2]):
-            for ibatch in range(self.batch_size):
+      lats, lons = self.lats, self.lons
+      ts, n_size = self.time_sampling, self.n_size
+      ns_2 = np.array(self.n_size) / 2.
+      res = self.res
+
+      iter_start, iter_end = self.worker_workset()
+
+      for bidx in range( iter_start, iter_end) :
+
+        sources, token_infos = [[] for _ in self.fields], [[] for _ in self.fields]
+        sources_infos, source_idxs = [], []
+    
+        i_bidx = self.idxs_perm_t[bidx]
+        idxs_t = list(np.arange( i_bidx - n_size[0]*ts, i_bidx, ts, dtype=np.int64))
+        # data_tt_sfc = self.ds['data_sfc'].oindex[idxs_t]
+        # data_tt = self.ds['data'].oindex[idxs_t]
+        with dc.set(**{'array.slicing.split_large_chunks': True}):
+          data_tt_sfc = self.dask_array_sfc[idxs_t].compute()
+          data_tt     = self.dask_array_data[idxs_t].compute()
+
+        for sidx in range(self.batch_size) :
+          
+          idx = self.idxs_perm[bidx*self.batch_size+sidx]
+          # slight asymetry with offset by res/2 is required to match desired token count
+          lat_ran = np.where(np.logical_and(lats>idx[0]-ns_2[1]-res[0]/2.,lats<idx[0]+ns_2[1]))[0]
+          # handle periodicity of lon
+          assert not ((idx[1]-ns_2[2]) < 0. and (idx[1]+ns_2[2]) > 360.)
+          il, ir = (idx[1]-ns_2[2]-res[1]/2., idx[1]+ns_2[2])
+          if il < 0. :
+            lon_ran = np.concatenate( [np.where( lons > il+360)[0], np.where(lons < ir)[0]], 0)
+          elif ir > 360. :
+            lon_ran = np.concatenate( [np.where( lons > il)[0], np.where(lons < ir-360)[0]], 0)
+          else : 
+            lon_ran = np.where(np.logical_and( lons > il, lons < ir))[0]
+          
+          sources_infos += [ [ self.ds['time'][ idxs_t ].astype(datetime), 
+                              self.lats[lat_ran], self.lons[lon_ran], self.res ] ]
+
+          if self.with_source_idxs :
+            source_idxs += [ (idxs_t, lat_ran, lon_ran) ]
+          
+          #print the lat lon and date that is actually being processed
+          dates = self.ds['time'][ idxs_t ].astype(datetime)
+          #print(f'Processing batch {bidx}, sample {sidx} :: lat {self.lats[lat_ran]}, lon {self.lons[lon_ran]}, time {dates}', flush=True)
+
+          # extract data
+          for ifield, field_info in enumerate(self.fields):  
+            source_lvl, tok_info_lvl  = [], []
+            tok_size  = field_info[4]
+            num_tokens = field_info[3]
+            corr_type = 'global' if len(field_info) <= 6 else field_info[6]
+          
+            for ilevel, vl in enumerate(field_info[2]):
+              if vl == 0 : #surface level
+                field_idx = self.ds.attrs['fields_sfc'].index( field_info[0])
+                data_t = data_tt_sfc[ :, field_idx ]
+              else :
+                field_idx = self.ds.attrs['fields'].index( field_info[0])
+                vl_idx = self.ds.attrs['levels'].index(vl)
+                data_t = data_tt[ :, field_idx, vl_idx ]
+            
+              source_data, tok_info = [], []
+              # extract data, normalize and tokenize
+              cdata = data_t[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
               
-              lats_idx = source_idxs[ibatch][1] 
-              lons_idx = source_idxs[ibatch][2]
+              normalizer = self.normalizers[ifield][ilevel]
 
-              idx_base = tmidx_list[ifield][ilevel][ibatch]
-              idx_loc = idx_base - np.prod(num_tokens) * ibatch
+              if corr_type != 'global': 
+                #normalizer = normalizer[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
+                if lat_ran[0] < lat_ran[-1] and lon_ran[0] < lon_ran[-1]:
+                  lat_max, lat_min = max(lat_ran), min(lat_ran)
+                  lon_max, lon_min = max(lon_ran), min(lon_ran)
+                  normalizer = normalizer[:,:,lat_min:lat_max+1,lon_min:lon_max+1]
+                  #normalizer_vu = normalizer[:,:,lat_min:lat_max+1,lon_min:lon_max+1]
+                  #cdata = normalize(cdata, normalizer_vu, sources_infos[-1][0], year_base = self.year_base) 
+                else:
+                  normalizer = normalizer[ ... , lat_ran[:,np.newaxis], lon_ran[np.newaxis,:]]
+                  #cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
+              #else:
+              cdata = normalize(cdata, normalizer, sources_infos[-1][0], year_base = self.year_base)
               
-              grid = np.flip(np.array( np.meshgrid( lons_idx, lats_idx)), axis = 0) #flip to have lat on pos 0 and lon on pos 1
-              grid = torch.from_numpy( np.array( np.broadcast_to( grid,
-                                      shape = [tok_size[0]*num_tokens[0], *grid.shape])).swapaxes(0,1))
+              
+              source_data = tokenize( torch.from_numpy( cdata), tok_size )    
+              # token_infos uses center of the token: *last* datetime and center in space
+              dates = self.ds['time'][ idxs_t ].astype(datetime)
+              cdates = dates[tok_size[0]-1::tok_size[0]]
+              # use -1 is to start days from 0
+              dates = [(d.year, d.timetuple().tm_yday-1, d.hour) for d in cdates] 
+              lats_sidx = self.lats[lat_ran][ tok_size[1]//2 :: tok_size[1] ]
+              lons_sidx = self.lons[lon_ran][ tok_size[2]//2 :: tok_size[2] ]
+              # tensor product for token_infos
+              tok_info += [[[[[ year, day, hour, vl, lat, lon, vl, self.res[0]] for lon in lons_sidx]
+                                                                                for lat in lats_sidx]
+                                                                    for (year, day, hour) in dates]]
 
-              grid_lats_toked = tokenize( grid[0], tok_size).flatten( 0, 2)  
+              source_lvl += [ source_data ]
+              tok_info_lvl += [ torch.tensor(tok_info, dtype=torch.float32).flatten( 1, -2)]      
+            sources[ifield] += [ torch.stack(source_lvl, 0) ]
+            token_infos[ifield] += [ torch.stack(tok_info_lvl, 0) ]
+        
+        # concatenate batches   
+        sources = [torch.stack(sources_field).transpose(1,0) for sources_field in sources]
+        token_infos = [torch.stack(tis_field).transpose(1,0) for tis_field in token_infos]
+        sources = self.pre_batch( sources, token_infos )
 
-              lats_mskd_b = np.array([np.unique(t) for t in grid_lats_toked[ idx_loc ].numpy()])
+        tmidx_list = sources[-1]
+        weights_idx_list = []
+        if self.compute_weights:
+          for ifield, field_info in enumerate(self.fields): 
+            weights = []
+            for ilevel, vl in enumerate(field_info[2]):
+              for ibatch in range(self.batch_size):
+                
+                lats_idx = source_idxs[ibatch][1] 
+                lons_idx = source_idxs[ibatch][2]
 
-              weights.append([get_weights(la) for la in lats_mskd_b])
+                idx_base = tmidx_list[ifield][ilevel][ibatch]
+                idx_loc = idx_base - np.prod(num_tokens) * ibatch
+                
+                grid = np.flip(np.array( np.meshgrid( lons_idx, lats_idx)), axis = 0) #flip to have lat on pos 0 and lon on pos 1
+                grid = torch.from_numpy( np.array( np.broadcast_to( grid,
+                                        shape = [tok_size[0]*num_tokens[0], *grid.shape])).swapaxes(0,1))
 
-          weights_idx_list.append(weights)
-      sources = (*sources, weights_idx_list)
+                grid_lats_toked = tokenize( grid[0], tok_size).flatten( 0, 2)  
 
-      # TODO: implement (only required when prediction target comes from different data stream)
-      targets, target_info = None, None
-      target_idxs = None
-     
-      yield ( sources, targets, (source_idxs, sources_infos), (target_idxs, target_info))
+                lats_mskd_b = np.array([np.unique(t) for t in grid_lats_toked[ idx_loc ].numpy()])
+
+                weights.append([get_weights(la) for la in lats_mskd_b])
+
+            weights_idx_list.append(weights)
+        sources = (*sources, weights_idx_list)
+
+        # TODO: implement (only required when prediction target comes from different data stream)
+        targets, target_info = None, None
+        target_idxs = None
+      
+        yield ( sources, targets, (source_idxs, sources_infos), (target_idxs, target_info))
 
   ###################################################
   def set_data( self, times_pos, batch_size = None) :
@@ -298,7 +299,7 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
       tstamp = pd.to_datetime( f'{item[0]}-{item[1]}-{item[2]}-{item[3]}', format='%Y-%m-%d-%H')
       
       self.idxs_perm_t += [ np.where( self.times == tstamp)[0]+1 ] #The +1 assures that tsamp is included in the range
-
+      assert len(self.idxs_perm_t[-1]) == 1, f'timestamp {tstamp} not found in self.times'
       # work with mathematical lat coordinates from here on
       self.idxs_perm[idx] = np.array( [90. - item[4], item[5]])
    
@@ -379,3 +380,53 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
 
     return iter_start, iter_end
 
+  ############################################################################################
+  ## added this ####
+
+  # def set_location(self, pos, years, months, num_t_samples_per_month, batch_size=None):
+  #     """
+  #     Restrict the sampler to a fixed location and time range.
+  #     pos: [lat, lon]
+  #     years: list of years
+  #     months: list of months
+  #     num_t_samples_per_month: number of time samples per month
+  #     batch_size: optional, override batch size
+  #     """
+  #     self.fixed_location_mode = True
+  #     lat, lon = pos
+  #     # Find closest lat/lon indices in the dataset
+  #     lat_idx = np.argmin(np.abs(self.lats - lat))
+  #     lon_idx = np.argmin(np.abs(self.lons - lon))
+
+  #     # Build a list of timestamps for the requested years/months
+  #     times = pd.to_datetime(self.ds['time'][:])
+  #     selected_indices = []
+  #     for year in years:
+  #         for month in months:
+  #             # Get all times in this year/month
+  #             month_mask = (times.year == year) & (times.month == month)
+  #             month_indices = np.where(month_mask)[0]
+  #             # Select evenly spaced samples in the month
+  #             if len(month_indices) > 0:
+  #                 step = max(1, len(month_indices) // num_t_samples_per_month)
+  #                 selected_indices.extend(month_indices[::step][:num_t_samples_per_month])
+
+  #     # Store the indices for iteration
+  #     self.selected_time_indices = np.array(selected_indices)
+  #     self.selected_lat_idx = lat_idx
+  #     self.selected_lon_idx = lon_idx
+
+  #     # Optionally update batch size
+  #     if batch_size is not None:
+  #         self.batch_size = batch_size
+
+  #     # Update internal state for iteration
+  #     self.num_samples = len(self.selected_time_indices)
+  #     print(f"Sampler set to location: lat={self.lats[lat_idx]}, lon={self.lons[lon_idx]}")
+  #     print(f"Number of samples for evaluation: {self.num_samples}")
+
+  # # def __iter__(self):
+  # #     # Example: yield only the selected location and times
+  # #     for t_idx in self.selected_time_indices:
+  # #         # You may need to adapt this to your batch logic
+  # #         yield self.get_sample(t_idx, self.selected_lat_idx, self.selected_lon_idx)

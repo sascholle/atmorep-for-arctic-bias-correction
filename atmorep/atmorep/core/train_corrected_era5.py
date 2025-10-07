@@ -237,99 +237,12 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   # any parameter in cf can be overwritten when training is continued, e.g. we can increase the 
   # masking rate 
 
-  # cf.fields = [ [ 'specific_humidity', [ 1, 2048, [ ], 0 ], 
-  #                               [ 96, 105, 114, 123, 137 ], 
-  #                               [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.1, 0.05] ] ]
-    
-#   cf.fields = [
-#     [
-#         'velocity_u',  # Name
-#         [1, 2048, [], 0, ],  # Field Properties
-#         [137],  # Vertical Levels
-#         [12, 6, 12],  # Number of Tokens
-#         [3, 9, 9],  # Token Size
-#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-#         'local'  # Norm
-#     ],
-#     [
-#         'velocity_v',  # Name
-#         [1, 2048, [], 0 ],  # Field Properties
-#         [137],  # Vertical Levels
-#         [12, 6, 12],  # Number of Tokens
-#         [3, 9, 9],  # Token Size
-#         [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-#         'local'  # Norm
-#     ],
-    #   [
-    #     'temperature',  # Name
-    #     [1, 1024, [], 0 ],  # Field Properties: [Dynamic, Embedding Dimension, Device ID]
-    #     [137],  # Vertical Levels
-    #     [12, 6, 12],  # Number of Tokens
-    #     [3, 9, 9],  # Token Size
-    #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-    #     'local'  # Norm
-    # ]
-# ]
 
 ######################################################
 # Parameters changed by me
 ######################################################
 
-#for 3 field model 
-
-  # cf.fields = [
-  #   [
-  #     'velocity_u',  # Name
-  #     [1, 2048, ['velocity_v', 'temperature'], 0, ['3k6e6p7o', 141]],  # Field Properties
-  #     [96, 105, 114, 123, 137],  # Vertical Levels
-  #     [12, 6, 12],  # Number of Tokens
-  #     [3, 9, 9],  # Token Size
-  #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-  #     'local'  # Norm
-  #   ],
-  #   [
-  #     'velocity_v',  # Name
-  #     [1, 2048, ['velocity_u', 'temperature'], 1, ['brxmevmt', 141]],  # Field Properties
-  #     [96, 105, 114, 123, 137],  # Vertical Levels
-  #     [12, 6, 12],  # Number of Tokens
-  #     [3, 9, 9],  # Token Size
-  #     [0.5, 0.9, 0.2, 0.05],  # Masking and Noising Rates
-  #     'local'  # Norm
-  #   ],
-  #   [
-  #     'temperature',  # Name
-  #     [1, 1024, ['velocity_u', 'velocity_v'], 2, ['1za45vud', 155]],  # Field Properties
-  #     [96, 105, 114, 123, 137],  # Vertical Levels
-  #     [12, 6, 12],  # Number of Tokens
-  #     [3, 9, 9],  # Token Size
-  #     [0.0, 0.0, 0.0, 0.0],  # Masking and Noising Rates
-  #     'local'  # Norm
-  #   ]
-  # ]
-
-# for temp model
-  # cf.fields = [
-  #   [
-  #     'temperature',  # input
-  #     [1, 1536, [], 0], 
-  #     [137], 
-  #     [12, 2, 4], # nr of tokens
-  #     [3, 27, 27],  # token size 
-  #     [0.1, 0.1, 0.1, 0.1], 
-  #     'local'
-  #     ],
-  #     [
-  #       't2m',  # Name
-  #       [1, 1024, [], 0],  # Field Properties
-  #       [0],  # Vertical Levels
-  #       [12, 6, 12],  # Number of Tokens
-  #       [3, 9, 9],  # Token Size
-  #       [0.9, 0.9, 0.1, 0.05],  # Masking and Noising Rates
-  #       'local'
-  #   ]
-  #  ]
-
-  # for 6 field model
+# for 6 field model
 
   cf.fields = [
     [
@@ -396,41 +309,30 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
         [0.25,0.9,0.1,0.05]
     ],
     [
-      't2m',  # Name
-      [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 1],  # Field Properties # was 1024 / 1536
-      [0],  # Vertical Levels
-      [12, 2, 4],  # Number of Tokens
-      [3, 27, 27],  # Token Size
-      #[1, 0, 0, 0], # Masking and Noising Rates
-      [0.5, 0.9, 0.2, 0.05], 
-      'Local'
+        't2m',  # Name
+        [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 1],  # Field Properties # was 1024 / 1536
+        [0],  # Vertical Levels
+        [12, 2, 4],  # Number of Tokens
+        [3, 27, 27],  # Token Size
+        #[1, 0, 0, 0], # Masking and Noising Rates
+        [0.5, 0.9, 0.2, 0.05], 
+        'Local'
     ], 
     [
-      'corrected_t2m',  # Name
-      [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 2],  # Field Properties # was 1024 / 1536
-      [0],  # Vertical Levels
-      [12, 2, 4],  # Number of Tokens
-      [3, 27, 27],  # Token Size
-      #[1, 0, 0, 0], # Masking and Noising Rates
-      [0.5, 0.9, 0.2, 0.05], 
-      'Local'
+        'corrected_t2m',  # Name
+        [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 2],  # Field Properties # was 1024 / 1536
+        [0],  # Vertical Levels
+        [12, 2, 4],  # Number of Tokens
+        [3, 27, 27],  # Token Size
+        #[1, 0, 0, 0], # Masking and Noising Rates
+        [0.1, 0.9, 0.2, 0.05], 
+        'Local' 
     ]
   ]
 
-  #cf.fields_prediction = [ ["velocity_u", 0.0], ["velocity_v", 0.0], ["temperature", 1.0] ]
-
   cf.fields_prediction = [
-    #  ["velocity_u", 0.0], 
-    #  ["velocity_v", 0.0], 
-    #  ["specific_humidity", 0.0], 
-    #  ["velocity_z", 0.0], 
-    #  ["temperature", 0.0], 
-    #  ["total_precip", 1.0]
-    #  ]
-  
-  #["velocity_u",0.225],["velocity_v",0.225],["specific_humidity",0.15],["velocity_z",0.1],["temperature",0.2],["total_precip",0.1] ]
 
-  #["velocity_u", 0.225], ["velocity_v", 0.225], ["specific_humidity", 0.1125], ["velocity_z", 0.01875], ["temperature", 0.15], ["total_precip", 0.01875], ["t2m", 0.25] ]
+  #["velocity_u",0.225],["velocity_v",0.225],["specific_humidity",0.15],["velocity_z",0.1],["temperature",0.2],["total_precip",0.1] ]
 
   ["velocity_u", 0.125], ["velocity_v", 0.125], ["specific_humidity", 0.05], ["velocity_z", 0.01], ["temperature", 0.1], ["total_precip", 0.01], ["t2m", 0.2], ["corrected_t2m", 0.38] ]
 
@@ -463,23 +365,19 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   cf.years_train = list( range(2010, 2021))
   cf.years_test = [2021]
   cf.years_val = [2021] 
-  cf.geo_range_sampling = [[ 72.27, 90.], [ 0., 360.]] #[[ -90., 90.], [ 0., 360.]]
+  #cf.geo_range_sampling = [[ 72.27, 90.], [ 0., 360.]] #[[ -90., 90.], [ 0., 360.]]
+  cf.geo_range_sampling = [list(range(0, 71)), list(range(0, 1440))]
 
   cf.file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr' 
   #cf.file_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
-  #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr'
-  #cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8_with_t2m.zarr'
-  #cf.file_path = '/work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8.zarr'
-  #cf.file_path = '/work/ab1412/atmorep/data/era5_y2010_2020_res100.zarr'
-  #cf.file_path = '/work/ab1412/atmorep/data/combined/ml137/era5_y2021_res025_chunk8.zarr'
-  #cf.file_path = "/work/ab1412/atmorep/data/era_corrected/T2M_y2010-2021_no_leap_res025.zarr"
-
+  
   setup_wandb( cf.with_wandb, cf, par_rank, project_name='train', mode='offline')  
 
   # resuming a run requires online mode, which is not available everywhere
   #setup_wandb( cf.with_wandb, cf, par_rank, wandb_id = wandb_id) 
   
   if cf.with_wandb and 0 == cf.par_rank :
+    #print if write_json is working
     cf.write_json( wandb)
     cf.print() 
 
@@ -504,27 +402,21 @@ if __name__ == '__main__':
 
     #train()
 
-    # 4nvwbetz - Vorticity
-    # 3cizyl1q - multi3-uv
-    # 3qou60es - temperature
-    # 1v4qk0qx - forecasting 3 hours 
-    # wc5e2i3t - multi6 
-    # 3l087mw4 - t2m fine-tuned, original 
-    # hjbmsjft - v1 t2m fine-tuned 0: Wandb run: atmorep-hjbmsjft-18543509
-    # nqqyqr15 - v2 t2m fine-tuned on hjbmsjft again to find convergence  0: Wandb run: atmorep-nqqyqr15-18584657
-    # 58ipo6bs - v3 t2m fine-tuned on nqqyqr15 again to find convergence  0: Wandb run: atmorep-58ipo6bs-18612021
-    # 0rmiio09 - v4 t2m fine-tuned on 58ipo6bs again to find convergence  0: Wandb run: atmorep-0rmiio09-18677812
-    # qw047nnt - v5 t2m fine_tuned on 0rmiio09 again to find convergence  0: Wandb run: atmorep-qw047nnt-18909849
-    # b9h8xdoz - v6 t2m trained on qw047nnt     0: Wandb run: atmorep-b9h8xdoz-18941949
-    # ugqn2s9m - v7 trained on b9h8xdoz
-
     # corrected training 
-    # 0: Wandb run: atmorep-eg3ztaai-19017100 on b9h8xdoz
-    # 0: Wandb run: atmorep-f1ct6gx3-19062418 on ugqn2s9m
+    # 0: Wandb run: atmorep-eg3ztaai-19017100 on b9h8xdoz v1.0.1
+    # 0: Wandb run: atmorep-zxipahjj-19062614 on ugqn2s9m v1.0.2 - ugqn2s9m is an b9h8xdoz 6 field model 
+    
+    # second round
+    # 0: Wandb run: atmorep-6mb1bcla-19305085 trained on j2l0sz9j 0.9 masking v1.1.1
+    # 0: Wandb run: atmorep-qb7ksr0h-19309940 trained on 6mb1bcla 0.5 masking v1.1.2
+    # 0: Wandb run: atmorep-y1gpdgaa-19313842 trained on qb7ksr0h 0.5 masking v1.1.3
+    # 0: Wandb run: atmorep-u9vvriz7-19337083 trained on y1gpdgaa 0.5 masking v1.1.4
+    # 0: Wandb run: atmorep-iuy5bnth-19366232 trained on u9vvriz7 0.1 masking v1.1.5
+    # 0: Wandb run: atmorep-iuw3ce3v-19413611 trained on iuy5bnth 0.1 masking v1.1.6
 
 
 
-    wandb_id, epoch, epoch_continue = 'ugqn2s9m', -2, -2 
+    wandb_id, epoch, epoch_continue = 'iuy5bnth', -2, -2 
     Trainer = Trainer_BERT  
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 

@@ -78,15 +78,17 @@ class Config :
   def write_json( self, wandb) :
 
     if not hasattr( wandb.run, 'id') :
+      print('No wandb run id found. Cannot write json.')
+      print("wandb.run: ", wandb.run, wandb.run.id)
       return
 
     json_str = json.dumps(self.__dict__ )
 
     # save in directory with model files
-    dirname = Path( config.path_results, 'models/id{}'.format( wandb.run.id))
+    dirname = Path( config.path_models, 'id{}'.format( wandb.run.id))
     if not os.path.exists(dirname):
       os.makedirs( dirname)
-    fname =Path(config.path_results,'models/id{}/model_id{}.json'.format(wandb.run.id,wandb.run.id))
+    fname =Path(config.path_models,'id{}/model_id{}.json'.format(wandb.run.id,wandb.run.id))
     with open(fname, 'w') as f :
       f.write( json_str)
 
@@ -245,10 +247,15 @@ def setup_ddp( with_ddp = True) :
     rank = int(os.environ.get("SLURM_NODEID")) * ranks_per_node + local_rank
     size = int(os.environ.get("SLURM_NTASKS"))
 
-    master_node = os.environ.get('MASTER_ADDR', '-1')
+    # CHANGED THIS
+    master_node = os.environ.get('MASTER_ADDR', '1345')
+    #master_port = os.environ.get('MASTER_PORT', '1345')
     dist.init_process_group( backend='nccl', init_method='tcp://' + master_node + ':1345',
                               timeout=datetime.timedelta(seconds=10*8192),
                               world_size = size, rank = rank) 
+    # dist.init_process_group( backend='nccl', init_method=f'tcp://{master_node}:{master_port}',
+    #                           timeout=datetime.timedelta(seconds=10*8192),
+    #                           world_size = size, rank = rank) 
     logger.info( f'Using DDP with MASTER_ADDR={master_node}.' )
   else :
     logger.info( 'DDP is not used.' )

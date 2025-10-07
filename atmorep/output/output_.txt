@@ -1,0 +1,267 @@
+# take run ids from 
+plot_losses_path = "/work/ab1412/atmorep/plotting/plot_losses.py
+
+''' Model Run Ids for Plotting
+
+#### Corrected t2m model for Arctic fine-tune training ####
+    ## second iteration with better t2m learning curriculum 
+19305085 - v2.1 Wandb run: atmorep-6mb1bcla-19305085 trained on j2l0sz9j 0.9 masking of t2m corrected
+19309940 - v2.2 Wandb run: atmorep-qb7ksr0h-19309940 trained on 6mb1bcla 0.5 masking
+19313842 - v2.3 Wandb run: atmorep-y1gpdgaa-19313842 trained on qb7ksr0h 0.5 masking
+19337083 - v2.4 Wandb run: atmorep-u9vvriz7-19337083 trained on y1gpdgaa 0.5 masking
+19366232 - v2.5 Wandb run: atmorep-iuy5bnth-19366232 trained on u9vvriz7 0.1 masking
+
+    ## initial first runs
+19017100 - t2m corrected run v1.2 0.5 masking
+19062614 - loaded model 0: model-_id : ugqn2s9m v1.1 0.5 masking
+
+
+#### BERT vs forecast Sparsity Tests for Temperature #####
+19304401 - bert, input masking of temp using 1,1,1,1
+19305341 - bert, complete masked input field 0s, 50% target sparsity (and 1,1,1,1 as config)
+19305366 - bert, 50% input 0s, 50% target (and 1,1,1,1 as config)
+19305879 - bert, 50% input 0s, 50% target (and 0.5, 0.9, 0.2, 0.05 as config)
+19305768 - NaNs dont work - bert, 50% input nans, 50% target (and 0.5, 0.9, 0.2, 0.05 as config)
+
+19305731 - forecast, 50% input 0s, 50% target (and 0.5, 0.9, 0.2, 0.05 as config)
+19305748 - forecast, 50% input 0s, 50% target (and 0.5, 0.9, 0.2, 0.05 as config)
+
+#### Forecast and BERT Baseline search ####
+    ## used in presentation
+17850993 - BERT and plain mse (not ensemble), old prediction ratios
+17720794 - BERT, MES, old prediction ratios (17767562 - BERT and global like 17720794)
+17720895 - forecast, MES, old prediction ratios (17767305 - forecast and global like 17720895)
+    ## new prediction ratios
+17159353 - BERT, MES, new prediction ratios
+17138477 - forecast, MES, new prediction ratios
+
+#### t2m with temp cross attention and decaying masking #####
+19295934 - v8.2 (unfortunate doubling up).. maybe good for plotting
+19300146 - v8 
+19285543 - v7
+19272003 - v6
+19210229 - v4 trained on wldctg77
+19155880 - v3 trained on dhap4i9v
+19133753 - v2 trained on uo2r80k8
+19111065 - v1 trained on wc5e2i3t
+
+#### t2m tests ####
+19094477 - v9
+19094345 - v1.2 t2m with temperature cross attention
+19062136 - v8.3 normal t2m masking 
+19062198 - v8.2 no t2m masking 0.001
+19058384 - v8.1 much higher masking at 0.9
+19031053 - v7
+18941949 - v6
+18909849 - v5 
+18719337 - 50% masked with target set to t2m bert 
+18717159 - 50% masked t2m bert
+18685688 - completely masked input t2m bert, all others not. No target sparsity because forecast, but full input sparsity  
+    ## finetuning starting
+18677812 - and again t2m bert v4
+18612021 - and again t2m bert v3, third time continued fine tuning on t2m using 18584657
+18584657 - t2m bert v2, continued t2m fine tuning, not converged yet 
+18543509 - t2m bert v1, really high t2m loss weighting, mse and stats - solid learning, not converged yet 
+18524597 - t2m bert, sparsity input and target 90% - no learning 
+18522685 - t2m bert, mid t2m weight - good learning - t2m has values 
+18347853 - t2m bert 
+    ## checking t2m full longitude range -90-90 - no difference geo selection nothing
+18994864 - re-trained t2m model b9h8xdoz on full lat range
+18994795 - training on wc5e2i3t again to see improvement 
+
+    ## only MSE ensemble
+17831587 - BERT and MSE ens, 480 samples and 10 hours to check training 
+17828425 - BERT and MSE ens, 1024 samples per epoch - weird training plotting...
+17824426 - BERT and MSE ens as the paper has
+
+#### Forecasting Global only with precip target ####
+17720340 - precip target forecast baseline global, 128 epochs 
+17714187 - precip target forecast baseline global with updated config to match old models as best as possible (only prediction rations changed)
+17698436 - precip target forecast baseline global no target or input masking, normal prediction ratios
+17691529 - precip target forecast baseline arctic, no target or input masking, normal prediction ratios
+
+#### Forecast Arctic only predicting and targeting precip ####
+17555479 - 0's input double check
+17546671 - 0's for input in precip
+17398874 - 0%
+17398873 - 10%
+17413071 - 50%
+17398877 - 90% 
+17398871 - 100% - not possible
+17398921 - 99.9%
+17390826 - tailored MSE
+17321944 - Forecast, MSE only, does grad loss and mse differ? why?
+17307463 - Forecast, only predicting precip, Mse and stats, fully masked precip though this shouldnt change anything.
+17307451 - Forecast, only predicting precip, stats and mse for Forecast arctic with minimal masking (hopefully same as above masking doesn't change anything)
+
+#### BERT ERA #####
+17254410 - Bert Arctic, target precip and no masking of other fields. 
+17254035 - OOTB, old MSE 4th check
+17191348 - OOTB, old MSE as well 3rd check 
+17183688 - no arctic default 2nd check
+17159066 - Bert default prediction and input masking, mse and stats, 70% target sparsity, But still sparsity setting - could be messing up precip
+17138477 - Bert local, why no loss lines in plot??, mse ensemble and stats, 70% target sparsity, arctic, but default input masking and prediction ratios, 
+17138473 - Bert local, mse ensemble only, 70% target sparsity, arctic, but default input masking and prediction ratios, 
+17133443 - Bert local, only precip prediction and target, 70% target masking, default masking,  
+17116108 - Bert and global temp 
+
+#### Only predicting precip: ####
+    ## Bert PLUS complete masking of precip too
+    all seem to have similar total loss
+    why is global temp here better for temp loss?
+    does target sparsity really have no effect on BERT?
+    MES seems to have less chaotic loss than just MSE ens
+17086740 - Bert, mse ens, global temp, 70% target sparsity, should not have any change seeing as the sparsity shouldnt effect the BERT tokens - update: why would this be the case??, best loss out of three ~ 0.09
+17116097 - Bert, mse ens, local temp, precip 70% target sparsity
+16975985 - Bert, MES, local temp, no target sparsity, loss improved - BERT better than forecast, even with NO input?
+
+    ## How does forecasting handle target sparsity so well? The grad loss is a bit over the place, but still total loss is lower than model *213 without target sparsity?? Mmh maybe thats because of the loss. Mse ens lower loss than with stats
+    And why do the other fields respond by converging so well, especially temp, even though they are not being predicted or targeted?
+    AND why does temp actually perform better with global norms ~0.01, vs local ~0.11??
+17112711 - fore, 70% sparsity, mse ens, local temp, only predicting precip, 100% input sparsity - means nothing for forecast
+17086747 - fore, 70% sparsity, global temp, only mse ens, forecast, precip check 2 - same peak around epoch 2-3
+17019617 - fore, 70% sparsity, global temp, only mse ens, forecast, precip , global temp
+    ## All three of these should be showing the same model: only predicting and thus targeting precip, local temp, MES, 
+    Why does the loss of the other fields so chaotic, especially in comparison to the model with target sparsity? --- makes me think the target sparsity code needs checking... this surely shouldn't be the case
+16953415 - fore, MES,  default targets, 100% input masking precip - non-sensicle for fore, loss improved
+16951213 - fore, MES, double check, only predicting and target precip - higher loss though?
+16441376 - fore, MES, only predicting and target precip, weird that this has better loss than model without only targeting precip?? - oh wait thats not weird. The predict list is adopted for target list so effectively its the same.  
+
+#### Only predicting t2m: ####
+16779906 - fore, t2m 50 epochs
+16799165 - fore, t2m 500 epochs
+'''
+
+##############################################################################################################################
+
+run ids from: 
+/work/ab1412/atmorep/atmorep/core/train.py
+
+# 4nvwbetz - Vorticity
+# 3cizyl1q - multi3-uv
+# 3qou60es - temperature
+# 1v4qk0qx - forecasting 3 hours 
+# wc5e2i3t - multi6 
+# 3l087mw4 - t2m fine-tuned, original 
+# hjbmsjft - v0.0.1 t2m fine-tuned 0: Wandb run: atmorep-hjbmsjft-18543509
+# nqqyqr15 - v0.0.2 t2m fine-tuned on hjbmsjft  0: Wandb run: atmorep-nqqyqr15-18584657
+# 58ipo6bs - v0.0.3 t2m fine-tuned on nqqyqr15  0: Wandb run: atmorep-58ipo6bs-18612021
+# 0rmiio09 - v0.0.4 t2m fine-tuned on 58ipo6bs  0: Wandb run: atmorep-0rmiio09-18677812
+# qw047nnt - v0.0.5 t2m fine_tuned on 0rmiio09  0: Wandb run: atmorep-qw047nnt-18909849
+# b9h8xdoz - v0.0.6 t2m trained on qw047nnt     0: Wandb run: atmorep-b9h8xdoz-18941949
+# ugqn2s9m - v0.0.7 t2m trained on b9h8xdoz     0: Wandb run: atmorep-ugqn2s9m-19031053
+# df9i2pq3 - v0.0.8.3 t2m fine-tuned on ugqn2s9m 0: Wandb run: atmorep-df9i2pq3-19062136
+# 0: Wandb run: atmorep-17p69lul-19094477 v0.0.9
+
+
+# adding temp cross attention to t2m field   
+# 0: Wandb run: atmorep-uo2r80k8-19111065 trained on wc5e2i3t 0.9 masking v0.1.1
+# 0: Wandb run: atmorep-dhap4i9v-19133753 trained on uo2r80k8 0.9 masking v0.1.2
+# 0: Wandb run: atmorep-wldctg77-19155880 trained on dhap4i9v 0.9 masking v0.1.3
+# 0: Wandb run: atmorep-zid4h599-19210229 trained on wldctg77 0.5 masking v0.1.4
+# 0: Wandb run: atmorep-q5o0n7ku-19255183 trained on zid4h599 0.5 masking v0.1.5
+# 0: Wandb run: atmorep-4786qlyo-19272003 trained on q5o0n7ku 0.5 masking v0.1.6
+# 0: Wandb run: atmorep-tjsw9hor-19285543 trained on 4786qlyo 0.1 masking v0.1.7
+# 0: Wandb run: atmorep-v3gn2q2u-19295934 ALSO trained on tjsw9hor 0.1 masking v0.1.8.2
+# 0: Wandb run: atmorep-j2l0sz9j-19300146 trained on tjsw9hor 0.1 masking v0.1.8
+
+
+run ids from:
+/work/ab1412/atmorep/atmorep/core/train_corrected_era5.py
+
+# corrected training 
+# 0: Wandb run: atmorep-eg3ztaai-19017100 on b9h8xdoz v1.0.1
+# 0: Wandb run: atmorep-zxipahjj-19062614 on ugqn2s9m v1.0.2 - ugqn2s9m is an b9h8xdoz 6 field model 
+
+# second round
+# 0: Wandb run: atmorep-6mb1bcla-19305085 trained on j2l0sz9j 0.9 masking v1.1.1
+# 0: Wandb run: atmorep-qb7ksr0h-19309940 trained on 6mb1bcla 0.5 masking v1.1.2
+# 0: Wandb run: atmorep-y1gpdgaa-19313842 trained on qb7ksr0h 0.5 masking v1.1.3
+# 0: Wandb run: atmorep-u9vvriz7-19337083 trained on y1gpdgaa 0.5 masking v1.1.4
+# 0: Wandb run: atmorep-iuy5bnth-19366232 trained on u9vvriz7 0.1 masking v1.1.5
+# 0: Wandb run: atmorep-iuw3ce3v-19413611 trained on iuy5bnth 0.1 masking v1.1.6
+
+##############################################################################################################################
+
+
+and run ids from: 
+/work/ab1412/atmorep/plotting/plot_forecast.py
+
+# 0: Wandb run: atmorep-5k7qf095-19238962 0: Loaded model id = wc5e2i3t. original 6 field model
+
+# 0: Wandb run: atmorep-to9m4vuf-18687042 re-trained t2m model hjbmsjft
+# 0: Wandb run: atmorep-e27ydobl-18688645 0: Loaded model id = 58ipo6bs. v3
+# 0: Wandb run: atmorep-f1br76ag-18896986 0: Loaded model id = 0rmiio09. v4
+# 0: Wandb run: atmorep--18947992 0: Loaded model id = qw047nnt. v5
+# 0: Wandb run: atmorep-c36hghai-19060281 0: Loaded model id = ugqn2s9m. v7
+# 0: Wandb run: atmorep-apadxke2-19093350  0: Loaded model id = zxipahjj. corrected t2m model
+
+# Round of comparing temp 
+# 0: Wandb run: atmorep-hha4bqe6-19513219 0: Loaded model id = iuw3ce3v. Jan
+# 0: Wandb run: atmorep-9ah3u47h-19513414 0: Loaded model id = wc5e2i3t. Jan
+# 0: Wandb run: atmorep-mh62gs52-19513494 0: Loaded model id = j2l0sz9j. Jan
+# 0: Wandb run: atmorep-zwxjwne7-19513570 0: Loaded model id = wc5e2i3t. April
+# 0: Wandb run: atmorep-cyv829p3-19513573 0: Loaded model id = wc5e2i3t. April again
+# 0: Wandb run: atmorep-cztlfxsg-19513838 0: Loaded model id = wc5e2i3t. May
+# 0: Wandb run: atmorep-97fv1tzd-19513857 0: Loaded model id = wc5e2i3t. May again
+# 0: Wandb run: atmorep-ru0l87n7-19513986 0: Loaded model id = wc5e2i3t. Sept
+
+# 0: Wandb run: atmorep-jbgafymp-19514003  0: Loaded model id = iuw3ce3v. Sept
+# 0: Wandb run: atmorep-vqt0cahy-19514007  0: Loaded model id = iuw3ce3v. May
+# 0: Wandb run: atmorep-j5putaeg-19514008 0: Loaded model id = iuw3ce3v. Sept again
+# 0: Wandb run: atmorep-yip9b2fw-19514049 0: Loaded model id = iuw3ce3v. Jan
+# 0: Wandb run: atmorep-igdw4ghm-19514068 0: Loaded model id = iuw3ce3v. Sept 26
+
+##############################################################################################################################
+
+and run ids from:
+/work/ab1412/atmorep/plotting/plot_forecast_difference.py
+
+for all of these: loaded model id = iuw3ce3v_single_gpu
+#0: Processing line: 0: Wandb run: atmorep-cjtlxcuc-19707366 - 2015-01-21 19:00:00
+#0: Processing line: 0: Wandb run: atmorep-ny8qo9me-19707374 - 2015-02-17 17:00:00
+#0: Processing line: 0: Wandb run: atmorep-ts9hael0-19707380 - 2015-03-15 05:00:00
+#0: Processing line: 0: Wandb run: atmorep-qsubzdar-19707380 - 2015-04-22T21
+#0: Processing line: 0: Wandb run: atmorep-8jvqsal4-19707380 - 2015-04-23T15
+#0: Processing line: 0: Wandb run: atmorep-vhko6m4j-19707381 - 2015-04-24T15
+#0: Processing line: 0: Wandb run: atmorep-5vogn4mz-19707390 - 2015-05-21T20
+#0: Processing line: 0: Wandb run: atmorep-8dgi3kal-19707397 - 2015-06-
+
+##############################################################################################################################
+
+ and  /work/ab1412/atmorep/results/NICE_vs_atmorep_RSME.py
+
+ output_files = [19707366, 
+                19707367,
+                19707368,
+                19707369, 
+                19707370, 
+                19707371, 
+                19707372,
+                19707373,
+                19707374,
+                19707375,
+                19707376,
+                19707377,
+                19707379,
+                19707380,
+                19707381,
+                19707382,
+                19707384,
+                19707385,
+                19707386, 
+                19707387,
+                19707388,
+                19707389,
+                19707390,
+                19707391,
+                19707392,
+                19707393,
+                19707394,
+                19707395,
+                19707396,
+                19707397
+]
+
+
+ save them and delete the rest 
