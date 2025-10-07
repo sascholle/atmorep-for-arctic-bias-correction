@@ -1,3 +1,6 @@
+A comprehensive list of all important output files that could be useful in the future
+
+
 # take run ids from 
 plot_losses_path = "/work/ab1412/atmorep/plotting/plot_losses.py
 
