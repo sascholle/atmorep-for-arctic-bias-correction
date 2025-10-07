@@ -1,0 +1,298 @@
+0: Wandb run: atmorep-jenle227-19278898
+0: l40360:1789614:1789614 [0] NCCL INFO Bootstrap : Using ib0:10.128.9.102<0>
+0: l40360:1789614:1789614 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l40360:1789614:1789614 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l40360:1789614:1789614 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l40360:1789614:1789614 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+0: l40360:1789614:1790137 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.9.102<0>
+0: l40360:1789614:1790137 [0] NCCL INFO Using non-device net plugin version 0
+0: l40360:1789614:1790137 [0] NCCL INFO Using network IB
+0: l40360:1789614:1790137 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l40360:1789614:1790137 [0] NCCL INFO ncclCommInitRank comm 0x55555f106200 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x94507d397fa890f - Init START
+0: l40360:1789614:1790137 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+0: l40360:1789614:1790137 [0] NCCL INFO comm 0x55555f106200 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 00/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 01/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 02/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 03/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 04/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 05/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 06/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 07/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 08/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 09/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 10/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 11/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 12/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 13/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 14/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 15/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 16/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 17/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 18/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 19/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 20/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 21/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 22/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 23/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 24/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 25/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 26/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 27/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 28/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 29/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 30/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Channel 31/32 :    0
+0: l40360:1789614:1790137 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:1789614:1790137 [0] NCCL INFO P2P Chunksize set to 131072
+0: l40360:1789614:1790137 [0] NCCL INFO Connected all rings
+0: l40360:1789614:1790137 [0] NCCL INFO Connected all trees
+0: l40360:1789614:1790137 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:1789614:1790137 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l40360:1789614:1790137 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l40360:1789614:1790137 [0] NCCL INFO ncclCommInitRank comm 0x55555f106200 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x94507d397fa890f - Init COMPLETE
+0: Running Evaluate.evaluate with mode = BERT
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = zxipahjj.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2015]
+0: month : None
+0: geo_range_sampling : [[72.27, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19278898
+0: wandb_id : jenle227
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : zxipahjj
+0: with_pytest : True
+0: lat_sampling_weighted : False
+0: it == 0 and starting val norms printouts
+0: validation loss for strategy=BERT at epoch 0 : 0.02821776270866394
+0: validation loss for velocity_u : 0.0008102653082460165
+0: validation loss for velocity_v : 0.0010767289204522967
+0: validation loss for specific_humidity : 0.0002593561657704413
+0: validation loss for velocity_z : 0.012129495851695538
+0: validation loss for temperature : 0.0015472337836399674
+0: validation loss for total_precip : 0.0014358543558046222
+0: validation loss for t2m : 0.03335276618599892
+0: validation loss for corrected_t2m : 0.1751304715871811
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 54, Level 96: Timestamp 2015-12-10 02:00:00, Shape (18, 18)
+0: Sample 10, Level 96: Timestamp 2015-06-09 00:00:00, Shape (18, 18)
+0: Sample 43, Level 96: Timestamp 2015-02-21 20:00:00, Shape (18, 18)
+0: Sample 35, Level 96: Timestamp 2015-05-29 06:00:00, Shape (18, 18)
+0: Sample 21, Level 96: Timestamp 2015-11-18 23:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [20, 38, 39, 5, 43, 80, 31, 59, 92, 62, 76, 22, 47, 19, 41, 26, 85, 16, 68, 88, 4, 48, 91, 78, 25, 72, 81, 36, 60, 8, 30, 10, 40, 46, 27, 29, 13, 50, 51, 87, 53, 74, 54, 61, 49, 89, 95, 56, 37, 65]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [20, 38, 39, 5, 43, 80, 31, 59, 92, 62, 76, 22, 47, 19, 41, 26, 85, 16, 68, 88, 4, 48, 91, 78, 25, 72, 81, 36, 60, 8, 30, 10, 40, 46, 27, 29, 13, 50, 51, 87, 53, 74, 54, 61, 49, 89, 95, 56, 37, 65]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [20, 38, 39, 5, 43, 80, 31, 59, 92, 62, 76, 22, 47, 19, 41, 26, 85, 16, 68, 88, 4, 48, 91, 78, 25, 72, 81, 36, 60, 8, 30, 10, 40, 46, 27, 29, 13, 50, 51, 87, 53, 74, 54, 61, 49, 89, 95, 56, 37, 65]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [20, 38, 39, 5, 43, 80, 31, 59, 92, 62, 76, 22, 47, 19, 41, 26, 85, 16, 68, 88, 4, 48, 91, 78, 25, 72, 81, 36, 60, 8, 30, 10, 40, 46, 27, 29, 13, 50, 51, 87, 53, 74, 54, 61, 49, 89, 95, 56, 37, 65]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [20, 38, 39, 5, 43, 80, 31, 59, 92, 62, 76, 22, 47, 19, 41, 26, 85, 16, 68, 88, 4, 48, 91, 78, 25, 72, 81, 36, 60, 8, 30, 10, 40, 46, 27, 29, 13, 50, 51, 87, 53, 74, 54, 61, 49, 89, 95, 56, 37, 65]
+0: ..
+0: 
+0: ============================== 3 passed in 9.62s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 22, Level 96: Timestamp 2015-08-16 17:00:00, Shape (18, 18)
+0: Sample 67, Level 96: Timestamp 2015-05-11 12:00:00, Shape (18, 18)
+0: Sample 87, Level 96: Timestamp 2015-05-15 17:00:00, Shape (18, 18)
+0: Sample 42, Level 96: Timestamp 2015-04-29 05:00:00, Shape (18, 18)
+0: Sample 41, Level 96: Timestamp 2015-02-20 10:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [81, 14, 43, 44, 20, 37, 66, 17, 54, 47, 51, 86, 52, 73, 29, 74, 85, 41, 12, 60, 46, 79, 16, 42, 67, 78, 21, 19, 63, 64, 90, 53, 36, 2, 31, 80, 9, 0, 84, 65, 58, 32, 70, 91, 39, 10, 82, 57, 28, 18]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [81, 14, 43, 44, 20, 37, 66, 17, 54, 47, 51, 86, 52, 73, 29, 74, 85, 41, 12, 60, 46, 79, 16, 42, 67, 78, 21, 19, 63, 64, 90, 53, 36, 2, 31, 80, 9, 0, 84, 65, 58, 32, 70, 91, 39, 10, 82, 57, 28, 18]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [81, 14, 43, 44, 20, 37, 66, 17, 54, 47, 51, 86, 52, 73, 29, 74, 85, 41, 12, 60, 46, 79, 16, 42, 67, 78, 21, 19, 63, 64, 90, 53, 36, 2, 31, 80, 9, 0, 84, 65, 58, 32, 70, 91, 39, 10, 82, 57, 28, 18]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [81, 14, 43, 44, 20, 37, 66, 17, 54, 47, 51, 86, 52, 73, 29, 74, 85, 41, 12, 60, 46, 79, 16, 42, 67, 78, 21, 19, 63, 64, 90, 53, 36, 2, 31, 80, 9, 0, 84, 65, 58, 32, 70, 91, 39, 10, 82, 57, 28, 18]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [81, 14, 43, 44, 20, 37, 66, 17, 54, 47, 51, 86, 52, 73, 29, 74, 85, 41, 12, 60, 46, 79, 16, 42, 67, 78, 21, 19, 63, 64, 90, 53, 36, 2, 31, 80, 9, 0, 84, 65, 58, 32, 70, 91, 39, 10, 82, 57, 28, 18]
+0: ..
+0: 
+0: ============================== 3 passed in 2.35s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 40, Level 96: Timestamp 2015-01-15 04:00:00, Shape (18, 18)
+0: Sample 57, Level 96: Timestamp 2015-07-07 23:00:00, Shape (18, 18)
+0: Sample 31, Level 96: Timestamp 2015-08-30 15:00:00, Shape (18, 18)
+0: Sample 65, Level 96: Timestamp 2015-04-29 14:00:00, Shape (18, 18)
+0: Sample 18, Level 96: Timestamp 2015-05-17 11:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [60, 77, 79, 2, 32, 46, 33, 55, 64, 13, 63, 44, 10, 19, 87, 28, 62, 51, 31, 24, 70, 65, 75, 85, 47, 57, 89, 78, 11, 58, 49, 25, 56, 21, 90, 72, 14, 36, 61, 59, 22, 12, 81, 86, 4, 34, 38, 48, 17, 91]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [60, 77, 79, 2, 32, 46, 33, 55, 64, 13, 63, 44, 10, 19, 87, 28, 62, 51, 31, 24, 70, 65, 75, 85, 47, 57, 89, 78, 11, 58, 49, 25, 56, 21, 90, 72, 14, 36, 61, 59, 22, 12, 81, 86, 4, 34, 38, 48, 17, 91]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [60, 77, 79, 2, 32, 46, 33, 55, 64, 13, 63, 44, 10, 19, 87, 28, 62, 51, 31, 24, 70, 65, 75, 85, 47, 57, 89, 78, 11, 58, 49, 25, 56, 21, 90, 72, 14, 36, 61, 59, 22, 12, 81, 86, 4, 34, 38, 48, 17, 91]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [60, 77, 79, 2, 32, 46, 33, 55, 64, 13, 63, 44, 10, 19, 87, 28, 62, 51, 31, 24, 70, 65, 75, 85, 47, 57, 89, 78, 11, 58, 49, 25, 56, 21, 90, 72, 14, 36, 61, 59, 22, 12, 81, 86, 4, 34, 38, 48, 17, 91]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [60, 77, 79, 2, 32, 46, 33, 55, 64, 13, 63, 44, 10, 19, 87, 28, 62, 51, 31, 24, 70, 65, 75, 85, 47, 57, 89, 78, 11, 58, 49, 25, 56, 21, 90, 72, 14, 36, 61, 59, 22, 12, 81, 86, 4, 34, 38, 48, 17, 91]
+0: ..
+0: 
+0: ============================== 3 passed in 2.52s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 34, Level 96: Timestamp 2015-04-05 03:00:00, Shape (18, 18)
+0: Sample 44, Level 96: Timestamp 2015-10-22 18:00:00, Shape (18, 18)
+0: Sample 8, Level 96: Timestamp 2015-03-24 09:00:00, Shape (18, 18)
+0: Sample 95, Level 96: Timestamp 2015-04-29 01:00:00, Shape (18, 18)
+0: Sample 27, Level 96: Timestamp 2015-07-21 21:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [43, 61, 16, 67, 87, 47, 68, 64, 25, 7, 50, 2, 74, 73, 9, 51, 1, 58, 22, 26, 32, 12, 70, 89, 38, 31, 78, 3, 72, 15, 94, 29, 33, 66, 14, 69, 49, 59, 60, 48, 42, 54, 75, 21, 92, 46, 95, 52, 45, 6]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [43, 61, 16, 67, 87, 47, 68, 64, 25, 7, 50, 2, 74, 73, 9, 51, 1, 58, 22, 26, 32, 12, 70, 89, 38, 31, 78, 3, 72, 15, 94, 29, 33, 66, 14, 69, 49, 59, 60, 48, 42, 54, 75, 21, 92, 46, 95, 52, 45, 6]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [43, 61, 16, 67, 87, 47, 68, 64, 25, 7, 50, 2, 74, 73, 9, 51, 1, 58, 22, 26, 32, 12, 70, 89, 38, 31, 78, 3, 72, 15, 94, 29, 33, 66, 14, 69, 49, 59, 60, 48, 42, 54, 75, 21, 92, 46, 95, 52, 45, 6]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [43, 61, 16, 67, 87, 47, 68, 64, 25, 7, 50, 2, 74, 73, 9, 51, 1, 58, 22, 26, 32, 12, 70, 89, 38, 31, 78, 3, 72, 15, 94, 29, 33, 66, 14, 69, 49, 59, 60, 48, 42, 54, 75, 21, 92, 46, 95, 52, 45, 6]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [43, 61, 16, 67, 87, 47, 68, 64, 25, 7, 50, 2, 74, 73, 9, 51, 1, 58, 22, 26, 32, 12, 70, 89, 38, 31, 78, 3, 72, 15, 94, 29, 33, 66, 14, 69, 49, 59, 60, 48, 42, 54, 75, 21, 92, 46, 95, 52, 45, 6]
+0: ..
+0: 
+0: ============================== 3 passed in 2.53s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 90, Level 96: Timestamp 2015-11-26 04:00:00, Shape (27, 27)
+0: Sample 51, Level 96: Timestamp 2015-07-20 07:00:00, Shape (27, 27)
+0: Sample 89, Level 96: Timestamp 2015-09-23 15:00:00, Shape (27, 27)
+0: Sample 66, Level 96: Timestamp 2015-11-26 19:00:00, Shape (27, 27)
+0: Sample 25, Level 96: Timestamp 2015-01-17 21:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [86, 52, 13, 45, 55, 49, 1, 40, 80, 62, 8, 18, 11, 59, 34, 75, 21, 22, 54, 29, 12, 46, 50, 32, 73, 72, 56, 37, 84, 25, 92, 71, 26, 91, 44, 65, 51, 41, 42, 76, 90, 82, 87, 15, 35, 63, 24, 69, 74, 95]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [86, 52, 13, 45, 55, 49, 1, 40, 80, 62, 8, 18, 11, 59, 34, 75, 21, 22, 54, 29, 12, 46, 50, 32, 73, 72, 56, 37, 84, 25, 92, 71, 26, 91, 44, 65, 51, 41, 42, 76, 90, 82, 87, 15, 35, 63, 24, 69, 74, 95]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [86, 52, 13, 45, 55, 49, 1, 40, 80, 62, 8, 18, 11, 59, 34, 75, 21, 22, 54, 29, 12, 46, 50, 32, 73, 72, 56, 37, 84, 25, 92, 71, 26, 91, 44, 65, 51, 41, 42, 76, 90, 82, 87, 15, 35, 63, 24, 69, 74, 95]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [86, 52, 13, 45, 55, 49, 1, 40, 80, 62, 8, 18, 11, 59, 34, 75, 21, 22, 54, 29, 12, 46, 50, 32, 73, 72, 56, 37, 84, 25, 92, 71, 26, 91, 44, 65, 51, 41, 42, 76, 90, 82, 87, 15, 35, 63, 24, 69, 74, 95]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [86, 52, 13, 45, 55, 49, 1, 40, 80, 62, 8, 18, 11, 59, 34, 75, 21, 22, 54, 29, 12, 46, 50, 32, 73, 72, 56, 37, 84, 25, 92, 71, 26, 91, 44, 65, 51, 41, 42, 76, 90, 82, 87, 15, 35, 63, 24, 69, 74, 95]
+0: ..
+0: 
+0: ============================== 3 passed in 2.35s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 45, Level 0: Timestamp 2015-05-25 04:00:00, Shape (9, 9)
+0: Sample 56, Level 0: Timestamp 2015-02-19 16:00:00, Shape (9, 9)
+0: Sample 77, Level 0: Timestamp 2015-03-02 19:00:00, Shape (9, 9)
+0: Sample 0, Level 0: Timestamp 2015-09-24 11:00:00, Shape (9, 9)
+0: Sample 41, Level 0: Timestamp 2015-02-19 04:00:00, Shape (9, 9)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: total_precip, levels: [0], level: 0, level_idx: 0, samples: [69, 1, 23, 51, 39, 52, 42, 92, 74, 71, 29, 58, 0, 28, 43, 49, 88, 86, 73, 65, 60, 87, 40, 85, 37, 31, 50, 61, 32, 66, 33, 79, 26, 75, 93, 45, 10, 91, 81, 5, 25, 68, 62, 35, 17, 3, 22, 55, 9, 95]
+0: ..
+0: 
+0: ============================== 3 passed in 1.41s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 25, Level 0: Timestamp 2015-01-17 09:00:00, Shape (27, 27)
+0: Sample 39, Level 0: Timestamp 2015-08-05 12:00:00, Shape (27, 27)
+0: Sample 92, Level 0: Timestamp 2015-12-12 16:00:00, Shape (27, 27)
+0: Sample 68, Level 0: Timestamp 2015-01-25 14:00:00, Shape (27, 27)
+0: Sample 83, Level 0: Timestamp 2015-08-15 06:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: t2m, levels: [0], level: 0, level_idx: 0, samples: [56, 76, 9, 84, 27, 53, 50, 69, 86, 62, 47, 66, 21, 78, 85, 41, 24, 58, 36, 7, 15, 48, 25, 65, 49, 42, 77, 2, 45, 1, 17, 16, 81, 64, 34, 87, 73, 59, 18, 13, 31, 90, 11, 51, 74, 60, 70, 75, 80, 57]
+0: ..
+0: 
+0: ============================== 3 passed in 1.24s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 50, Level 0: Timestamp 2015-12-09 04:00:00, Shape (27, 27)
+0: Sample 89, Level 0: Timestamp 2015-09-24 12:00:00, Shape (27, 27)
+0: Sample 17, Level 0: Timestamp 2015-08-31 18:00:00, Shape (27, 27)
+0: Sample 3, Level 0: Timestamp 2015-11-22 21:00:00, Shape (27, 27)
+0: Sample 86, Level 0: Timestamp 2015-08-29 14:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: corrected_t2m, levels: [0], level: 0, level_idx: 0, samples: [72, 73, 56, 69, 31, 78, 26, 67, 3, 60, 65, 25, 17, 20, 4, 46, 86, 53, 28, 84, 80, 91, 41, 93, 82, 57, 18, 33, 1, 89, 0, 14, 23, 61, 71, 66, 79, 10, 85, 39, 58, 50, 45, 37, 94, 22, 81, 62, 83, 88]
+0: ..
+0: 
+0: ============================== 3 passed in 1.36s ===============================
+0: time 323.46140575408936
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250822_012635-jenle227[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250822_012635-jenle227/logs[0m
+0: l40360:1789614:1790140 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l40360:1789614:1790741 [0] NCCL INFO comm 0x55555f106200 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

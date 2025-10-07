@@ -1,0 +1,895 @@
+0: Wandb run: atmorep-x9r2uz8c-17575123
+0: l50027:1501644:1501644 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.124<0>
+0: l50027:1501644:1501644 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50027:1501644:1501644 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50027:1501644:1501644 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50027:1501644:1501644 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50027:1501644:1501891 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.124<0>
+0: l50027:1501644:1501891 [0] NCCL INFO Using non-device net plugin version 0
+0: l50027:1501644:1501891 [0] NCCL INFO Using network IB
+0: l50027:1501644:1501891 [0] NCCL INFO ncclCommInitRank comm 0x55555f293900 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xa0eb2fe4da0141c1 - Init START
+0: l50027:1501644:1501891 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50027:1501644:1501891 [0] NCCL INFO comm 0x55555f293900 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 00/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 01/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 02/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 03/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 04/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 05/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 06/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 07/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 08/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 09/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 10/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 11/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 12/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 13/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 14/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 15/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 16/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 17/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 18/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 19/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 20/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 21/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 22/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 23/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 24/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 25/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 26/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 27/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 28/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 29/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 30/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Channel 31/32 :    0
+0: l50027:1501644:1501891 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50027:1501644:1501891 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50027:1501644:1501891 [0] NCCL INFO Connected all rings
+0: l50027:1501644:1501891 [0] NCCL INFO Connected all trees
+0: l50027:1501644:1501891 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50027:1501644:1501891 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50027:1501644:1501891 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50027:1501644:1501891 [0] NCCL INFO ncclCommInitRank comm 0x55555f293900 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xa0eb2fe4da0141c1 - Init COMPLETE
+0: Running Evaluate.evaluate with mode = BERT
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]]]
+0: fields_prediction : [['velocity_u', 0.225], ['velocity_v', 0.225], ['specific_humidity', 0.15], ['velocity_z', 0.1], ['temperature', 0.2], ['total_precip', 0.1]]
+0: fields_targets : []
+0: years_train : [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[-90.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 128
+0: num_samples_per_epoch : 49152
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17575123
+0: wandb_id : x9r2uz8c
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: with_pytest : True
+0: lat_sampling_weighted : False
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'total_precip' with shape: torch.Size([166, 243])
+0:          min = -0.000, max = 0.001, mean = 0.000
+0:          sample (first 20): tensor([4.0030e-06, 6.0671e-06, 8.6585e-06, 1.0285e-05, 1.1444e-05, 7.8749e-06, 1.4368e-05, 1.4300e-05, 2.3539e-05,
+0:         4.6256e-06, 6.3083e-06, 1.3685e-05, 1.7829e-05, 2.8246e-05, 3.0181e-05, 3.6403e-05, 4.4504e-05, 5.4374e-05,
+0:         1.0030e-05, 1.4376e-05])
+0: validation loss for strategy=BERT at epoch 0 : 0.0765877291560173
+0: validation loss for velocity_u : 0.003651229664683342
+0: validation loss for velocity_v : 0.004824234638363123
+0: validation loss for specific_humidity : 0.006074013188481331
+0: validation loss for velocity_z : 0.09976235032081604
+0: validation loss for temperature : 0.017276084050536156
+0: validation loss for total_precip : 0.3279384970664978
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'velocity_u', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'velocity_u', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 41, level 96: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 2.73s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'velocity_v', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'velocity_v', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 7, level 96: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 0.21s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'specific_humidity', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'specific_humidity', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 73, level 96: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 0.18s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'velocity_z', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'velocity_z', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 65, level 96: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 5.96s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'temperature', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'temperature', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 11, level 96: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 0.22s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py F
+0: 
+0: =================================== FAILURES ===================================
+0: ________________________________ test_datetime _________________________________
+0: 
+0: field = 'total_precip', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0: >                   assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0: E                   TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:114: TypeError
+0: 
+0: During handling of the above exception, another exception occurred:
+0: 
+0: field = 'total_precip', model_id = 'x9r2uz8c', BERT = True, epoch = 0
+0: 
+0:     def test_datetime(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Modified test that doesn't rely on accessing original ERA5 files.
+0:         Instead, it checks for internal consistency of timestamps.
+0:         """
+0:         store = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         atmorep = zarr.group(store)
+0:     
+0:         # Check if we should proceed
+0:         if field not in atmorep:
+0:             pytest.skip(f"Field {field} not found in AtmoRep output")
+0:     
+0:         # Get sample data
+0:         nsamples = min(len(atmorep[field]), 5)  # Reduced from 50 to 5 samples for speed
+0:         samples = rnd.sample(range(len(atmorep[field])), nsamples)
+0:     
+0:         if BERT:
+0:             levels = [int(f.split("=")[1]) for f in atmorep[f"{field}/sample=00000"]]
+0:         else:
+0:             # For forecast mode
+0:             if 'ml' in atmorep[f"{field}/sample=00000"]:
+0:                 levels = atmorep[f"{field}/sample=00000"].ml[:]
+0:             else:
+0:                 # Handle case where ml array might be missing
+0:                 levels = [0]  # Default to a single level
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         # Check if time information is consistently stored
+0:         for level in levels[:1]:  # Only check first level to save time
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             all_datetimes = []
+0:             for s in samples:
+0:                 try:
+0:                     data, datetime_obj, lats, lons = get_data(atmorep, field, s, level_idx)
+0:     
+0:                     # Verify datetime object is valid
+0:                     assert datetime_obj is not None, "Missing datetime information"
+0:                     assert isinstance(datetime_obj, datetime), f"Expected datetime object, got {type(datetime_obj)}"
+0:     
+0:                     all_datetimes.append(datetime_obj)
+0:     
+0:                     # Verify data has reasonable shape
+0:                     assert data.shape[0] > 0, "Empty data array"
+0:     
+0:                     # Verify latitude/longitude are reasonable
+0:                     assert len(lats) > 0, "Empty latitude array"
+0:                     assert len(lons) > 0, "Empty longitude array"
+0:                     assert min(lats) >= -90 and max(lats) <= 90, f"Latitude out of bounds: {min(lats)}, {max(lats)}"
+0:                     assert min(lons) >= 0 and max(lons) <= 360, f"Longitude out of bounds: {min(lons)}, {max(lons)}"
+0:     
+0:                     print(f"Sample {s}, Level {level}: Timestamp {datetime_obj}, Shape {data.shape}")
+0:     
+0:                 except Exception as e:
+0: >                   pytest.fail(f"Error processing sample {s}, level {level}: {str(e)}")
+0: E                   Failed: Error processing sample 30, level 0: isinstance() arg 2 must be a type, a tuple of types, or a union
+0: 
+0: atmorep/tests/validation_test.py:130: Failed
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_datetime - Failed: Error proces...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ============================== 1 failed in 0.21s ===============================
+0: time 312.90899443626404
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250611_175325-x9r2uz8c[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250611_175325-x9r2uz8c/logs[0m
+0: l50027:1501644:1501894 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50027:1501644:1502504 [0] NCCL INFO comm 0x55555f293900 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

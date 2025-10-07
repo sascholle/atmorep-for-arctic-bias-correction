@@ -1,0 +1,390 @@
+0: Wandb run: atmorep-bv07kju2-18612004
+0: l50139:1386488:1386488 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.188<0>
+0: l50139:1386488:1386488 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50139:1386488:1386488 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50139:1386488:1386488 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50139:1386488:1386488 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+0: l50139:1386488:1386887 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.188<0>
+0: l50139:1386488:1386887 [0] NCCL INFO Using non-device net plugin version 0
+0: l50139:1386488:1386887 [0] NCCL INFO Using network IB
+0: l50139:1386488:1386887 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l50139:1386488:1386887 [0] NCCL INFO ncclCommInitRank comm 0x55555f104260 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xb56b26f7fe7fa97a - Init START
+0: l50139:1386488:1386887 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+0: l50139:1386488:1386887 [0] NCCL INFO comm 0x55555f104260 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 00/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 01/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 02/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 03/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 04/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 05/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 06/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 07/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 08/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 09/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 10/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 11/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 12/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 13/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 14/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 15/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 16/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 17/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 18/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 19/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 20/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 21/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 22/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 23/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 24/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 25/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 26/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 27/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 28/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 29/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 30/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Channel 31/32 :    0
+0: l50139:1386488:1386887 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50139:1386488:1386887 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50139:1386488:1386887 [0] NCCL INFO Connected all rings
+0: l50139:1386488:1386887 [0] NCCL INFO Connected all trees
+0: l50139:1386488:1386887 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50139:1386488:1386887 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50139:1386488:1386887 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50139:1386488:1386887 [0] NCCL INFO ncclCommInitRank comm 0x55555f104260 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xb56b26f7fe7fa97a - Init COMPLETE
+0: Running Evaluate.evaluate with mode = forecast
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = hjbmsjft.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.58]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[0.0, 360.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 18612004
+0: wandb_id : bv07kju2
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : hjbmsjft
+0: with_pytest : True
+0: lat_sampling_weighted : False
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 't2m' with shape: torch.Size([16, 2187])
+0:          min = -1.140, max = 0.217, mean = -0.424
+0:          sample (first 20): tensor([-0.2567, -0.3086, -0.3013, -0.3249, -0.3719, -0.2972, -0.2484, -0.2856, -0.2780, -0.3249, -0.2717, -0.3525,
+0:         -0.3584, -0.2642, -0.2774, -0.3193, -0.2722, -0.2916, -0.3317, -0.3153])
+0: validation loss for strategy=forecast at epoch 0 : 0.3301474452018738
+0: validation loss for velocity_u : 0.03633326664566994
+0: validation loss for velocity_v : 0.06968071311712265
+0: validation loss for specific_humidity : 0.0290173701941967
+0: validation loss for velocity_z : 0.5703716278076172
+0: validation loss for temperature : 0.07615455985069275
+0: validation loss for total_precip : 0.931210994720459
+0: validation loss for t2m : 0.5982637405395508
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 19, Level 96: Timestamp 2021-02-24 01:00:00, Shape (54, 108)
+0: Sample 124, Level 96: Timestamp 2021-05-17 02:00:00, Shape (54, 108)
+0: Sample 97, Level 96: Timestamp 2021-03-16 09:00:00, Shape (54, 108)
+0: Sample 84, Level 96: Timestamp 2021-07-11 09:00:00, Shape (54, 108)
+0: Sample 7, Level 96: Timestamp 2021-12-27 10:00:00, Shape (54, 108)
+0: ...
+0: 
+0: ============================== 3 passed in 18.37s ==============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 27, Level 96: Timestamp 2021-09-19 06:00:00, Shape (54, 108)
+0: Sample 108, Level 96: Timestamp 2021-05-24 21:00:00, Shape (54, 108)
+0: Sample 98, Level 96: Timestamp 2021-10-28 19:00:00, Shape (54, 108)
+0: Sample 39, Level 96: Timestamp 2021-02-08 17:00:00, Shape (54, 108)
+0: Sample 81, Level 96: Timestamp 2021-07-07 16:00:00, Shape (54, 108)
+0: ...
+0: 
+0: ============================== 3 passed in 3.94s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 83, Level 96: Timestamp 2021-04-06 15:00:00, Shape (54, 108)
+0: Sample 87, Level 96: Timestamp 2021-11-25 01:00:00, Shape (54, 108)
+0: Sample 21, Level 96: Timestamp 2021-06-20 09:00:00, Shape (54, 108)
+0: Sample 58, Level 96: Timestamp 2021-12-28 07:00:00, Shape (54, 108)
+0: Sample 64, Level 96: Timestamp 2021-04-22 02:00:00, Shape (54, 108)
+0: ...
+0: 
+0: ============================== 3 passed in 2.48s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 43, Level 96: Timestamp 2021-09-22 00:00:00, Shape (54, 108)
+0: Sample 48, Level 96: Timestamp 2021-03-24 16:00:00, Shape (54, 108)
+0: Sample 119, Level 96: Timestamp 2021-08-10 16:00:00, Shape (54, 108)
+0: Sample 71, Level 96: Timestamp 2021-09-25 10:00:00, Shape (54, 108)
+0: Sample 13, Level 96: Timestamp 2021-01-07 19:00:00, Shape (54, 108)
+0: ...
+0: 
+0: ============================== 3 passed in 2.58s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 103, Level 96: Timestamp 2021-01-25 23:00:00, Shape (54, 108)
+0: Sample 53, Level 96: Timestamp 2021-07-20 09:00:00, Shape (54, 108)
+0: Sample 24, Level 96: Timestamp 2021-01-27 16:00:00, Shape (54, 108)
+0: Sample 13, Level 96: Timestamp 2021-01-07 19:00:00, Shape (54, 108)
+0: Sample 114, Level 96: Timestamp 2021-12-11 00:00:00, Shape (54, 108)
+0: ...
+0: 
+0: ============================== 3 passed in 2.41s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 113, Level 96: Timestamp 2021-01-01 10:00:00, Shape (54, 108)
+0: Sample 87, Level 96: Timestamp 2021-11-25 01:00:00, Shape (54, 108)
+0: Sample 94, Level 96: Timestamp 2021-04-08 06:00:00, Shape (54, 108)
+0: Sample 103, Level 96: Timestamp 2021-01-25 23:00:00, Shape (54, 108)
+0: Sample 62, Level 96: Timestamp 2021-05-01 16:00:00, Shape (54, 108)
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: _______________________________ test_coordinates _______________________________
+0: 
+0: field = 'total_precip', model_id = 'bv07kju2', BERT = False, epoch = 0
+0: 
+0:     def test_coordinates(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Check that coordinates match between target and prediction.
+0:         Check also that latitude and longitudes are in geographical coordinates
+0:         50 random samples.
+0:         """
+0:     
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:         ##### new levels for surface fields
+0:         if 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]  # For surface fields
+0:         #####
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             for s in samples:
+0: >               _, datetime_target, lats_target, lons_target = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:169: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:37: in get_forecast
+0:     data = atmorep_sample.data[level_idx, 0]
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:797: in __getitem__
+0:     result = self.get_basic_selection(pure_selection, fields=fields)
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:923: in get_basic_selection
+0:     return self._get_basic_selection_nd(selection=selection, out=out, fields=fields)
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:963: in _get_basic_selection_nd
+0:     indexer = BasicIndexer(selection, self)
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:336: in __init__
+0:     dim_indexer = IntDimIndexer(dim_sel, dim_len, dim_chunk_len)
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:150: in __init__
+0:     dim_sel = normalize_integer_selection(dim_sel, dim_len)
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: dim_sel = 1, dim_len = 1
+0: 
+0:     def normalize_integer_selection(dim_sel, dim_len):
+0:         # normalize type to int
+0:         dim_sel = int(dim_sel)
+0:     
+0:         # handle wraparound
+0:         if dim_sel < 0:
+0:             dim_sel = dim_len + dim_sel
+0:     
+0:         # handle out of bounds
+0:         if dim_sel >= dim_len or dim_sel < 0:
+0: >           raise BoundsCheckError(dim_len)
+0: E           zarr.errors.BoundsCheckError: index out of bounds for dimension with length 1
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:125: BoundsCheckError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_coordinates - zarr.errors.Bound...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 1 passed in 2.19s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 117, Level 96: Timestamp 2021-08-02 23:00:00, Shape (54, 108)
+0: Sample 7, Level 96: Timestamp 2021-12-27 10:00:00, Shape (54, 108)
+0: Sample 32, Level 96: Timestamp 2021-07-21 01:00:00, Shape (54, 108)
+0: Sample 106, Level 96: Timestamp 2021-11-06 10:00:00, Shape (54, 108)
+0: Sample 12, Level 96: Timestamp 2021-07-10 14:00:00, Shape (54, 108)
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: _______________________________ test_coordinates _______________________________
+0: 
+0: field = 't2m', model_id = 'bv07kju2', BERT = False, epoch = 0
+0: 
+0:     def test_coordinates(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Check that coordinates match between target and prediction.
+0:         Check also that latitude and longitudes are in geographical coordinates
+0:         50 random samples.
+0:         """
+0:     
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:         ##### new levels for surface fields
+0:         if 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]  # For surface fields
+0:         #####
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             for s in samples:
+0: >               _, datetime_target, lats_target, lons_target = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:169: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:37: in get_forecast
+0:     data = atmorep_sample.data[level_idx, 0]
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:797: in __getitem__
+0:     result = self.get_basic_selection(pure_selection, fields=fields)
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:923: in get_basic_selection
+0:     return self._get_basic_selection_nd(selection=selection, out=out, fields=fields)
+0: pyenv/lib/python3.10/site-packages/zarr/core.py:963: in _get_basic_selection_nd
+0:     indexer = BasicIndexer(selection, self)
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:336: in __init__
+0:     dim_indexer = IntDimIndexer(dim_sel, dim_len, dim_chunk_len)
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:150: in __init__
+0:     dim_sel = normalize_integer_selection(dim_sel, dim_len)
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: dim_sel = 1, dim_len = 1
+0: 
+0:     def normalize_integer_selection(dim_sel, dim_len):
+0:         # normalize type to int
+0:         dim_sel = int(dim_sel)
+0:     
+0:         # handle wraparound
+0:         if dim_sel < 0:
+0:             dim_sel = dim_len + dim_sel
+0:     
+0:         # handle out of bounds
+0:         if dim_sel >= dim_len or dim_sel < 0:
+0: >           raise BoundsCheckError(dim_len)
+0: E           zarr.errors.BoundsCheckError: index out of bounds for dimension with length 1
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/indexing.py:125: BoundsCheckError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_coordinates - zarr.errors.Bound...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 1 passed in 0.77s ==========================
+0: time 590.8738255500793
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250725_133328-bv07kju2[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250725_133328-bv07kju2/logs[0m
+0: l50139:1386488:1386890 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50139:1386488:1387671 [0] NCCL INFO comm 0x55555f104260 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

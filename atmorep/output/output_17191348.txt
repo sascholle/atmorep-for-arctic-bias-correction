@@ -1,0 +1,1112 @@
+0: Wandb run: atmorep-7lna48py-17191348
+0: l50003:1544512:1544512 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.108<0>
+0: l50003:1544512:1544512 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50003:1544512:1544512 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50003:1544512:1544512 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50003:1544512:1544512 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50003:1544512:1544755 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.108<0>
+0: l50003:1544512:1544755 [0] NCCL INFO Using non-device net plugin version 0
+0: l50003:1544512:1544755 [0] NCCL INFO Using network IB
+0: l50003:1544512:1544755 [0] NCCL INFO ncclCommInitRank comm 0x55555f23f3e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x44cfd99ef921ea68 - Init START
+0: l50003:1544512:1544755 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50003:1544512:1544755 [0] NCCL INFO comm 0x55555f23f3e0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 00/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 01/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 02/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 03/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 04/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 05/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 06/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 07/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 08/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 09/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 10/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 11/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 12/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 13/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 14/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 15/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 16/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 17/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 18/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 19/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 20/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 21/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 22/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 23/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 24/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 25/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 26/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 27/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 28/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 29/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 30/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Channel 31/32 :    0
+0: l50003:1544512:1544755 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50003:1544512:1544755 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50003:1544512:1544755 [0] NCCL INFO Connected all rings
+0: l50003:1544512:1544755 [0] NCCL INFO Connected all trees
+0: l50003:1544512:1544755 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50003:1544512:1544755 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50003:1544512:1544755 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50003:1544512:1544755 [0] NCCL INFO ncclCommInitRank comm 0x55555f23f3e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x44cfd99ef921ea68 - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]]]
+0: fields_prediction : [['velocity_u', 0.225], ['velocity_v', 0.225], ['specific_humidity', 0.15], ['velocity_z', 0.1], ['temperature', 0.2], ['total_precip', 0.1]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[-90.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17191348
+0: wandb_id : 7lna48py
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: years_test : [2021]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t at epoch = 0.
+0: Loaded run 'wc5e2i3t' at epoch 0.
+0: l50003:1544512:1544783 [1] NCCL INFO Using non-device net plugin version 0
+0: l50003:1544512:1544783 [1] NCCL INFO Using network IB
+0: l50003:1544512:1544783 [1] NCCL INFO ncclCommInitRank comm 0x5555a6f86ce0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x838b4e7b76e0fd7a - Init START
+0: l50003:1544512:1544783 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+0: l50003:1544512:1544783 [1] NCCL INFO comm 0x5555a6f86ce0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 00/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 01/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 02/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 03/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 04/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 05/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 06/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 07/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 08/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 09/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 10/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 11/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 12/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 13/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 14/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 15/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 16/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 17/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 18/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 19/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 20/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 21/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 22/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 23/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 24/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 25/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 26/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 27/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 28/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 29/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 30/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Channel 31/32 :    0
+0: l50003:1544512:1544783 [1] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50003:1544512:1544783 [1] NCCL INFO P2P Chunksize set to 131072
+0: l50003:1544512:1544783 [1] NCCL INFO Connected all rings
+0: l50003:1544512:1544783 [1] NCCL INFO Connected all trees
+0: l50003:1544512:1544783 [1] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50003:1544512:1544783 [1] NCCL INFO ncclCommInitRank comm 0x5555a6f86ce0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x838b4e7b76e0fd7a - Init COMPLETE
+0: l50003:1544512:1544788 [2] NCCL INFO Using non-device net plugin version 0
+0: l50003:1544512:1544788 [2] NCCL INFO Using network IB
+0: l50003:1544512:1544788 [2] NCCL INFO ncclCommInitRank comm 0x55557eb81220 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0x43dc6773476b79e0 - Init START
+0: l50003:1544512:1544788 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+0: l50003:1544512:1544788 [2] NCCL INFO comm 0x55557eb81220 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 00/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 01/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 02/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 03/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 04/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 05/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 06/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 07/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 08/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 09/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 10/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 11/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 12/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 13/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 14/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 15/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 16/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 17/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 18/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 19/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 20/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 21/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 22/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 23/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 24/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 25/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 26/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 27/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 28/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 29/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 30/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Channel 31/32 :    0
+0: l50003:1544512:1544788 [2] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50003:1544512:1544788 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50003:1544512:1544788 [2] NCCL INFO Connected all rings
+0: l50003:1544512:1544788 [2] NCCL INFO Connected all trees
+0: l50003:1544512:1544788 [2] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50003:1544512:1544788 [2] NCCL INFO ncclCommInitRank comm 0x55557eb81220 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0x43dc6773476b79e0 - Init COMPLETE
+0: l50003:1544512:1544793 [3] NCCL INFO Using non-device net plugin version 0
+0: l50003:1544512:1544793 [3] NCCL INFO Using network IB
+0: l50003:1544512:1544793 [3] NCCL INFO ncclCommInitRank comm 0x5555877d26c0 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xe81e631e9fcce231 - Init START
+0: l50003:1544512:1544793 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+0: l50003:1544512:1544793 [3] NCCL INFO comm 0x5555877d26c0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 00/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 01/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 02/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 03/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 04/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 05/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 06/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 07/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 08/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 09/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 10/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 11/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 12/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 13/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 14/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 15/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 16/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 17/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 18/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 19/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 20/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 21/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 22/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 23/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 24/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 25/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 26/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 27/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 28/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 29/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 30/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Channel 31/32 :    0
+0: l50003:1544512:1544793 [3] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50003:1544512:1544793 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50003:1544512:1544793 [3] NCCL INFO Connected all rings
+0: l50003:1544512:1544793 [3] NCCL INFO Connected all trees
+0: l50003:1544512:1544793 [3] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50003:1544512:1544793 [3] NCCL INFO ncclCommInitRank comm 0x5555877d26c0 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xe81e631e9fcce231 - Init COMPLETE
+0: Number of trainable parameters: 741,136,272
+0: 1 : 12:38:56 :: batch_size = 96, lr = 1.5000000000000002e-05
+0: velocity_u: 0.15847823023796082; velocity_v: 0.16970698535442352; specific_humidity: 0.15546154975891113; velocity_z: 0.3483296036720276; temperature: 0.19303973019123077; total_precip: 0.259400874376297; 
+0: velocity_u: 0.24188874661922455; velocity_v: 0.2798883318901062; specific_humidity: 0.26426151394844055; velocity_z: 0.3867526352405548; temperature: 0.25017625093460083; total_precip: 0.5396265983581543; 
+0: epoch: 1 [1/5 (20%)]	Loss: 0.24813 : 0.06530 :: 0.07313 (1.85 s/sec)
+0: velocity_u: 0.23584364354610443; velocity_v: 0.27110978960990906; specific_humidity: 0.25260984897613525; velocity_z: 0.371547669172287; temperature: 0.2474151849746704; total_precip: 0.5899865627288818; 
+0: epoch: 1 [2/5 (40%)]	Loss: 0.29759 : 0.09120 :: 0.06912 (18.03 s/sec)
+0: velocity_u: 0.18907809257507324; velocity_v: 0.1978432834148407; specific_humidity: 0.17656362056732178; velocity_z: 0.37013858556747437; temperature: 0.22293835878372192; total_precip: 0.4487571716308594; 
+0: epoch: 1 [3/5 (60%)]	Loss: 0.24002 : 0.08213 :: 0.09986 (17.94 s/sec)
+0: velocity_u: 0.19565623998641968; velocity_v: 0.20542895793914795; specific_humidity: 0.18447640538215637; velocity_z: 0.35264092683792114; temperature: 0.23517343401908875; total_precip: 0.36929041147232056; 
+0: epoch: 1 [4/5 (80%)]	Loss: 0.23714 : 0.07563 :: 0.10621 (17.87 s/sec)
+0: validation loss for strategy=BERT at epoch 1 : 0.06099357083439827
+0: validation loss for velocity_u : 0.005787731613963842
+0: validation loss for velocity_v : 0.009125271812081337
+0: validation loss for specific_humidity : 0.0075542074628174305
+0: validation loss for velocity_z : 0.10239151865243912
+0: validation loss for temperature : 0.02054915390908718
+0: validation loss for total_precip : 0.22055365145206451
+0: 2 : 12:43:09 :: batch_size = 96, lr = 2e-05
+0: velocity_u: 0.1925145983695984; velocity_v: 0.21391482651233673; specific_humidity: 0.19744986295700073; velocity_z: 0.35959407687187195; temperature: 0.23234711587429047; total_precip: 0.34627217054367065; 
+0: velocity_u: 0.1858675181865692; velocity_v: 0.19616785645484924; specific_humidity: 0.19138245284557343; velocity_z: 0.3455308973789215; temperature: 0.22619673609733582; total_precip: 0.34152814745903015; 
+0: epoch: 2 [1/5 (20%)]	Loss: 0.23337 : 0.06690 :: 0.09891 (2.32 s/sec)
+0: velocity_u: 0.18709377944469452; velocity_v: 0.2007981389760971; specific_humidity: 0.1890859752893448; velocity_z: 0.36635515093803406; temperature: 0.22459641098976135; total_precip: 0.4179765582084656; 
+0: epoch: 2 [2/5 (40%)]	Loss: 0.23899 : 0.09330 :: 0.10073 (17.86 s/sec)
+0: velocity_u: 0.18026527762413025; velocity_v: 0.1912703812122345; specific_humidity: 0.17864204943180084; velocity_z: 0.3566126823425293; temperature: 0.22104200720787048; total_precip: 0.3222499489784241; 
+0: epoch: 2 [3/5 (60%)]	Loss: 0.22249 : 0.06629 :: 0.09423 (17.63 s/sec)
+0: velocity_u: 0.1821158081293106; velocity_v: 0.19493521749973297; specific_humidity: 0.1806657612323761; velocity_z: 0.38684695959091187; temperature: 0.22507037222385406; total_precip: 0.42148274183273315; 
+0: epoch: 2 [4/5 (80%)]	Loss: 0.23778 : 0.10165 :: 0.09091 (17.90 s/sec)
+0: validation loss for strategy=BERT at epoch 2 : 0.061766453087329865
+0: validation loss for velocity_u : 0.004763795528560877
+0: validation loss for velocity_v : 0.006656115874648094
+0: validation loss for specific_humidity : 0.0069639491848647594
+0: validation loss for velocity_z : 0.10715267062187195
+0: validation loss for temperature : 0.0175847839564085
+0: validation loss for total_precip : 0.22747743129730225
+0: 3 : 12:47:13 :: batch_size = 96, lr = 1.9512195121951222e-05
+0: velocity_u: 0.17662137746810913; velocity_v: 0.18605566024780273; specific_humidity: 0.17707502841949463; velocity_z: 0.3481411039829254; temperature: 0.20622070133686066; total_precip: 0.3071872889995575; 
+0: velocity_u: 0.1745036095380783; velocity_v: 0.18794290721416473; specific_humidity: 0.1710127592086792; velocity_z: 0.3695732355117798; temperature: 0.22988483309745789; total_precip: 0.397793173789978; 
+0: epoch: 3 [1/5 (20%)]	Loss: 0.22243 : 0.07782 :: 0.08013 (2.13 s/sec)
+0: velocity_u: 0.1782151609659195; velocity_v: 0.18730580806732178; specific_humidity: 0.18443089723587036; velocity_z: 0.36474505066871643; temperature: 0.22688521444797516; total_precip: 0.3330395221710205; 
+0: epoch: 3 [2/5 (40%)]	Loss: 0.22506 : 0.06859 :: 0.07976 (17.63 s/sec)
+0: velocity_u: 0.1676827073097229; velocity_v: 0.18041054904460907; specific_humidity: 0.16193509101867676; velocity_z: 0.35366591811180115; temperature: 0.20814625918865204; total_precip: 0.3652307391166687; 
+0: epoch: 3 [3/5 (60%)]	Loss: 0.21613 : 0.07923 :: 0.07370 (17.87 s/sec)
+0: velocity_u: 0.16243520379066467; velocity_v: 0.17891710996627808; specific_humidity: 0.1600758582353592; velocity_z: 0.3617705702781677; temperature: 0.21775813400745392; total_precip: 0.3483950197696686; 
+0: epoch: 3 [4/5 (80%)]	Loss: 0.21538 : 0.07765 :: 0.06900 (18.19 s/sec)
+0: validation loss for strategy=BERT at epoch 3 : 0.07543450593948364
+0: validation loss for velocity_u : 0.0038830526173114777
+0: validation loss for velocity_v : 0.005562933161854744
+0: validation loss for specific_humidity : 0.007157791871577501
+0: validation loss for velocity_z : 0.11142418533563614
+0: validation loss for temperature : 0.02282414771616459
+0: validation loss for total_precip : 0.3017548620700836
+0: 4 : 12:51:16 :: batch_size = 96, lr = 1.903628792385485e-05
+0: velocity_u: 0.17012961208820343; velocity_v: 0.1833820343017578; specific_humidity: 0.1687186062335968; velocity_z: 0.36908063292503357; temperature: 0.20980902016162872; total_precip: 0.33938586711883545; 
+0: velocity_u: 0.17188674211502075; velocity_v: 0.18128201365470886; specific_humidity: 0.1715947836637497; velocity_z: 0.3703598380088806; temperature: 0.22555021941661835; total_precip: 0.34588244557380676; 
+0: epoch: 4 [1/5 (20%)]	Loss: 0.21980 : 0.07429 :: 0.07390 (2.43 s/sec)
+0: velocity_u: 0.17288804054260254; velocity_v: 0.18071812391281128; specific_humidity: 0.16387511789798737; velocity_z: 0.3703424632549286; temperature: 0.21846804022789001; total_precip: 0.3308013081550598; 
+0: epoch: 4 [2/5 (40%)]	Loss: 0.21795 : 0.07218 :: 0.07630 (17.85 s/sec)
+0: velocity_u: 0.16264992952346802; velocity_v: 0.17379558086395264; specific_humidity: 0.1623925119638443; velocity_z: 0.3438100218772888; temperature: 0.20640259981155396; total_precip: 0.4903487265110016; 
+0: epoch: 4 [3/5 (60%)]	Loss: 0.22476 : 0.11924 :: 0.07205 (17.99 s/sec)
+0: velocity_u: 0.17043651640415192; velocity_v: 0.18079766631126404; specific_humidity: 0.18316490948200226; velocity_z: 0.37240540981292725; temperature: 0.23981788754463196; total_precip: 0.436381995677948; 
+0: epoch: 4 [4/5 (80%)]	Loss: 0.23534 : 0.10146 :: 0.07580 (17.76 s/sec)
+0: validation loss for strategy=BERT at epoch 4 : 0.11207915842533112
+0: validation loss for velocity_u : 0.004328523762524128
+0: validation loss for velocity_v : 0.006208925042301416
+0: validation loss for specific_humidity : 0.006225204095244408
+0: validation loss for velocity_z : 0.1275615394115448
+0: validation loss for temperature : 0.018391180783510208
+0: validation loss for total_precip : 0.5097596645355225
+0: 5 : 12:55:16 :: batch_size = 96, lr = 1.857198821839498e-05
+0: velocity_u: 0.1652357280254364; velocity_v: 0.17500068247318268; specific_humidity: 0.17147594690322876; velocity_z: 0.3705081343650818; temperature: 0.22910545766353607; total_precip: 0.4611677825450897; 
+0: velocity_u: 0.1619635671377182; velocity_v: 0.1731906235218048; specific_humidity: 0.15760070085525513; velocity_z: 0.35160860419273376; temperature: 0.2098587304353714; total_precip: 0.35974305868148804; 
+0: epoch: 5 [1/5 (20%)]	Loss: 0.22171 : 0.09518 :: 0.06998 (2.18 s/sec)
+0: velocity_u: 0.1611861139535904; velocity_v: 0.17432647943496704; specific_humidity: 0.16468846797943115; velocity_z: 0.34600764513015747; temperature: 0.21837635338306427; total_precip: 0.3268049955368042; 
+0: epoch: 5 [2/5 (40%)]	Loss: 0.21115 : 0.07002 :: 0.06956 (17.81 s/sec)
+0: velocity_u: 0.1603936105966568; velocity_v: 0.17063376307487488; specific_humidity: 0.1559324860572815; velocity_z: 0.3544327914714813; temperature: 0.2071678191423416; total_precip: 0.3577594459056854; 
+0: epoch: 5 [3/5 (60%)]	Loss: 0.21052 : 0.08596 :: 0.06800 (18.00 s/sec)
+0: velocity_u: 0.16837012767791748; velocity_v: 0.18100391328334808; specific_humidity: 0.17382128536701202; velocity_z: 0.3871663212776184; temperature: 0.22175966203212738; total_precip: 0.3259752094745636; 
+0: epoch: 5 [4/5 (80%)]	Loss: 0.22035 : 0.07699 :: 0.07223 (18.05 s/sec)
+0: validation loss for strategy=BERT at epoch 5 : 0.08532080054283142
+0: validation loss for velocity_u : 0.004501901566982269
+0: validation loss for velocity_v : 0.006219760049134493
+0: validation loss for specific_humidity : 0.006378836464136839
+0: validation loss for velocity_z : 0.1340947300195694
+0: validation loss for temperature : 0.018839476630091667
+0: validation loss for total_precip : 0.3418901264667511
+0: 6 : 12:59:21 :: batch_size = 96, lr = 1.8119012895995104e-05
+0: velocity_u: 0.15685534477233887; velocity_v: 0.16953212022781372; specific_humidity: 0.15330396592617035; velocity_z: 0.3437592387199402; temperature: 0.20228341221809387; total_precip: 0.3371656537055969; 
+0: velocity_u: 0.15623708069324493; velocity_v: 0.16723595559597015; specific_humidity: 0.14893683791160583; velocity_z: 0.32073840498924255; temperature: 0.1939854770898819; total_precip: 0.27769479155540466; 
+0: epoch: 6 [1/5 (20%)]	Loss: 0.19937 : 0.06176 :: 0.06593 (2.67 s/sec)
+0: velocity_u: 0.1603311151266098; velocity_v: 0.17305004596710205; specific_humidity: 0.15785562992095947; velocity_z: 0.350366473197937; temperature: 0.20717903971672058; total_precip: 0.3174586594104767; 
+0: epoch: 6 [2/5 (40%)]	Loss: 0.20691 : 0.06583 :: 0.06815 (17.81 s/sec)
+0: velocity_u: 0.15894992649555206; velocity_v: 0.171439066529274; specific_humidity: 0.1432127058506012; velocity_z: 0.34353601932525635; temperature: 0.19557850062847137; total_precip: 0.2225884050130844; 
+0: epoch: 6 [3/5 (60%)]	Loss: 0.19155 : 0.04728 :: 0.06885 (17.86 s/sec)
+0: velocity_u: 0.16406923532485962; velocity_v: 0.17310784757137299; specific_humidity: 0.15272867679595947; velocity_z: 0.3683142364025116; temperature: 0.21080613136291504; total_precip: 0.35417667031288147; 
+0: epoch: 6 [4/5 (80%)]	Loss: 0.21318 : 0.07908 :: 0.07240 (18.20 s/sec)
+0: validation loss for strategy=BERT at epoch 6 : 0.05181903392076492
+0: validation loss for velocity_u : 0.004193989560008049
+0: validation loss for velocity_v : 0.00609217956662178
+0: validation loss for specific_humidity : 0.005102579016238451
+0: validation loss for velocity_z : 0.11925909668207169
+0: validation loss for temperature : 0.013983279466629028
+0: validation loss for total_precip : 0.16228309273719788
+0: 7 : 13:03:32 :: batch_size = 96, lr = 1.7677085752190346e-05
+0: velocity_u: 0.16167797148227692; velocity_v: 0.17687194049358368; specific_humidity: 0.17248445749282837; velocity_z: 0.3670027554035187; temperature: 0.213276669383049; total_precip: 0.28900057077407837; 
+0: velocity_u: 0.15992791950702667; velocity_v: 0.16799187660217285; specific_humidity: 0.15905947983264923; velocity_z: 0.35972610116004944; temperature: 0.21376657485961914; total_precip: 0.35916975140571594; 
+0: epoch: 7 [1/5 (20%)]	Loss: 0.21129 : 0.07677 :: 0.06969 (2.28 s/sec)
+0: velocity_u: 0.1611316055059433; velocity_v: 0.17577911913394928; specific_humidity: 0.15918108820915222; velocity_z: 0.36102259159088135; temperature: 0.20863819122314453; total_precip: 0.346737802028656; 
+0: epoch: 7 [2/5 (40%)]	Loss: 0.21219 : 0.08127 :: 0.07120 (17.74 s/sec)
+0: velocity_u: 0.1651921272277832; velocity_v: 0.17480319738388062; specific_humidity: 0.1532944291830063; velocity_z: 0.37049880623817444; temperature: 0.20909684896469116; total_precip: 0.279076486825943; 
+0: epoch: 7 [3/5 (60%)]	Loss: 0.20627 : 0.06121 :: 0.07315 (17.93 s/sec)
+0: velocity_u: 0.15891319513320923; velocity_v: 0.17132656276226044; specific_humidity: 0.1511455625295639; velocity_z: 0.3562629222869873; temperature: 0.19972243905067444; total_precip: 0.33684760332107544; 
+0: epoch: 7 [4/5 (80%)]	Loss: 0.20623 : 0.08298 :: 0.06922 (17.73 s/sec)
+0: validation loss for strategy=BERT at epoch 7 : 0.06116580218076706
+0: validation loss for velocity_u : 0.003964829724282026
+0: validation loss for velocity_v : 0.005378797184675932
+0: validation loss for specific_humidity : 0.005217377562075853
+0: validation loss for velocity_z : 0.11146610975265503
+0: validation loss for temperature : 0.014176640659570694
+0: validation loss for total_precip : 0.22679094970226288
+0: 8 : 13:07:39 :: batch_size = 96, lr = 1.7245937319210094e-05
+0: velocity_u: 0.16302070021629333; velocity_v: 0.17431026697158813; specific_humidity: 0.17825482785701752; velocity_z: 0.35860922932624817; temperature: 0.22249285876750946; total_precip: 0.34682875871658325; 
+0: velocity_u: 0.16248640418052673; velocity_v: 0.17540210485458374; specific_humidity: 0.17055267095565796; velocity_z: 0.3714064359664917; temperature: 0.22751294076442719; total_precip: 0.3450970947742462; 
+0: epoch: 8 [1/5 (20%)]	Loss: 0.21822 : 0.07873 :: 0.07156 (2.31 s/sec)
+0: velocity_u: 0.15649986267089844; velocity_v: 0.1669054925441742; specific_humidity: 0.16761665046215057; velocity_z: 0.34747830033302307; temperature: 0.2215767502784729; total_precip: 0.3040896952152252; 
+0: epoch: 8 [2/5 (40%)]	Loss: 0.20738 : 0.06394 :: 0.06797 (18.07 s/sec)
+0: velocity_u: 0.15516297519207; velocity_v: 0.16215713322162628; specific_humidity: 0.1431419998407364; velocity_z: 0.33092549443244934; temperature: 0.193436399102211; total_precip: 0.31629306077957153; 
+0: epoch: 8 [3/5 (60%)]	Loss: 0.19628 : 0.06764 :: 0.06708 (18.11 s/sec)
+0: velocity_u: 0.15506398677825928; velocity_v: 0.1666642427444458; specific_humidity: 0.16237862408161163; velocity_z: 0.34706562757492065; temperature: 0.21819864213466644; total_precip: 0.34835389256477356; 
+0: epoch: 8 [4/5 (80%)]	Loss: 0.20993 : 0.07934 :: 0.06727 (17.97 s/sec)
+0: validation loss for strategy=BERT at epoch 8 : 0.07774759829044342
+0: validation loss for velocity_u : 0.003827666165307164
+0: validation loss for velocity_v : 0.005221307277679443
+0: validation loss for specific_humidity : 0.006227241829037666
+0: validation loss for velocity_z : 0.13142982125282288
+0: validation loss for temperature : 0.01603737846016884
+0: validation loss for total_precip : 0.3037421703338623
+0: 9 : 13:11:47 :: batch_size = 96, lr = 1.6825304701668386e-05
+0: velocity_u: 0.15780916810035706; velocity_v: 0.1710887998342514; specific_humidity: 0.15717944502830505; velocity_z: 0.3585393726825714; temperature: 0.20953786373138428; total_precip: 0.3947201371192932; 
+0: velocity_u: 0.1575990617275238; velocity_v: 0.1681460589170456; specific_humidity: 0.1464778035879135; velocity_z: 0.33907729387283325; temperature: 0.18889698386192322; total_precip: 0.30344945192337036; 
+0: epoch: 9 [1/5 (20%)]	Loss: 0.20605 : 0.07953 :: 0.06840 (2.18 s/sec)
+0: velocity_u: 0.15980610251426697; velocity_v: 0.17332199215888977; specific_humidity: 0.1697690486907959; velocity_z: 0.3596768081188202; temperature: 0.2213829904794693; total_precip: 0.3005579710006714; 
+0: epoch: 9 [2/5 (40%)]	Loss: 0.21072 : 0.06646 :: 0.07031 (18.07 s/sec)
+0: velocity_u: 0.15852704644203186; velocity_v: 0.16857026517391205; specific_humidity: 0.1606205701828003; velocity_z: 0.3501659631729126; temperature: 0.2045413851737976; total_precip: 0.2920827269554138; 
+0: epoch: 9 [3/5 (60%)]	Loss: 0.20282 : 0.06540 :: 0.06903 (17.95 s/sec)
+0: velocity_u: 0.15308621525764465; velocity_v: 0.16483141481876373; specific_humidity: 0.1569448709487915; velocity_z: 0.3345344066619873; temperature: 0.21120119094848633; total_precip: 0.3314771056175232; 
+0: epoch: 9 [4/5 (80%)]	Loss: 0.20391 : 0.07246 :: 0.06505 (17.99 s/sec)
+0: validation loss for strategy=BERT at epoch 9 : 0.07783999294042587
+0: validation loss for velocity_u : 0.003561910940334201
+0: validation loss for velocity_v : 0.005087721161544323
+0: validation loss for specific_humidity : 0.006369716953486204
+0: validation loss for velocity_z : 0.11330530792474747
+0: validation loss for temperature : 0.022165628150105476
+0: validation loss for total_precip : 0.31654974818229675
+0: 10 : 13:15:49 :: batch_size = 96, lr = 1.6414931416261842e-05
+0: velocity_u: 0.1521373838186264; velocity_v: 0.16399067640304565; specific_humidity: 0.14969958364963531; velocity_z: 0.34726542234420776; temperature: 0.21502293646335602; total_precip: 0.3090854287147522; 
+0: velocity_u: 0.16680443286895752; velocity_v: 0.1738087683916092; specific_humidity: 0.16396328806877136; velocity_z: 0.3727777302265167; temperature: 0.21923944354057312; total_precip: 0.36237460374832153; 
+0: epoch: 10 [1/5 (20%)]	Loss: 0.21041 : 0.08093 :: 0.07558 (2.28 s/sec)
+0: velocity_u: 0.16269521415233612; velocity_v: 0.17306147515773773; specific_humidity: 0.1647329181432724; velocity_z: 0.3619479537010193; temperature: 0.20619766414165497; total_precip: 0.30873942375183105; 
+0: epoch: 10 [2/5 (40%)]	Loss: 0.20856 : 0.06823 :: 0.07309 (18.08 s/sec)
+0: velocity_u: 0.16000331938266754; velocity_v: 0.1701478362083435; specific_humidity: 0.15989840030670166; velocity_z: 0.3490108549594879; temperature: 0.2103119194507599; total_precip: 0.300380140542984; 
+0: epoch: 10 [3/5 (60%)]	Loss: 0.20527 : 0.06237 :: 0.07034 (18.13 s/sec)
+0: velocity_u: 0.16100281476974487; velocity_v: 0.17176036536693573; specific_humidity: 0.17187544703483582; velocity_z: 0.36336272954940796; temperature: 0.23851336538791656; total_precip: 0.37570202350616455; 
+0: epoch: 10 [4/5 (80%)]	Loss: 0.22226 : 0.09364 :: 0.07166 (17.94 s/sec)
+0: validation loss for strategy=BERT at epoch 10 : 0.07853123545646667
+0: validation loss for velocity_u : 0.0037018524017184973
+0: validation loss for velocity_v : 0.004786750767379999
+0: validation loss for specific_humidity : 0.006443678867071867
+0: validation loss for velocity_z : 0.09583155065774918
+0: validation loss for temperature : 0.021288925781846046
+0: validation loss for total_precip : 0.33913469314575195
+0: 11 : 13:19:39 :: batch_size = 96, lr = 1.601456723537741e-05
+0: velocity_u: 0.15676888823509216; velocity_v: 0.1680128574371338; specific_humidity: 0.15636354684829712; velocity_z: 0.3465547263622284; temperature: 0.2152579128742218; total_precip: 0.2871498465538025; 
+0: velocity_u: 0.15599532425403595; velocity_v: 0.1672469824552536; specific_humidity: 0.1696886271238327; velocity_z: 0.3436117172241211; temperature: 0.2111479640007019; total_precip: 0.3302777409553528; 
+0: epoch: 11 [1/5 (20%)]	Loss: 0.20538 : 0.06744 :: 0.06744 (2.16 s/sec)
+0: velocity_u: 0.15759624540805817; velocity_v: 0.16933640837669373; specific_humidity: 0.1568497270345688; velocity_z: 0.36798322200775146; temperature: 0.21811741590499878; total_precip: 0.4549919664859772; 
+0: epoch: 11 [2/5 (40%)]	Loss: 0.22301 : 0.11625 :: 0.06820 (18.07 s/sec)
+0: velocity_u: 0.158060222864151; velocity_v: 0.16661958396434784; specific_humidity: 0.16543909907341003; velocity_z: 0.34817740321159363; temperature: 0.2126016467809677; total_precip: 0.26583337783813477; 
+0: epoch: 11 [3/5 (60%)]	Loss: 0.20179 : 0.05682 :: 0.06848 (17.88 s/sec)
+0: velocity_u: 0.1574518233537674; velocity_v: 0.1708003282546997; specific_humidity: 0.17629916965961456; velocity_z: 0.36322417855262756; temperature: 0.22949092090129852; total_precip: 0.3583647310733795; 
+0: epoch: 11 [4/5 (80%)]	Loss: 0.21836 : 0.08681 :: 0.06814 (18.01 s/sec)
+0: validation loss for strategy=BERT at epoch 11 : 0.05537772551178932
+0: validation loss for velocity_u : 0.003686419688165188
+0: validation loss for velocity_v : 0.005221633240580559
+0: validation loss for specific_humidity : 0.005665348842740059
+0: validation loss for velocity_z : 0.10507123917341232
+0: validation loss for temperature : 0.017806485295295715
+0: validation loss for total_precip : 0.19481511414051056
+0: 12 : 13:23:40 :: batch_size = 96, lr = 1.5623968034514547e-05
+0: velocity_u: 0.16411878168582916; velocity_v: 0.17564278841018677; specific_humidity: 0.1624702662229538; velocity_z: 0.3702481985092163; temperature: 0.2065540999174118; total_precip: 0.30271434783935547; 
+0: velocity_u: 0.15742580592632294; velocity_v: 0.1677493005990982; specific_humidity: 0.17266350984573364; velocity_z: 0.35798949003219604; temperature: 0.2324303239583969; total_precip: 0.3273667097091675; 
+0: epoch: 12 [1/5 (20%)]	Loss: 0.21175 : 0.07231 :: 0.06854 (2.21 s/sec)
+0: velocity_u: 0.1553376019001007; velocity_v: 0.16882894933223724; specific_humidity: 0.14924584329128265; velocity_z: 0.3444015383720398; temperature: 0.20001783967018127; total_precip: 0.2826257348060608; 
+0: epoch: 12 [2/5 (40%)]	Loss: 0.19803 : 0.06423 :: 0.06751 (18.07 s/sec)
+0: velocity_u: 0.15793249011039734; velocity_v: 0.16782405972480774; specific_humidity: 0.1652228683233261; velocity_z: 0.35788416862487793; temperature: 0.21120615303516388; total_precip: 0.3090221881866455; 
+0: epoch: 12 [3/5 (60%)]	Loss: 0.20701 : 0.07227 :: 0.06887 (17.97 s/sec)
+0: velocity_u: 0.15919911861419678; velocity_v: 0.170357346534729; specific_humidity: 0.17042750120162964; velocity_z: 0.3573986291885376; temperature: 0.2170129418373108; total_precip: 0.2826939821243286; 
+0: epoch: 12 [4/5 (80%)]	Loss: 0.20713 : 0.05844 :: 0.06912 (17.98 s/sec)
+0: validation loss for strategy=BERT at epoch 12 : 0.06868818402290344
+0: validation loss for velocity_u : 0.0038215939421206713
+0: validation loss for velocity_v : 0.004993044771254063
+0: validation loss for specific_humidity : 0.005637125577777624
+0: validation loss for velocity_z : 0.11016639322042465
+0: validation loss for temperature : 0.016401728615164757
+0: validation loss for total_precip : 0.27110928297042847
+0: 13 : 13:27:35 :: batch_size = 96, lr = 1.5242895643428828e-05
+0: velocity_u: 0.1624629944562912; velocity_v: 0.170420303940773; specific_humidity: 0.14945398271083832; velocity_z: 0.3648334741592407; temperature: 0.19795961678028107; total_precip: 0.2976386845111847; 
+0: velocity_u: 0.15878522396087646; velocity_v: 0.1705300360918045; specific_humidity: 0.151139497756958; velocity_z: 0.36208340525627136; temperature: 0.21352829039096832; total_precip: 0.3972964286804199; 
+0: epoch: 13 [1/5 (20%)]	Loss: 0.20928 : 0.08160 :: 0.06958 (2.69 s/sec)
+0: velocity_u: 0.16282767057418823; velocity_v: 0.17408756911754608; specific_humidity: 0.1560247242450714; velocity_z: 0.36851057410240173; temperature: 0.19923648238182068; total_precip: 0.3217932879924774; 
+0: epoch: 13 [2/5 (40%)]	Loss: 0.20809 : 0.07465 :: 0.07209 (17.91 s/sec)
+0: velocity_u: 0.15601469576358795; velocity_v: 0.1672583818435669; specific_humidity: 0.14224976301193237; velocity_z: 0.33807188272476196; temperature: 0.19432057440280914; total_precip: 0.29160937666893005; 
+0: epoch: 13 [3/5 (60%)]	Loss: 0.19591 : 0.06378 :: 0.06798 (17.95 s/sec)
+0: velocity_u: 0.15484629571437836; velocity_v: 0.16756965219974518; specific_humidity: 0.14735983312129974; velocity_z: 0.34676915407180786; temperature: 0.1993529051542282; total_precip: 0.23925021290779114; 
+0: epoch: 13 [4/5 (80%)]	Loss: 0.19312 : 0.05103 :: 0.06686 (18.25 s/sec)
+0: validation loss for strategy=BERT at epoch 13 : 0.058218225836753845
+0: validation loss for velocity_u : 0.0036394866183400154
+0: validation loss for velocity_v : 0.004904374945908785
+0: validation loss for specific_humidity : 0.005209039896726608
+0: validation loss for velocity_z : 0.10854300856590271
+0: validation loss for temperature : 0.019936958327889442
+0: validation loss for total_precip : 0.20707650482654572
+0: 14 : 13:31:33 :: batch_size = 96, lr = 1.4871117700906175e-05
+0: velocity_u: 0.15165722370147705; velocity_v: 0.1614648699760437; specific_humidity: 0.15295232832431793; velocity_z: 0.3375309705734253; temperature: 0.19690197706222534; total_precip: 0.2855725586414337; 
+0: velocity_u: 0.16201232373714447; velocity_v: 0.17139337956905365; specific_humidity: 0.167142853140831; velocity_z: 0.37318575382232666; temperature: 0.21108686923980713; total_precip: 0.3944168984889984; 
+0: epoch: 14 [1/5 (20%)]	Loss: 0.20708 : 0.07606 :: 0.07095 (2.53 s/sec)
+0: velocity_u: 0.1609986126422882; velocity_v: 0.16770176589488983; specific_humidity: 0.15946345031261444; velocity_z: 0.3684097230434418; temperature: 0.2065492868423462; total_precip: 0.35091066360473633; 
+0: epoch: 14 [2/5 (40%)]	Loss: 0.21112 : 0.07852 :: 0.07015 (17.93 s/sec)
+0: velocity_u: 0.1580331176519394; velocity_v: 0.16672134399414062; specific_humidity: 0.15591315925121307; velocity_z: 0.3462415337562561; temperature: 0.2068302035331726; total_precip: 0.27907031774520874; 
+0: epoch: 14 [3/5 (60%)]	Loss: 0.20035 : 0.06183 :: 0.06817 (17.91 s/sec)
+0: velocity_u: 0.15986546874046326; velocity_v: 0.16912119090557098; specific_humidity: 0.1661800742149353; velocity_z: 0.3776443600654602; temperature: 0.2208545058965683; total_precip: 0.27299511432647705; 
+0: epoch: 14 [4/5 (80%)]	Loss: 0.20818 : 0.06021 :: 0.06930 (17.92 s/sec)
+0: validation loss for strategy=BERT at epoch 14 : 0.054510559886693954
+0: validation loss for velocity_u : 0.0038276652339845896
+0: validation loss for velocity_v : 0.005240820813924074
+0: validation loss for specific_humidity : 0.006143119651824236
+0: validation loss for velocity_z : 0.10524832457304001
+0: validation loss for temperature : 0.017572877928614616
+0: validation loss for total_precip : 0.18903058767318726
+0: 15 : 13:35:28 :: batch_size = 96, lr = 1.4508407513079195e-05
+0: velocity_u: 0.1626761257648468; velocity_v: 0.17531448602676392; specific_humidity: 0.15380126237869263; velocity_z: 0.37393873929977417; temperature: 0.19666694104671478; total_precip: 0.2540532946586609; 
+0: velocity_u: 0.15880359709262848; velocity_v: 0.16499179601669312; specific_humidity: 0.15379653871059418; velocity_z: 0.3477504849433899; temperature: 0.19853928685188293; total_precip: 0.2177785336971283; 
+0: epoch: 15 [1/5 (20%)]	Loss: 0.19672 : 0.04901 :: 0.06948 (2.40 s/sec)
+0: velocity_u: 0.16049084067344666; velocity_v: 0.17082224786281586; specific_humidity: 0.14401260018348694; velocity_z: 0.3542487323284149; temperature: 0.1923314779996872; total_precip: 0.3463970422744751; 
+0: epoch: 15 [2/5 (40%)]	Loss: 0.20468 : 0.07924 :: 0.07063 (17.91 s/sec)
+0: velocity_u: 0.157425194978714; velocity_v: 0.16761283576488495; specific_humidity: 0.15454651415348053; velocity_z: 0.344104528427124; temperature: 0.2031235545873642; total_precip: 0.30449381470680237; 
+0: epoch: 15 [3/5 (60%)]	Loss: 0.20180 : 0.06675 :: 0.06872 (17.84 s/sec)
+0: velocity_u: 0.161508709192276; velocity_v: 0.1710122674703598; specific_humidity: 0.16124846041202545; velocity_z: 0.3579575717449188; temperature: 0.2132163941860199; total_precip: 0.34138864278793335; 
+0: epoch: 15 [4/5 (80%)]	Loss: 0.21158 : 0.07750 :: 0.07177 (18.04 s/sec)
+0: validation loss for strategy=BERT at epoch 15 : 0.06718020141124725
+0: validation loss for velocity_u : 0.003698251210153103
+0: validation loss for velocity_v : 0.0049330624751746655
+0: validation loss for specific_humidity : 0.005888721439987421
+0: validation loss for velocity_z : 0.1031513437628746
+0: validation loss for temperature : 0.01920020952820778
+0: validation loss for total_precip : 0.26620951294898987
+0: 16 : 13:39:26 :: batch_size = 96, lr = 1.4154543915199217e-05
+0: velocity_u: 0.16263534128665924; velocity_v: 0.17174449563026428; specific_humidity: 0.16870251297950745; velocity_z: 0.3680381774902344; temperature: 0.21962584555149078; total_precip: 0.32879072427749634; 
+0: velocity_u: 0.1571538895368576; velocity_v: 0.16697540879249573; specific_humidity: 0.14753735065460205; velocity_z: 0.34418928623199463; temperature: 0.1958962082862854; total_precip: 0.3100317120552063; 
+0: epoch: 16 [1/5 (20%)]	Loss: 0.20690 : 0.07278 :: 0.06815 (2.13 s/sec)
+0: velocity_u: 0.16411378979682922; velocity_v: 0.17204247415065765; specific_humidity: 0.1538277417421341; velocity_z: 0.3777909278869629; temperature: 0.2058383673429489; total_precip: 0.3196418285369873; 
+0: epoch: 16 [2/5 (40%)]	Loss: 0.20962 : 0.07369 :: 0.07306 (17.86 s/sec)
+0: velocity_u: 0.15854445099830627; velocity_v: 0.1651097536087036; specific_humidity: 0.15632453560829163; velocity_z: 0.34987059235572815; temperature: 0.2074449211359024; total_precip: 0.2889423966407776; 
+0: epoch: 16 [3/5 (60%)]	Loss: 0.20164 : 0.06020 :: 0.06814 (18.15 s/sec)
+0: velocity_u: 0.16097211837768555; velocity_v: 0.17242825031280518; specific_humidity: 0.16241022944450378; velocity_z: 0.36958545446395874; temperature: 0.21282528340816498; total_precip: 0.340350478887558; 
+0: epoch: 16 [4/5 (80%)]	Loss: 0.21294 : 0.07652 :: 0.07163 (17.99 s/sec)
+0: validation loss for strategy=BERT at epoch 16 : 0.0665530264377594
+0: validation loss for velocity_u : 0.003822165774181485
+0: validation loss for velocity_v : 0.005434483755379915
+0: validation loss for specific_humidity : 0.005649138707667589
+0: validation loss for velocity_z : 0.10661580413579941
+0: validation loss for temperature : 0.019926710054278374
+0: validation loss for total_precip : 0.2578698396682739
+0: 17 : 13:43:36 :: batch_size = 96, lr = 1.3809311136779726e-05
+0: velocity_u: 0.15346656739711761; velocity_v: 0.16197490692138672; specific_humidity: 0.15270470082759857; velocity_z: 0.3330695331096649; temperature: 0.19792874157428741; total_precip: 0.3045825958251953; 
+0: velocity_u: 0.15639692544937134; velocity_v: 0.16471652686595917; specific_humidity: 0.1534053087234497; velocity_z: 0.34708371758461; temperature: 0.20587141811847687; total_precip: 0.3061981499195099; 
+0: epoch: 17 [1/5 (20%)]	Loss: 0.19950 : 0.06748 :: 0.06865 (2.21 s/sec)
+0: velocity_u: 0.16416160762310028; velocity_v: 0.17141500115394592; specific_humidity: 0.16724225878715515; velocity_z: 0.3504513204097748; temperature: 0.21078918874263763; total_precip: 0.34485113620758057; 
+0: epoch: 17 [2/5 (40%)]	Loss: 0.21228 : 0.07734 :: 0.07227 (18.15 s/sec)
+0: velocity_u: 0.15241292119026184; velocity_v: 0.16365836560726166; specific_humidity: 0.1542540192604065; velocity_z: 0.3320941925048828; temperature: 0.19694826006889343; total_precip: 0.28787776827812195; 
+0: epoch: 17 [3/5 (60%)]	Loss: 0.19564 : 0.05787 :: 0.06554 (18.18 s/sec)
+0: velocity_u: 0.1556527465581894; velocity_v: 0.16421478986740112; specific_humidity: 0.1508147418498993; velocity_z: 0.34600183367729187; temperature: 0.2026059925556183; total_precip: 0.3022998869419098; 
+0: epoch: 17 [4/5 (80%)]	Loss: 0.19994 : 0.07167 :: 0.06760 (17.95 s/sec)
+0: validation loss for strategy=BERT at epoch 17 : 0.0646757259964943
+0: validation loss for velocity_u : 0.003751729615032673
+0: validation loss for velocity_v : 0.004849610384553671
+0: validation loss for specific_humidity : 0.005971358623355627
+0: validation loss for velocity_z : 0.10062450170516968
+0: validation loss for temperature : 0.017309995368123055
+0: validation loss for total_precip : 0.25554707646369934
+0: 18 : 13:47:34 :: batch_size = 96, lr = 1.3472498670029002e-05
+0: velocity_u: 0.15586736798286438; velocity_v: 0.16259068250656128; specific_humidity: 0.15192048251628876; velocity_z: 0.3382525146007538; temperature: 0.20204828679561615; total_precip: 0.33636903762817383; 
+0: velocity_u: 0.15709909796714783; velocity_v: 0.16599760949611664; specific_humidity: 0.16430369019508362; velocity_z: 0.36222249269485474; temperature: 0.20327293872833252; total_precip: 0.24857693910598755; 
+0: epoch: 18 [1/5 (20%)]	Loss: 0.20069 : 0.06692 :: 0.06780 (2.28 s/sec)
+0: velocity_u: 0.1633325070142746; velocity_v: 0.17076921463012695; specific_humidity: 0.14836032688617706; velocity_z: 0.3632742166519165; temperature: 0.1948746293783188; total_precip: 0.3385065495967865; 
+0: epoch: 18 [2/5 (40%)]	Loss: 0.20658 : 0.07999 :: 0.07215 (18.05 s/sec)
+0: velocity_u: 0.1608496755361557; velocity_v: 0.1699773669242859; specific_humidity: 0.16287682950496674; velocity_z: 0.3624308705329895; temperature: 0.21589595079421997; total_precip: 0.30566859245300293; 
+0: epoch: 18 [3/5 (60%)]	Loss: 0.20886 : 0.06826 :: 0.07071 (18.11 s/sec)
+0: velocity_u: 0.15536841750144958; velocity_v: 0.16778013110160828; specific_humidity: 0.1439131498336792; velocity_z: 0.3492531180381775; temperature: 0.199321910738945; total_precip: 0.26833078265190125; 
+0: epoch: 18 [4/5 (80%)]	Loss: 0.19592 : 0.05583 :: 0.06664 (17.96 s/sec)
+0: validation loss for strategy=BERT at epoch 18 : 0.05725632607936859
+0: validation loss for velocity_u : 0.003580893389880657
+0: validation loss for velocity_v : 0.004897123668342829
+0: validation loss for specific_humidity : 0.004725160542875528
+0: validation loss for velocity_z : 0.102629154920578
+0: validation loss for temperature : 0.015113651752471924
+0: validation loss for total_precip : 0.21259193122386932
+0: 19 : 13:51:33 :: batch_size = 96, lr = 1.3143901141491711e-05
+0: velocity_u: 0.15955841541290283; velocity_v: 0.16958846151828766; specific_humidity: 0.16629624366760254; velocity_z: 0.36390388011932373; temperature: 0.21069473028182983; total_precip: 0.3269909620285034; 
+0: velocity_u: 0.15411563217639923; velocity_v: 0.16490626335144043; specific_humidity: 0.14426203072071075; velocity_z: 0.348537415266037; temperature: 0.1976766288280487; total_precip: 0.2896718382835388; 
+0: epoch: 19 [1/5 (20%)]	Loss: 0.20350 : 0.07197 :: 0.06562 (2.12 s/sec)
+0: velocity_u: 0.15421028435230255; velocity_v: 0.16657854616641998; specific_humidity: 0.14610201120376587; velocity_z: 0.3516019582748413; temperature: 0.19018658995628357; total_precip: 0.27155017852783203; 
+0: epoch: 19 [2/5 (40%)]	Loss: 0.19445 : 0.06044 :: 0.06634 (17.73 s/sec)
+0: velocity_u: 0.1538318693637848; velocity_v: 0.16044259071350098; specific_humidity: 0.16029450297355652; velocity_z: 0.33554232120513916; temperature: 0.2140820324420929; total_precip: 0.3012178838253021; 
+0: epoch: 19 [3/5 (60%)]	Loss: 0.20125 : 0.06518 :: 0.06582 (17.94 s/sec)
+0: velocity_u: 0.15629702806472778; velocity_v: 0.165809765458107; specific_humidity: 0.14712776243686676; velocity_z: 0.3475218713283539; temperature: 0.19629782438278198; total_precip: 0.30283379554748535; 
+0: epoch: 19 [4/5 (80%)]	Loss: 0.19884 : 0.06467 :: 0.06770 (17.72 s/sec)
+0: validation loss for strategy=BERT at epoch 19 : 0.08583763241767883
+0: validation loss for velocity_u : 0.003871028544381261
+0: validation loss for velocity_v : 0.005257803481072187
+0: validation loss for specific_humidity : 0.005952031817287207
+0: validation loss for velocity_z : 0.12307843565940857
+0: validation loss for temperature : 0.019216159358620644
+0: validation loss for total_precip : 0.3576502501964569
+0: 20 : 13:55:37 :: batch_size = 96, lr = 1.2823318186821183e-05
+0: velocity_u: 0.15406709909439087; velocity_v: 0.16366276144981384; specific_humidity: 0.15878824889659882; velocity_z: 0.3372134566307068; temperature: 0.208536297082901; total_precip: 0.31033846735954285; 
+0: velocity_u: 0.150344118475914; velocity_v: 0.15927083790302277; specific_humidity: 0.14545154571533203; velocity_z: 0.3390815854072571; temperature: 0.20384062826633453; total_precip: 0.34638795256614685; 
+0: epoch: 20 [1/5 (20%)]	Loss: 0.20128 : 0.08196 :: 0.06362 (2.26 s/sec)
+0: velocity_u: 0.15648838877677917; velocity_v: 0.1670699119567871; specific_humidity: 0.15626093745231628; velocity_z: 0.3602607846260071; temperature: 0.19975100457668304; total_precip: 0.27914607524871826; 
+0: epoch: 20 [2/5 (40%)]	Loss: 0.20013 : 0.06828 :: 0.06733 (17.76 s/sec)
+0: velocity_u: 0.1585540771484375; velocity_v: 0.17023566365242004; specific_humidity: 0.1687028855085373; velocity_z: 0.35379427671432495; temperature: 0.21531933546066284; total_precip: 0.3261191248893738; 
+0: epoch: 20 [3/5 (60%)]	Loss: 0.21034 : 0.07753 :: 0.06929 (18.06 s/sec)
+0: velocity_u: 0.16139359772205353; velocity_v: 0.17195799946784973; specific_humidity: 0.1616412103176117; velocity_z: 0.34591495990753174; temperature: 0.2162998765707016; total_precip: 0.2549344599246979; 
+0: epoch: 20 [4/5 (80%)]	Loss: 0.20260 : 0.05716 :: 0.07073 (18.09 s/sec)
+0: validation loss for strategy=BERT at epoch 20 : 0.05783112347126007
+0: validation loss for velocity_u : 0.003164819674566388
+0: validation loss for velocity_v : 0.004443236626684666
+0: validation loss for specific_humidity : 0.005012056324630976
+0: validation loss for velocity_z : 0.09330732375383377
+0: validation loss for temperature : 0.015004460699856281
+0: validation loss for total_precip : 0.22605478763580322
+0: 21 : 13:59:38 :: batch_size = 96, lr = 1.2510554328606033e-05
+0: velocity_u: 0.15474462509155273; velocity_v: 0.16461767256259918; specific_humidity: 0.15114982426166534; velocity_z: 0.3355019986629486; temperature: 0.19010914862155914; total_precip: 0.30356335639953613; 
+0: velocity_u: 0.15796488523483276; velocity_v: 0.16759808361530304; specific_humidity: 0.15178868174552917; velocity_z: 0.35055670142173767; temperature: 0.19589368999004364; total_precip: 0.24284443259239197; 
+0: epoch: 21 [1/5 (20%)]	Loss: 0.19550 : 0.06181 :: 0.06893 (2.13 s/sec)
+0: velocity_u: 0.1528669148683548; velocity_v: 0.16387321054935455; specific_humidity: 0.16141803562641144; velocity_z: 0.3486674427986145; temperature: 0.21058866381645203; total_precip: 0.3307792842388153; 
+0: epoch: 21 [2/5 (40%)]	Loss: 0.20554 : 0.07988 :: 0.06521 (17.95 s/sec)
+0: velocity_u: 0.15375401079654694; velocity_v: 0.16109764575958252; specific_humidity: 0.1511821299791336; velocity_z: 0.3419160842895508; temperature: 0.21141818165779114; total_precip: 0.2449718713760376; 
+0: epoch: 21 [3/5 (60%)]	Loss: 0.19449 : 0.05445 :: 0.06659 (17.99 s/sec)
+0: velocity_u: 0.15959660708904266; velocity_v: 0.1670525074005127; specific_humidity: 0.16250179708003998; velocity_z: 0.3691529333591461; temperature: 0.21444694697856903; total_precip: 0.46808069944381714; 
+0: epoch: 21 [4/5 (80%)]	Loss: 0.22448 : 0.11342 :: 0.07006 (18.04 s/sec)
+0: validation loss for strategy=BERT at epoch 21 : 0.05298108980059624
+0: validation loss for velocity_u : 0.003747413633391261
+0: validation loss for velocity_v : 0.005187031347304583
+0: validation loss for specific_humidity : 0.00548628531396389
+0: validation loss for velocity_z : 0.1018444076180458
+0: validation loss for temperature : 0.015804115682840347
+0: validation loss for total_precip : 0.1858171820640564
+0: 22 : 14:03:42 :: batch_size = 96, lr = 1.2205418857176618e-05
+0: velocity_u: 0.15386542677879333; velocity_v: 0.16527584195137024; specific_humidity: 0.15748180449008942; velocity_z: 0.34132319688796997; temperature: 0.21195468306541443; total_precip: 0.3192140460014343; 
+0: velocity_u: 0.15182389318943024; velocity_v: 0.1650908887386322; specific_humidity: 0.1554490178823471; velocity_z: 0.33395469188690186; temperature: 0.20432473719120026; total_precip: 0.2977343201637268; 
+0: epoch: 22 [1/5 (20%)]	Loss: 0.20127 : 0.06702 :: 0.06441 (2.31 s/sec)
+0: velocity_u: 0.15643547475337982; velocity_v: 0.16217826306819916; specific_humidity: 0.15942731499671936; velocity_z: 0.34608280658721924; temperature: 0.21721455454826355; total_precip: 0.39076298475265503; 
+0: epoch: 22 [2/5 (40%)]	Loss: 0.21273 : 0.09768 :: 0.06702 (17.85 s/sec)
+0: velocity_u: 0.16440708935260773; velocity_v: 0.17712992429733276; specific_humidity: 0.16647563874721527; velocity_z: 0.3839212656021118; temperature: 0.21718479692935944; total_precip: 0.2944095730781555; 
+0: epoch: 22 [3/5 (60%)]	Loss: 0.21309 : 0.07248 :: 0.07272 (17.82 s/sec)
+0: velocity_u: 0.1552661955356598; velocity_v: 0.1657823771238327; specific_humidity: 0.1653991937637329; velocity_z: 0.3376538157463074; temperature: 0.20448724925518036; total_precip: 0.23181365430355072; 
+0: epoch: 22 [4/5 (80%)]	Loss: 0.19489 : 0.04512 :: 0.06641 (17.70 s/sec)
+0: validation loss for strategy=BERT at epoch 22 : 0.04974471032619476
+0: validation loss for velocity_u : 0.0034772518556565046
+0: validation loss for velocity_v : 0.004804644733667374
+0: validation loss for specific_humidity : 0.004498792812228203
+0: validation loss for velocity_z : 0.09342381358146667
+0: validation loss for temperature : 0.012862528674304485
+0: validation loss for total_precip : 0.17940115928649902
+0: 23 : 14:07:46 :: batch_size = 96, lr = 1.1907725714318652e-05
+0: velocity_u: 0.1503206193447113; velocity_v: 0.15919621288776398; specific_humidity: 0.15487463772296906; velocity_z: 0.3279690146446228; temperature: 0.19854427874088287; total_precip: 0.3233315944671631; 
+0: velocity_u: 0.15996697545051575; velocity_v: 0.16904912889003754; specific_humidity: 0.16316932439804077; velocity_z: 0.3544192612171173; temperature: 0.21176129579544067; total_precip: 0.4502236843109131; 
+0: epoch: 23 [1/5 (20%)]	Loss: 0.20952 : 0.09305 :: 0.07040 (2.20 s/sec)
+0: velocity_u: 0.15738245844841003; velocity_v: 0.16877272725105286; specific_humidity: 0.1719416379928589; velocity_z: 0.34377753734588623; temperature: 0.20901039242744446; total_precip: 0.3137010335922241; 
+0: epoch: 23 [2/5 (40%)]	Loss: 0.20673 : 0.06466 :: 0.06848 (18.33 s/sec)
+0: velocity_u: 0.16235993802547455; velocity_v: 0.17183229327201843; specific_humidity: 0.16854599118232727; velocity_z: 0.36833256483078003; temperature: 0.20997995138168335; total_precip: 0.3946447968482971; 
+0: epoch: 23 [3/5 (60%)]	Loss: 0.21877 : 0.09119 :: 0.07225 (18.10 s/sec)
+0: velocity_u: 0.15846918523311615; velocity_v: 0.1692710518836975; specific_humidity: 0.15553544461727142; velocity_z: 0.3555346429347992; temperature: 0.20800864696502686; total_precip: 0.26791131496429443; 
+0: epoch: 23 [4/5 (80%)]	Loss: 0.20102 : 0.05946 :: 0.06945 (18.19 s/sec)
+0: validation loss for strategy=BERT at epoch 23 : 0.05954727157950401
+0: validation loss for velocity_u : 0.003211858682334423
+0: validation loss for velocity_v : 0.004743456374853849
+0: validation loss for specific_humidity : 0.00542159378528595
+0: validation loss for velocity_z : 0.0984886884689331
+0: validation loss for temperature : 0.015844298526644707
+0: validation loss for total_precip : 0.22957389056682587
+0: 24 : 14:11:45 :: batch_size = 96, lr = 1.1617293379823076e-05
+0: velocity_u: 0.1590520292520523; velocity_v: 0.16562405228614807; specific_humidity: 0.16595831513404846; velocity_z: 0.365642786026001; temperature: 0.2224401831626892; total_precip: 0.37810713052749634; 
+0: velocity_u: 0.15277127921581268; velocity_v: 0.16529974341392517; specific_humidity: 0.15591616928577423; velocity_z: 0.3319810926914215; temperature: 0.2064727395772934; total_precip: 0.3553072214126587; 
+0: epoch: 24 [1/5 (20%)]	Loss: 0.21089 : 0.08593 :: 0.06488 (2.24 s/sec)
+0: velocity_u: 0.15168389678001404; velocity_v: 0.15906566381454468; specific_humidity: 0.14510443806648254; velocity_z: 0.3245081305503845; temperature: 0.1881987750530243; total_precip: 0.309955894947052; 
+0: epoch: 24 [2/5 (40%)]	Loss: 0.19277 : 0.06992 :: 0.06446 (18.14 s/sec)
+0: velocity_u: 0.15613798797130585; velocity_v: 0.1698271632194519; specific_humidity: 0.14747607707977295; velocity_z: 0.34079259634017944; temperature: 0.1959022581577301; total_precip: 0.23013252019882202; 
+0: epoch: 24 [3/5 (60%)]	Loss: 0.19174 : 0.04596 :: 0.06719 (17.76 s/sec)
+0: velocity_u: 0.16010548174381256; velocity_v: 0.17342858016490936; specific_humidity: 0.16000503301620483; velocity_z: 0.3549033999443054; temperature: 0.20613721013069153; total_precip: 0.3253364562988281; 
+0: epoch: 24 [4/5 (80%)]	Loss: 0.20830 : 0.07835 :: 0.07033 (18.12 s/sec)
+0: validation loss for strategy=BERT at epoch 24 : 0.11138524115085602
+0: validation loss for velocity_u : 0.003951869439333677
+0: validation loss for velocity_v : 0.005378196015954018
+0: validation loss for specific_humidity : 0.007356905844062567
+0: validation loss for velocity_z : 0.11763312667608261
+0: validation loss for temperature : 0.02324935607612133
+0: validation loss for total_precip : 0.5107418894767761
+0: 25 : 14:15:47 :: batch_size = 96, lr = 1.1333944760803001e-05
+0: velocity_u: 0.1562189757823944; velocity_v: 0.16443686187267303; specific_humidity: 0.1503397524356842; velocity_z: 0.33042553067207336; temperature: 0.20256099104881287; total_precip: 0.2435668408870697; 
+0: velocity_u: 0.15408188104629517; velocity_v: 0.1612146943807602; specific_humidity: 0.14816920459270477; velocity_z: 0.3369923233985901; temperature: 0.19520775973796844; total_precip: 0.303882360458374; 
+0: epoch: 25 [1/5 (20%)]	Loss: 0.19445 : 0.05642 :: 0.06595 (2.53 s/sec)
+0: velocity_u: 0.15289853513240814; velocity_v: 0.16441135108470917; specific_humidity: 0.17862440645694733; velocity_z: 0.34194424748420715; temperature: 0.22782933712005615; total_precip: 0.42641007900238037; 
+0: epoch: 25 [2/5 (40%)]	Loss: 0.22059 : 0.10599 :: 0.06510 (17.31 s/sec)
+0: velocity_u: 0.16295668482780457; velocity_v: 0.17172519862651825; specific_humidity: 0.16594751179218292; velocity_z: 0.37709274888038635; temperature: 0.21535219252109528; total_precip: 0.37367355823516846; 
+0: epoch: 25 [3/5 (60%)]	Loss: 0.21834 : 0.09063 :: 0.07155 (17.41 s/sec)
+0: velocity_u: 0.15474055707454681; velocity_v: 0.1644820123910904; specific_humidity: 0.1599404364824295; velocity_z: 0.3447275757789612; temperature: 0.21703709661960602; total_precip: 0.32515382766723633; 
+0: epoch: 25 [4/5 (80%)]	Loss: 0.20621 : 0.07310 :: 0.06645 (17.56 s/sec)
+0: validation loss for strategy=BERT at epoch 25 : 0.0742368996143341
+0: validation loss for velocity_u : 0.003412968246266246
+0: validation loss for velocity_v : 0.00498754670843482
+0: validation loss for specific_humidity : 0.006598609033972025
+0: validation loss for velocity_z : 0.10867142677307129
+0: validation loss for temperature : 0.020780934020876884
+0: validation loss for total_precip : 0.30096977949142456
+0: 26 : 14:19:55 :: batch_size = 96, lr = 1.1057507083710246e-05
+0: velocity_u: 0.1517869532108307; velocity_v: 0.16367380321025848; specific_humidity: 0.15055260062217712; velocity_z: 0.33277198672294617; temperature: 0.19115251302719116; total_precip: 0.27046459913253784; 
+0: velocity_u: 0.14669208228588104; velocity_v: 0.15532664954662323; specific_humidity: 0.1382458508014679; velocity_z: 0.31098634004592896; temperature: 0.19050826132297516; total_precip: 0.2683902382850647; 
+0: epoch: 26 [1/5 (20%)]	Loss: 0.18842 : 0.05823 :: 0.06196 (2.48 s/sec)
+0: velocity_u: 0.15041840076446533; velocity_v: 0.15628241002559662; specific_humidity: 0.1482105851173401; velocity_z: 0.31861406564712524; temperature: 0.19864623248577118; total_precip: 0.3292669653892517; 
+0: epoch: 26 [2/5 (40%)]	Loss: 0.19576 : 0.07069 :: 0.06400 (17.42 s/sec)
+0: velocity_u: 0.1595095843076706; velocity_v: 0.16971121728420258; specific_humidity: 0.15217915177345276; velocity_z: 0.3641659617424011; temperature: 0.2066633552312851; total_precip: 0.3246265649795532; 
+0: epoch: 26 [3/5 (60%)]	Loss: 0.20711 : 0.07588 :: 0.06976 (17.69 s/sec)
+0: velocity_u: 0.164030060172081; velocity_v: 0.17606480419635773; specific_humidity: 0.17010682821273804; velocity_z: 0.3800644278526306; temperature: 0.21443656086921692; total_precip: 0.356921911239624; 
+0: epoch: 26 [4/5 (80%)]	Loss: 0.21862 : 0.09344 :: 0.07292 (18.14 s/sec)
+0: validation loss for strategy=BERT at epoch 26 : 0.053787488490343094
+0: validation loss for velocity_u : 0.0038653200026601553
+0: validation loss for velocity_v : 0.005125995725393295
+0: validation loss for specific_humidity : 0.006020819768309593
+0: validation loss for velocity_z : 0.1099945530295372
+0: validation loss for temperature : 0.015831125900149345
+0: validation loss for total_precip : 0.18188713490962982
+0: 27 : 14:23:51 :: batch_size = 96, lr = 1.0787811788985607e-05
+0: velocity_u: 0.1646847277879715; velocity_v: 0.17566163837909698; specific_humidity: 0.16168612241744995; velocity_z: 0.378057062625885; temperature: 0.20406411588191986; total_precip: 0.25885501503944397; 
+0: velocity_u: 0.1608884632587433; velocity_v: 0.1709812879562378; specific_humidity: 0.17480747401714325; velocity_z: 0.3648032546043396; temperature: 0.2300252765417099; total_precip: 0.4087711274623871; 
+0: epoch: 27 [1/5 (20%)]	Loss: 0.21479 : 0.08131 :: 0.07101 (2.40 s/sec)
+0: velocity_u: 0.16112996637821198; velocity_v: 0.1714310348033905; specific_humidity: 0.15943117439746857; velocity_z: 0.3570159375667572; temperature: 0.2229316234588623; total_precip: 0.27077364921569824; 
+0: epoch: 27 [2/5 (40%)]	Loss: 0.20611 : 0.05640 :: 0.07132 (17.96 s/sec)
+0: velocity_u: 0.15772755444049835; velocity_v: 0.169701486825943; specific_humidity: 0.16944915056228638; velocity_z: 0.3534693419933319; temperature: 0.21811650693416595; total_precip: 0.39967846870422363; 
+0: epoch: 27 [3/5 (60%)]	Loss: 0.21803 : 0.09773 :: 0.06824 (17.83 s/sec)
+0: velocity_u: 0.14841561019420624; velocity_v: 0.1591055542230606; specific_humidity: 0.14809872210025787; velocity_z: 0.3225596845149994; temperature: 0.19843460619449615; total_precip: 0.28494685888290405; 
+0: epoch: 27 [4/5 (80%)]	Loss: 0.19184 : 0.06201 :: 0.06189 (18.14 s/sec)
+0: validation loss for strategy=BERT at epoch 27 : 0.0678972527384758
+0: validation loss for velocity_u : 0.003317262278869748
+0: validation loss for velocity_v : 0.004676428157836199
+0: validation loss for specific_humidity : 0.006111078429967165
+0: validation loss for velocity_z : 0.1108575090765953
+0: validation loss for temperature : 0.021218763664364815
+0: validation loss for total_precip : 0.2612023949623108
+0: 28 : 14:27:46 :: batch_size = 96, lr = 1.0524694428278642e-05
+0: velocity_u: 0.15884363651275635; velocity_v: 0.16744670271873474; specific_humidity: 0.14839571714401245; velocity_z: 0.3570029139518738; temperature: 0.20767471194267273; total_precip: 0.3387294113636017; 
+0: velocity_u: 0.1557120531797409; velocity_v: 0.16727831959724426; specific_humidity: 0.1555628776550293; velocity_z: 0.35384804010391235; temperature: 0.20675678551197052; total_precip: 0.3027547001838684; 
+0: epoch: 28 [1/5 (20%)]	Loss: 0.20490 : 0.07671 :: 0.06751 (2.15 s/sec)
+0: velocity_u: 0.1544255167245865; velocity_v: 0.163887619972229; specific_humidity: 0.15057231485843658; velocity_z: 0.34482014179229736; temperature: 0.2051478773355484; total_precip: 0.2558228671550751; 
+0: epoch: 28 [2/5 (40%)]	Loss: 0.19530 : 0.04940 :: 0.06686 (17.59 s/sec)
+0: velocity_u: 0.1592179536819458; velocity_v: 0.16899025440216064; specific_humidity: 0.15401683747768402; velocity_z: 0.35981863737106323; temperature: 0.2052830159664154; total_precip: 0.3435786962509155; 
+0: epoch: 28 [3/5 (60%)]	Loss: 0.20835 : 0.08238 :: 0.06983 (18.13 s/sec)
+0: velocity_u: 0.15188778936862946; velocity_v: 0.16468940675258636; specific_humidity: 0.1498429775238037; velocity_z: 0.3556211590766907; temperature: 0.1992311030626297; total_precip: 0.24859938025474548; 
+0: epoch: 28 [4/5 (80%)]	Loss: 0.19397 : 0.05656 :: 0.06503 (17.75 s/sec)
+0: validation loss for strategy=BERT at epoch 28 : 0.07367672026157379
+0: validation loss for velocity_u : 0.0029958945233374834
+0: validation loss for velocity_v : 0.004458607640117407
+0: validation loss for specific_humidity : 0.006410328205674887
+0: validation loss for velocity_z : 0.0884259045124054
+0: validation loss for temperature : 0.023159563541412354
+0: validation loss for total_precip : 0.31660982966423035
+0: 29 : 14:31:49 :: batch_size = 96, lr = 1.0267994564174285e-05
+0: velocity_u: 0.1579134464263916; velocity_v: 0.1684931367635727; specific_humidity: 0.16482873260974884; velocity_z: 0.35774362087249756; temperature: 0.2146792709827423; total_precip: 0.2904782295227051; 
+0: velocity_u: 0.1630922555923462; velocity_v: 0.17325371503829956; specific_humidity: 0.1629706472158432; velocity_z: 0.3907962441444397; temperature: 0.21377016603946686; total_precip: 0.3886246383190155; 
+0: epoch: 29 [1/5 (20%)]	Loss: 0.21337 : 0.07988 :: 0.07250 (2.11 s/sec)
+0: velocity_u: 0.16342899203300476; velocity_v: 0.169009730219841; specific_humidity: 0.16597053408622742; velocity_z: 0.35762596130371094; temperature: 0.21266421675682068; total_precip: 0.26834508776664734; 
+0: epoch: 29 [2/5 (40%)]	Loss: 0.20482 : 0.05802 :: 0.07220 (17.54 s/sec)
+0: velocity_u: 0.16087079048156738; velocity_v: 0.1724948137998581; specific_humidity: 0.16330020129680634; velocity_z: 0.36370107531547546; temperature: 0.2041623741388321; total_precip: 0.36545881628990173; 
+0: epoch: 29 [3/5 (60%)]	Loss: 0.21325 : 0.08887 :: 0.07065 (17.65 s/sec)
+0: velocity_u: 0.15713317692279816; velocity_v: 0.16796278953552246; specific_humidity: 0.157304584980011; velocity_z: 0.34312063455581665; temperature: 0.20997300744056702; total_precip: 0.3302786350250244; 
+0: epoch: 29 [4/5 (80%)]	Loss: 0.20608 : 0.07200 :: 0.06810 (17.84 s/sec)
+0: validation loss for strategy=BERT at epoch 29 : 0.07204180210828781
+0: validation loss for velocity_u : 0.003884267993271351
+0: validation loss for velocity_v : 0.005492551252245903
+0: validation loss for specific_humidity : 0.00652705691754818
+0: validation loss for velocity_z : 0.12143054604530334
+0: validation loss for temperature : 0.02027267776429653
+0: validation loss for total_precip : 0.2746437191963196
+0: 30 : 14:35:50 :: batch_size = 96, lr = 1.0017555672365157e-05
+0: velocity_u: 0.16096146404743195; velocity_v: 0.17302833497524261; specific_humidity: 0.16244731843471527; velocity_z: 0.3723928928375244; temperature: 0.2252228856086731; total_precip: 0.46658793091773987; 
+0: velocity_u: 0.1542946696281433; velocity_v: 0.16365499794483185; specific_humidity: 0.14767171442508698; velocity_z: 0.3390173017978668; temperature: 0.20704394578933716; total_precip: 0.3321250081062317; 
+0: epoch: 30 [1/5 (20%)]	Loss: 0.21533 : 0.10082 :: 0.06674 (2.05 s/sec)
+0: velocity_u: 0.1622648686170578; velocity_v: 0.1755029708147049; specific_humidity: 0.1592315137386322; velocity_z: 0.3669469654560089; temperature: 0.2130950689315796; total_precip: 0.34331613779067993; 
+0: epoch: 30 [2/5 (40%)]	Loss: 0.21353 : 0.08570 :: 0.07171 (17.86 s/sec)
+0: velocity_u: 0.16453827917575836; velocity_v: 0.17421329021453857; specific_humidity: 0.16276447474956512; velocity_z: 0.3758057951927185; temperature: 0.21025198698043823; total_precip: 0.36339324712753296; 
+0: epoch: 30 [3/5 (60%)]	Loss: 0.21660 : 0.09546 :: 0.07361 (17.81 s/sec)
+0: velocity_u: 0.16066695749759674; velocity_v: 0.1671551913022995; specific_humidity: 0.1527651846408844; velocity_z: 0.3653445243835449; temperature: 0.21550409495830536; total_precip: 0.28167739510536194; 
+0: epoch: 30 [4/5 (80%)]	Loss: 0.20448 : 0.06896 :: 0.07088 (18.09 s/sec)
+0: validation loss for strategy=BERT at epoch 30 : 0.05875813215970993
+0: validation loss for velocity_u : 0.0035889146383851767
+0: validation loss for velocity_v : 0.005329583305865526
+0: validation loss for specific_humidity : 0.005152574274688959
+0: validation loss for velocity_z : 0.10671425610780716
+0: validation loss for temperature : 0.01566939242184162
+0: validation loss for total_precip : 0.21609418094158173
+0: 31 : 14:39:56 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15693336725234985; velocity_v: 0.1697145402431488; specific_humidity: 0.15723668038845062; velocity_z: 0.350788414478302; temperature: 0.20701153576374054; total_precip: 0.24605295062065125; 
+0: velocity_u: 0.16434140503406525; velocity_v: 0.1737426519393921; specific_humidity: 0.14847493171691895; velocity_z: 0.3572096526622772; temperature: 0.19967913627624512; total_precip: 0.5341621041297913; 
+0: epoch: 31 [1/5 (20%)]	Loss: 0.21279 : 0.09418 :: 0.07286 (2.38 s/sec)
+0: velocity_u: 0.1467217206954956; velocity_v: 0.157082200050354; specific_humidity: 0.14805786311626434; velocity_z: 0.32772696018218994; temperature: 0.20037426054477692; total_precip: 0.3716012239456177; 
+0: epoch: 31 [2/5 (40%)]	Loss: 0.20057 : 0.08980 :: 0.06077 (17.72 s/sec)
+0: velocity_u: 0.15866431593894958; velocity_v: 0.1690063625574112; specific_humidity: 0.16714702546596527; velocity_z: 0.34783995151519775; temperature: 0.21947120130062103; total_precip: 0.36578047275543213; 
+0: epoch: 31 [3/5 (60%)]	Loss: 0.21405 : 0.08489 :: 0.06930 (17.82 s/sec)
+0: velocity_u: 0.15580318868160248; velocity_v: 0.16728757321834564; specific_humidity: 0.15592673420906067; velocity_z: 0.3702276945114136; temperature: 0.21650594472885132; total_precip: 0.3119882643222809; 
+0: epoch: 31 [4/5 (80%)]	Loss: 0.20761 : 0.07503 :: 0.06718 (17.76 s/sec)
+0: validation loss for strategy=BERT at epoch 31 : 0.053007934242486954
+0: validation loss for velocity_u : 0.00386950490064919
+0: validation loss for velocity_v : 0.005377758760005236
+0: validation loss for specific_humidity : 0.005829970818012953
+0: validation loss for velocity_z : 0.10731185227632523
+0: validation loss for temperature : 0.01819186843931675
+0: validation loss for total_precip : 0.17746663093566895
+0: 32 : 14:43:59 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15168677270412445; velocity_v: 0.1630713790655136; specific_humidity: 0.1503322422504425; velocity_z: 0.34203529357910156; temperature: 0.20782946050167084; total_precip: 0.314685195684433; 
+0: velocity_u: 0.15832608938217163; velocity_v: 0.1682649701833725; specific_humidity: 0.15917955338954926; velocity_z: 0.3456156253814697; temperature: 0.2056133896112442; total_precip: 0.3659006357192993; 
+0: epoch: 32 [1/5 (20%)]	Loss: 0.20512 : 0.07811 :: 0.06887 (2.34 s/sec)
+0: velocity_u: 0.16172219812870026; velocity_v: 0.17500931024551392; specific_humidity: 0.17527808248996735; velocity_z: 0.36949217319488525; temperature: 0.22095364332199097; total_precip: 0.3660632371902466; 
+0: epoch: 32 [2/5 (40%)]	Loss: 0.21980 : 0.09200 :: 0.07144 (17.85 s/sec)
+0: velocity_u: 0.16097266972064972; velocity_v: 0.1730935424566269; specific_humidity: 0.15034694969654083; velocity_z: 0.3754531443119049; temperature: 0.21029168367385864; total_precip: 0.3450497090816498; 
+0: epoch: 32 [3/5 (60%)]	Loss: 0.21183 : 0.08636 :: 0.07093 (18.10 s/sec)
+0: velocity_u: 0.15675237774848938; velocity_v: 0.17245791852474213; specific_humidity: 0.15793974697589874; velocity_z: 0.357120156288147; temperature: 0.20136281847953796; total_precip: 0.30736351013183594; 
+0: epoch: 32 [4/5 (80%)]	Loss: 0.20448 : 0.06988 :: 0.06806 (17.34 s/sec)
+0: validation loss for strategy=BERT at epoch 32 : 0.04858905076980591
+0: validation loss for velocity_u : 0.003747757524251938
+0: validation loss for velocity_v : 0.005270262714475393
+0: validation loss for specific_humidity : 0.005892147775739431
+0: validation loss for velocity_z : 0.10427578538656235
+0: validation loss for temperature : 0.019791578873991966
+0: validation loss for total_precip : 0.15255682170391083
+0: 33 : 14:48:01 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15203648805618286; velocity_v: 0.16169172525405884; specific_humidity: 0.15288987755775452; velocity_z: 0.32787802815437317; temperature: 0.2103959023952484; total_precip: 0.26666906476020813; 
+0: velocity_u: 0.15730592608451843; velocity_v: 0.16736486554145813; specific_humidity: 0.15559972822666168; velocity_z: 0.3535206913948059; temperature: 0.2066439390182495; total_precip: 0.2942515015602112; 
+0: epoch: 33 [1/5 (20%)]	Loss: 0.19878 : 0.06175 :: 0.06831 (2.34 s/sec)
+0: velocity_u: 0.16257594525814056; velocity_v: 0.17592613399028778; specific_humidity: 0.16082869470119476; velocity_z: 0.3700864911079407; temperature: 0.21006610989570618; total_precip: 0.3926110863685608; 
+0: epoch: 33 [2/5 (40%)]	Loss: 0.21857 : 0.09955 :: 0.07162 (17.80 s/sec)
+0: velocity_u: 0.15430255234241486; velocity_v: 0.16638651490211487; specific_humidity: 0.14892317354679108; velocity_z: 0.3581012189388275; temperature: 0.20059587061405182; total_precip: 0.28406569361686707; 
+0: epoch: 33 [3/5 (60%)]	Loss: 0.19883 : 0.06610 :: 0.06604 (17.34 s/sec)
+0: velocity_u: 0.16376836597919464; velocity_v: 0.1732790321111679; specific_humidity: 0.16022837162017822; velocity_z: 0.36795574426651; temperature: 0.21434286236763; total_precip: 0.42357611656188965; 
+0: epoch: 33 [4/5 (80%)]	Loss: 0.22189 : 0.10896 :: 0.07296 (17.92 s/sec)
+0: validation loss for strategy=BERT at epoch 33 : 0.0498059056699276
+0: validation loss for velocity_u : 0.003501148661598563
+0: validation loss for velocity_v : 0.0048825996927917
+0: validation loss for specific_humidity : 0.005975597072392702
+0: validation loss for velocity_z : 0.10497114807367325
+0: validation loss for temperature : 0.01641034334897995
+0: validation loss for total_precip : 0.1630946397781372
+0: 34 : 14:52:01 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15936601161956787; velocity_v: 0.17103764414787292; specific_humidity: 0.16250649094581604; velocity_z: 0.34891194105148315; temperature: 0.21737833321094513; total_precip: 0.3181380033493042; 
+0: velocity_u: 0.15673395991325378; velocity_v: 0.1652485579252243; specific_humidity: 0.15514005720615387; velocity_z: 0.33306095004081726; temperature: 0.19608622789382935; total_precip: 0.24791593849658966; 
+0: epoch: 34 [1/5 (20%)]	Loss: 0.20096 : 0.05726 :: 0.06819 (2.39 s/sec)
+0: velocity_u: 0.1568307727575302; velocity_v: 0.16869349777698517; specific_humidity: 0.15702196955680847; velocity_z: 0.34615859389305115; temperature: 0.2086295634508133; total_precip: 0.27246350049972534; 
+0: epoch: 34 [2/5 (40%)]	Loss: 0.20038 : 0.05634 :: 0.06801 (17.70 s/sec)
+0: velocity_u: 0.15023955702781677; velocity_v: 0.16358065605163574; specific_humidity: 0.1421772688627243; velocity_z: 0.31655624508857727; temperature: 0.19265109300613403; total_precip: 0.21366387605667114; 
+0: epoch: 34 [3/5 (60%)]	Loss: 0.18349 : 0.04221 :: 0.06364 (17.79 s/sec)
+0: velocity_u: 0.16488304734230042; velocity_v: 0.17544075846672058; specific_humidity: 0.15453045070171356; velocity_z: 0.3653829097747803; temperature: 0.20650555193424225; total_precip: 0.3295685052871704; 
+0: epoch: 34 [4/5 (80%)]	Loss: 0.21055 : 0.08027 :: 0.07358 (18.13 s/sec)
+0: validation loss for strategy=BERT at epoch 34 : 0.06429467350244522
+0: validation loss for velocity_u : 0.003759264713153243
+0: validation loss for velocity_v : 0.00526677630841732
+0: validation loss for specific_humidity : 0.006254665553569794
+0: validation loss for velocity_z : 0.11510434001684189
+0: validation loss for temperature : 0.019558744505047798
+0: validation loss for total_precip : 0.2358241230249405
+0: 35 : 14:55:58 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.1576160490512848; velocity_v: 0.16867320239543915; specific_humidity: 0.14971765875816345; velocity_z: 0.36120718717575073; temperature: 0.19943688809871674; total_precip: 0.30803167819976807; 
+0: velocity_u: 0.15883003175258636; velocity_v: 0.1691858023405075; specific_humidity: 0.16778333485126495; velocity_z: 0.3482980728149414; temperature: 0.22248630225658417; total_precip: 0.29185813665390015; 
+0: epoch: 35 [1/5 (20%)]	Loss: 0.20508 : 0.06769 :: 0.06909 (2.30 s/sec)
+0: velocity_u: 0.16077594459056854; velocity_v: 0.1720719039440155; specific_humidity: 0.16435815393924713; velocity_z: 0.35912230610847473; temperature: 0.21423983573913574; total_precip: 0.3338274657726288; 
+0: epoch: 35 [2/5 (40%)]	Loss: 0.21169 : 0.07781 :: 0.07063 (18.03 s/sec)
+0: velocity_u: 0.1627180427312851; velocity_v: 0.1732320785522461; specific_humidity: 0.1653537154197693; velocity_z: 0.36856937408447266; temperature: 0.20840562880039215; total_precip: 0.3130599856376648; 
+0: epoch: 35 [3/5 (60%)]	Loss: 0.21024 : 0.07642 :: 0.07221 (17.87 s/sec)
+0: velocity_u: 0.160710871219635; velocity_v: 0.17160442471504211; specific_humidity: 0.17151083052158356; velocity_z: 0.35272088646888733; temperature: 0.22424161434173584; total_precip: 0.3749921917915344; 
+0: epoch: 35 [4/5 (80%)]	Loss: 0.21812 : 0.09219 :: 0.07075 (17.99 s/sec)
+0: validation loss for strategy=BERT at epoch 35 : 0.06784837692975998
+0: validation loss for velocity_u : 0.0033573685213923454
+0: validation loss for velocity_v : 0.00515540037304163
+0: validation loss for specific_humidity : 0.005675148218870163
+0: validation loss for velocity_z : 0.09550314396619797
+0: validation loss for temperature : 0.01664363406598568
+0: validation loss for total_precip : 0.28075575828552246
+0: 36 : 15:00:03 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.16197124123573303; velocity_v: 0.170750230550766; specific_humidity: 0.1519472748041153; velocity_z: 0.3663868308067322; temperature: 0.2072385549545288; total_precip: 0.31292974948883057; 
+0: velocity_u: 0.15681247413158417; velocity_v: 0.16736562550067902; specific_humidity: 0.15769840776920319; velocity_z: 0.34467458724975586; temperature: 0.21493899822235107; total_precip: 0.31798022985458374; 
+0: epoch: 36 [1/5 (20%)]	Loss: 0.20644 : 0.07266 :: 0.06787 (2.17 s/sec)
+0: velocity_u: 0.15927459299564362; velocity_v: 0.16766312718391418; specific_humidity: 0.1603929102420807; velocity_z: 0.35988715291023254; temperature: 0.20754210650920868; total_precip: 0.3600720167160034; 
+0: epoch: 36 [2/5 (40%)]	Loss: 0.21112 : 0.08391 :: 0.07016 (18.30 s/sec)
+0: velocity_u: 0.1582951545715332; velocity_v: 0.16807200014591217; specific_humidity: 0.16012483835220337; velocity_z: 0.35402530431747437; temperature: 0.20461329817771912; total_precip: 0.2679516673088074; 
+0: epoch: 36 [3/5 (60%)]	Loss: 0.20057 : 0.05702 :: 0.06904 (18.17 s/sec)
+0: velocity_u: 0.15899011492729187; velocity_v: 0.16651372611522675; specific_humidity: 0.16056740283966064; velocity_z: 0.3523131012916565; temperature: 0.22178642451763153; total_precip: 0.29047781229019165; 
+0: epoch: 36 [4/5 (80%)]	Loss: 0.20596 : 0.06629 :: 0.06963 (17.86 s/sec)
+0: validation loss for strategy=BERT at epoch 36 : 0.06849756836891174
+0: validation loss for velocity_u : 0.003343914868310094
+0: validation loss for velocity_v : 0.004822756629437208
+0: validation loss for specific_humidity : 0.006383839529007673
+0: validation loss for velocity_z : 0.10995694994926453
+0: validation loss for temperature : 0.020148903131484985
+0: validation loss for total_precip : 0.2663290500640869
+0: 37 : 15:04:06 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.16754382848739624; velocity_v: 0.17751586437225342; specific_humidity: 0.16327643394470215; velocity_z: 0.37567925453186035; temperature: 0.20532546937465668; total_precip: 0.26773586869239807; 
+0: velocity_u: 0.1587887555360794; velocity_v: 0.16415466368198395; specific_humidity: 0.15801823139190674; velocity_z: 0.3503996431827545; temperature: 0.21276576817035675; total_precip: 0.29225993156433105; 
+0: epoch: 37 [1/5 (20%)]	Loss: 0.20536 : 0.06322 :: 0.06954 (2.22 s/sec)
+0: velocity_u: 0.15483516454696655; velocity_v: 0.16730324923992157; specific_humidity: 0.17334413528442383; velocity_z: 0.35176047682762146; temperature: 0.23280102014541626; total_precip: 0.3473717272281647; 
+0: epoch: 37 [2/5 (40%)]	Loss: 0.21496 : 0.07962 :: 0.06675 (18.06 s/sec)
+0: velocity_u: 0.16352686285972595; velocity_v: 0.17242029309272766; specific_humidity: 0.1614808440208435; velocity_z: 0.37056076526641846; temperature: 0.20793886482715607; total_precip: 0.2781863212585449; 
+0: epoch: 37 [3/5 (60%)]	Loss: 0.20627 : 0.05795 :: 0.07273 (18.03 s/sec)
+0: velocity_u: 0.1583801954984665; velocity_v: 0.16931994259357452; specific_humidity: 0.16081009805202484; velocity_z: 0.36375120282173157; temperature: 0.21253670752048492; total_precip: 0.2670777440071106; 
+0: epoch: 37 [4/5 (80%)]	Loss: 0.20344 : 0.06366 :: 0.06936 (18.01 s/sec)
+0: validation loss for strategy=BERT at epoch 37 : 0.10141363739967346
+0: validation loss for velocity_u : 0.0036604905035346746
+0: validation loss for velocity_v : 0.005166050512343645
+0: validation loss for specific_humidity : 0.006647288333624601
+0: validation loss for velocity_z : 0.11822729557752609
+0: validation loss for temperature : 0.02465304173529148
+0: validation loss for total_precip : 0.45012763142585754
+0: 38 : 15:08:07 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.1563042551279068; velocity_v: 0.16681715846061707; specific_humidity: 0.15952803194522858; velocity_z: 0.3431454300880432; temperature: 0.21134734153747559; total_precip: 0.3770487606525421; 
+0: velocity_u: 0.16095270216464996; velocity_v: 0.17107447981834412; specific_humidity: 0.16321417689323425; velocity_z: 0.3560671806335449; temperature: 0.21507079899311066; total_precip: 0.2983514666557312; 
+0: epoch: 38 [1/5 (20%)]	Loss: 0.20928 : 0.07994 :: 0.07084 (2.43 s/sec)
+0: velocity_u: 0.15731000900268555; velocity_v: 0.17051835358142853; specific_humidity: 0.1679239422082901; velocity_z: 0.358649343252182; temperature: 0.2158542275428772; total_precip: 0.3554573953151703; 
+0: epoch: 38 [2/5 (40%)]	Loss: 0.21353 : 0.08226 :: 0.06766 (17.86 s/sec)
+0: velocity_u: 0.1615891307592392; velocity_v: 0.17585334181785583; specific_humidity: 0.1700410693883896; velocity_z: 0.37230125069618225; temperature: 0.22824127972126007; total_precip: 0.46503788232803345; 
+0: epoch: 38 [3/5 (60%)]	Loss: 0.23081 : 0.12445 :: 0.07114 (17.84 s/sec)
+0: velocity_u: 0.16197052597999573; velocity_v: 0.1679820418357849; specific_humidity: 0.1690007746219635; velocity_z: 0.3571678698062897; temperature: 0.235615074634552; total_precip: 0.354411780834198; 
+0: epoch: 38 [4/5 (80%)]	Loss: 0.21787 : 0.08057 :: 0.07156 (17.77 s/sec)
+0: validation loss for strategy=BERT at epoch 38 : 0.06341918557882309
+0: validation loss for velocity_u : 0.003571451408788562
+0: validation loss for velocity_v : 0.004996129311621189
+0: validation loss for specific_humidity : 0.006240710150450468
+0: validation loss for velocity_z : 0.11595182865858078
+0: validation loss for temperature : 0.020147593691945076
+0: validation loss for total_precip : 0.22960740327835083
+0: 39 : 15:12:12 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.1555369347333908; velocity_v: 0.16421811282634735; specific_humidity: 0.15867950022220612; velocity_z: 0.3371276557445526; temperature: 0.20329870283603668; total_precip: 0.28721797466278076; 
+0: velocity_u: 0.15584762394428253; velocity_v: 0.16677582263946533; specific_humidity: 0.1488027274608612; velocity_z: 0.35568979382514954; temperature: 0.2025802731513977; total_precip: 0.36024823784828186; 
+0: epoch: 39 [1/5 (20%)]	Loss: 0.20293 : 0.07711 :: 0.06832 (2.10 s/sec)
+0: velocity_u: 0.1612718552350998; velocity_v: 0.1710572987794876; specific_humidity: 0.1648983508348465; velocity_z: 0.35569140315055847; temperature: 0.212002232670784; total_precip: 0.2774958610534668; 
+0: epoch: 39 [2/5 (40%)]	Loss: 0.20523 : 0.06172 :: 0.07086 (18.21 s/sec)
+0: velocity_u: 0.162271648645401; velocity_v: 0.1711314618587494; specific_humidity: 0.1672057956457138; velocity_z: 0.37375858426094055; temperature: 0.22417248785495758; total_precip: 0.3313693404197693; 
+0: epoch: 39 [3/5 (60%)]	Loss: 0.21544 : 0.08085 :: 0.07188 (17.71 s/sec)
+0: velocity_u: 0.16059470176696777; velocity_v: 0.172122061252594; specific_humidity: 0.16401498019695282; velocity_z: 0.351166307926178; temperature: 0.21433328092098236; total_precip: 0.3301270604133606; 
+0: epoch: 39 [4/5 (80%)]	Loss: 0.21046 : 0.07988 :: 0.06997 (18.04 s/sec)
+0: validation loss for strategy=BERT at epoch 39 : 0.06172816455364227
+0: validation loss for velocity_u : 0.0030684673693031073
+0: validation loss for velocity_v : 0.004332184325903654
+0: validation loss for specific_humidity : 0.004996407311409712
+0: validation loss for velocity_z : 0.08160237967967987
+0: validation loss for temperature : 0.020017480477690697
+0: validation loss for total_precip : 0.2563519775867462
+0: 40 : 15:16:18 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.1598707139492035; velocity_v: 0.16818301379680634; specific_humidity: 0.15752550959587097; velocity_z: 0.3520209789276123; temperature: 0.20311574637889862; total_precip: 0.2644384205341339; 
+0: velocity_u: 0.15877017378807068; velocity_v: 0.17190757393836975; specific_humidity: 0.16259387135505676; velocity_z: 0.35882696509361267; temperature: 0.20938259363174438; total_precip: 0.372620165348053; 
+0: epoch: 40 [1/5 (20%)]	Loss: 0.20676 : 0.07395 :: 0.06942 (2.53 s/sec)
+0: velocity_u: 0.15760284662246704; velocity_v: 0.16534821689128876; specific_humidity: 0.15848731994628906; velocity_z: 0.35318952798843384; temperature: 0.2161613404750824; total_precip: 0.36065030097961426; 
+0: epoch: 40 [2/5 (40%)]	Loss: 0.21105 : 0.09142 :: 0.06856 (17.79 s/sec)
+0: velocity_u: 0.15591493248939514; velocity_v: 0.16844041645526886; specific_humidity: 0.14966680109500885; velocity_z: 0.34516575932502747; temperature: 0.20804397761821747; total_precip: 0.28714966773986816; 
+0: epoch: 40 [3/5 (60%)]	Loss: 0.20027 : 0.06464 :: 0.06779 (17.64 s/sec)
+0: velocity_u: 0.1650637835264206; velocity_v: 0.17178378999233246; specific_humidity: 0.15258027613162994; velocity_z: 0.3496663570404053; temperature: 0.209541916847229; total_precip: 0.2627260088920593; 
+0: epoch: 40 [4/5 (80%)]	Loss: 0.20183 : 0.05296 :: 0.07382 (18.31 s/sec)
+0: validation loss for strategy=BERT at epoch 40 : 0.06466396152973175
+0: validation loss for velocity_u : 0.003204782260581851
+0: validation loss for velocity_v : 0.004458869341760874
+0: validation loss for specific_humidity : 0.005622943863272667
+0: validation loss for velocity_z : 0.09880757331848145
+0: validation loss for temperature : 0.01982193998992443
+0: validation loss for total_precip : 0.2560677230358124
+0: 41 : 15:20:13 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15948747098445892; velocity_v: 0.1676303595304489; specific_humidity: 0.15875668823719025; velocity_z: 0.36525025963783264; temperature: 0.21182900667190552; total_precip: 0.3974500000476837; 
+0: velocity_u: 0.15600070357322693; velocity_v: 0.1660265475511551; specific_humidity: 0.15752962231636047; velocity_z: 0.3469851016998291; temperature: 0.205921933054924; total_precip: 0.266793429851532; 
+0: epoch: 41 [1/5 (20%)]	Loss: 0.20735 : 0.08163 :: 0.06759 (2.37 s/sec)
+0: velocity_u: 0.1533135175704956; velocity_v: 0.16426865756511688; specific_humidity: 0.1542288213968277; velocity_z: 0.34439581632614136; temperature: 0.20676228404045105; total_precip: 0.2740972936153412; 
+0: epoch: 41 [2/5 (40%)]	Loss: 0.19779 : 0.06167 :: 0.06593 (18.73 s/sec)
+0: velocity_u: 0.15130667388439178; velocity_v: 0.16303750872612; specific_humidity: 0.15286824107170105; velocity_z: 0.3347882330417633; temperature: 0.2187632918357849; total_precip: 0.2973305284976959; 
+0: epoch: 41 [3/5 (60%)]	Loss: 0.20062 : 0.06861 :: 0.06436 (17.87 s/sec)
+0: velocity_u: 0.16081734001636505; velocity_v: 0.17095059156417847; specific_humidity: 0.1424846202135086; velocity_z: 0.3533685803413391; temperature: 0.205499529838562; total_precip: 0.30723822116851807; 
+0: epoch: 41 [4/5 (80%)]	Loss: 0.20318 : 0.07297 :: 0.07018 (17.69 s/sec)
+0: validation loss for strategy=BERT at epoch 41 : 0.06481680274009705
+0: validation loss for velocity_u : 0.0034669802989810705
+0: validation loss for velocity_v : 0.004792030900716782
+0: validation loss for specific_humidity : 0.00651128264144063
+0: validation loss for velocity_z : 0.11106408387422562
+0: validation loss for temperature : 0.018412260338664055
+0: validation loss for total_precip : 0.24465413391590118
+0: 42 : 15:24:11 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15827658772468567; velocity_v: 0.16960527002811432; specific_humidity: 0.15563519299030304; velocity_z: 0.36219024658203125; temperature: 0.2060490995645523; total_precip: 0.3353610932826996; 
+0: velocity_u: 0.15549156069755554; velocity_v: 0.169815793633461; specific_humidity: 0.15437665581703186; velocity_z: 0.3492566645145416; temperature: 0.1955806165933609; total_precip: 0.2593423128128052; 
+0: epoch: 42 [1/5 (20%)]	Loss: 0.20221 : 0.06640 :: 0.06664 (1.81 s/sec)
+0: velocity_u: 0.16464941203594208; velocity_v: 0.17157752811908722; specific_humidity: 0.1681671291589737; velocity_z: 0.39648592472076416; temperature: 0.22375211119651794; total_precip: 0.27785754203796387; 
+0: epoch: 42 [2/5 (40%)]	Loss: 0.21306 : 0.06359 :: 0.07357 (17.69 s/sec)
+0: velocity_u: 0.16331523656845093; velocity_v: 0.16813385486602783; specific_humidity: 0.1506378948688507; velocity_z: 0.36082741618156433; temperature: 0.2068290114402771; total_precip: 0.31512200832366943; 
+0: epoch: 42 [3/5 (60%)]	Loss: 0.20613 : 0.07522 :: 0.07286 (18.04 s/sec)
+0: velocity_u: 0.15696482360363007; velocity_v: 0.1640026569366455; specific_humidity: 0.15202593803405762; velocity_z: 0.3526690602302551; temperature: 0.20538073778152466; total_precip: 0.31244218349456787; 
+0: epoch: 42 [4/5 (80%)]	Loss: 0.20261 : 0.06900 :: 0.06887 (18.03 s/sec)
+0: validation loss for strategy=BERT at epoch 42 : 0.11176712065935135
+0: validation loss for velocity_u : 0.0037954121362417936
+0: validation loss for velocity_v : 0.005256511736661196
+0: validation loss for specific_humidity : 0.007052317261695862
+0: validation loss for velocity_z : 0.11453109234571457
+0: validation loss for temperature : 0.022474288940429688
+0: validation loss for total_precip : 0.5174931883811951
+0: 43 : 15:28:34 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15461567044258118; velocity_v: 0.16515761613845825; specific_humidity: 0.16300377249717712; velocity_z: 0.34306472539901733; temperature: 0.21574248373508453; total_precip: 0.32268303632736206; 
+0: velocity_u: 0.1603643000125885; velocity_v: 0.1707606017589569; specific_humidity: 0.15730154514312744; velocity_z: 0.3535242974758148; temperature: 0.20507343113422394; total_precip: 0.26520124077796936; 
+0: epoch: 43 [1/5 (20%)]	Loss: 0.20355 : 0.06368 :: 0.07061 (2.26 s/sec)
+0: velocity_u: 0.14812937378883362; velocity_v: 0.1613895446062088; specific_humidity: 0.14303714036941528; velocity_z: 0.3359352648258209; temperature: 0.19380533695220947; total_precip: 0.28358566761016846; 
+0: epoch: 43 [2/5 (40%)]	Loss: 0.19181 : 0.06445 :: 0.06207 (17.99 s/sec)
+0: velocity_u: 0.14764468371868134; velocity_v: 0.1592261642217636; specific_humidity: 0.1550462692975998; velocity_z: 0.31856951117515564; temperature: 0.20943289995193481; total_precip: 0.2263001799583435; 
+0: epoch: 43 [3/5 (60%)]	Loss: 0.18868 : 0.04593 :: 0.06141 (18.07 s/sec)
+0: velocity_u: 0.15824322402477264; velocity_v: 0.16738399863243103; specific_humidity: 0.16702327132225037; velocity_z: 0.36014387011528015; temperature: 0.20840440690517426; total_precip: 0.2946292459964752; 
+0: epoch: 43 [4/5 (80%)]	Loss: 0.20548 : 0.06541 :: 0.06832 (18.03 s/sec)
+0: validation loss for strategy=BERT at epoch 43 : 0.06354555487632751
+0: validation loss for velocity_u : 0.003947263117879629
+0: validation loss for velocity_v : 0.005974926054477692
+0: validation loss for specific_humidity : 0.005794557277113199
+0: validation loss for velocity_z : 0.12024588137865067
+0: validation loss for temperature : 0.01608876883983612
+0: validation loss for total_precip : 0.22922195494174957
+0: 44 : 15:32:47 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15233269333839417; velocity_v: 0.16424821317195892; specific_humidity: 0.16853420436382294; velocity_z: 0.35022449493408203; temperature: 0.22115404903888702; total_precip: 0.31735342741012573; 
+0: velocity_u: 0.1596691608428955; velocity_v: 0.1706767976284027; specific_humidity: 0.1653202921152115; velocity_z: 0.37913763523101807; temperature: 0.22552789747714996; total_precip: 0.31814390420913696; 
+0: epoch: 44 [1/5 (20%)]	Loss: 0.21073 : 0.07595 :: 0.07013 (2.12 s/sec)
+0: velocity_u: 0.15838083624839783; velocity_v: 0.16926127672195435; specific_humidity: 0.14764560759067535; velocity_z: 0.36677977442741394; temperature: 0.19966545701026917; total_precip: 0.3825698494911194; 
+0: epoch: 44 [2/5 (40%)]	Loss: 0.21073 : 0.09566 :: 0.06950 (18.40 s/sec)
+0: velocity_u: 0.15625923871994019; velocity_v: 0.16825689375400543; specific_humidity: 0.16214676201343536; velocity_z: 0.3554578423500061; temperature: 0.20976464450359344; total_precip: 0.316834956407547; 
+0: epoch: 44 [3/5 (60%)]	Loss: 0.20652 : 0.07001 :: 0.06780 (18.65 s/sec)
+0: velocity_u: 0.16101467609405518; velocity_v: 0.1702231913805008; specific_humidity: 0.17009754478931427; velocity_z: 0.37345725297927856; temperature: 0.22383157908916473; total_precip: 0.3650064468383789; 
+0: epoch: 44 [4/5 (80%)]	Loss: 0.21866 : 0.08879 :: 0.07062 (17.79 s/sec)
+0: validation loss for strategy=BERT at epoch 44 : 0.05793062970042229
+0: validation loss for velocity_u : 0.0029160939157009125
+0: validation loss for velocity_v : 0.004072932526469231
+0: validation loss for specific_humidity : 0.0042906696908175945
+0: validation loss for velocity_z : 0.07295443117618561
+0: validation loss for temperature : 0.01573401503264904
+0: validation loss for total_precip : 0.24761570990085602
+0: 45 : 15:36:56 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15701663494110107; velocity_v: 0.17096228897571564; specific_humidity: 0.14999669790267944; velocity_z: 0.3627210259437561; temperature: 0.20739787817001343; total_precip: 0.30080169439315796; 
+0: velocity_u: 0.1613432765007019; velocity_v: 0.17203707993030548; specific_humidity: 0.15441404283046722; velocity_z: 0.37006646394729614; temperature: 0.20106825232505798; total_precip: 0.37183722853660583; 
+0: epoch: 45 [1/5 (20%)]	Loss: 0.20835 : 0.08093 :: 0.07084 (2.09 s/sec)
+0: velocity_u: 0.14857709407806396; velocity_v: 0.1571553647518158; specific_humidity: 0.1470310539007187; velocity_z: 0.3207774758338928; temperature: 0.19199404120445251; total_precip: 0.26311442255973816; 
+0: epoch: 45 [2/5 (40%)]	Loss: 0.18763 : 0.05156 :: 0.06234 (17.89 s/sec)
+0: velocity_u: 0.15494991838932037; velocity_v: 0.16739597916603088; specific_humidity: 0.15646037459373474; velocity_z: 0.3530527949333191; temperature: 0.20471930503845215; total_precip: 0.28067946434020996; 
+0: epoch: 45 [3/5 (60%)]	Loss: 0.20031 : 0.06267 :: 0.06632 (18.78 s/sec)
+0: velocity_u: 0.16014689207077026; velocity_v: 0.16842730343341827; specific_humidity: 0.15476590394973755; velocity_z: 0.3661351203918457; temperature: 0.20891180634498596; total_precip: 0.2596169412136078; 
+0: epoch: 45 [4/5 (80%)]	Loss: 0.20150 : 0.05859 :: 0.07082 (18.61 s/sec)
+0: validation loss for strategy=BERT at epoch 45 : 0.046248361468315125
+0: validation loss for velocity_u : 0.003332257503643632
+0: validation loss for velocity_v : 0.0045369709841907024
+0: validation loss for specific_humidity : 0.00542529858648777
+0: validation loss for velocity_z : 0.08481284976005554
+0: validation loss for temperature : 0.016027390956878662
+0: validation loss for total_precip : 0.16335545480251312
+0: 46 : 15:41:04 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.16335780918598175; velocity_v: 0.17259781062602997; specific_humidity: 0.17468084394931793; velocity_z: 0.3800583481788635; temperature: 0.2229323387145996; total_precip: 0.3793742060661316; 
+0: velocity_u: 0.15170659124851227; velocity_v: 0.16652074456214905; specific_humidity: 0.13792505860328674; velocity_z: 0.34375083446502686; temperature: 0.20088815689086914; total_precip: 0.2844407558441162; 
+0: epoch: 46 [1/5 (20%)]	Loss: 0.20880 : 0.07971 :: 0.06472 (2.21 s/sec)
+0: velocity_u: 0.15399517118930817; velocity_v: 0.16344769299030304; specific_humidity: 0.1563698947429657; velocity_z: 0.3357291519641876; temperature: 0.19519159197807312; total_precip: 0.2769201993942261; 
+0: epoch: 46 [2/5 (40%)]	Loss: 0.19518 : 0.05447 :: 0.06569 (18.38 s/sec)
+0: velocity_u: 0.15099819004535675; velocity_v: 0.16224882006645203; specific_humidity: 0.1457841843366623; velocity_z: 0.3271075487136841; temperature: 0.18366128206253052; total_precip: 0.28629961609840393; 
+0: epoch: 46 [3/5 (60%)]	Loss: 0.19042 : 0.06151 :: 0.06427 (17.85 s/sec)
+0: velocity_u: 0.157168447971344; velocity_v: 0.16528034210205078; specific_humidity: 0.15306232869625092; velocity_z: 0.35134392976760864; temperature: 0.2095576971769333; total_precip: 0.3055480420589447; 
+0: epoch: 46 [4/5 (80%)]	Loss: 0.20311 : 0.06976 :: 0.06830 (17.85 s/sec)
+0: validation loss for strategy=BERT at epoch 46 : 0.06326144933700562
+0: validation loss for velocity_u : 0.003828661283478141
+0: validation loss for velocity_v : 0.005357624962925911
+0: validation loss for specific_humidity : 0.005389766301959753
+0: validation loss for velocity_z : 0.11161471158266068
+0: validation loss for temperature : 0.01641705445945263
+0: validation loss for total_precip : 0.23696084320545197
+0: 47 : 15:45:09 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.15598343312740326; velocity_v: 0.16366402804851532; specific_humidity: 0.16324523091316223; velocity_z: 0.34451985359191895; temperature: 0.21086496114730835; total_precip: 0.3151165246963501; 
+0: velocity_u: 0.16159893572330475; velocity_v: 0.174203023314476; specific_humidity: 0.17117686569690704; velocity_z: 0.36442872881889343; temperature: 0.21797315776348114; total_precip: 0.36942678689956665; 
+0: epoch: 47 [1/5 (20%)]	Loss: 0.21138 : 0.08174 :: 0.07139 (2.28 s/sec)
+0: velocity_u: 0.15746425092220306; velocity_v: 0.1657702922821045; specific_humidity: 0.15735428035259247; velocity_z: 0.35421884059906006; temperature: 0.20404577255249023; total_precip: 0.38402658700942993; 
+0: epoch: 47 [2/5 (40%)]	Loss: 0.21096 : 0.09803 :: 0.06866 (18.62 s/sec)
+0: velocity_u: 0.15911369025707245; velocity_v: 0.16945359110832214; specific_humidity: 0.1684856116771698; velocity_z: 0.3551901578903198; temperature: 0.2082669883966446; total_precip: 0.3601346015930176; 
+0: epoch: 47 [3/5 (60%)]	Loss: 0.21239 : 0.08280 :: 0.06969 (17.86 s/sec)
+0: velocity_u: 0.15820497274398804; velocity_v: 0.16232651472091675; specific_humidity: 0.1576271504163742; velocity_z: 0.3426884114742279; temperature: 0.20938846468925476; total_precip: 0.37409859895706177; 
+0: epoch: 47 [4/5 (80%)]	Loss: 0.20932 : 0.08941 :: 0.06857 (18.05 s/sec)
+0: validation loss for strategy=BERT at epoch 47 : 0.09901542961597443
+0: validation loss for velocity_u : 0.003373093204572797
+0: validation loss for velocity_v : 0.005013668444007635
+0: validation loss for specific_humidity : 0.006126588210463524
+0: validation loss for velocity_z : 0.10809028148651123
+0: validation loss for temperature : 0.018196672201156616
+0: validation loss for total_precip : 0.4532923996448517
+0: 48 : 15:49:08 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.1573440134525299; velocity_v: 0.17123742401599884; specific_humidity: 0.1459050327539444; velocity_z: 0.358161598443985; temperature: 0.19210897386074066; total_precip: 0.3261856436729431; 
+0: velocity_u: 0.1539788544178009; velocity_v: 0.16385161876678467; specific_humidity: 0.1528577357530594; velocity_z: 0.350178062915802; temperature: 0.20628580451011658; total_precip: 0.4183460474014282; 
+0: epoch: 48 [1/5 (20%)]	Loss: 0.20761 : 0.09251 :: 0.06620 (2.07 s/sec)
+0: velocity_u: 0.15328872203826904; velocity_v: 0.16285547614097595; specific_humidity: 0.1477690190076828; velocity_z: 0.33196038007736206; temperature: 0.20235145092010498; total_precip: 0.2675272226333618; 
+0: epoch: 48 [2/5 (40%)]	Loss: 0.19372 : 0.05905 :: 0.06583 (18.27 s/sec)
+0: velocity_u: 0.15436148643493652; velocity_v: 0.1651182770729065; specific_humidity: 0.15609294176101685; velocity_z: 0.33210334181785583; temperature: 0.20686273276805878; total_precip: 0.30105698108673096; 
+0: epoch: 48 [3/5 (60%)]	Loss: 0.19999 : 0.06136 :: 0.06648 (17.88 s/sec)
+0: velocity_u: 0.15488073229789734; velocity_v: 0.16352564096450806; specific_humidity: 0.14424793422222137; velocity_z: 0.3269862234592438; temperature: 0.1953379511833191; total_precip: 0.3157190978527069; 
+0: epoch: 48 [4/5 (80%)]	Loss: 0.19662 : 0.06813 :: 0.06645 (17.88 s/sec)
+0: validation loss for strategy=BERT at epoch 48 : 0.08251899480819702
+0: validation loss for velocity_u : 0.0038173189386725426
+0: validation loss for velocity_v : 0.005365134682506323
+0: validation loss for specific_humidity : 0.0057777888141572475
+0: validation loss for velocity_z : 0.1303127259016037
+0: validation loss for temperature : 0.02311091683804989
+0: validation loss for total_precip : 0.3267301619052887
+0: 49 : 15:53:10 :: batch_size = 96, lr = 1e-05
+0: velocity_u: 0.16424350440502167; velocity_v: 0.17287489771842957; specific_humidity: 0.16484148800373077; velocity_z: 0.37614378333091736; temperature: 0.20640039443969727; total_precip: 0.3206748962402344; 
+0: velocity_u: 0.15865981578826904; velocity_v: 0.16714756190776825; specific_humidity: 0.1645241677761078; velocity_z: 0.3525962829589844; temperature: 0.19725240767002106; total_precip: 0.24683547019958496; 
+0: epoch: 49 [1/5 (20%)]	Loss: 0.20446 : 0.06601 :: 0.06901 (2.60 s/sec)
+0: velocity_u: 0.15665550529956818; velocity_v: 0.1651170253753662; specific_humidity: 0.15157732367515564; velocity_z: 0.34625929594039917; temperature: 0.2037297785282135; total_precip: 0.3387991487979889; 
+0: epoch: 49 [2/5 (40%)]	Loss: 0.20439 : 0.08524 :: 0.06839 (17.63 s/sec)
+0: velocity_u: 0.157192662358284; velocity_v: 0.16891254484653473; specific_humidity: 0.16332368552684784; velocity_z: 0.36353588104248047; temperature: 0.22193197906017303; total_precip: 0.3453633785247803; 
+0: epoch: 49 [3/5 (60%)]	Loss: 0.21315 : 0.07928 :: 0.06808 (17.93 s/sec)
+0: velocity_u: 0.15271316468715668; velocity_v: 0.1654214709997177; specific_humidity: 0.1559334397315979; velocity_z: 0.34936073422431946; temperature: 0.20535078644752502; total_precip: 0.2481124997138977; 
+0: epoch: 49 [4/5 (80%)]	Loss: 0.19579 : 0.05640 :: 0.06520 (17.88 s/sec)
+0: validation loss for strategy=BERT at epoch 49 : 0.062334731221199036
+0: validation loss for velocity_u : 0.0034908175002783537
+0: validation loss for velocity_v : 0.004907109308987856
+0: validation loss for specific_humidity : 0.004966589156538248
+0: validation loss for velocity_z : 0.09650055319070816
+0: validation loss for temperature : 0.020849788561463356
+0: validation loss for total_precip : 0.24329350888729095
+0: Finished training at 15:56:56 with test loss = 0.062334731221199036.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250523_123806-7lna48py[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250523_123806-7lna48py/logs[0m
+0: l50003:1544512:1544789 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50003:1544512:1557128 [2] NCCL INFO comm 0x55557eb81220 rank 0 nranks 1 cudaDev 2 busId 84000 - Abort COMPLETE
+0: l50003:1544512:1544794 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50003:1544512:1557128 [3] NCCL INFO comm 0x5555877d26c0 rank 0 nranks 1 cudaDev 3 busId c4000 - Abort COMPLETE
+0: l50003:1544512:1544784 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50003:1544512:1557128 [1] NCCL INFO comm 0x5555a6f86ce0 rank 0 nranks 1 cudaDev 1 busId 44000 - Abort COMPLETE
+0: l50003:1544512:1544758 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50003:1544512:1557128 [0] NCCL INFO comm 0x55555f23f3e0 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

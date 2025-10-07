@@ -1,0 +1,24 @@
+Rank 3 sees 1 CUDA devices
+Rank 3 using device cuda:0 with properties:
+  Name: NVIDIA A100-SXM4-80GB
+> /work/ab1412/atmorep/atmorep/utils/utils.py(225)init_torch()
+-> print(f"  PCI Bus ID: {torch.cuda.get_device_properties(torch.cuda.current_device()).pci_bus_id}")
+(Pdb) 
+Rank 0 sees 1 CUDA devices
+Rank 0 using device cuda:0 with properties:
+  Name: NVIDIA A100-SXM4-80GB
+> /work/ab1412/atmorep/atmorep/utils/utils.py(225)init_torch()
+-> print(f"  PCI Bus ID: {torch.cuda.get_device_properties(torch.cuda.current_device()).pci_bus_id}")
+(Pdb) 
+Rank 1 sees 1 CUDA devices
+Rank 1 using device cuda:0 with properties:
+  Name: NVIDIA A100-SXM4-80GB
+> /work/ab1412/atmorep/atmorep/utils/utils.py(225)init_torch()
+-> print(f"  PCI Bus ID: {torch.cuda.get_device_properties(torch.cuda.current_device()).pci_bus_id}")
+(Pdb) 
+Rank 2 sees 1 CUDA devices
+Rank 2 using device cuda:0 with properties:
+  Name: NVIDIA A100-SXM4-80GB
+> /work/ab1412/atmorep/atmorep/utils/utils.py(225)init_torch()
+-> print(f"  PCI Bus ID: {torch.cuda.get_device_properties(torch.cuda.current_device()).pci_bus_id}")
+(Pdb) 

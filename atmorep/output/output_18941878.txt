@@ -1,0 +1,6 @@
+1: > /sw/spack-levante/mambaforge-22.9.0-2-Linux-x86_64-kptncg/lib/python3.10/json/decoder.py(353)raw_decode()
+1: -> obj, end = self.scan_once(s, idx)
+1: (Pdb) 
+0: > /sw/spack-levante/mambaforge-22.9.0-2-Linux-x86_64-kptncg/lib/python3.10/json/decoder.py(353)raw_decode()
+0: -> obj, end = self.scan_once(s, idx)
+0: (Pdb) 

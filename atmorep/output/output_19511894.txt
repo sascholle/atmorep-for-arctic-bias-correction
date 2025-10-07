@@ -1,0 +1,404 @@
+0: Wandb run: atmorep-nenzomjw-19511894
+0: l50033:1823563:1823563 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.128<0>
+0: l50033:1823563:1823563 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50033:1823563:1823563 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50033:1823563:1823563 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50033:1823563:1823563 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+0: l50033:1823563:1823967 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.128<0>
+0: l50033:1823563:1823967 [0] NCCL INFO Using non-device net plugin version 0
+0: l50033:1823563:1823967 [0] NCCL INFO Using network IB
+0: l50033:1823563:1823967 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l50033:1823563:1823967 [0] NCCL INFO ncclCommInitRank comm 0x55555f1056e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xed4bf3ec5a6806c2 - Init START
+0: l50033:1823563:1823967 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+0: l50033:1823563:1823967 [0] NCCL INFO comm 0x55555f1056e0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 00/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 01/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 02/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 03/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 04/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 05/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 06/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 07/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 08/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 09/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 10/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 11/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 12/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 13/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 14/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 15/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 16/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 17/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 18/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 19/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 20/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 21/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 22/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 23/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 24/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 25/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 26/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 27/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 28/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 29/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 30/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Channel 31/32 :    0
+0: l50033:1823563:1823967 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50033:1823563:1823967 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50033:1823563:1823967 [0] NCCL INFO Connected all rings
+0: l50033:1823563:1823967 [0] NCCL INFO Connected all trees
+0: l50033:1823563:1823967 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50033:1823563:1823967 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50033:1823563:1823967 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50033:1823563:1823967 [0] NCCL INFO ncclCommInitRank comm 0x55555f1056e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xed4bf3ec5a6806c2 - Init COMPLETE
+0: Running Evaluate.evaluate with mode = fixed_location
+0: With config:
+0: model_id = u9vvriz7
+0: time_pos = [[2015, 1, 21, 0, 81, 18.25], [2015, 1, 21, 1, 81, 18.25]]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: Loaded model id = u9vvriz7.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 1], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 2], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[72.27, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 64
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19511894
+0: wandb_id : nenzomjw
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: num_files_test : 2
+0: num_patches_per_t_test : 2
+0: batch_size_test : 24
+0: Evaluating sample meta info:
+0:   Time indices: [np.int64(104911), np.int64(104912), np.int64(104913), np.int64(104914), np.int64(104915), np.int64(104916), np.int64(104917), np.int64(104918), np.int64(104919), np.int64(104920), np.int64(104921), np.int64(104922), np.int64(104923), np.int64(104924), np.int64(104925), np.int64(104926), np.int64(104927), np.int64(104928), np.int64(104929), np.int64(104930), np.int64(104931), np.int64(104932), np.int64(104933), np.int64(104934), np.int64(104935), np.int64(104936), np.int64(104937), np.int64(104938), np.int64(104939), np.int64(104940), np.int64(104941), np.int64(104942), np.int64(104943), np.int64(104944), np.int64(104945), np.int64(104946)]
+0:   Times: [datetime.datetime(2021, 12, 20, 7, 0)
+0:  datetime.datetime(2021, 12, 20, 8, 0)
+0:  datetime.datetime(2021, 12, 20, 9, 0)
+0:  datetime.datetime(2021, 12, 20, 10, 0)
+0:  datetime.datetime(2021, 12, 20, 11, 0)
+0:  datetime.datetime(2021, 12, 20, 12, 0)
+0:  datetime.datetime(2021, 12, 20, 13, 0)
+0:  datetime.datetime(2021, 12, 20, 14, 0)
+0:  datetime.datetime(2021, 12, 20, 15, 0)
+0:  datetime.datetime(2021, 12, 20, 16, 0)
+0:  datetime.datetime(2021, 12, 20, 17, 0)
+0:  datetime.datetime(2021, 12, 20, 18, 0)
+0:  datetime.datetime(2021, 12, 20, 19, 0)
+0:  datetime.datetime(2021, 12, 20, 20, 0)
+0:  datetime.datetime(2021, 12, 20, 21, 0)
+0:  datetime.datetime(2021, 12, 20, 22, 0)
+0:  datetime.datetime(2021, 12, 20, 23, 0)
+0:  datetime.datetime(2021, 12, 21, 0, 0)
+0:  datetime.datetime(2021, 12, 21, 1, 0)
+0:  datetime.datetime(2021, 12, 21, 2, 0)
+0:  datetime.datetime(2021, 12, 21, 3, 0)
+0:  datetime.datetime(2021, 12, 21, 4, 0)
+0:  datetime.datetime(2021, 12, 21, 5, 0)
+0:  datetime.datetime(2021, 12, 21, 6, 0)
+0:  datetime.datetime(2021, 12, 21, 7, 0)
+0:  datetime.datetime(2021, 12, 21, 8, 0)
+0:  datetime.datetime(2021, 12, 21, 9, 0)
+0:  datetime.datetime(2021, 12, 21, 10, 0)
+0:  datetime.datetime(2021, 12, 21, 11, 0)
+0:  datetime.datetime(2021, 12, 21, 12, 0)
+0:  datetime.datetime(2021, 12, 21, 13, 0)
+0:  datetime.datetime(2021, 12, 21, 14, 0)
+0:  datetime.datetime(2021, 12, 21, 15, 0)
+0:  datetime.datetime(2021, 12, 21, 16, 0)
+0:  datetime.datetime(2021, 12, 21, 17, 0)
+0:  datetime.datetime(2021, 12, 21, 18, 0)]
+0:   Lat idx/value: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+0:  24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+0:  48 49 50 51 52 53] [ 0.    0.25  0.5   0.75  1.    1.25  1.5   1.75  2.    2.25  2.5   2.75
+0:   3.    3.25  3.5   3.75  4.    4.25  4.5   4.75  5.    5.25  5.5   5.75
+0:   6.    6.25  6.5   6.75  7.    7.25  7.5   7.75  8.    8.25  8.5   8.75
+0:   9.    9.25  9.5   9.75 10.   10.25 10.5  10.75 11.   11.25 11.5  11.75
+0:  12.   12.25 12.5  12.75 13.   13.25]
+0:   Lon idx/value: [1423 1424 1425 1426 1427 1428 1429 1430 1431 1432 1433 1434 1435 1436
+0:  1437 1438 1439    0    1    2    3    4    5    6    7    8    9   10
+0:    11   12   13   14   15   16   17   18   19   20   21   22   23   24
+0:    25   26   27   28   29   30   31   32   33   34   35   36   37   38
+0:    39   40   41   42   43   44   45   46   47   48   49   50   51   52
+0:    53   54   55   56   57   58   59   60   61   62   63   64   65   66
+0:    67   68   69   70   71   72   73   74   75   76   77   78   79   80
+0:    81   82   83   84   85   86   87   88   89   90] [3.5575e+02 3.5600e+02 3.5625e+02 3.5650e+02 3.5675e+02 3.5700e+02
+0:  3.5725e+02 3.5750e+02 3.5775e+02 3.5800e+02 3.5825e+02 3.5850e+02
+0:  3.5875e+02 3.5900e+02 3.5925e+02 3.5950e+02 3.5975e+02 0.0000e+00
+0:  2.5000e-01 5.0000e-01 7.5000e-01 1.0000e+00 1.2500e+00 1.5000e+00
+0:  1.7500e+00 2.0000e+00 2.2500e+00 2.5000e+00 2.7500e+00 3.0000e+00
+0:  3.2500e+00 3.5000e+00 3.7500e+00 4.0000e+00 4.2500e+00 4.5000e+00
+0:  4.7500e+00 5.0000e+00 5.2500e+00 5.5000e+00 5.7500e+00 6.0000e+00
+0:  6.2500e+00 6.5000e+00 6.7500e+00 7.0000e+00 7.2500e+00 7.5000e+00
+0:  7.7500e+00 8.0000e+00 8.2500e+00 8.5000e+00 8.7500e+00 9.0000e+00
+0:  9.2500e+00 9.5000e+00 9.7500e+00 1.0000e+01 1.0250e+01 1.0500e+01
+0:  1.0750e+01 1.1000e+01 1.1250e+01 1.1500e+01 1.1750e+01 1.2000e+01
+0:  1.2250e+01 1.2500e+01 1.2750e+01 1.3000e+01 1.3250e+01 1.3500e+01
+0:  1.3750e+01 1.4000e+01 1.4250e+01 1.4500e+01 1.4750e+01 1.5000e+01
+0:  1.5250e+01 1.5500e+01 1.5750e+01 1.6000e+01 1.6250e+01 1.6500e+01
+0:  1.6750e+01 1.7000e+01 1.7250e+01 1.7500e+01 1.7750e+01 1.8000e+01
+0:  1.8250e+01 1.8500e+01 1.8750e+01 1.9000e+01 1.9250e+01 1.9500e+01
+0:  1.9750e+01 2.0000e+01 2.0250e+01 2.0500e+01 2.0750e+01 2.1000e+01
+0:  2.1250e+01 2.1500e+01 2.1750e+01 2.2000e+01 2.2250e+01 2.2500e+01]
+0:   sources_infos: [array([datetime.datetime(2021, 12, 20, 7, 0),
+0:        datetime.datetime(2021, 12, 20, 8, 0),
+0:        datetime.datetime(2021, 12, 20, 9, 0),
+0:        datetime.datetime(2021, 12, 20, 10, 0),
+0:        datetime.datetime(2021, 12, 20, 11, 0),
+0:        datetime.datetime(2021, 12, 20, 12, 0),
+0:        datetime.datetime(2021, 12, 20, 13, 0),
+0:        datetime.datetime(2021, 12, 20, 14, 0),
+0:        datetime.datetime(2021, 12, 20, 15, 0),
+0:        datetime.datetime(2021, 12, 20, 16, 0),
+0:        datetime.datetime(2021, 12, 20, 17, 0),
+0:        datetime.datetime(2021, 12, 20, 18, 0),
+0:        datetime.datetime(2021, 12, 20, 19, 0),
+0:        datetime.datetime(2021, 12, 20, 20, 0),
+0:        datetime.datetime(2021, 12, 20, 21, 0),
+0:        datetime.datetime(2021, 12, 20, 22, 0),
+0:        datetime.datetime(2021, 12, 20, 23, 0),
+0:        datetime.datetime(2021, 12, 21, 0, 0),
+0:        datetime.datetime(2021, 12, 21, 1, 0),
+0:        datetime.datetime(2021, 12, 21, 2, 0),
+0:        datetime.datetime(2021, 12, 21, 3, 0),
+0:        datetime.datetime(2021, 12, 21, 4, 0),
+0:        datetime.datetime(2021, 12, 21, 5, 0),
+0:        datetime.datetime(2021, 12, 21, 6, 0),
+0:        datetime.datetime(2021, 12, 21, 7, 0),
+0:        datetime.datetime(2021, 12, 21, 8, 0),
+0:        datetime.datetime(2021, 12, 21, 9, 0),
+0:        datetime.datetime(2021, 12, 21, 10, 0),
+0:        datetime.datetime(2021, 12, 21, 11, 0),
+0:        datetime.datetime(2021, 12, 21, 12, 0),
+0:        datetime.datetime(2021, 12, 21, 13, 0),
+0:        datetime.datetime(2021, 12, 21, 14, 0),
+0:        datetime.datetime(2021, 12, 21, 15, 0),
+0:        datetime.datetime(2021, 12, 21, 16, 0),
+0:        datetime.datetime(2021, 12, 21, 17, 0),
+0:        datetime.datetime(2021, 12, 21, 18, 0)], dtype=object), array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ,
+0:         2.25,  2.5 ,  2.75,  3.  ,  3.25,  3.5 ,  3.75,  4.  ,  4.25,
+0:         4.5 ,  4.75,  5.  ,  5.25,  5.5 ,  5.75,  6.  ,  6.25,  6.5 ,
+0:         6.75,  7.  ,  7.25,  7.5 ,  7.75,  8.  ,  8.25,  8.5 ,  8.75,
+0:         9.  ,  9.25,  9.5 ,  9.75, 10.  , 10.25, 10.5 , 10.75, 11.  ,
+0:        11.25, 11.5 , 11.75, 12.  , 12.25, 12.5 , 12.75, 13.  , 13.25]), array([3.5575e+02, 3.5600e+02, 3.5625e+02, 3.5650e+02, 3.5675e+02,
+0:        3.5700e+02, 3.5725e+02, 3.5750e+02, 3.5775e+02, 3.5800e+02,
+0:        3.5825e+02, 3.5850e+02, 3.5875e+02, 3.5900e+02, 3.5925e+02,
+0:        3.5950e+02, 3.5975e+02, 0.0000e+00, 2.5000e-01, 5.0000e-01,
+0:        7.5000e-01, 1.0000e+00, 1.2500e+00, 1.5000e+00, 1.7500e+00,
+0:        2.0000e+00, 2.2500e+00, 2.5000e+00, 2.7500e+00, 3.0000e+00,
+0:        3.2500e+00, 3.5000e+00, 3.7500e+00, 4.0000e+00, 4.2500e+00,
+0:        4.5000e+00, 4.7500e+00, 5.0000e+00, 5.2500e+00, 5.5000e+00,
+0:        5.7500e+00, 6.0000e+00, 6.2500e+00, 6.5000e+00, 6.7500e+00,
+0:        7.0000e+00, 7.2500e+00, 7.5000e+00, 7.7500e+00, 8.0000e+00,
+0:        8.2500e+00, 8.5000e+00, 8.7500e+00, 9.0000e+00, 9.2500e+00,
+0:        9.5000e+00, 9.7500e+00, 1.0000e+01, 1.0250e+01, 1.0500e+01,
+0:        1.0750e+01, 1.1000e+01, 1.1250e+01, 1.1500e+01, 1.1750e+01,
+0:        1.2000e+01, 1.2250e+01, 1.2500e+01, 1.2750e+01, 1.3000e+01,
+0:        1.3250e+01, 1.3500e+01, 1.3750e+01, 1.4000e+01, 1.4250e+01,
+0:        1.4500e+01, 1.4750e+01, 1.5000e+01, 1.5250e+01, 1.5500e+01,
+0:        1.5750e+01, 1.6000e+01, 1.6250e+01, 1.6500e+01, 1.6750e+01,
+0:        1.7000e+01, 1.7250e+01, 1.7500e+01, 1.7750e+01, 1.8000e+01,
+0:        1.8250e+01, 1.8500e+01, 1.8750e+01, 1.9000e+01, 1.9250e+01,
+0:        1.9500e+01, 1.9750e+01, 2.0000e+01, 2.0250e+01, 2.0500e+01,
+0:        2.0750e+01, 2.1000e+01, 2.1250e+01, 2.1500e+01, 2.1750e+01,
+0:        2.2000e+01, 2.2250e+01, 2.2500e+01]), array([0.25, 0.25])]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([19, 2187])
+0:          min = 239.016, max = 276.717, mean = 252.992
+0:          sample (first 20): tensor([247.6851, 247.5280, 247.1258, 247.4003, 247.0707, 247.1127, 247.2269, 247.3836, 247.1256, 247.2138, 247.0741,
+0:         247.3196, 247.0656, 246.7620, 246.8536, 247.0727, 246.7691, 246.7694, 246.6812, 246.8650])
+0: Evaluating sample meta info:
+0:   Time indices: [np.int64(97564), np.int64(97565), np.int64(97566), np.int64(97567), np.int64(97568), np.int64(97569), np.int64(97570), np.int64(97571), np.int64(97572), np.int64(97573), np.int64(97574), np.int64(97575), np.int64(97576), np.int64(97577), np.int64(97578), np.int64(97579), np.int64(97580), np.int64(97581), np.int64(97582), np.int64(97583), np.int64(97584), np.int64(97585), np.int64(97586), np.int64(97587), np.int64(97588), np.int64(97589), np.int64(97590), np.int64(97591), np.int64(97592), np.int64(97593), np.int64(97594), np.int64(97595), np.int64(97596), np.int64(97597), np.int64(97598), np.int64(97599)]
+0:   Times: [datetime.datetime(2021, 2, 17, 4, 0) datetime.datetime(2021, 2, 17, 5, 0)
+0:  datetime.datetime(2021, 2, 17, 6, 0) datetime.datetime(2021, 2, 17, 7, 0)
+0:  datetime.datetime(2021, 2, 17, 8, 0) datetime.datetime(2021, 2, 17, 9, 0)
+0:  datetime.datetime(2021, 2, 17, 10, 0)
+0:  datetime.datetime(2021, 2, 17, 11, 0)
+0:  datetime.datetime(2021, 2, 17, 12, 0)
+0:  datetime.datetime(2021, 2, 17, 13, 0)
+0:  datetime.datetime(2021, 2, 17, 14, 0)
+0:  datetime.datetime(2021, 2, 17, 15, 0)
+0:  datetime.datetime(2021, 2, 17, 16, 0)
+0:  datetime.datetime(2021, 2, 17, 17, 0)
+0:  datetime.datetime(2021, 2, 17, 18, 0)
+0:  datetime.datetime(2021, 2, 17, 19, 0)
+0:  datetime.datetime(2021, 2, 17, 20, 0)
+0:  datetime.datetime(2021, 2, 17, 21, 0)
+0:  datetime.datetime(2021, 2, 17, 22, 0)
+0:  datetime.datetime(2021, 2, 17, 23, 0)
+0:  datetime.datetime(2021, 2, 18, 0, 0) datetime.datetime(2021, 2, 18, 1, 0)
+0:  datetime.datetime(2021, 2, 18, 2, 0) datetime.datetime(2021, 2, 18, 3, 0)
+0:  datetime.datetime(2021, 2, 18, 4, 0) datetime.datetime(2021, 2, 18, 5, 0)
+0:  datetime.datetime(2021, 2, 18, 6, 0) datetime.datetime(2021, 2, 18, 7, 0)
+0:  datetime.datetime(2021, 2, 18, 8, 0) datetime.datetime(2021, 2, 18, 9, 0)
+0:  datetime.datetime(2021, 2, 18, 10, 0)
+0:  datetime.datetime(2021, 2, 18, 11, 0)
+0:  datetime.datetime(2021, 2, 18, 12, 0)
+0:  datetime.datetime(2021, 2, 18, 13, 0)
+0:  datetime.datetime(2021, 2, 18, 14, 0)
+0:  datetime.datetime(2021, 2, 18, 15, 0)]
+0:   Lat idx/value: [ 2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+0:  26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+0:  50 51 52 53 54 55] [ 0.5   0.75  1.    1.25  1.5   1.75  2.    2.25  2.5   2.75  3.    3.25
+0:   3.5   3.75  4.    4.25  4.5   4.75  5.    5.25  5.5   5.75  6.    6.25
+0:   6.5   6.75  7.    7.25  7.5   7.75  8.    8.25  8.5   8.75  9.    9.25
+0:   9.5   9.75 10.   10.25 10.5  10.75 11.   11.25 11.5  11.75 12.   12.25
+0:  12.5  12.75 13.   13.25 13.5  13.75]
+0:   Lon idx/value: [189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206
+0:  207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224
+0:  225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242
+0:  243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260
+0:  261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278
+0:  279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296] [47.25 47.5  47.75 48.   48.25 48.5  48.75 49.   49.25 49.5  49.75 50.
+0:  50.25 50.5  50.75 51.   51.25 51.5  51.75 52.   52.25 52.5  52.75 53.
+0:  53.25 53.5  53.75 54.   54.25 54.5  54.75 55.   55.25 55.5  55.75 56.
+0:  56.25 56.5  56.75 57.   57.25 57.5  57.75 58.   58.25 58.5  58.75 59.
+0:  59.25 59.5  59.75 60.   60.25 60.5  60.75 61.   61.25 61.5  61.75 62.
+0:  62.25 62.5  62.75 63.   63.25 63.5  63.75 64.   64.25 64.5  64.75 65.
+0:  65.25 65.5  65.75 66.   66.25 66.5  66.75 67.   67.25 67.5  67.75 68.
+0:  68.25 68.5  68.75 69.   69.25 69.5  69.75 70.   70.25 70.5  70.75 71.
+0:  71.25 71.5  71.75 72.   72.25 72.5  72.75 73.   73.25 73.5  73.75 74.  ]
+0:   sources_infos: [array([datetime.datetime(2021, 2, 17, 4, 0),
+0:        datetime.datetime(2021, 2, 17, 5, 0),
+0:        datetime.datetime(2021, 2, 17, 6, 0),
+0:        datetime.datetime(2021, 2, 17, 7, 0),
+0:        datetime.datetime(2021, 2, 17, 8, 0),
+0:        datetime.datetime(2021, 2, 17, 9, 0),
+0:        datetime.datetime(2021, 2, 17, 10, 0),
+0:        datetime.datetime(2021, 2, 17, 11, 0),
+0:        datetime.datetime(2021, 2, 17, 12, 0),
+0:        datetime.datetime(2021, 2, 17, 13, 0),
+0:        datetime.datetime(2021, 2, 17, 14, 0),
+0:        datetime.datetime(2021, 2, 17, 15, 0),
+0:        datetime.datetime(2021, 2, 17, 16, 0),
+0:        datetime.datetime(2021, 2, 17, 17, 0),
+0:        datetime.datetime(2021, 2, 17, 18, 0),
+0:        datetime.datetime(2021, 2, 17, 19, 0),
+0:        datetime.datetime(2021, 2, 17, 20, 0),
+0:        datetime.datetime(2021, 2, 17, 21, 0),
+0:        datetime.datetime(2021, 2, 17, 22, 0),
+0:        datetime.datetime(2021, 2, 17, 23, 0),
+0:        datetime.datetime(2021, 2, 18, 0, 0),
+0:        datetime.datetime(2021, 2, 18, 1, 0),
+0:        datetime.datetime(2021, 2, 18, 2, 0),
+0:        datetime.datetime(2021, 2, 18, 3, 0),
+0:        datetime.datetime(2021, 2, 18, 4, 0),
+0:        datetime.datetime(2021, 2, 18, 5, 0),
+0:        datetime.datetime(2021, 2, 18, 6, 0),
+0:        datetime.datetime(2021, 2, 18, 7, 0),
+0:        datetime.datetime(2021, 2, 18, 8, 0),
+0:        datetime.datetime(2021, 2, 18, 9, 0),
+0:        datetime.datetime(2021, 2, 18, 10, 0),
+0:        datetime.datetime(2021, 2, 18, 11, 0),
+0:        datetime.datetime(2021, 2, 18, 12, 0),
+0:        datetime.datetime(2021, 2, 18, 13, 0),
+0:        datetime.datetime(2021, 2, 18, 14, 0),
+0:        datetime.datetime(2021, 2, 18, 15, 0)], dtype=object), array([ 0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ,  2.25,  2.5 ,
+0:         2.75,  3.  ,  3.25,  3.5 ,  3.75,  4.  ,  4.25,  4.5 ,  4.75,
+0:         5.  ,  5.25,  5.5 ,  5.75,  6.  ,  6.25,  6.5 ,  6.75,  7.  ,
+0:         7.25,  7.5 ,  7.75,  8.  ,  8.25,  8.5 ,  8.75,  9.  ,  9.25,
+0:         9.5 ,  9.75, 10.  , 10.25, 10.5 , 10.75, 11.  , 11.25, 11.5 ,
+0:        11.75, 12.  , 12.25, 12.5 , 12.75, 13.  , 13.25, 13.5 , 13.75]), array([47.25, 47.5 , 47.75, 48.  , 48.25, 48.5 , 48.75, 49.  , 49.25,
+0:        49.5 , 49.75, 50.  , 50.25, 50.5 , 50.75, 51.  , 51.25, 51.5 ,
+0:        51.75, 52.  , 52.25, 52.5 , 52.75, 53.  , 53.25, 53.5 , 53.75,
+0:        54.  , 54.25, 54.5 , 54.75, 55.  , 55.25, 55.5 , 55.75, 56.  ,
+0:        56.25, 56.5 , 56.75, 57.  , 57.25, 57.5 , 57.75, 58.  , 58.25,
+0:        58.5 , 58.75, 59.  , 59.25, 59.5 , 59.75, 60.  , 60.25, 60.5 ,
+0:        60.75, 61.  , 61.25, 61.5 , 61.75, 62.  , 62.25, 62.5 , 62.75,
+0:        63.  , 63.25, 63.5 , 63.75, 64.  , 64.25, 64.5 , 64.75, 65.  ,
+0:        65.25, 65.5 , 65.75, 66.  , 66.25, 66.5 , 66.75, 67.  , 67.25,
+0:        67.5 , 67.75, 68.  , 68.25, 68.5 , 68.75, 69.  , 69.25, 69.5 ,
+0:        69.75, 70.  , 70.25, 70.5 , 70.75, 71.  , 71.25, 71.5 , 71.75,
+0:        72.  , 72.25, 72.5 , 72.75, 73.  , 73.25, 73.5 , 73.75, 74.  ]), array([0.25, 0.25])]
+0: validation loss for strategy=BERT at epoch 0 : 0.006596247665584087
+0: validation loss for velocity_u : 0.0007094255415722728
+0: validation loss for velocity_v : 0.0009073459077626467
+0: validation loss for specific_humidity : 0.00017026136629283428
+0: validation loss for velocity_z : 0.010364334098994732
+0: validation loss for temperature : 0.0012419826816767454
+0: validation loss for total_precip : 0.0004808471130672842
+0: validation loss for t2m : 0.0041862791404128075
+0: validation loss for corrected_t2m : 0.03470950573682785
+0: time 88.98596239089966
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250908_193226-nenzomjw[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250908_193226-nenzomjw/logs[0m
+0: l50033:1823563:1823970 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50033:1823563:1824403 [0] NCCL INFO comm 0x55555f1056e0 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

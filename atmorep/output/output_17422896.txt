@@ -1,0 +1,627 @@
+0: Wandb run: atmorep-iq8upx6b-17422896
+0: l40360:2537080:2537080 [0] NCCL INFO Bootstrap : Using ib0:10.128.9.102<0>
+0: l40360:2537080:2537080 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l40360:2537080:2537080 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l40360:2537080:2537080 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l40360:2537080:2537080 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l40360:2537080:2537330 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.9.102<0>
+0: l40360:2537080:2537330 [0] NCCL INFO Using non-device net plugin version 0
+0: l40360:2537080:2537330 [0] NCCL INFO Using network IB
+0: l40360:2537080:2537330 [0] NCCL INFO ncclCommInitRank comm 0x55555f2611e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x7553a3d4c51e00d8 - Init START
+0: l40360:2537080:2537330 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l40360:2537080:2537330 [0] NCCL INFO comm 0x55555f2611e0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 00/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 01/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 02/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 03/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 04/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 05/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 06/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 07/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 08/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 09/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 10/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 11/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 12/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 13/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 14/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 15/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 16/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 17/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 18/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 19/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 20/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 21/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 22/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 23/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 24/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 25/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 26/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 27/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 28/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 29/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 30/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Channel 31/32 :    0
+0: l40360:2537080:2537330 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:2537080:2537330 [0] NCCL INFO P2P Chunksize set to 131072
+0: l40360:2537080:2537330 [0] NCCL INFO Connected all rings
+0: l40360:2537080:2537330 [0] NCCL INFO Connected all trees
+0: l40360:2537080:2537330 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:2537080:2537330 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l40360:2537080:2537330 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l40360:2537080:2537330 [0] NCCL INFO ncclCommInitRank comm 0x55555f2611e0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x7553a3d4c51e00d8 - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.1, 0, 0, 0], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [1, 0, 0, 0]]]
+0: fields_prediction : [['velocity_u', 0.0], ['velocity_v', 0.0], ['specific_humidity', 0.0], ['velocity_z', 0.0], ['temperature', 0.0], ['total_precip', 1.0]]
+0: fields_targets : ['total_precip']
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[70.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17422896
+0: wandb_id : iq8upx6b
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: sparse_target : True
+0: sparse_target_field : total_precip
+0: sparse_target_sparsity : 0.9
+0: years_test : [2021]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t at epoch = 0.
+0: Loaded run 'wc5e2i3t' at epoch 0.
+0: l40360:2537080:2537471 [1] NCCL INFO Using non-device net plugin version 0
+0: l40360:2537080:2537471 [1] NCCL INFO Using network IB
+0: l40360:2537080:2537471 [1] NCCL INFO ncclCommInitRank comm 0x55556eacefe0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x4498e1c384809eeb - Init START
+0: l40360:2537080:2537471 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+0: l40360:2537080:2537471 [1] NCCL INFO comm 0x55556eacefe0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 00/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 01/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 02/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 03/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 04/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 05/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 06/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 07/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 08/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 09/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 10/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 11/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 12/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 13/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 14/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 15/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 16/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 17/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 18/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 19/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 20/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 21/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 22/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 23/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 24/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 25/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 26/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 27/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 28/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 29/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 30/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Channel 31/32 :    0
+0: l40360:2537080:2537471 [1] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:2537080:2537471 [1] NCCL INFO P2P Chunksize set to 131072
+0: l40360:2537080:2537471 [1] NCCL INFO Connected all rings
+0: l40360:2537080:2537471 [1] NCCL INFO Connected all trees
+0: l40360:2537080:2537471 [1] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:2537080:2537471 [1] NCCL INFO ncclCommInitRank comm 0x55556eacefe0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x4498e1c384809eeb - Init COMPLETE
+0: l40360:2537080:2537476 [2] NCCL INFO Using non-device net plugin version 0
+0: l40360:2537080:2537476 [2] NCCL INFO Using network IB
+0: l40360:2537080:2537476 [2] NCCL INFO ncclCommInitRank comm 0x555583257630 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0xe905b8770eafb813 - Init START
+0: l40360:2537080:2537476 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+0: l40360:2537080:2537476 [2] NCCL INFO comm 0x555583257630 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 00/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 01/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 02/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 03/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 04/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 05/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 06/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 07/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 08/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 09/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 10/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 11/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 12/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 13/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 14/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 15/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 16/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 17/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 18/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 19/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 20/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 21/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 22/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 23/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 24/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 25/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 26/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 27/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 28/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 29/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 30/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Channel 31/32 :    0
+0: l40360:2537080:2537476 [2] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:2537080:2537476 [2] NCCL INFO P2P Chunksize set to 131072
+0: l40360:2537080:2537476 [2] NCCL INFO Connected all rings
+0: l40360:2537080:2537476 [2] NCCL INFO Connected all trees
+0: l40360:2537080:2537476 [2] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:2537080:2537476 [2] NCCL INFO ncclCommInitRank comm 0x555583257630 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0xe905b8770eafb813 - Init COMPLETE
+0: l40360:2537080:2537481 [3] NCCL INFO Using non-device net plugin version 0
+0: l40360:2537080:2537481 [3] NCCL INFO Using network IB
+0: l40360:2537080:2537481 [3] NCCL INFO ncclCommInitRank comm 0x55558552ef70 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xc70f01a465cf269c - Init START
+0: l40360:2537080:2537481 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+0: l40360:2537080:2537481 [3] NCCL INFO comm 0x55558552ef70 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 00/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 01/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 02/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 03/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 04/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 05/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 06/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 07/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 08/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 09/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 10/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 11/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 12/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 13/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 14/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 15/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 16/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 17/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 18/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 19/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 20/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 21/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 22/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 23/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 24/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 25/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 26/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 27/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 28/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 29/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 30/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Channel 31/32 :    0
+0: l40360:2537080:2537481 [3] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:2537080:2537481 [3] NCCL INFO P2P Chunksize set to 131072
+0: l40360:2537080:2537481 [3] NCCL INFO Connected all rings
+0: l40360:2537080:2537481 [3] NCCL INFO Connected all trees
+0: l40360:2537080:2537481 [3] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:2537080:2537481 [3] NCCL INFO ncclCommInitRank comm 0x55558552ef70 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xc70f01a465cf269c - Init COMPLETE
+0: Number of trainable parameters: 741,136,272
+0: 1 : 19:20:23 :: batch_size = 96, lr = 1.5000000000000002e-05
+0: Created sparse mask for total_precip with 10.0% data retained
+0: [DEBUG] Epoch 1, first input batch shapes / sample data:
+0:   └─ Field: 'velocity_u' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.5597, -0.5657, -0.5718, -0.5779, -0.5843, -0.5908, -0.5973, -0.6039, -0.6107, -0.6176, -0.6246, -0.6316,
+0:         -0.6387, -0.6458, -0.6530, -0.6603, -0.6676, -0.6748, -0.5923, -0.5988, -0.6054, -0.6122, -0.6190, -0.6258,
+0:         -0.6326], device='cuda:0')
+0:   └─ Field: 'velocity_v' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-1.5553, -1.5537, -1.5524, -1.5516, -1.5508, -1.5506, -1.5504, -1.5504, -1.5506, -1.5510, -1.5514, -1.5520,
+0:         -1.5527, -1.5533, -1.5537, -1.5543, -1.5547, -1.5551, -1.5652, -1.5654, -1.5658, -1.5664, -1.5670, -1.5679,
+0:         -1.5689], device='cuda:1')
+0:   └─ Field: 'specific_humidity' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.6820, -0.6816, -0.6811, -0.6808, -0.6805, -0.6801, -0.6798, -0.6794, -0.6790, -0.6788, -0.6785, -0.6782,
+0:         -0.6780, -0.6778, -0.6775, -0.6773, -0.6771, -0.6769, -0.6811, -0.6807, -0.6803, -0.6799, -0.6794, -0.6791,
+0:         -0.6789], device='cuda:2')
+0:   └─ Field: 'velocity_z' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([0.3516, 0.3494, 0.3449, 0.3427, 0.3427, 0.3427, 0.3449, 0.3494, 0.3539, 0.3583, 0.3650, 0.3695, 0.3717, 0.3739,
+0:         0.3739, 0.3717, 0.3672, 0.3583, 0.3204, 0.3160, 0.3115, 0.3093, 0.3071, 0.3048, 0.3048], device='cuda:3')
+0:   └─ Field: 'temperature' shape: torch.Size([96, 5, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([-0.8368, -0.8433, -0.8492, -0.8546, -0.8591, -0.8627, -0.8657, -0.8679, -0.8693, -0.8702, -0.8704, -0.8701,
+0:         -0.8692, -0.8678, -0.8657, -0.8633, -0.8604, -0.8573, -0.8538, -0.8500, -0.8459, -0.8415, -0.8372, -0.8323,
+0:         -0.8275], device='cuda:3')
+0:   └─ Field: 'total_precip' shape: torch.Size([96, 1, 12, 6, 12, 3, 9, 9])
+0:      first 25 values: tensor([-0.2154, -0.2154, -0.2131, -0.2131, -0.2131, -0.2109, -0.2109, -0.2109, -0.2086, -0.2063, -0.2063, -0.2063,
+0:         -0.2063, -0.2063, -0.2063, -0.2041, -0.2041, -0.2041, -0.2041, -0.2041, -0.2041, -0.2041, -0.2041, -0.2041,
+0:         -0.2041], device='cuda:0')
+0: [DEBUG] Epoch 1, batch 0 - Sparse-masked 'total_precip' shape target data: torch.Size([13824, 243])
+0: [DEBUG] First 243 batch values:
+0: tensor([    nan,     nan,     nan,     nan,     nan,     nan, -0.2267,     nan,     nan, -0.2267,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan, -0.2222,     nan,     nan, -0.2222,     nan,     nan,     nan,     nan,     nan,
+0:             nan, -0.2199,     nan,     nan, -0.2222,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2222,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2244,     nan,     nan,     nan,     nan,
+0:             nan, -0.2267,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan, -0.2290,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2222,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2222,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2222,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan, -0.2267,     nan,     nan,     nan, -0.2290,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan, -0.2290,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2256,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan, -0.2233,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2222,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.2244,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2267,
+0:             nan,     nan, -0.2267,     nan,     nan,     nan,     nan, -0.2278,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan])
+0: [DEBUG] Epoch 1, first predictions sample:
+0:   └─ Predictions for 'velocity_u' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.8989, -0.9127, -0.9252, -0.9312, -0.9335, -0.9373, -0.9401, -0.9515, -0.9603, -0.9738, -0.9838, -0.9953,
+0:         -1.0031, -1.0078, -1.0094, -1.0045, -0.9973, -0.9890, -0.9365, -0.9531, -0.9706, -0.9778, -0.9793, -0.9803,
+0:         -0.9809], device='cuda:0', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_v' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-1.7484, -1.7480, -1.7496, -1.7567, -1.7660, -1.7658, -1.7633, -1.7465, -1.7250, -1.6986, -1.6773, -1.6596,
+0:         -1.6509, -1.6459, -1.6447, -1.6451, -1.6423, -1.6361, -1.7708, -1.7598, -1.7547, -1.7568, -1.7584, -1.7570,
+0:         -1.7524], device='cuda:1', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'specific_humidity' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.5517, -0.5505, -0.5505, -0.5489, -0.5493, -0.5492, -0.5516, -0.5523, -0.5543, -0.5555, -0.5566, -0.5570,
+0:         -0.5599, -0.5640, -0.5698, -0.5776, -0.5871, -0.5964, -0.5702, -0.5704, -0.5706, -0.5695, -0.5693, -0.5696,
+0:         -0.5690], device='cuda:2', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_z' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.1695, -0.1751, -0.1535, -0.1605, -0.1311, -0.0833, -0.0822, -0.1121, -0.1098, -0.1135, -0.1625, -0.1583,
+0:         -0.1286, -0.1520, -0.1406, -0.0929, -0.0722, -0.0204, -0.1939, -0.2137, -0.1822, -0.1689, -0.1497, -0.1095,
+0:         -0.1039], device='cuda:3', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'temperature' shape: torch.Size([7680, 2187])
+0:      first 25 pred values: tensor([0.5002, 0.5042, 0.5081, 0.5115, 0.5144, 0.5148, 0.5123, 0.5052, 0.4948, 0.4842, 0.4752, 0.4697, 0.4660, 0.4624,
+0:         0.4556, 0.4475, 0.4374, 0.4288, 0.4214, 0.4143, 0.4065, 0.3986, 0.3912, 0.3832, 0.3771], device='cuda:3',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'total_precip' shape: torch.Size([13824, 243])
+0:      first 25 pred values: tensor([-0.2096, -0.2120, -0.2148, -0.2153, -0.2163, -0.2172, -0.2186, -0.2193, -0.2198, -0.2050, -0.2076, -0.2086,
+0:         -0.2119, -0.2116, -0.2130, -0.2148, -0.2157, -0.2189, -0.2040, -0.2067, -0.2069, -0.2065, -0.2072, -0.2060,
+0:         -0.2106], device='cuda:0', grad_fn=<SliceBackward0>)
+0: velocity_u: 0.053734272718429565; velocity_v: 0.08836831897497177; specific_humidity: 0.03177618607878685; velocity_z: 0.5471617579460144; temperature: 0.10155918449163437; total_precip: 0.7668906450271606; 
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.06065218523144722; velocity_v: 0.10182053595781326; specific_humidity: 0.04265684634447098; velocity_z: 0.5426990389823914; temperature: 0.11203210055828094; total_precip: 0.8681833744049072; 
+0: epoch: 1 [1/5 (20%)]	Loss: 0.81754 : 0.25134 :: 0.14525 (2.20 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.06297685205936432; velocity_v: 0.10263947397470474; specific_humidity: 0.05105910077691078; velocity_z: 0.5483919382095337; temperature: 0.140652135014534; total_precip: 0.6533346176147461; 
+0: epoch: 1 [2/5 (40%)]	Loss: 0.65333 : 0.23056 :: 0.15715 (15.43 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.060179151594638824; velocity_v: 0.10503832995891571; specific_humidity: 0.04215506464242935; velocity_z: 0.5990568399429321; temperature: 0.29626867175102234; total_precip: 0.7413434386253357; 
+0: epoch: 1 [3/5 (60%)]	Loss: 0.74134 : 0.28101 :: 0.14503 (15.44 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.06916695833206177; velocity_v: 0.11504974961280823; specific_humidity: 0.04548253118991852; velocity_z: 0.5946962833404541; temperature: 0.13810774683952332; total_precip: 1.0594619512557983; 
+0: epoch: 1 [4/5 (80%)]	Loss: 1.05946 : 0.30783 :: 0.15978 (15.39 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: validation loss for strategy=forecast at epoch 1 : 0.24192023277282715
+0: validation loss for velocity_u : 0.03253841772675514
+0: validation loss for velocity_v : 0.055178407579660416
+0: validation loss for specific_humidity : 0.02870025485754013
+0: validation loss for velocity_z : 0.5031774640083313
+0: validation loss for temperature : 0.0846271738409996
+0: validation loss for total_precip : 0.7473001480102539
+0: 2 : 19:24:31 :: batch_size = 96, lr = 2e-05
+0: Created sparse mask for total_precip with 10.0% data retained
+0: [DEBUG] Epoch 2, first input batch shapes / sample data:
+0:   └─ Field: 'velocity_u' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([0.9818, 1.0102, 1.0417, 1.0742, 1.1067, 1.1384, 1.1679, 1.1937, 1.2158, 1.2337, 1.2471, 1.2572, 1.2643, 1.2686,
+0:         1.2707, 1.2700, 1.2657, 1.2583, 1.0036, 1.0327, 1.0642, 1.0962, 1.1272, 1.1565, 1.1827], device='cuda:0')
+0:   └─ Field: 'velocity_v' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([0.6980, 0.6720, 0.6477, 0.6262, 0.6052, 0.5836, 0.5618, 0.5392, 0.5156, 0.4912, 0.4650, 0.4373, 0.4086, 0.3791,
+0:         0.3496, 0.3209, 0.2930, 0.2659, 0.6860, 0.6656, 0.6498, 0.6376, 0.6280, 0.6201, 0.6127], device='cuda:1')
+0:   └─ Field: 'specific_humidity' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.1538, -0.1349, -0.1243, -0.1140, -0.1086, -0.1099, -0.1124, -0.1137, -0.1181, -0.1255, -0.1337, -0.1403,
+0:         -0.1495, -0.1655, -0.1881, -0.2161, -0.2479, -0.2808, -0.1911, -0.1821, -0.1789, -0.1755, -0.1811, -0.1873,
+0:         -0.1928], device='cuda:2')
+0:   └─ Field: 'velocity_z' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([ 0.6468,  0.6252,  0.6208,  0.6360,  0.6641,  0.6728,  0.6641,  0.6533,  0.6143,  0.5321,  0.4369,  0.3482,
+0:          0.2509,  0.1340,  0.0345, -0.0520, -0.1343, -0.1905,  0.4651,  0.4326,  0.4413,  0.4824,  0.5646,  0.6446,
+0:          0.7182], device='cuda:3')
+0:   └─ Field: 'temperature' shape: torch.Size([96, 5, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([-1.6815, -1.7314, -1.7770, -1.8163, -1.8508, -1.8803, -1.9037, -1.9226, -1.9387, -1.9542, -1.9673, -1.9781,
+0:         -1.9873, -1.9954, -2.0032, -2.0136, -2.0279, -2.0468, -2.0696, -2.0942, -2.1201, -2.1476, -2.1742, -2.1978,
+0:         -2.2219], device='cuda:3')
+0:   └─ Field: 'total_precip' shape: torch.Size([96, 1, 12, 6, 12, 3, 9, 9])
+0:      first 25 values: tensor([-0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313, -0.2313,
+0:         -0.2313, -0.2313, -0.2313, -0.2302, -0.2268, -0.2302, -0.2100, -0.2055, -0.2032, -0.2245, -0.2245, -0.2234,
+0:         -0.2279], device='cuda:0')
+0: [DEBUG] Epoch 2, batch 0 - Sparse-masked 'total_precip' shape target data: torch.Size([13824, 243])
+0: [DEBUG] First 243 batch values:
+0: tensor([-0.2313,     nan,     nan,     nan,     nan,     nan, -0.2313,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2279,     nan,     nan,     nan,
+0:             nan,     nan,     nan, -0.2279,     nan,     nan,     nan, -0.2043, -0.1987,     nan,     nan,     nan,
+0:         -0.1796, -0.1370,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan, -0.2313, -0.2313,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.2313,     nan, -0.2313,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2223,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2122,     nan,
+0:         -0.2279,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2279,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan, -0.2313,     nan,     nan,     nan,     nan, -0.2313,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.2313,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2313,     nan,
+0:             nan, -0.2313,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.2290,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.2268])
+0: [DEBUG] Epoch 2, first predictions sample:
+0:   └─ Predictions for 'velocity_u' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([0.4590, 0.4586, 0.4590, 0.4592, 0.4625, 0.4666, 0.4744, 0.4789, 0.4813, 0.4835, 0.4816, 0.4785, 0.4733, 0.4655,
+0:         0.4548, 0.4428, 0.4308, 0.4201, 0.4649, 0.4678, 0.4653, 0.4630, 0.4611, 0.4641, 0.4691], device='cuda:0',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_v' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([ 0.0648,  0.0582,  0.0427,  0.0103, -0.0357, -0.0894, -0.1463, -0.1956, -0.2322, -0.2533, -0.2618, -0.2576,
+0:         -0.2463, -0.2373, -0.2323, -0.2297, -0.2314, -0.2331,  0.0633,  0.0692,  0.0642,  0.0406, -0.0006, -0.0562,
+0:         -0.1160], device='cuda:1', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'specific_humidity' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([0.5784, 0.5972, 0.6241, 0.6550, 0.6828, 0.7059, 0.7201, 0.7280, 0.7189, 0.7004, 0.6735, 0.6451, 0.6119, 0.5861,
+0:         0.5716, 0.5600, 0.5543, 0.5510, 0.5678, 0.5869, 0.6111, 0.6435, 0.6802, 0.7141, 0.7478], device='cuda:2',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_z' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.0743, -0.0969, -0.1522, -0.2207, -0.2633, -0.3009, -0.3304, -0.3526, -0.3696, -0.3567, -0.3110, -0.2412,
+0:         -0.1676, -0.1093, -0.0389,  0.0305,  0.0885,  0.1359, -0.0169, -0.0388, -0.0848, -0.1469, -0.1954, -0.2553,
+0:         -0.3113], device='cuda:3', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'temperature' shape: torch.Size([7680, 2187])
+0:      first 25 pred values: tensor([-1.0157, -1.0206, -1.0251, -1.0316, -1.0388, -1.0485, -1.0588, -1.0697, -1.0801, -1.0920, -1.1048, -1.1185,
+0:         -1.1322, -1.1466, -1.1605, -1.1739, -1.1861, -1.1973, -1.2067, -1.2149, -1.2225, -1.2305, -1.2392, -1.2490,
+0:         -1.2609], device='cuda:3', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'total_precip' shape: torch.Size([13824, 243])
+0:      first 25 pred values: tensor([-0.1845, -0.1913, -0.1917, -0.1924, -0.1952, -0.2048, -0.2107, -0.2115, -0.2178, -0.1949, -0.1967, -0.1991,
+0:         -0.2001, -0.1983, -0.2060, -0.2089, -0.2168, -0.2224, -0.2042, -0.2065, -0.2042, -0.2039, -0.2043, -0.2050,
+0:         -0.2105], device='cuda:0', grad_fn=<SliceBackward0>)
+0: velocity_u: 0.053676776587963104; velocity_v: 0.08694896101951599; specific_humidity: 0.036986857652664185; velocity_z: 0.5163444876670837; temperature: 0.1080268919467926; total_precip: 0.8464877009391785; 
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.05642962455749512; velocity_v: 0.09660964459180832; specific_humidity: 0.045488227158784866; velocity_z: 0.581526517868042; temperature: 0.11043445765972137; total_precip: 0.6880267262458801; 
+0: epoch: 2 [1/5 (20%)]	Loss: 0.76726 : 0.24354 :: 0.14392 (2.91 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.06461421400308609; velocity_v: 0.09641597419977188; specific_humidity: 0.037002772092819214; velocity_z: 0.548039436340332; temperature: 0.09688328206539154; total_precip: 36.21996307373047; 
+0: epoch: 2 [2/5 (40%)]	Loss: 36.21996 : 6.15086 :: 0.15866 (15.29 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.06350439786911011; velocity_v: 0.11441317945718765; specific_humidity: 0.033750783652067184; velocity_z: 0.5347439646720886; temperature: 0.09804563224315643; total_precip: 37.118003845214844; 
+0: epoch: 2 [3/5 (60%)]	Loss: 37.11800 : 6.30069 :: 0.15410 (15.51 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: velocity_u: 0.058302104473114014; velocity_v: 0.09399428218603134; specific_humidity: 0.04008350521326065; velocity_z: 0.5907794833183289; temperature: 0.09451138973236084; total_precip: 38.774112701416016; 
+0: epoch: 2 [4/5 (80%)]	Loss: 38.77411 : 6.58251 :: 0.15058 (15.74 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained

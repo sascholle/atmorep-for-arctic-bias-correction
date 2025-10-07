@@ -1,0 +1,899 @@
+0: Wandb run: atmorep-sifcibcz-19278171
+0: l40360:1780712:1780712 [0] NCCL INFO Bootstrap : Using ib0:10.128.9.102<0>
+0: l40360:1780712:1780712 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l40360:1780712:1780712 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l40360:1780712:1780712 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l40360:1780712:1780712 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+0: l40360:1780712:1781337 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.9.102<0>
+0: l40360:1780712:1781337 [0] NCCL INFO Using non-device net plugin version 0
+0: l40360:1780712:1781337 [0] NCCL INFO Using network IB
+0: l40360:1780712:1781337 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l40360:1780712:1781337 [0] NCCL INFO ncclCommInitRank comm 0x55555f103d10 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdfd139206e6da382 - Init START
+0: l40360:1780712:1781337 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+0: l40360:1780712:1781337 [0] NCCL INFO comm 0x55555f103d10 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 00/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 01/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 02/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 03/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 04/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 05/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 06/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 07/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 08/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 09/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 10/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 11/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 12/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 13/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 14/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 15/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 16/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 17/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 18/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 19/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 20/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 21/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 22/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 23/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 24/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 25/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 26/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 27/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 28/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 29/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 30/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Channel 31/32 :    0
+0: l40360:1780712:1781337 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l40360:1780712:1781337 [0] NCCL INFO P2P Chunksize set to 131072
+0: l40360:1780712:1781337 [0] NCCL INFO Connected all rings
+0: l40360:1780712:1781337 [0] NCCL INFO Connected all trees
+0: l40360:1780712:1781337 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l40360:1780712:1781337 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l40360:1780712:1781337 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l40360:1780712:1781337 [0] NCCL INFO ncclCommInitRank comm 0x55555f103d10 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdfd139206e6da382 - Init COMPLETE
+0: Running Evaluate.evaluate with mode = BERT
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (71,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = zxipahjj.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2015]
+0: month : None
+0: geo_range_sampling : [[72.27, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19278171
+0: wandb_id : sifcibcz
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : zxipahjj
+0: with_pytest : True
+0: lat_sampling_weighted : False
+0: it == 0 and starting val norms printouts
+0: validation loss for strategy=BERT at epoch 0 : 0.0353851243853569
+0: validation loss for velocity_u : 0.000918630335945636
+0: validation loss for velocity_v : 0.0012106549693271518
+0: validation loss for specific_humidity : 0.0004128475266043097
+0: validation loss for velocity_z : 0.016510752961039543
+0: validation loss for temperature : 0.002115213545039296
+0: validation loss for total_precip : 0.00314288679510355
+0: validation loss for t2m : 0.040699779987335205
+0: validation loss for corrected_t2m : 0.21807022392749786
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 28, Level 96: Timestamp 2015-02-28 22:00:00, Shape (18, 18)
+0: Sample 9, Level 96: Timestamp 2015-04-28 19:00:00, Shape (18, 18)
+0: Sample 95, Level 96: Timestamp 2015-08-03 14:00:00, Shape (18, 18)
+0: Sample 18, Level 96: Timestamp 2015-04-30 14:00:00, Shape (18, 18)
+0: Sample 8, Level 96: Timestamp 2015-12-19 09:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [0, 49, 29, 28, 59, 83, 25, 43, 58, 2, 93, 65, 4, 75, 52, 30, 88, 81, 92, 80, 51, 46, 27, 9, 42, 31, 82, 55, 39, 7, 36, 50, 18, 94, 71, 8, 68, 41, 14, 21, 6, 37, 84, 62, 57, 95, 89, 77, 44, 70]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [0, 49, 29, 28, 59, 83, 25, 43, 58, 2, 93, 65, 4, 75, 52, 30, 88, 81, 92, 80, 51, 46, 27, 9, 42, 31, 82, 55, 39, 7, 36, 50, 18, 94, 71, 8, 68, 41, 14, 21, 6, 37, 84, 62, 57, 95, 89, 77, 44, 70]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [0, 49, 29, 28, 59, 83, 25, 43, 58, 2, 93, 65, 4, 75, 52, 30, 88, 81, 92, 80, 51, 46, 27, 9, 42, 31, 82, 55, 39, 7, 36, 50, 18, 94, 71, 8, 68, 41, 14, 21, 6, 37, 84, 62, 57, 95, 89, 77, 44, 70]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [0, 49, 29, 28, 59, 83, 25, 43, 58, 2, 93, 65, 4, 75, 52, 30, 88, 81, 92, 80, 51, 46, 27, 9, 42, 31, 82, 55, 39, 7, 36, 50, 18, 94, 71, 8, 68, 41, 14, 21, 6, 37, 84, 62, 57, 95, 89, 77, 44, 70]
+0: Field: velocity_u, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [0, 49, 29, 28, 59, 83, 25, 43, 58, 2, 93, 65, 4, 75, 52, 30, 88, 81, 92, 80, 51, 46, 27, 9, 42, 31, 82, 55, 39, 7, 36, 50, 18, 94, 71, 8, 68, 41, 14, 21, 6, 37, 84, 62, 57, 95, 89, 77, 44, 70]
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_u', model_id = 'sifcibcz', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         ##added this
+0:         if field in ['t2m', 'total_precip', 'corrected_t2m']:
+0:             levels = [0]
+0:         elif 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]
+0:         #####
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             for s in samples:
+0: >               sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:223: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:28: in get_BERT
+0:     atmorep_sample = atmorep[f"{field}/sample={sample:05d}/ml={level:05d}"]
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: self = <zarr.hierarchy.Group '/'>, item = 'velocity_u/sample=00051/ml=00000'
+0: 
+0:     def __getitem__(self, item):
+0:         """Obtain a group member.
+0:     
+0:         Parameters
+0:         ----------
+0:         item : string
+0:             Member name or path.
+0:     
+0:         Examples
+0:         --------
+0:         >>> import zarr
+0:         >>> g1 = zarr.group()
+0:         >>> d1 = g1.create_dataset('foo/bar/baz', shape=100, chunks=10)
+0:         >>> g1['foo']
+0:         <zarr.hierarchy.Group '/foo'>
+0:         >>> g1['foo/bar']
+0:         <zarr.hierarchy.Group '/foo/bar'>
+0:         >>> g1['foo/bar/baz']
+0:         <zarr.core.Array '/foo/bar/baz' (100,) float64>
+0:     
+0:         """
+0:         path = self._item_path(item)
+0:         try:
+0:             return Array(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 synchronizer=self._synchronizer,
+0:                 cache_attrs=self.attrs.cache,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except ArrayNotFoundError:
+0:             pass
+0:     
+0:         try:
+0:             return Group(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 cache_attrs=self.attrs.cache,
+0:                 synchronizer=self._synchronizer,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except GroupNotFoundError:
+0:             pass
+0:     
+0:         if self._version == 3:
+0:             implicit_group = meta_root + path + "/"
+0:             # non-empty folder in the metadata path implies an implicit group
+0:             if self._store.list_prefix(implicit_group):
+0:                 return Group(
+0:                     self._store,
+0:                     read_only=self._read_only,
+0:                     path=path,
+0:                     chunk_store=self._chunk_store,
+0:                     cache_attrs=self.attrs.cache,
+0:                     synchronizer=self._synchronizer,
+0:                     zarr_version=self._version,
+0:                     meta_array=self._meta_array,
+0:                 )
+0:             else:
+0:                 raise KeyError(item)
+0:         else:
+0: >           raise KeyError(item)
+0: E           KeyError: 'velocity_u/sample=00051/ml=00000'
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/hierarchy.py:511: KeyError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - KeyError: 'velocity_u/sa...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 9.76s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 18, Level 96: Timestamp 2015-05-01 05:00:00, Shape (18, 18)
+0: Sample 63, Level 96: Timestamp 2015-05-23 08:00:00, Shape (18, 18)
+0: Sample 41, Level 96: Timestamp 2015-05-15 11:00:00, Shape (18, 18)
+0: Sample 13, Level 96: Timestamp 2015-06-10 06:00:00, Shape (18, 18)
+0: Sample 21, Level 96: Timestamp 2015-05-26 02:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [50, 38, 19, 51, 24, 30, 57, 22, 41, 25, 11, 82, 74, 72, 23, 3, 36, 69, 58, 13, 73, 33, 34, 43, 5, 6, 78, 70, 37, 83, 88, 29, 91, 39, 71, 44, 92, 81, 42, 2, 0, 95, 47, 85, 80, 79, 16, 84, 89, 17]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [50, 38, 19, 51, 24, 30, 57, 22, 41, 25, 11, 82, 74, 72, 23, 3, 36, 69, 58, 13, 73, 33, 34, 43, 5, 6, 78, 70, 37, 83, 88, 29, 91, 39, 71, 44, 92, 81, 42, 2, 0, 95, 47, 85, 80, 79, 16, 84, 89, 17]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [50, 38, 19, 51, 24, 30, 57, 22, 41, 25, 11, 82, 74, 72, 23, 3, 36, 69, 58, 13, 73, 33, 34, 43, 5, 6, 78, 70, 37, 83, 88, 29, 91, 39, 71, 44, 92, 81, 42, 2, 0, 95, 47, 85, 80, 79, 16, 84, 89, 17]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [50, 38, 19, 51, 24, 30, 57, 22, 41, 25, 11, 82, 74, 72, 23, 3, 36, 69, 58, 13, 73, 33, 34, 43, 5, 6, 78, 70, 37, 83, 88, 29, 91, 39, 71, 44, 92, 81, 42, 2, 0, 95, 47, 85, 80, 79, 16, 84, 89, 17]
+0: Field: velocity_v, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [50, 38, 19, 51, 24, 30, 57, 22, 41, 25, 11, 82, 74, 72, 23, 3, 36, 69, 58, 13, 73, 33, 34, 43, 5, 6, 78, 70, 37, 83, 88, 29, 91, 39, 71, 44, 92, 81, 42, 2, 0, 95, 47, 85, 80, 79, 16, 84, 89, 17]
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_v', model_id = 'sifcibcz', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         ##added this
+0:         if field in ['t2m', 'total_precip', 'corrected_t2m']:
+0:             levels = [0]
+0:         elif 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]
+0:         #####
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             for s in samples:
+0: >               sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:223: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:28: in get_BERT
+0:     atmorep_sample = atmorep[f"{field}/sample={sample:05d}/ml={level:05d}"]
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: self = <zarr.hierarchy.Group '/'>, item = 'velocity_v/sample=00062/ml=00000'
+0: 
+0:     def __getitem__(self, item):
+0:         """Obtain a group member.
+0:     
+0:         Parameters
+0:         ----------
+0:         item : string
+0:             Member name or path.
+0:     
+0:         Examples
+0:         --------
+0:         >>> import zarr
+0:         >>> g1 = zarr.group()
+0:         >>> d1 = g1.create_dataset('foo/bar/baz', shape=100, chunks=10)
+0:         >>> g1['foo']
+0:         <zarr.hierarchy.Group '/foo'>
+0:         >>> g1['foo/bar']
+0:         <zarr.hierarchy.Group '/foo/bar'>
+0:         >>> g1['foo/bar/baz']
+0:         <zarr.core.Array '/foo/bar/baz' (100,) float64>
+0:     
+0:         """
+0:         path = self._item_path(item)
+0:         try:
+0:             return Array(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 synchronizer=self._synchronizer,
+0:                 cache_attrs=self.attrs.cache,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except ArrayNotFoundError:
+0:             pass
+0:     
+0:         try:
+0:             return Group(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 cache_attrs=self.attrs.cache,
+0:                 synchronizer=self._synchronizer,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except GroupNotFoundError:
+0:             pass
+0:     
+0:         if self._version == 3:
+0:             implicit_group = meta_root + path + "/"
+0:             # non-empty folder in the metadata path implies an implicit group
+0:             if self._store.list_prefix(implicit_group):
+0:                 return Group(
+0:                     self._store,
+0:                     read_only=self._read_only,
+0:                     path=path,
+0:                     chunk_store=self._chunk_store,
+0:                     cache_attrs=self.attrs.cache,
+0:                     synchronizer=self._synchronizer,
+0:                     zarr_version=self._version,
+0:                     meta_array=self._meta_array,
+0:                 )
+0:             else:
+0:                 raise KeyError(item)
+0:         else:
+0: >           raise KeyError(item)
+0: E           KeyError: 'velocity_v/sample=00062/ml=00000'
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/hierarchy.py:511: KeyError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - KeyError: 'velocity_v/sa...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 2.12s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 18, Level 96: Timestamp 2015-04-30 20:00:00, Shape (18, 18)
+0: Sample 28, Level 96: Timestamp 2015-02-28 19:00:00, Shape (18, 18)
+0: Sample 72, Level 96: Timestamp 2015-06-14 19:00:00, Shape (18, 18)
+0: Sample 20, Level 96: Timestamp 2015-04-29 18:00:00, Shape (18, 18)
+0: Sample 32, Level 96: Timestamp 2015-07-03 00:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [66, 1, 12, 43, 46, 70, 40, 28, 31, 4, 24, 91, 38, 41, 73, 36, 89, 25, 58, 3, 15, 21, 62, 93, 76, 42, 84, 57, 18, 14, 81, 74, 6, 0, 47, 44, 94, 55, 51, 64, 2, 82, 35, 26, 71, 60, 83, 32, 92, 49]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [66, 1, 12, 43, 46, 70, 40, 28, 31, 4, 24, 91, 38, 41, 73, 36, 89, 25, 58, 3, 15, 21, 62, 93, 76, 42, 84, 57, 18, 14, 81, 74, 6, 0, 47, 44, 94, 55, 51, 64, 2, 82, 35, 26, 71, 60, 83, 32, 92, 49]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [66, 1, 12, 43, 46, 70, 40, 28, 31, 4, 24, 91, 38, 41, 73, 36, 89, 25, 58, 3, 15, 21, 62, 93, 76, 42, 84, 57, 18, 14, 81, 74, 6, 0, 47, 44, 94, 55, 51, 64, 2, 82, 35, 26, 71, 60, 83, 32, 92, 49]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [66, 1, 12, 43, 46, 70, 40, 28, 31, 4, 24, 91, 38, 41, 73, 36, 89, 25, 58, 3, 15, 21, 62, 93, 76, 42, 84, 57, 18, 14, 81, 74, 6, 0, 47, 44, 94, 55, 51, 64, 2, 82, 35, 26, 71, 60, 83, 32, 92, 49]
+0: Field: specific_humidity, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [66, 1, 12, 43, 46, 70, 40, 28, 31, 4, 24, 91, 38, 41, 73, 36, 89, 25, 58, 3, 15, 21, 62, 93, 76, 42, 84, 57, 18, 14, 81, 74, 6, 0, 47, 44, 94, 55, 51, 64, 2, 82, 35, 26, 71, 60, 83, 32, 92, 49]
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'specific_humidity', model_id = 'sifcibcz', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         ##added this
+0:         if field in ['t2m', 'total_precip', 'corrected_t2m']:
+0:             levels = [0]
+0:         elif 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]
+0:         #####
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             for s in samples:
+0: >               sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:223: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:28: in get_BERT
+0:     atmorep_sample = atmorep[f"{field}/sample={sample:05d}/ml={level:05d}"]
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: self = <zarr.hierarchy.Group '/'>
+0: item = 'specific_humidity/sample=00088/ml=00000'
+0: 
+0:     def __getitem__(self, item):
+0:         """Obtain a group member.
+0:     
+0:         Parameters
+0:         ----------
+0:         item : string
+0:             Member name or path.
+0:     
+0:         Examples
+0:         --------
+0:         >>> import zarr
+0:         >>> g1 = zarr.group()
+0:         >>> d1 = g1.create_dataset('foo/bar/baz', shape=100, chunks=10)
+0:         >>> g1['foo']
+0:         <zarr.hierarchy.Group '/foo'>
+0:         >>> g1['foo/bar']
+0:         <zarr.hierarchy.Group '/foo/bar'>
+0:         >>> g1['foo/bar/baz']
+0:         <zarr.core.Array '/foo/bar/baz' (100,) float64>
+0:     
+0:         """
+0:         path = self._item_path(item)
+0:         try:
+0:             return Array(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 synchronizer=self._synchronizer,
+0:                 cache_attrs=self.attrs.cache,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except ArrayNotFoundError:
+0:             pass
+0:     
+0:         try:
+0:             return Group(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 cache_attrs=self.attrs.cache,
+0:                 synchronizer=self._synchronizer,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except GroupNotFoundError:
+0:             pass
+0:     
+0:         if self._version == 3:
+0:             implicit_group = meta_root + path + "/"
+0:             # non-empty folder in the metadata path implies an implicit group
+0:             if self._store.list_prefix(implicit_group):
+0:                 return Group(
+0:                     self._store,
+0:                     read_only=self._read_only,
+0:                     path=path,
+0:                     chunk_store=self._chunk_store,
+0:                     cache_attrs=self.attrs.cache,
+0:                     synchronizer=self._synchronizer,
+0:                     zarr_version=self._version,
+0:                     meta_array=self._meta_array,
+0:                 )
+0:             else:
+0:                 raise KeyError(item)
+0:         else:
+0: >           raise KeyError(item)
+0: E           KeyError: 'specific_humidity/sample=00088/ml=00000'
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/hierarchy.py:511: KeyError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - KeyError: 'specific_humi...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 2.02s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 94, Level 96: Timestamp 2015-09-22 03:00:00, Shape (18, 18)
+0: Sample 58, Level 96: Timestamp 2015-06-15 11:00:00, Shape (18, 18)
+0: Sample 37, Level 96: Timestamp 2015-09-12 03:00:00, Shape (18, 18)
+0: Sample 19, Level 96: Timestamp 2015-12-15 11:00:00, Shape (18, 18)
+0: Sample 70, Level 96: Timestamp 2015-07-23 19:00:00, Shape (18, 18)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [11, 15, 58, 31, 83, 6, 27, 39, 94, 32, 5, 91, 7, 68, 45, 88, 70, 24, 80, 21, 46, 30, 38, 79, 0, 37, 61, 28, 52, 42, 8, 84, 72, 33, 59, 82, 3, 16, 56, 18, 62, 12, 1, 35, 40, 48, 65, 77, 78, 29]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [11, 15, 58, 31, 83, 6, 27, 39, 94, 32, 5, 91, 7, 68, 45, 88, 70, 24, 80, 21, 46, 30, 38, 79, 0, 37, 61, 28, 52, 42, 8, 84, 72, 33, 59, 82, 3, 16, 56, 18, 62, 12, 1, 35, 40, 48, 65, 77, 78, 29]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [11, 15, 58, 31, 83, 6, 27, 39, 94, 32, 5, 91, 7, 68, 45, 88, 70, 24, 80, 21, 46, 30, 38, 79, 0, 37, 61, 28, 52, 42, 8, 84, 72, 33, 59, 82, 3, 16, 56, 18, 62, 12, 1, 35, 40, 48, 65, 77, 78, 29]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [11, 15, 58, 31, 83, 6, 27, 39, 94, 32, 5, 91, 7, 68, 45, 88, 70, 24, 80, 21, 46, 30, 38, 79, 0, 37, 61, 28, 52, 42, 8, 84, 72, 33, 59, 82, 3, 16, 56, 18, 62, 12, 1, 35, 40, 48, 65, 77, 78, 29]
+0: Field: velocity_z, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [11, 15, 58, 31, 83, 6, 27, 39, 94, 32, 5, 91, 7, 68, 45, 88, 70, 24, 80, 21, 46, 30, 38, 79, 0, 37, 61, 28, 52, 42, 8, 84, 72, 33, 59, 82, 3, 16, 56, 18, 62, 12, 1, 35, 40, 48, 65, 77, 78, 29]
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_z', model_id = 'sifcibcz', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         ##added this
+0:         if field in ['t2m', 'total_precip', 'corrected_t2m']:
+0:             levels = [0]
+0:         elif 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]
+0:         #####
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             for s in samples:
+0: >               sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:223: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:28: in get_BERT
+0:     atmorep_sample = atmorep[f"{field}/sample={sample:05d}/ml={level:05d}"]
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: self = <zarr.hierarchy.Group '/'>, item = 'velocity_z/sample=00071/ml=00000'
+0: 
+0:     def __getitem__(self, item):
+0:         """Obtain a group member.
+0:     
+0:         Parameters
+0:         ----------
+0:         item : string
+0:             Member name or path.
+0:     
+0:         Examples
+0:         --------
+0:         >>> import zarr
+0:         >>> g1 = zarr.group()
+0:         >>> d1 = g1.create_dataset('foo/bar/baz', shape=100, chunks=10)
+0:         >>> g1['foo']
+0:         <zarr.hierarchy.Group '/foo'>
+0:         >>> g1['foo/bar']
+0:         <zarr.hierarchy.Group '/foo/bar'>
+0:         >>> g1['foo/bar/baz']
+0:         <zarr.core.Array '/foo/bar/baz' (100,) float64>
+0:     
+0:         """
+0:         path = self._item_path(item)
+0:         try:
+0:             return Array(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 synchronizer=self._synchronizer,
+0:                 cache_attrs=self.attrs.cache,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except ArrayNotFoundError:
+0:             pass
+0:     
+0:         try:
+0:             return Group(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 cache_attrs=self.attrs.cache,
+0:                 synchronizer=self._synchronizer,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except GroupNotFoundError:
+0:             pass
+0:     
+0:         if self._version == 3:
+0:             implicit_group = meta_root + path + "/"
+0:             # non-empty folder in the metadata path implies an implicit group
+0:             if self._store.list_prefix(implicit_group):
+0:                 return Group(
+0:                     self._store,
+0:                     read_only=self._read_only,
+0:                     path=path,
+0:                     chunk_store=self._chunk_store,
+0:                     cache_attrs=self.attrs.cache,
+0:                     synchronizer=self._synchronizer,
+0:                     zarr_version=self._version,
+0:                     meta_array=self._meta_array,
+0:                 )
+0:             else:
+0:                 raise KeyError(item)
+0:         else:
+0: >           raise KeyError(item)
+0: E           KeyError: 'velocity_z/sample=00071/ml=00000'
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/hierarchy.py:511: KeyError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - KeyError: 'velocity_z/sa...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 2.13s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 5, Level 96: Timestamp 2015-09-25 16:00:00, Shape (27, 27)
+0: Sample 70, Level 96: Timestamp 2015-07-24 04:00:00, Shape (27, 27)
+0: Sample 71, Level 96: Timestamp 2015-06-20 02:00:00, Shape (27, 27)
+0: Sample 74, Level 96: Timestamp 2015-07-04 11:00:00, Shape (27, 27)
+0: Sample 28, Level 96: Timestamp 2015-02-28 16:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 96, level_idx: 96, samples: [77, 36, 34, 62, 70, 64, 83, 41, 94, 3, 85, 8, 24, 7, 53, 19, 67, 51, 29, 80, 57, 54, 4, 0, 5, 75, 91, 87, 65, 14, 93, 58, 81, 37, 90, 32, 17, 33, 89, 10, 56, 60, 66, 18, 49, 26, 92, 43, 95, 71]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 105, level_idx: 105, samples: [77, 36, 34, 62, 70, 64, 83, 41, 94, 3, 85, 8, 24, 7, 53, 19, 67, 51, 29, 80, 57, 54, 4, 0, 5, 75, 91, 87, 65, 14, 93, 58, 81, 37, 90, 32, 17, 33, 89, 10, 56, 60, 66, 18, 49, 26, 92, 43, 95, 71]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 114, level_idx: 114, samples: [77, 36, 34, 62, 70, 64, 83, 41, 94, 3, 85, 8, 24, 7, 53, 19, 67, 51, 29, 80, 57, 54, 4, 0, 5, 75, 91, 87, 65, 14, 93, 58, 81, 37, 90, 32, 17, 33, 89, 10, 56, 60, 66, 18, 49, 26, 92, 43, 95, 71]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 123, level_idx: 123, samples: [77, 36, 34, 62, 70, 64, 83, 41, 94, 3, 85, 8, 24, 7, 53, 19, 67, 51, 29, 80, 57, 54, 4, 0, 5, 75, 91, 87, 65, 14, 93, 58, 81, 37, 90, 32, 17, 33, 89, 10, 56, 60, 66, 18, 49, 26, 92, 43, 95, 71]
+0: Field: temperature, levels: [96, 105, 114, 123, 137], level: 137, level_idx: 137, samples: [77, 36, 34, 62, 70, 64, 83, 41, 94, 3, 85, 8, 24, 7, 53, 19, 67, 51, 29, 80, 57, 54, 4, 0, 5, 75, 91, 87, 65, 14, 93, 58, 81, 37, 90, 32, 17, 33, 89, 10, 56, 60, 66, 18, 49, 26, 92, 43, 95, 71]
+0: .F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'temperature', model_id = 'sifcibcz', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         #levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         ##added this
+0:         if field in ['t2m', 'total_precip', 'corrected_t2m']:
+0:             levels = [0]
+0:         elif 'ml' in target[f"{field}/sample=00000"]:
+0:             levels = target[f"{field}/sample=00000"].ml[:]
+0:         else:
+0:             levels = [0]
+0:         #####
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             #level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             level_idx = level if BERT else np.where(np.array(levels) == level)[0].tolist()[0] if len(levels) > 1 else 0
+0:     
+0:             for s in samples:
+0: >               sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0: 
+0: atmorep/tests/validation_test.py:223: 
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: atmorep/tests/test_utils.py:28: in get_BERT
+0:     atmorep_sample = atmorep[f"{field}/sample={sample:05d}/ml={level:05d}"]
+0: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+0: 
+0: self = <zarr.hierarchy.Group '/'>, item = 'temperature/sample=00029/ml=00000'
+0: 
+0:     def __getitem__(self, item):
+0:         """Obtain a group member.
+0:     
+0:         Parameters
+0:         ----------
+0:         item : string
+0:             Member name or path.
+0:     
+0:         Examples
+0:         --------
+0:         >>> import zarr
+0:         >>> g1 = zarr.group()
+0:         >>> d1 = g1.create_dataset('foo/bar/baz', shape=100, chunks=10)
+0:         >>> g1['foo']
+0:         <zarr.hierarchy.Group '/foo'>
+0:         >>> g1['foo/bar']
+0:         <zarr.hierarchy.Group '/foo/bar'>
+0:         >>> g1['foo/bar/baz']
+0:         <zarr.core.Array '/foo/bar/baz' (100,) float64>
+0:     
+0:         """
+0:         path = self._item_path(item)
+0:         try:
+0:             return Array(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 synchronizer=self._synchronizer,
+0:                 cache_attrs=self.attrs.cache,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except ArrayNotFoundError:
+0:             pass
+0:     
+0:         try:
+0:             return Group(
+0:                 self._store,
+0:                 read_only=self._read_only,
+0:                 path=path,
+0:                 chunk_store=self._chunk_store,
+0:                 cache_attrs=self.attrs.cache,
+0:                 synchronizer=self._synchronizer,
+0:                 zarr_version=self._version,
+0:                 meta_array=self._meta_array,
+0:             )
+0:         except GroupNotFoundError:
+0:             pass
+0:     
+0:         if self._version == 3:
+0:             implicit_group = meta_root + path + "/"
+0:             # non-empty folder in the metadata path implies an implicit group
+0:             if self._store.list_prefix(implicit_group):
+0:                 return Group(
+0:                     self._store,
+0:                     read_only=self._read_only,
+0:                     path=path,
+0:                     chunk_store=self._chunk_store,
+0:                     cache_attrs=self.attrs.cache,
+0:                     synchronizer=self._synchronizer,
+0:                     zarr_version=self._version,
+0:                     meta_array=self._meta_array,
+0:                 )
+0:             else:
+0:                 raise KeyError(item)
+0:         else:
+0: >           raise KeyError(item)
+0: E           KeyError: 'temperature/sample=00029/ml=00000'
+0: 
+0: pyenv/lib/python3.10/site-packages/zarr/hierarchy.py:511: KeyError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - KeyError: 'temperature/s...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 1.84s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 64, Level 0: Timestamp 2015-06-30 12:00:00, Shape (9, 9)
+0: Sample 70, Level 0: Timestamp 2015-07-24 13:00:00, Shape (9, 9)
+0: Sample 47, Level 0: Timestamp 2015-05-27 05:00:00, Shape (9, 9)
+0: Sample 15, Level 0: Timestamp 2015-03-25 13:00:00, Shape (9, 9)
+0: Sample 58, Level 0: Timestamp 2015-06-15 05:00:00, Shape (9, 9)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: total_precip, levels: [0], level: 0, level_idx: 0, samples: [15, 5, 31, 69, 21, 93, 9, 73, 85, 13, 28, 89, 60, 38, 44, 1, 91, 80, 32, 82, 59, 49, 54, 6, 92, 26, 70, 81, 58, 83, 52, 51, 42, 16, 71, 8, 17, 14, 55, 67, 7, 63, 84, 41, 35, 11, 34, 76, 3, 27]
+0: ..
+0: 
+0: ============================== 3 passed in 1.67s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 38, Level 0: Timestamp 2015-06-25 15:00:00, Shape (27, 27)
+0: Sample 21, Level 0: Timestamp 2015-05-26 05:00:00, Shape (27, 27)
+0: Sample 27, Level 0: Timestamp 2015-04-12 05:00:00, Shape (27, 27)
+0: Sample 53, Level 0: Timestamp 2015-03-24 10:00:00, Shape (27, 27)
+0: Sample 10, Level 0: Timestamp 2015-03-30 08:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: t2m, levels: [0], level: 0, level_idx: 0, samples: [4, 85, 70, 9, 49, 31, 28, 90, 93, 66, 16, 6, 91, 26, 46, 83, 87, 17, 15, 38, 82, 63, 89, 0, 69, 25, 22, 19, 36, 74, 20, 77, 1, 79, 47, 84, 18, 55, 21, 23, 48, 94, 8, 42, 40, 62, 51, 2, 24, 92]
+0: ..
+0: 
+0: ============================== 3 passed in 1.38s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 83, Level 0: Timestamp 2015-02-17 18:00:00, Shape (27, 27)
+0: Sample 79, Level 0: Timestamp 2015-10-27 02:00:00, Shape (27, 27)
+0: Sample 45, Level 0: Timestamp 2015-07-28 19:00:00, Shape (27, 27)
+0: Sample 94, Level 0: Timestamp 2015-09-22 18:00:00, Shape (27, 27)
+0: Sample 51, Level 0: Timestamp 2015-03-10 00:00:00, Shape (27, 27)
+0: .['corrected_t2m', 'specific_humidity', 't2m', 'temperature', 'total_precip', 'velocity_u', 'velocity_v', 'velocity_z']
+0: Field: corrected_t2m, levels: [0], level: 0, level_idx: 0, samples: [16, 88, 73, 55, 24, 29, 39, 52, 78, 27, 0, 87, 66, 47, 40, 84, 45, 12, 34, 28, 18, 7, 32, 26, 15, 94, 57, 56, 65, 69, 14, 95, 13, 74, 62, 33, 82, 91, 63, 51, 46, 11, 71, 81, 53, 9, 23, 17, 58, 77]
+0: ..
+0: 
+0: ============================== 3 passed in 1.59s ===============================
+0: time 342.1813724040985
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250821_234500-sifcibcz[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250821_234500-sifcibcz/logs[0m
+0: l40360:1780712:1781340 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l40360:1780712:1782150 [0] NCCL INFO comm 0x55555f103d10 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

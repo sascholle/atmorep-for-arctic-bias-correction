@@ -1,0 +1,1 @@
+0: After masking, number of matched points: 2124 2124 2124 2124

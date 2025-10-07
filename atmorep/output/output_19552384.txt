@@ -1,0 +1,4 @@
+0: Evaluating for first 10 N-ICE time points:
+0:   [0] 2015-01-21 21:00
+0: Running global_forecast for 2015-01-21 21:00:00 ...
+0: Could not find fname due to [Errno 2] No such file or directory: '/models/idiuw3ce3v_single_gpu/model_idiuw3ce3v_single_gpu.json'. Aborting.

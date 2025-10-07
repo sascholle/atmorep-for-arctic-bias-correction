@@ -1,0 +1,478 @@
+0: Wandb run: atmorep-ktk6oth0-17572626
+0: l50033:437856:437856 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.128<0>
+0: l50033:437856:437856 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50033:437856:437856 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50033:437856:437856 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50033:437856:437856 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50033:437856:438115 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.128<0>
+0: l50033:437856:438115 [0] NCCL INFO Using non-device net plugin version 0
+0: l50033:437856:438115 [0] NCCL INFO Using network IB
+0: l50033:437856:438115 [0] NCCL INFO ncclCommInitRank comm 0x55555f25ebf0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xec22899400d72c0a - Init START
+0: l50033:437856:438115 [0] NCCL INFO comm 0x55555f25ebf0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50033:437856:438115 [0] NCCL INFO Channel 00/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 01/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 02/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 03/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 04/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 05/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 06/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 07/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 08/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 09/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 10/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 11/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 12/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 13/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 14/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 15/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 16/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 17/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 18/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 19/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 20/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 21/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 22/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 23/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 24/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 25/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 26/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 27/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 28/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 29/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 30/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Channel 31/32 :    0
+0: l50033:437856:438115 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50033:437856:438115 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50033:437856:438115 [0] NCCL INFO Connected all rings
+0: l50033:437856:438115 [0] NCCL INFO Connected all trees
+0: l50033:437856:438115 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50033:437856:438115 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50033:437856:438115 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50033:437856:438115 [0] NCCL INFO ncclCommInitRank comm 0x55555f25ebf0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xec22899400d72c0a - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.1, 0, 0, 0], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [1, 0, 0, 0]]]
+0: fields_prediction : [['velocity_u', 0.0], ['velocity_v', 0.0], ['specific_humidity', 0.0], ['velocity_z', 0.0], ['temperature', 0.0], ['total_precip', 1.0]]
+0: fields_targets : ['total_precip']
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[70.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17572626
+0: wandb_id : ktk6oth0
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: sparse_target : True
+0: sparse_target_field : total_precip
+0: sparse_target_sparsity : 0.9
+0: mask_input_field : total_precip
+0: mask_input_value : 0
+0: years_test : [2021]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t.
+0: Loaded run 'wc5e2i3t' at epoch -2.
+0: l50033:437856:438136 [1] NCCL INFO Using non-device net plugin version 0
+0: l50033:437856:438136 [1] NCCL INFO Using network IB
+0: l50033:437856:438136 [1] NCCL INFO ncclCommInitRank comm 0x555577315700 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x96dc35a6cfd03e8c - Init START
+0: l50033:437856:438136 [1] NCCL INFO comm 0x555577315700 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50033:437856:438136 [1] NCCL INFO Channel 00/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 01/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 02/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 03/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 04/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 05/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 06/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 07/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 08/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 09/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 10/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 11/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 12/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 13/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 14/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 15/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 16/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 17/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 18/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 19/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 20/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 21/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 22/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 23/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 24/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 25/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 26/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 27/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 28/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 29/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 30/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Channel 31/32 :    0
+0: l50033:437856:438136 [1] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50033:437856:438136 [1] NCCL INFO P2P Chunksize set to 131072
+0: l50033:437856:438136 [1] NCCL INFO Connected all rings
+0: l50033:437856:438136 [1] NCCL INFO Connected all trees
+0: l50033:437856:438136 [1] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50033:437856:438136 [1] NCCL INFO ncclCommInitRank comm 0x555577315700 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x96dc35a6cfd03e8c - Init COMPLETE
+0: l50033:437856:438141 [2] NCCL INFO Using non-device net plugin version 0
+0: l50033:437856:438141 [2] NCCL INFO Using network IB
+0: l50033:437856:438141 [2] NCCL INFO ncclCommInitRank comm 0x55557ec256c0 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0x6bb5939028a55c68 - Init START
+0: l50033:437856:438141 [2] NCCL INFO comm 0x55557ec256c0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50033:437856:438141 [2] NCCL INFO Channel 00/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 01/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 02/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 03/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 04/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 05/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 06/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 07/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 08/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 09/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 10/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 11/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 12/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 13/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 14/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 15/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 16/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 17/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 18/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 19/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 20/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 21/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 22/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 23/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 24/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 25/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 26/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 27/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 28/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 29/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 30/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Channel 31/32 :    0
+0: l50033:437856:438141 [2] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50033:437856:438141 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50033:437856:438141 [2] NCCL INFO Connected all rings
+0: l50033:437856:438141 [2] NCCL INFO Connected all trees
+0: l50033:437856:438141 [2] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50033:437856:438141 [2] NCCL INFO ncclCommInitRank comm 0x55557ec256c0 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0x6bb5939028a55c68 - Init COMPLETE
+0: l50033:437856:438146 [3] NCCL INFO Using non-device net plugin version 0
+0: l50033:437856:438146 [3] NCCL INFO Using network IB
+0: l50033:437856:438146 [3] NCCL INFO ncclCommInitRank comm 0x5555877f9b60 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0x3b058e7807ddf326 - Init START
+0: l50033:437856:438146 [3] NCCL INFO comm 0x5555877f9b60 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50033:437856:438146 [3] NCCL INFO Channel 00/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 01/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 02/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 03/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 04/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 05/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 06/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 07/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 08/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 09/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 10/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 11/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 12/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 13/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 14/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 15/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 16/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 17/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 18/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 19/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 20/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 21/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 22/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 23/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 24/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 25/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 26/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 27/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 28/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 29/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 30/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Channel 31/32 :    0
+0: l50033:437856:438146 [3] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50033:437856:438146 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50033:437856:438146 [3] NCCL INFO Connected all rings
+0: l50033:437856:438146 [3] NCCL INFO Connected all trees
+0: l50033:437856:438146 [3] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50033:437856:438146 [3] NCCL INFO ncclCommInitRank comm 0x5555877f9b60 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0x3b058e7807ddf326 - Init COMPLETE
+0: Number of trainable parameters: 741,136,272
+0: -1 : 16:01:24 :: batch_size = 96, lr = 1e-05
+0: Created sparse mask for total_precip with 10.0% data retained
+0: [DEBUG] INPUT BATCH
+0: Epoch -1, first input batch shapes / sample data:
+0:   └─ Field: 'velocity_u' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([0.3998, 0.4292, 0.4579, 0.4858, 0.5120, 0.5357, 0.5570, 0.5760, 0.5935, 0.6103, 0.6270, 0.6443, 0.6617, 0.6785,
+0:         0.6935, 0.7055, 0.7137, 0.7177, 0.5341, 0.5625, 0.5902, 0.6164, 0.6403, 0.6616, 0.6798], device='cuda:0')
+0:   └─ Field: 'velocity_v' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([1.9307, 1.9475, 1.9617, 1.9730, 1.9809, 1.9855, 1.9878, 1.9884, 1.9880, 1.9870, 1.9851, 1.9813, 1.9750, 1.9652,
+0:         1.9514, 1.9339, 1.9128, 1.8892, 1.9865, 2.0012, 2.0129, 2.0212, 2.0258, 2.0271, 2.0252], device='cuda:1')
+0:   └─ Field: 'specific_humidity' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.5728, -0.5697, -0.5667, -0.5637, -0.5603, -0.5569, -0.5537, -0.5510, -0.5501, -0.5493, -0.5486, -0.5476,
+0:         -0.5489, -0.5501, -0.5514, -0.5516, -0.5512, -0.5508, -0.5582, -0.5544, -0.5508, -0.5467, -0.5427, -0.5391,
+0:         -0.5368], device='cuda:2')
+0:   └─ Field: 'velocity_z' shape: torch.Size([96, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([ 0.5778,  0.6428,  0.6978,  0.7375,  0.7584,  0.7573,  0.7309,  0.6780,  0.6020,  0.5030,  0.3884,  0.2651,
+0:          0.1418,  0.0295, -0.0641, -0.1312, -0.1676, -0.1720,  0.5690,  0.6494,  0.7320,  0.8123,  0.8828,  0.9401,
+0:          0.9786], device='cuda:3')
+0:   └─ Field: 'temperature' shape: torch.Size([96, 5, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([-0.0880, -0.0342,  0.0195,  0.0730,  0.1257,  0.1778,  0.2289,  0.2786,  0.3269,  0.3729,  0.4164,  0.4568,
+0:          0.4942,  0.5290,  0.5622,  0.5950,  0.6284,  0.6628,  0.6985,  0.7352,  0.7720,  0.8083,  0.8434,  0.8772,
+0:          0.9094], device='cuda:3')
+0:   └─ Field: 'total_precip' shape: torch.Size([96, 1, 12, 6, 12, 3, 9, 9])
+0:      first 25 values: tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+0:        device='cuda:0')
+0: [DEBUG] TARGET BATCH
+0: Epoch -1, batch 0 - Sparse-masked 'total_precip' shape target data: torch.Size([13824, 243])
+0: [DEBUG] First 243 batch values:
+0: tensor([    nan,     nan, -0.2025,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan, -0.1330,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:         -0.1717,     nan,     nan, -0.1763,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan, -0.0316,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan, -0.2002,     nan, -0.1991,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan, -0.1717,     nan,     nan,     nan,     nan, -0.1706,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.1843,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.1193,     nan,
+0:             nan,     nan, -0.1023,     nan, -0.0499,     nan,     nan,     nan,     nan,  0.0059,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,  0.2611,
+0:             nan,     nan,  0.3066,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan, -0.2127,
+0:             nan, -0.2059,     nan,     nan,     nan,     nan,     nan,     nan, -0.2036,     nan,     nan,     nan,
+0:             nan,     nan, -0.2036,     nan,     nan,     nan,     nan, -0.2036,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,     nan,
+0:          0.1745,     nan,     nan,     nan,     nan,     nan,     nan,  0.1791,     nan,     nan,     nan,     nan,
+0:             nan,     nan,     nan])
+0: [DEBUG] PREDICTIONS TRAIN BATCH
+0: Epoch -1, first predictions sample:
+0:   └─ Predictions for 'velocity_u' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.5404, -0.5414, -0.5368, -0.5294, -0.5172, -0.5071, -0.4980, -0.4934, -0.4913, -0.4879, -0.4794, -0.4717,
+0:         -0.4598, -0.4475, -0.4363, -0.4285, -0.4226, -0.4141, -0.4802, -0.4757, -0.4751, -0.4670, -0.4553, -0.4419,
+0:         -0.4259], device='cuda:0', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_v' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([0.7454, 0.7383, 0.7347, 0.7390, 0.7431, 0.7480, 0.7531, 0.7568, 0.7610, 0.7697, 0.7742, 0.7777, 0.7778, 0.7828,
+0:         0.7912, 0.8009, 0.8062, 0.8011, 0.8104, 0.8096, 0.8140, 0.8223, 0.8347, 0.8418, 0.8450], device='cuda:1',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'specific_humidity' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.3403, -0.3425, -0.3450, -0.3498, -0.3575, -0.3623, -0.3693, -0.3702, -0.3722, -0.3683, -0.3646, -0.3628,
+0:         -0.3617, -0.3639, -0.3679, -0.3734, -0.3830, -0.3926, -0.3560, -0.3562, -0.3572, -0.3573, -0.3583, -0.3616,
+0:         -0.3594], device='cuda:2', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_z' shape: torch.Size([17280, 972])
+0:      first 25 pred values: tensor([-0.5905, -0.5818, -0.5470, -0.5481, -0.5028, -0.4530, -0.4366, -0.4266, -0.4089, -0.4022, -0.4039, -0.3750,
+0:         -0.3406, -0.3211, -0.2840, -0.2379, -0.1905, -0.1767, -0.4066, -0.4022, -0.3501, -0.3268, -0.2744, -0.2297,
+0:         -0.2294], device='cuda:3', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'temperature' shape: torch.Size([7680, 2187])
+0:      first 25 pred values: tensor([0.6289, 0.6425, 0.6548, 0.6666, 0.6816, 0.6956, 0.7113, 0.7236, 0.7328, 0.7394, 0.7437, 0.7477, 0.7546, 0.7675,
+0:         0.7823, 0.7988, 0.8127, 0.8245, 0.8362, 0.8481, 0.8607, 0.8730, 0.8840, 0.8926, 0.8982], device='cuda:3',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'total_precip' shape: torch.Size([13824, 243])
+0:      first 25 pred values: tensor([-0.1374, -0.1410, -0.1492, -0.1499, -0.1560, -0.1619, -0.1655, -0.1587, -0.1588, -0.1443, -0.1438, -0.1525,
+0:         -0.1578, -0.1635, -0.1614, -0.1693, -0.1680, -0.1586, -0.1442, -0.1490, -0.1514, -0.1560, -0.1601, -0.1627,
+0:         -0.1663], device='cuda:0', grad_fn=<SliceBackward0>)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: epoch: -1 [1/5 (20%)]	Loss: nan : nan :: 0.14005 (0.82 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: epoch: -1 [2/5 (40%)]	Loss: nan : nan :: 0.13482 (19.86 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: epoch: -1 [3/5 (60%)]	Loss: nan : nan :: 0.14369 (19.16 s/sec)
+0: Created sparse mask for total_precip with 10.0% data retained
+0: epoch: -1 [4/5 (80%)]	Loss: nan : nan :: 0.14175 (19.87 s/sec)
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_embeds_token_info_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_velocity_u_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_velocity_v_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_specific_humidity_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_velocity_z_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_temperature_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_encoder_total_precip_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_velocity_u_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_velocity_v_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_specific_humidity_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_velocity_z_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_temperature_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_decoder_total_precip_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_velocity_u_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_velocity_v_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_specific_humidity_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_velocity_z_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_temperature_idktk6oth0_epoch-1.mod
+0: Model file: /work/ab1412/atmorep/atmorep/config/../../models/idktk6oth0/AtmoRep_tail_total_precip_idktk6oth0_epoch-1.mod
+0: Created sparse mask for total_precip with 10.0% data retained
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'total_precip' with shape: torch.Size([144, 243])
+0:          min = -0.208, max = -0.067, mean = -0.161
+0:          sample (first 20): tensor([-0.1656, -0.1666, -0.1718, -0.1694, -0.1691, -0.1704, -0.1723, -0.1674, -0.1672, -0.1707, -0.1648, -0.1685,
+0:         -0.1690, -0.1706, -0.1666, -0.1711, -0.1691, -0.1639, -0.1682, -0.1679])
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: Created sparse mask for total_precip with 10.0% data retained
+0: validation loss for strategy=forecast at epoch -1 : nan
+0: validation loss for velocity_u : 0.03447132557630539
+0: validation loss for velocity_v : 0.05944463238120079
+0: validation loss for specific_humidity : 0.024836456403136253
+0: validation loss for velocity_z : 0.4695686101913452
+0: validation loss for temperature : 0.07308052480220795
+0: validation loss for total_precip : nan

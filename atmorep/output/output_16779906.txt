@@ -1,0 +1,806 @@
+0: Field configuration:
+0: Number of fields: 2
+0: Fields: ['temperature', 't2m']
+0: Coupling heads per field: 1
+0: Wandb run: atmorep-lavlc9ol-16779906
+0: l50042:1342718:1342718 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.134<0>
+0: l50042:1342718:1342718 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50042:1342718:1342718 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50042:1342718:1342718 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50042:1342718:1342718 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50042:1342718:1343080 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.134<0>
+0: l50042:1342718:1343080 [0] NCCL INFO Using non-device net plugin version 0
+0: l50042:1342718:1343080 [0] NCCL INFO Using network IB
+0: l50042:1342718:1343080 [0] NCCL INFO ncclCommInitRank comm 0x55555f2534c0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xd686d2140cc91a06 - Init START
+0: l50042:1342718:1343080 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50042:1342718:1343080 [0] NCCL INFO comm 0x55555f2534c0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 00/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 01/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 02/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 03/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 04/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 05/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 06/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 07/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 08/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 09/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 10/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 11/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 12/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 13/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 14/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 15/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 16/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 17/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 18/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 19/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 20/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 21/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 22/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 23/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 24/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 25/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 26/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 27/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 28/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 29/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 30/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Channel 31/32 :    0
+0: l50042:1342718:1343080 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50042:1342718:1343080 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50042:1342718:1343080 [0] NCCL INFO Connected all rings
+0: l50042:1342718:1343080 [0] NCCL INFO Connected all trees
+0: l50042:1342718:1343080 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50042:1342718:1343080 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50042:1342718:1343080 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50042:1342718:1343080 [0] NCCL INFO ncclCommInitRank comm 0x55555f2534c0 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0xd686d2140cc91a06 - Init COMPLETE
+0: num_accs_per_task : 4
+0: with_hvd : True
+0: hvd_rank : 0
+0: hvd_size : 64
+0: back_passes_per_step : 4
+0: comment : 
+0: file_format : grib
+0: data_dir : ../data/
+0: level_type : ml
+0: fields : [['temperature', [1, 1536, [], 0], [137], [12, 2, 4], [3, 27, 27], [0.1, 0.1, 0.1, 0.1], 'local'], ['t2m', [1, 1024, [], 0], [0], [12, 6, 12], [3, 9, 9], [0.9, 0.9, 0.1, 0.05], 'local']]
+0: fields_prediction : [['temperature', 0.0], ['t2m', 1.0]]
+0: fields_targets : ['t2m']
+0: years_train : [2021]
+0: years_test : [2021]
+0: month : None
+0: geo_range_sampling : [[70.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: data_smoothing : 0
+0: file_shape : [-1, 721, 1440]
+0: num_t_samples : 744
+0: num_patches_per_t_train : 2
+0: num_patches_per_t_test : 2
+0: torch_seed : 10055128178671072209
+0: batch_size_test : 64
+0: batch_size_start : 16
+0: batch_size_max : 16
+0: batch_size_delta : 8
+0: num_epochs : 50
+0: num_files_train : 2
+0: num_files_test : 1
+0: loader_num_workers : 8
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: learnable_mask : False
+0: with_qk_lnorm : True
+0: num_neighborhoods : 1
+0: encoder_num_layers : 10
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 10
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: ensemble_weighted : False
+0: ensemble_weighted_T : 50.0
+0: losses : ['mse_ensemble', 'stats']
+0: lr_start : 4.9999999999999996e-06
+0: lr_max : 8e-05
+0: lr_min : 4e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: lat_sampling_weighted : True
+0: BERT_strategy : forecast
+0: BERT_window : False
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : True
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 16779906
+0: wandb_id : lavlc9ol
+0: model_id : 3qou60es
+0: with_ddp : True
+0: par_rank : 0
+0: par_size : 1
+0: optimizer_zero : False
+0: attention : False
+0: num_loader_workers : 5
+0: n_size : [36, 13.5, 27.0]
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: with_mixed_precision : True
+0: years_val : [2021]
+0: batch_size : 96
+0: batch_size_validation : 1
+0: model_log_frequency : 256
+0: forecast_num_tokens : 2
+0: file_path : /work/ab1412/atmorep/data/temperature/ml137/era5_y2021_res025_chunk8_with_t2m.zarr
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (8760, 1, 1, 721, 1440) :: (8760,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (8760, 1, 1, 721, 1440) :: (8760,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded AtmoRep: ignoring 252 elements: ['embeds_token_info.0.weight', 'embeds_token_info.0.bias', 'embeds_token_info.1.weight', 'embeds_token_info.1.bias', 'embeds.1.weight', 'embeds.1.bias', 'encoders.1.embed.weight', 'encoders.1.embed.bias', 'encoders.1.heads.0.proj_out.weight', 'encoders.1.heads.0.proj_heads.weight', 'encoders.1.heads.1.proj_out.weight', 'encoders.1.heads.1.proj_heads.weight', 'encoders.1.heads.2.proj_out.weight', 'encoders.1.heads.2.proj_heads.weight', 'encoders.1.heads.3.proj_out.weight', 'encoders.1.heads.3.proj_heads.weight', 'encoders.1.heads.4.proj_out.weight', 'encoders.1.heads.4.proj_heads.weight', 'encoders.1.heads.5.proj_out.weight', 'encoders.1.heads.5.proj_heads.weight', 'encoders.1.heads.6.proj_out.weight', 'encoders.1.heads.6.proj_heads.weight', 'encoders.1.heads.7.proj_out.weight', 'encoders.1.heads.7.proj_heads.weight', 'encoders.1.heads.8.proj_out.weight', 'encoders.1.heads.8.proj_heads.weight', 'encoders.1.heads.9.proj_out.weight', 'encoders.1.heads.9.proj_heads.weight', 
+0: 'encoders.1.mlps.0.blocks.0.weight', 'encoders.1.mlps.0.blocks.0.bias', 'encoders.1.mlps.0.blocks.3.weight', 'encoders.1.mlps.0.blocks.3.bias', 'encoders.1.mlps.1.blocks.0.weight', 'encoders.1.mlps.1.blocks.0.bias', 'encoders.1.mlps.1.blocks.3.weight', 'encoders.1.mlps.1.blocks.3.bias', 'encoders.1.mlps.2.blocks.0.weight', 'encoders.1.mlps.2.blocks.0.bias', 'encoders.1.mlps.2.blocks.3.weight', 'encoders.1.mlps.2.blocks.3.bias', 'encoders.1.mlps.3.blocks.0.weight', 'encoders.1.mlps.3.blocks.0.bias', 'encoders.1.mlps.3.blocks.3.weight', 'encoders.1.mlps.3.blocks.3.bias', 'encoders.1.mlps.4.blocks.0.weight', 'encoders.1.mlps.4.blocks.0.bias', 'encoders.1.mlps.4.blocks.3.weight', 'encoders.1.mlps.4.blocks.3.bias', 'encoders.1.mlps.5.blocks.0.weight', 'encoders.1.mlps.5.blocks.0.bias', 'encoders.1.mlps.5.blocks.3.weight', 'encoders.1.mlps.5.blocks.3.bias', 'encoders.1.mlps.6.blocks.0.weight', 'encoders.1.mlps.6.blocks.0.bias', 'encoders.1.mlps.6.blocks.3.weight', 'encoders.1.mlps.6.blocks.3.bias', 'encoders.1.mlps
+0: .7.blocks.0.weight', 'encoders.1.mlps.7.blocks.0.bias', 'encoders.1.mlps.7.blocks.3.weight', 'encoders.1.mlps.7.blocks.3.bias', 'encoders.1.mlps.8.blocks.0.weight', 'encoders.1.mlps.8.blocks.0.bias', 'encoders.1.mlps.8.blocks.3.weight', 'encoders.1.mlps.8.blocks.3.bias', 'encoders.1.mlps.9.blocks.0.weight', 'encoders.1.mlps.9.blocks.0.bias', 'encoders.1.mlps.9.blocks.3.weight', 'encoders.1.mlps.9.blocks.3.bias', 'decoders.1.blocks.0.proj_heads.weight', 'decoders.1.blocks.0.proj_heads_o_q.weight', 'decoders.1.blocks.0.proj_heads_o_kv.weight', 'decoders.1.blocks.0.ln_q.weight', 'decoders.1.blocks.0.ln_q.bias', 'decoders.1.blocks.0.ln_k.weight', 'decoders.1.blocks.0.ln_k.bias', 'decoders.1.blocks.0.proj_out.weight', 'decoders.1.blocks.1.blocks.0.weight', 'decoders.1.blocks.1.blocks.0.bias', 'decoders.1.blocks.1.blocks.3.weight', 'decoders.1.blocks.1.blocks.3.bias', 'decoders.1.blocks.2.proj_heads.weight', 'decoders.1.blocks.2.proj_heads_o_q.weight', 'decoders.1.blocks.2.proj_heads_o_kv.weight', 'decoders.1.block
+0: s.2.ln_q.weight', 'decoders.1.blocks.2.ln_q.bias', 'decoders.1.blocks.2.ln_k.weight', 'decoders.1.blocks.2.ln_k.bias', 'decoders.1.blocks.2.proj_out.weight', 'decoders.1.blocks.3.blocks.0.weight', 'decoders.1.blocks.3.blocks.0.bias', 'decoders.1.blocks.3.blocks.3.weight', 'decoders.1.blocks.3.blocks.3.bias', 'decoders.1.blocks.4.proj_heads.weight', 'decoders.1.blocks.4.proj_heads_o_q.weight', 'decoders.1.blocks.4.proj_heads_o_kv.weight', 'decoders.1.blocks.4.ln_q.weight', 'decoders.1.blocks.4.ln_q.bias', 'decoders.1.blocks.4.ln_k.weight', 'decoders.1.blocks.4.ln_k.bias', 'decoders.1.blocks.4.proj_out.weight', 'decoders.1.blocks.5.blocks.0.weight', 'decoders.1.blocks.5.blocks.0.bias', 'decoders.1.blocks.5.blocks.3.weight', 'decoders.1.blocks.5.blocks.3.bias', 'decoders.1.blocks.6.proj_heads.weight', 'decoders.1.blocks.6.proj_heads_o_q.weight', 'decoders.1.blocks.6.proj_heads_o_kv.weight', 'decoders.1.blocks.6.ln_q.weight', 'decoders.1.blocks.6.ln_q.bias', 'decoders.1.blocks.6.ln_k.weight', 'decoders.1.blocks.6
+0: .ln_k.bias', 'decoders.1.blocks.6.proj_out.weight', 'decoders.1.blocks.7.blocks.0.weight', 'decoders.1.blocks.7.blocks.0.bias', 'decoders.1.blocks.7.blocks.3.weight', 'decoders.1.blocks.7.blocks.3.bias', 'decoders.1.blocks.8.proj_heads.weight', 'decoders.1.blocks.8.proj_heads_o_q.weight', 'decoders.1.blocks.8.proj_heads_o_kv.weight', 'decoders.1.blocks.8.ln_q.weight', 'decoders.1.blocks.8.ln_q.bias', 'decoders.1.blocks.8.ln_k.weight', 'decoders.1.blocks.8.ln_k.bias', 'decoders.1.blocks.8.proj_out.weight', 'decoders.1.blocks.9.blocks.0.weight', 'decoders.1.blocks.9.blocks.0.bias', 'decoders.1.blocks.9.blocks.3.weight', 'decoders.1.blocks.9.blocks.3.bias', 'decoders.1.blocks.10.proj_heads.weight', 'decoders.1.blocks.10.proj_heads_o_q.weight', 'decoders.1.blocks.10.proj_heads_o_kv.weight', 'decoders.1.blocks.10.ln_q.weight', 'decoders.1.blocks.10.ln_q.bias', 'decoders.1.blocks.10.ln_k.weight', 'decoders.1.blocks.10.ln_k.bias', 'decoders.1.blocks.10.proj_out.weight', 'decoders.1.blocks.11.blocks.0.weight', 'decod
+0: ers.1.blocks.11.blocks.0.bias', 'decoders.1.blocks.11.blocks.3.weight', 'decoders.1.blocks.11.blocks.3.bias', 'decoders.1.blocks.12.proj_heads.weight', 'decoders.1.blocks.12.proj_heads_o_q.weight', 'decoders.1.blocks.12.proj_heads_o_kv.weight', 'decoders.1.blocks.12.ln_q.weight', 'decoders.1.blocks.12.ln_q.bias', 'decoders.1.blocks.12.ln_k.weight', 'decoders.1.blocks.12.ln_k.bias', 'decoders.1.blocks.12.proj_out.weight', 'decoders.1.blocks.13.blocks.0.weight', 'decoders.1.blocks.13.blocks.0.bias', 'decoders.1.blocks.13.blocks.3.weight', 'decoders.1.blocks.13.blocks.3.bias', 'decoders.1.blocks.14.proj_heads.weight', 'decoders.1.blocks.14.proj_heads_o_q.weight', 'decoders.1.blocks.14.proj_heads_o_kv.weight', 'decoders.1.blocks.14.ln_q.weight', 'decoders.1.blocks.14.ln_q.bias', 'decoders.1.blocks.14.ln_k.weight', 'decoders.1.blocks.14.ln_k.bias', 'decoders.1.blocks.14.proj_out.weight', 'decoders.1.blocks.15.blocks.0.weight', 'decoders.1.blocks.15.blocks.0.bias', 'decoders.1.blocks.15.blocks.3.weight', 'decoders.
+0: 1.blocks.15.blocks.3.bias', 'decoders.1.blocks.16.proj_heads.weight', 'decoders.1.blocks.16.proj_heads_o_q.weight', 'decoders.1.blocks.16.proj_heads_o_kv.weight', 'decoders.1.blocks.16.ln_q.weight', 'decoders.1.blocks.16.ln_q.bias', 'decoders.1.blocks.16.ln_k.weight', 'decoders.1.blocks.16.ln_k.bias', 'decoders.1.blocks.16.proj_out.weight', 'decoders.1.blocks.17.blocks.0.weight', 'decoders.1.blocks.17.blocks.0.bias', 'decoders.1.blocks.17.blocks.3.weight', 'decoders.1.blocks.17.blocks.3.bias', 'decoders.1.blocks.18.proj_heads.weight', 'decoders.1.blocks.18.proj_heads_o_q.weight', 'decoders.1.blocks.18.proj_heads_o_kv.weight', 'decoders.1.blocks.18.ln_q.weight', 'decoders.1.blocks.18.ln_q.bias', 'decoders.1.blocks.18.ln_k.weight', 'decoders.1.blocks.18.ln_k.bias', 'decoders.1.blocks.18.proj_out.weight', 'decoders.1.blocks.19.blocks.0.weight', 'decoders.1.blocks.19.blocks.0.bias', 'decoders.1.blocks.19.blocks.3.weight', 'decoders.1.blocks.19.blocks.3.bias', 'tails.1.tail_nets.0.0.weight', 'tails.1.tail_nets.0.0
+0: .bias', 'tails.1.tail_nets.0.1.weight', 'tails.1.tail_nets.0.1.bias', 'tails.1.tail_nets.1.0.weight', 'tails.1.tail_nets.1.0.bias', 'tails.1.tail_nets.1.1.weight', 'tails.1.tail_nets.1.1.bias', 'tails.1.tail_nets.2.0.weight', 'tails.1.tail_nets.2.0.bias', 'tails.1.tail_nets.2.1.weight', 'tails.1.tail_nets.2.1.bias', 'tails.1.tail_nets.3.0.weight', 'tails.1.tail_nets.3.0.bias', 'tails.1.tail_nets.3.1.weight', 'tails.1.tail_nets.3.1.bias', 'tails.1.tail_nets.4.0.weight', 'tails.1.tail_nets.4.0.bias', 'tails.1.tail_nets.4.1.weight', 'tails.1.tail_nets.4.1.bias', 'tails.1.tail_nets.5.0.weight', 'tails.1.tail_nets.5.0.bias', 'tails.1.tail_nets.5.1.weight', 'tails.1.tail_nets.5.1.bias', 'tails.1.tail_nets.6.0.weight', 'tails.1.tail_nets.6.0.bias', 'tails.1.tail_nets.6.1.weight', 'tails.1.tail_nets.6.1.bias', 'tails.1.tail_nets.7.0.weight', 'tails.1.tail_nets.7.0.bias', 'tails.1.tail_nets.7.1.weight', 'tails.1.tail_nets.7.1.bias', 'tails.1.tail_nets.8.0.weight', 'tails.1.tail_nets.8.0.bias', 'tails.1.tail_nets.8.1.w
+0: eight', 'tails.1.tail_nets.8.1.bias', 'tails.1.tail_nets.9.0.weight', 'tails.1.tail_nets.9.0.bias', 'tails.1.tail_nets.9.1.weight', 'tails.1.tail_nets.9.1.bias', 'tails.1.tail_nets.10.0.weight', 'tails.1.tail_nets.10.0.bias', 'tails.1.tail_nets.10.1.weight', 'tails.1.tail_nets.10.1.bias', 'tails.1.tail_nets.11.0.weight', 'tails.1.tail_nets.11.0.bias', 'tails.1.tail_nets.11.1.weight', 'tails.1.tail_nets.11.1.bias', 'tails.1.tail_nets.12.0.weight', 'tails.1.tail_nets.12.0.bias', 'tails.1.tail_nets.12.1.weight', 'tails.1.tail_nets.12.1.bias', 'tails.1.tail_nets.13.0.weight', 'tails.1.tail_nets.13.0.bias', 'tails.1.tail_nets.13.1.weight', 'tails.1.tail_nets.13.1.bias', 'tails.1.tail_nets.14.0.weight', 'tails.1.tail_nets.14.0.bias', 'tails.1.tail_nets.14.1.weight', 'tails.1.tail_nets.14.1.bias', 'tails.1.tail_nets.15.0.weight', 'tails.1.tail_nets.15.0.bias', 'tails.1.tail_nets.15.1.weight', 'tails.1.tail_nets.15.1.bias']
+0: Loaded model id = 3qou60es at epoch = 0.
+0: Loaded run '3qou60es' at epoch 0.
+0: Number of trainable parameters: 606,841,200
+0: validation loss for strategy=forecast at epoch 1 : 0.11460112780332565
+0: validation loss for temperature : 0.13540257513523102
+0: validation loss for t2m : 0.09379968792200089
+0: 2 : 13:36:06 :: batch_size = 96, lr = 8e-05
+0: temperature: 0.4013558626174927; t2m: 0.6099206209182739; 
+0: temperature: 0.381721168756485; t2m: 0.5152063369750977; 
+0: epoch: 2 [1/5 (20%)]	Loss: 0.56256 : 0.10672 :: 0.18439 (7.48 s/sec)
+0: temperature: 0.47000038623809814; t2m: 0.47550466656684875; 
+0: epoch: 2 [2/5 (40%)]	Loss: 0.47550 : 0.10525 :: 0.21053 (43.84 s/sec)
+0: temperature: 0.4130266606807709; t2m: 0.44272544980049133; 
+0: epoch: 2 [3/5 (60%)]	Loss: 0.44273 : 0.09196 :: 0.20227 (43.97 s/sec)
+0: temperature: 0.4469834566116333; t2m: 0.4344121813774109; 
+0: epoch: 2 [4/5 (80%)]	Loss: 0.43441 : 0.12557 :: 0.20864 (43.98 s/sec)
+0: validation loss for strategy=forecast at epoch 2 : 0.11770091205835342
+0: validation loss for temperature : 0.11492115259170532
+0: validation loss for t2m : 0.12048066407442093
+0: 3 : 13:36:37 :: batch_size = 96, lr = 7.804878048780489e-05
+0: temperature: 0.4026637673377991; t2m: 0.3523336350917816; 
+0: temperature: 0.4418291449546814; t2m: 0.325700044631958; 
+0: epoch: 3 [1/5 (20%)]	Loss: 0.33902 : 0.08205 :: 0.19063 (9.15 s/sec)
+0: temperature: 0.3885776698589325; t2m: 0.38148826360702515; 
+0: epoch: 3 [2/5 (40%)]	Loss: 0.38149 : 0.12155 :: 0.17813 (43.79 s/sec)
+0: temperature: 0.4374474287033081; t2m: 0.3223709166049957; 
+0: epoch: 3 [3/5 (60%)]	Loss: 0.32237 : 0.13200 :: 0.20516 (40.33 s/sec)
+0: temperature: 0.4231967329978943; t2m: 0.24733100831508636; 
+0: epoch: 3 [4/5 (80%)]	Loss: 0.24733 : 0.09043 :: 0.18617 (43.85 s/sec)
+0: validation loss for strategy=forecast at epoch 3 : 0.143662229180336
+0: validation loss for temperature : 0.14379554986953735
+0: validation loss for t2m : 0.14352895319461823
+0: 4 : 13:37:06 :: batch_size = 96, lr = 7.61451516954194e-05
+0: temperature: 0.3972259759902954; t2m: 0.22701892256736755; 
+0: temperature: 0.42823293805122375; t2m: 0.22224798798561096; 
+0: epoch: 4 [1/5 (20%)]	Loss: 0.22463 : 0.08729 :: 0.18519 (13.87 s/sec)
+0: temperature: 0.4065006375312805; t2m: 0.22682538628578186; 
+0: epoch: 4 [2/5 (40%)]	Loss: 0.22683 : 0.09915 :: 0.18124 (43.96 s/sec)
+0: temperature: 0.47104188799858093; t2m: 0.2977893054485321; 
+0: epoch: 4 [3/5 (60%)]	Loss: 0.29779 : 0.17612 :: 0.20100 (44.00 s/sec)
+0: temperature: 0.4811452627182007; t2m: 0.2216944545507431; 
+0: epoch: 4 [4/5 (80%)]	Loss: 0.22169 : 0.12424 :: 0.20539 (44.00 s/sec)
+0: validation loss for strategy=forecast at epoch 4 : 0.09241608530282974
+0: validation loss for temperature : 0.1250712126493454
+0: validation loss for t2m : 0.0597609281539917
+0: 5 : 13:37:36 :: batch_size = 96, lr = 7.428795287357991e-05
+0: temperature: 0.37072864174842834; t2m: 0.2376268357038498; 
+0: temperature: 0.40087658166885376; t2m: 0.18225499987602234; 
+0: epoch: 5 [1/5 (20%)]	Loss: 0.20994 : 0.07614 :: 0.18452 (10.55 s/sec)
+0: temperature: 0.4334750771522522; t2m: 0.17669013142585754; 
+0: epoch: 5 [2/5 (40%)]	Loss: 0.17669 : 0.07954 :: 0.18459 (43.85 s/sec)
+0: temperature: 0.47513052821159363; t2m: 0.2495414763689041; 
+0: epoch: 5 [3/5 (60%)]	Loss: 0.24954 : 0.13546 :: 0.19977 (41.22 s/sec)
+0: temperature: 0.4278092682361603; t2m: 0.19234630465507507; 
+0: epoch: 5 [4/5 (80%)]	Loss: 0.19235 : 0.08660 :: 0.17960 (43.92 s/sec)
+0: validation loss for strategy=forecast at epoch 5 : 0.11095386743545532
+0: validation loss for temperature : 0.11603506654500961
+0: validation loss for t2m : 0.10587266832590103
+0: 6 : 13:38:04 :: batch_size = 96, lr = 7.247605158398042e-05
+0: temperature: 0.41584014892578125; t2m: 0.21786484122276306; 
+0: temperature: 0.38198474049568176; t2m: 0.18972896039485931; 
+0: epoch: 6 [1/5 (20%)]	Loss: 0.20380 : 0.10001 :: 0.17348 (12.21 s/sec)
+0: temperature: 0.4025290310382843; t2m: 0.29364463686943054; 
+0: epoch: 6 [2/5 (40%)]	Loss: 0.29364 : 0.17269 :: 0.17030 (43.83 s/sec)
+0: temperature: 0.3959060609340668; t2m: 0.18646065890789032; 
+0: epoch: 6 [3/5 (60%)]	Loss: 0.18646 : 0.08005 :: 0.17672 (43.92 s/sec)
+0: temperature: 0.4638863801956177; t2m: 0.18307910859584808; 
+0: epoch: 6 [4/5 (80%)]	Loss: 0.18308 : 0.11158 :: 0.20675 (43.03 s/sec)
+0: validation loss for strategy=forecast at epoch 6 : 0.10132188349962234
+0: validation loss for temperature : 0.09627675265073776
+0: validation loss for t2m : 0.10636699944734573
+0: 7 : 13:38:30 :: batch_size = 96, lr = 7.070834300876138e-05
+0: temperature: 0.4135662913322449; t2m: 0.1858074963092804; 
+0: temperature: 0.3997429609298706; t2m: 0.13148464262485504; 
+0: epoch: 7 [1/5 (20%)]	Loss: 0.15865 : 0.07615 :: 0.18127 (11.43 s/sec)
+0: temperature: 0.44196152687072754; t2m: 0.1646215170621872; 
+0: epoch: 7 [2/5 (40%)]	Loss: 0.16462 : 0.09016 :: 0.19522 (43.95 s/sec)
+0: temperature: 0.39763444662094116; t2m: 0.16021113097667694; 
+0: epoch: 7 [3/5 (60%)]	Loss: 0.16021 : 0.06674 :: 0.17966 (44.00 s/sec)
+0: temperature: 0.41836604475975037; t2m: 0.1785167157649994; 
+0: epoch: 7 [4/5 (80%)]	Loss: 0.17852 : 0.10398 :: 0.18573 (44.00 s/sec)
+0: validation loss for strategy=forecast at epoch 7 : 0.11093774437904358
+0: validation loss for temperature : 0.1336698681116104
+0: validation loss for t2m : 0.08820570260286331
+0: 8 : 13:38:56 :: batch_size = 96, lr = 6.898374927684037e-05
+0: temperature: 0.42844679951667786; t2m: 0.22648566961288452; 
+0: temperature: 0.4234052300453186; t2m: 0.2016175091266632; 
+0: epoch: 8 [1/5 (20%)]	Loss: 0.21405 : 0.12740 :: 0.17922 (9.51 s/sec)
+0: temperature: 0.4115848243236542; t2m: 0.1803027093410492; 
+0: epoch: 8 [2/5 (40%)]	Loss: 0.18030 : 0.09884 :: 0.18732 (43.93 s/sec)
+0: temperature: 0.4116845726966858; t2m: 0.15546929836273193; 
+0: epoch: 8 [3/5 (60%)]	Loss: 0.15547 : 0.08156 :: 0.18599 (43.99 s/sec)
+0: temperature: 0.454813152551651; t2m: 0.22669470310211182; 
+0: epoch: 8 [4/5 (80%)]	Loss: 0.22669 : 0.14360 :: 0.18038 (43.98 s/sec)
+0: validation loss for strategy=forecast at epoch 8 : 0.10939987748861313
+0: validation loss for temperature : 0.12940339744091034
+0: validation loss for t2m : 0.08939633518457413
+0: 9 : 13:39:29 :: batch_size = 96, lr = 6.730121880667354e-05
+0: temperature: 0.4319080114364624; t2m: 0.18011672794818878; 
+0: temperature: 0.4104786515235901; t2m: 0.15241214632987976; 
+0: epoch: 9 [1/5 (20%)]	Loss: 0.16626 : 0.08795 :: 0.17878 (9.28 s/sec)
+0: temperature: 0.397845596075058; t2m: 0.1576703041791916; 
+0: epoch: 9 [2/5 (40%)]	Loss: 0.15767 : 0.07939 :: 0.17695 (43.96 s/sec)
+0: temperature: 0.4034850001335144; t2m: 0.14601550996303558; 
+0: epoch: 9 [3/5 (60%)]	Loss: 0.14602 : 0.07881 :: 0.17871 (43.99 s/sec)
+0: temperature: 0.4155665636062622; t2m: 0.15824098885059357; 
+0: epoch: 9 [4/5 (80%)]	Loss: 0.15824 : 0.09470 :: 0.18027 (44.00 s/sec)
+0: validation loss for strategy=forecast at epoch 9 : 0.08154664188623428
+0: validation loss for temperature : 0.1292066127061844
+0: validation loss for t2m : 0.03388666361570358
+0: 10 : 13:40:02 :: batch_size = 96, lr = 6.565972566504737e-05
+0: temperature: 0.4203988313674927; t2m: 0.19190093874931335; 
+0: temperature: 0.40937113761901855; t2m: 0.26019608974456787; 
+0: epoch: 10 [1/5 (20%)]	Loss: 0.22605 : 0.14545 :: 0.17182 (10.42 s/sec)
+0: temperature: 0.4176229238510132; t2m: 0.20293039083480835; 
+0: epoch: 10 [2/5 (40%)]	Loss: 0.20293 : 0.12847 :: 0.17853 (39.67 s/sec)
+0: temperature: 0.41639888286590576; t2m: 0.1823614239692688; 
+0: epoch: 10 [3/5 (60%)]	Loss: 0.18236 : 0.09991 :: 0.17597 (43.95 s/sec)
+0: temperature: 0.444214791059494; t2m: 0.13580746948719025; 
+0: epoch: 10 [4/5 (80%)]	Loss: 0.13581 : 0.09556 :: 0.18329 (43.96 s/sec)
+0: validation loss for strategy=forecast at epoch 10 : 0.10706699639558792
+0: validation loss for temperature : 0.09706395119428635
+0: validation loss for t2m : 0.1170700415968895
+0: 11 : 13:40:30 :: batch_size = 96, lr = 6.405826894150964e-05
+0: temperature: 0.4343602955341339; t2m: 0.1966443657875061; 
+0: temperature: 0.42091622948646545; t2m: 0.11493388563394547; 
+0: epoch: 11 [1/5 (20%)]	Loss: 0.15579 : 0.09731 :: 0.20095 (10.32 s/sec)
+0: temperature: 0.4280773401260376; t2m: 0.12763994932174683; 
+0: epoch: 11 [2/5 (40%)]	Loss: 0.12764 : 0.07584 :: 0.19254 (43.88 s/sec)
+0: temperature: 0.48697519302368164; t2m: 0.16892054677009583; 
+0: epoch: 11 [3/5 (60%)]	Loss: 0.16892 : 0.12579 :: 0.20309 (42.94 s/sec)
+0: temperature: 0.4347279369831085; t2m: 0.16757166385650635; 
+0: epoch: 11 [4/5 (80%)]	Loss: 0.16757 : 0.11049 :: 0.18323 (43.94 s/sec)
+0: validation loss for strategy=forecast at epoch 11 : 0.10193118453025818
+0: validation loss for temperature : 0.1483435034751892
+0: validation loss for t2m : 0.05551891028881073
+0: 12 : 13:40:57 :: batch_size = 96, lr = 6.249587213805819e-05
+0: temperature: 0.4771135449409485; t2m: 0.20329147577285767; 
+0: temperature: 0.412823349237442; t2m: 0.19764474034309387; 
+0: epoch: 12 [1/5 (20%)]	Loss: 0.20047 : 0.13419 :: 0.17850 (12.02 s/sec)
+0: temperature: 0.41006413102149963; t2m: 0.1847344934940338; 
+0: epoch: 12 [2/5 (40%)]	Loss: 0.18473 : 0.10212 :: 0.18240 (43.96 s/sec)
+0: temperature: 0.44814425706863403; t2m: 0.14252200722694397; 
+0: epoch: 12 [3/5 (60%)]	Loss: 0.14252 : 0.10457 :: 0.19412 (41.96 s/sec)
+0: temperature: 0.42724886536598206; t2m: 0.1258789449930191; 
+0: epoch: 12 [4/5 (80%)]	Loss: 0.12588 : 0.07913 :: 0.17825 (43.99 s/sec)
+0: validation loss for strategy=forecast at epoch 12 : 0.1008872389793396
+0: validation loss for temperature : 0.11683880537748337
+0: validation loss for t2m : 0.08493569493293762
+0: 13 : 13:41:24 :: batch_size = 96, lr = 6.097158257371531e-05
+0: temperature: 0.463046133518219; t2m: 0.15910562872886658; 
+0: temperature: 0.4129349887371063; t2m: 0.2006172239780426; 
+0: epoch: 13 [1/5 (20%)]	Loss: 0.17986 : 0.12589 :: 0.16690 (12.28 s/sec)
+0: temperature: 0.47520071268081665; t2m: 0.21333497762680054; 
+0: epoch: 13 [2/5 (40%)]	Loss: 0.21333 : 0.17122 :: 0.19707 (43.93 s/sec)
+0: temperature: 0.3966384530067444; t2m: 0.13587552309036255; 
+0: epoch: 13 [3/5 (60%)]	Loss: 0.13588 : 0.07638 :: 0.17117 (43.97 s/sec)
+0: temperature: 0.40964746475219727; t2m: 0.17502272129058838; 
+0: epoch: 13 [4/5 (80%)]	Loss: 0.17502 : 0.09472 :: 0.18006 (43.98 s/sec)
+0: validation loss for strategy=forecast at epoch 13 : 0.09700751304626465
+0: validation loss for temperature : 0.11420882493257523
+0: validation loss for t2m : 0.0798061415553093
+0: 14 : 13:41:50 :: batch_size = 96, lr = 5.94844708036247e-05
+0: temperature: 0.4076894223690033; t2m: 0.1527351289987564; 
+0: temperature: 0.433682382106781; t2m: 0.17497527599334717; 
+0: epoch: 14 [1/5 (20%)]	Loss: 0.16386 : 0.10336 :: 0.19139 (12.43 s/sec)
+0: temperature: 0.45465847849845886; t2m: 0.14660945534706116; 
+0: epoch: 14 [2/5 (40%)]	Loss: 0.14661 : 0.11574 :: 0.18568 (43.98 s/sec)
+0: temperature: 0.42197978496551514; t2m: 0.16246747970581055; 
+0: epoch: 14 [3/5 (60%)]	Loss: 0.16247 : 0.09517 :: 0.17894 (44.00 s/sec)
+0: temperature: 0.5289664268493652; t2m: 0.17606325447559357; 
+0: epoch: 14 [4/5 (80%)]	Loss: 0.17606 : 0.16369 :: 0.22067 (44.00 s/sec)
+0: validation loss for strategy=forecast at epoch 14 : 0.1372925490140915
+0: validation loss for temperature : 0.10514206439256668
+0: validation loss for t2m : 0.1694430708885193
+0: 15 : 13:42:15 :: batch_size = 96, lr = 5.803363005231678e-05
+0: temperature: 0.4258505702018738; t2m: 0.14576676487922668; 
+0: temperature: 0.45043468475341797; t2m: 0.15012511610984802; 
+0: epoch: 15 [1/5 (20%)]	Loss: 0.14795 : 0.10214 :: 0.19242 (12.51 s/sec)
+0: temperature: 0.44751086831092834; t2m: 0.1218990907073021; 
+0: epoch: 15 [2/5 (40%)]	Loss: 0.12190 : 0.10130 :: 0.19306 (43.83 s/sec)
+0: temperature: 0.43870532512664795; t2m: 0.15476301312446594; 
+0: epoch: 15 [3/5 (60%)]	Loss: 0.15476 : 0.11338 :: 0.19179 (43.91 s/sec)
+0: temperature: 0.4223558008670807; t2m: 0.21022003889083862; 
+0: epoch: 15 [4/5 (80%)]	Loss: 0.21022 : 0.12658 :: 0.17423 (43.88 s/sec)
+0: validation loss for strategy=forecast at epoch 15 : 0.08080542087554932
+0: validation loss for temperature : 0.12415166944265366
+0: validation loss for t2m : 0.03745919466018677
+0: 16 : 13:42:46 :: batch_size = 96, lr = 5.661817566079687e-05
+0: temperature: 0.4346868395805359; t2m: 0.14757737517356873; 
+0: temperature: 0.4131796956062317; t2m: 0.15120190382003784; 
+0: epoch: 16 [1/5 (20%)]	Loss: 0.14939 : 0.08907 :: 0.17104 (12.60 s/sec)
+0: temperature: 0.4356936514377594; t2m: 0.17399629950523376; 
+0: epoch: 16 [2/5 (40%)]	Loss: 0.17400 : 0.12936 :: 0.18687 (43.77 s/sec)
+0: temperature: 0.40874210000038147; t2m: 0.15458354353904724; 
+0: epoch: 16 [3/5 (60%)]	Loss: 0.15458 : 0.10001 :: 0.17886 (43.91 s/sec)
+0: temperature: 0.4740075170993805; t2m: 0.1942812204360962; 
+0: epoch: 16 [4/5 (80%)]	Loss: 0.19428 : 0.13462 :: 0.19902 (43.92 s/sec)
+0: validation loss for strategy=forecast at epoch 16 : 0.14241573214530945
+0: validation loss for temperature : 0.15560279786586761
+0: validation loss for t2m : 0.12922869622707367
+0: 17 : 13:43:12 :: batch_size = 96, lr = 5.52372445471189e-05
+0: temperature: 0.42742323875427246; t2m: 0.14086414873600006; 
+0: temperature: 0.43843621015548706; t2m: 0.1477401852607727; 
+0: epoch: 17 [1/5 (20%)]	Loss: 0.14430 : 0.10356 :: 0.18330 (9.29 s/sec)
+0: temperature: 0.42113611102104187; t2m: 0.16666758060455322; 
+0: epoch: 17 [2/5 (40%)]	Loss: 0.16667 : 0.10846 :: 0.17608 (43.90 s/sec)
+0: temperature: 0.38232481479644775; t2m: 0.13360100984573364; 
+0: epoch: 17 [3/5 (60%)]	Loss: 0.13360 : 0.06756 :: 0.17158 (43.97 s/sec)
+0: temperature: 0.4039190411567688; t2m: 0.1332017332315445; 
+0: epoch: 17 [4/5 (80%)]	Loss: 0.13320 : 0.07295 :: 0.17278 (43.96 s/sec)
+0: validation loss for strategy=forecast at epoch 17 : 0.1140025332570076
+0: validation loss for temperature : 0.110930897295475
+0: validation loss for t2m : 0.11707413196563721
+0: 18 : 13:43:40 :: batch_size = 96, lr = 5.388999468011601e-05
+0: temperature: 0.45377683639526367; t2m: 0.136043518781662; 
+0: temperature: 0.41707104444503784; t2m: 0.10645025968551636; 
+0: epoch: 18 [1/5 (20%)]	Loss: 0.12125 : 0.08561 :: 0.17935 (8.99 s/sec)
+0: temperature: 0.4423060715198517; t2m: 0.16454467177391052; 
+0: epoch: 18 [2/5 (40%)]	Loss: 0.16454 : 0.10947 :: 0.18430 (43.84 s/sec)
+0: temperature: 0.4680823087692261; t2m: 0.17376375198364258; 
+0: epoch: 18 [3/5 (60%)]	Loss: 0.17376 : 0.13630 :: 0.20009 (43.90 s/sec)
+0: temperature: 0.4127170443534851; t2m: 0.1987823247909546; 
+0: epoch: 18 [4/5 (80%)]	Loss: 0.19878 : 0.12035 :: 0.18287 (43.90 s/sec)
+0: validation loss for strategy=forecast at epoch 18 : 0.10976555198431015
+0: validation loss for temperature : 0.17918072640895844
+0: validation loss for t2m : 0.0403502881526947
+0: 19 : 13:44:09 :: batch_size = 96, lr = 5.2575604565966846e-05
+0: temperature: 0.47535204887390137; t2m: 0.13394412398338318; 
+0: temperature: 0.43077075481414795; t2m: 0.20472973585128784; 
+0: epoch: 19 [1/5 (20%)]	Loss: 0.16934 : 0.12927 :: 0.17850 (10.89 s/sec)
+0: temperature: 0.5036513209342957; t2m: 0.135805144906044; 
+0: epoch: 19 [2/5 (40%)]	Loss: 0.13581 : 0.11048 :: 0.20177 (42.91 s/sec)
+0: temperature: 0.459538996219635; t2m: 0.14565816521644592; 
+0: epoch: 19 [3/5 (60%)]	Loss: 0.14566 : 0.11214 :: 0.19494 (43.93 s/sec)
+0: temperature: 0.42642295360565186; t2m: 0.15391838550567627; 
+0: epoch: 19 [4/5 (80%)]	Loss: 0.15392 : 0.09922 :: 0.18530 (43.91 s/sec)
+0: validation loss for strategy=forecast at epoch 19 : 0.0657624900341034
+0: validation loss for temperature : 0.11146006733179092
+0: validation loss for t2m : 0.020064886659383774
+0: 20 : 13:44:41 :: batch_size = 96, lr = 5.129327274728473e-05
+0: temperature: 0.4320107400417328; t2m: 0.20725300908088684; 
+0: temperature: 0.4073182940483093; t2m: 0.17855851352214813; 
+0: epoch: 20 [1/5 (20%)]	Loss: 0.19291 : 0.13255 :: 0.17551 (10.16 s/sec)
+0: temperature: 0.42859965562820435; t2m: 0.14082221686840057; 
+0: epoch: 20 [2/5 (40%)]	Loss: 0.14082 : 0.11276 :: 0.17851 (43.84 s/sec)
+0: temperature: 0.4957926571369171; t2m: 0.14257198572158813; 
+0: epoch: 20 [3/5 (60%)]	Loss: 0.14257 : 0.11046 :: 0.19909 (40.87 s/sec)
+0: temperature: 0.4665493667125702; t2m: 0.12633246183395386; 
+0: epoch: 20 [4/5 (80%)]	Loss: 0.12633 : 0.10105 :: 0.19607 (43.97 s/sec)
+0: validation loss for strategy=forecast at epoch 20 : 0.10797065496444702
+0: validation loss for temperature : 0.1565866768360138
+0: validation loss for t2m : 0.059354692697525024
+0: 21 : 13:45:09 :: batch_size = 96, lr = 5.004221731442413e-05
+0: temperature: 0.4628826975822449; t2m: 0.13753098249435425; 
+0: temperature: 0.4288875460624695; t2m: 0.10697082430124283; 
+0: epoch: 21 [1/5 (20%)]	Loss: 0.12225 : 0.09701 :: 0.19225 (9.33 s/sec)
+0: temperature: 0.40193450450897217; t2m: 0.232081800699234; 
+0: epoch: 21 [2/5 (40%)]	Loss: 0.23208 : 0.14504 :: 0.16784 (43.88 s/sec)
+0: temperature: 0.3796260952949524; t2m: 0.14200939238071442; 
+0: epoch: 21 [3/5 (60%)]	Loss: 0.14201 : 0.07048 :: 0.16586 (40.10 s/sec)
+0: temperature: 0.4253994822502136; t2m: 0.23146240413188934; 
+0: epoch: 21 [4/5 (80%)]	Loss: 0.23146 : 0.18505 :: 0.19014 (43.95 s/sec)
+0: validation loss for strategy=forecast at epoch 21 : 0.08249005675315857
+0: validation loss for temperature : 0.129208043217659
+0: validation loss for t2m : 0.03577199578285217
+0: 22 : 13:45:37 :: batch_size = 96, lr = 4.8821675428706474e-05
+0: temperature: 0.474173903465271; t2m: 0.15318641066551208; 
+0: temperature: 0.39641836285591125; t2m: 0.11335361003875732; 
+0: epoch: 22 [1/5 (20%)]	Loss: 0.13327 : 0.08897 :: 0.17817 (10.16 s/sec)
+0: temperature: 0.4380040168762207; t2m: 0.1546791046857834; 
+0: epoch: 22 [2/5 (40%)]	Loss: 0.15468 : 0.10081 :: 0.17821 (43.85 s/sec)
+0: temperature: 0.4456588625907898; t2m: 0.11944407224655151; 
+0: epoch: 22 [3/5 (60%)]	Loss: 0.11944 : 0.08185 :: 0.18068 (43.40 s/sec)
+0: temperature: 0.4525653123855591; t2m: 0.15932106971740723; 
+0: epoch: 22 [4/5 (80%)]	Loss: 0.15932 : 0.10602 :: 0.18010 (43.97 s/sec)
+0: validation loss for strategy=forecast at epoch 22 : 0.10287338495254517
+0: validation loss for temperature : 0.11436443775892258
+0: validation loss for t2m : 0.09138232469558716
+0: 23 : 13:46:05 :: batch_size = 96, lr = 4.763090285727461e-05
+0: temperature: 0.4303394556045532; t2m: 0.1668207049369812; 
+0: temperature: 0.3970574140548706; t2m: 0.1399972140789032; 
+0: epoch: 23 [1/5 (20%)]	Loss: 0.15341 : 0.10374 :: 0.17233 (11.36 s/sec)
+0: temperature: 0.3789404630661011; t2m: 0.13751140236854553; 
+0: epoch: 23 [2/5 (40%)]	Loss: 0.13751 : 0.06996 :: 0.17145 (43.85 s/sec)
+0: temperature: 0.39731675386428833; t2m: 0.13364210724830627; 
+0: epoch: 23 [3/5 (60%)]	Loss: 0.13364 : 0.08768 :: 0.17199 (40.03 s/sec)
+0: temperature: 0.40157800912857056; t2m: 0.13258886337280273; 
+0: epoch: 23 [4/5 (80%)]	Loss: 0.13259 : 0.09113 :: 0.17499 (43.94 s/sec)
+0: validation loss for strategy=forecast at epoch 23 : 0.130819171667099
+0: validation loss for temperature : 0.143546000123024
+0: validation loss for t2m : 0.11809233576059341
+0: 24 : 13:46:32 :: batch_size = 96, lr = 4.64691735192923e-05
+0: temperature: 0.41998884081840515; t2m: 0.11783614009618759; 
+0: temperature: 0.37844833731651306; t2m: 0.10159161686897278; 
+0: epoch: 24 [1/5 (20%)]	Loss: 0.10971 : 0.06663 :: 0.17018 (12.27 s/sec)
+0: temperature: 0.44065752625465393; t2m: 0.12604078650474548; 
+0: epoch: 24 [2/5 (40%)]	Loss: 0.12604 : 0.08968 :: 0.19674 (43.25 s/sec)
+0: temperature: 0.3947017192840576; t2m: 0.10558707267045975; 
+0: epoch: 24 [3/5 (60%)]	Loss: 0.10559 : 0.06028 :: 0.18000 (43.92 s/sec)
+0: temperature: 0.44756701588630676; t2m: 0.14593586325645447; 
+0: epoch: 24 [4/5 (80%)]	Loss: 0.14594 : 0.09827 :: 0.19960 (44.02 s/sec)
+0: validation loss for strategy=forecast at epoch 24 : 0.11386117339134216
+0: validation loss for temperature : 0.1445985734462738
+0: validation loss for t2m : 0.08312375098466873
+0: 25 : 13:46:58 :: batch_size = 96, lr = 4.5335779043212006e-05
+0: temperature: 0.42655831575393677; t2m: 0.15570713579654694; 
+0: temperature: 0.37758156657218933; t2m: 0.15735188126564026; 
+0: epoch: 25 [1/5 (20%)]	Loss: 0.15653 : 0.08705 :: 0.17108 (10.30 s/sec)
+0: temperature: 0.43058741092681885; t2m: 0.16806934773921967; 
+0: epoch: 25 [2/5 (40%)]	Loss: 0.16807 : 0.12223 :: 0.17697 (43.98 s/sec)
+0: temperature: 0.4139958322048187; t2m: 0.17049336433410645; 
+0: epoch: 25 [3/5 (60%)]	Loss: 0.17049 : 0.11903 :: 0.18409 (44.01 s/sec)
+0: temperature: 0.42423108220100403; t2m: 0.151167631149292; 
+0: epoch: 25 [4/5 (80%)]	Loss: 0.15117 : 0.10355 :: 0.17994 (44.04 s/sec)
+0: validation loss for strategy=forecast at epoch 25 : 0.14270438253879547
+0: validation loss for temperature : 0.19234086573123932
+0: validation loss for t2m : 0.09306789189577103
+0: 26 : 13:47:25 :: batch_size = 96, lr = 4.4230028334840986e-05
+0: temperature: 0.40720134973526; t2m: 0.15933996438980103; 
+0: temperature: 0.4561914801597595; t2m: 0.18246619403362274; 
+0: epoch: 26 [1/5 (20%)]	Loss: 0.17090 : 0.11452 :: 0.18893 (10.97 s/sec)
+0: temperature: 0.41452306509017944; t2m: 0.13477566838264465; 
+0: epoch: 26 [2/5 (40%)]	Loss: 0.13478 : 0.08755 :: 0.18295 (43.82 s/sec)
+0: temperature: 0.4669317901134491; t2m: 0.1498996913433075; 
+0: epoch: 26 [3/5 (60%)]	Loss: 0.14990 : 0.10645 :: 0.20338 (43.90 s/sec)
+0: temperature: 0.4528213143348694; t2m: 0.15738511085510254; 
+0: epoch: 26 [4/5 (80%)]	Loss: 0.15739 : 0.10877 :: 0.19802 (40.96 s/sec)
+0: validation loss for strategy=forecast at epoch 26 : 0.12079798430204391
+0: validation loss for temperature : 0.1428826004266739
+0: validation loss for t2m : 0.09871334582567215
+0: 27 : 13:47:52 :: batch_size = 96, lr = 4.315124715594243e-05
+0: temperature: 0.40312308073043823; t2m: 0.16286757588386536; 
+0: temperature: 0.43492913246154785; t2m: 0.13926322758197784; 
+0: epoch: 27 [1/5 (20%)]	Loss: 0.15107 : 0.10046 :: 0.18333 (14.31 s/sec)
+0: temperature: 0.4248892664909363; t2m: 0.15792781114578247; 
+0: epoch: 27 [2/5 (40%)]	Loss: 0.15793 : 0.12279 :: 0.18012 (43.92 s/sec)
+0: temperature: 0.45587581396102905; t2m: 0.18492969870567322; 
+0: epoch: 27 [3/5 (60%)]	Loss: 0.18493 : 0.14351 :: 0.18442 (44.00 s/sec)
+0: temperature: 0.3988954722881317; t2m: 0.18013335764408112; 
+0: epoch: 27 [4/5 (80%)]	Loss: 0.18013 : 0.12455 :: 0.16785 (44.03 s/sec)
+0: validation loss for strategy=forecast at epoch 27 : 0.0875898003578186
+0: validation loss for temperature : 0.14031510055065155
+0: validation loss for t2m : 0.03486454859375954
+0: 28 : 13:48:17 :: batch_size = 96, lr = 4.2098777713114566e-05
+0: temperature: 0.42970290780067444; t2m: 0.13772279024124146; 
+0: temperature: 0.41839033365249634; t2m: 0.11320498585700989; 
+0: epoch: 28 [1/5 (20%)]	Loss: 0.12546 : 0.09263 :: 0.17766 (11.21 s/sec)
+0: temperature: 0.45546287298202515; t2m: 0.14661598205566406; 
+0: epoch: 28 [2/5 (40%)]	Loss: 0.14662 : 0.11562 :: 0.18157 (43.85 s/sec)
+0: temperature: 0.3842669129371643; t2m: 0.1749403029680252; 
+0: epoch: 28 [3/5 (60%)]	Loss: 0.17494 : 0.11025 :: 0.17572 (42.86 s/sec)
+0: temperature: 0.4347679018974304; t2m: 0.1330757737159729; 
+0: epoch: 28 [4/5 (80%)]	Loss: 0.13308 : 0.09356 :: 0.18366 (43.94 s/sec)
+0: validation loss for strategy=forecast at epoch 28 : 0.1251603364944458
+0: validation loss for temperature : 0.14457722008228302
+0: validation loss for t2m : 0.10574349015951157
+0: 29 : 13:48:45 :: batch_size = 96, lr = 4.107197825669714e-05
+0: temperature: 0.4598373472690582; t2m: 0.11804705858230591; 
+0: temperature: 0.4147813320159912; t2m: 0.12251822650432587; 
+0: epoch: 29 [1/5 (20%)]	Loss: 0.12028 : 0.09016 :: 0.18059 (9.22 s/sec)
+0: temperature: 0.4126709997653961; t2m: 0.14977550506591797; 
+0: epoch: 29 [2/5 (40%)]	Loss: 0.14978 : 0.10130 :: 0.17373 (43.82 s/sec)
+0: temperature: 0.44799935817718506; t2m: 0.19199827313423157; 
+0: epoch: 29 [3/5 (60%)]	Loss: 0.19200 : 0.14752 :: 0.19274 (43.87 s/sec)
+0: temperature: 0.4554586112499237; t2m: 0.1479286253452301; 
+0: epoch: 29 [4/5 (80%)]	Loss: 0.14793 : 0.11783 :: 0.18771 (40.54 s/sec)
+0: validation loss for strategy=forecast at epoch 29 : 0.08886223286390305
+0: validation loss for temperature : 0.09386692196130753
+0: validation loss for t2m : 0.08385756611824036
+0: 30 : 13:49:13 :: batch_size = 96, lr = 4.007022268946063e-05
+0: temperature: 0.427815318107605; t2m: 0.16190147399902344; 
+0: temperature: 0.38807547092437744; t2m: 0.15475428104400635; 
+0: epoch: 30 [1/5 (20%)]	Loss: 0.15833 : 0.09892 :: 0.18206 (11.04 s/sec)
+0: temperature: 0.4088597297668457; t2m: 0.10004971921443939; 
+0: epoch: 30 [2/5 (40%)]	Loss: 0.10005 : 0.07100 :: 0.18485 (43.85 s/sec)
+0: temperature: 0.47022390365600586; t2m: 0.14135175943374634; 
+0: epoch: 30 [3/5 (60%)]	Loss: 0.14135 : 0.10780 :: 0.19363 (43.16 s/sec)
+0: temperature: 0.3942846357822418; t2m: 0.1374346762895584; 
+0: epoch: 30 [4/5 (80%)]	Loss: 0.13743 : 0.08739 :: 0.17693 (43.92 s/sec)
+0: validation loss for strategy=forecast at epoch 30 : 0.09307694435119629
+0: validation loss for temperature : 0.12629245221614838
+0: validation loss for t2m : 0.0598614364862442
+0: 31 : 13:49:40 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4501044750213623; t2m: 0.16930529475212097; 
+0: temperature: 0.46922609210014343; t2m: 0.14437681436538696; 
+0: epoch: 31 [1/5 (20%)]	Loss: 0.15684 : 0.11496 :: 0.19369 (9.14 s/sec)
+0: temperature: 0.42829763889312744; t2m: 0.11464138329029083; 
+0: epoch: 31 [2/5 (40%)]	Loss: 0.11464 : 0.09024 :: 0.19105 (43.87 s/sec)
+0: temperature: 0.45036813616752625; t2m: 0.13540950417518616; 
+0: epoch: 31 [3/5 (60%)]	Loss: 0.13541 : 0.10323 :: 0.18651 (43.94 s/sec)
+0: temperature: 0.40157967805862427; t2m: 0.12429971247911453; 
+0: epoch: 31 [4/5 (80%)]	Loss: 0.12430 : 0.08191 :: 0.17772 (43.19 s/sec)
+0: validation loss for strategy=forecast at epoch 31 : 0.10973750799894333
+0: validation loss for temperature : 0.16280706226825714
+0: validation loss for t2m : 0.05666789785027504
+0: 32 : 13:50:08 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4190791845321655; t2m: 0.13261055946350098; 
+0: temperature: 0.3999025523662567; t2m: 0.16480493545532227; 
+0: epoch: 32 [1/5 (20%)]	Loss: 0.14871 : 0.10078 :: 0.17997 (10.60 s/sec)
+0: temperature: 0.3894937038421631; t2m: 0.17892855405807495; 
+0: epoch: 32 [2/5 (40%)]	Loss: 0.17893 : 0.10599 :: 0.17595 (43.86 s/sec)
+0: temperature: 0.4132210910320282; t2m: 0.15067912638187408; 
+0: epoch: 32 [3/5 (60%)]	Loss: 0.15068 : 0.10325 :: 0.19076 (43.91 s/sec)
+0: temperature: 0.3891389071941376; t2m: 0.11829067021608353; 
+0: epoch: 32 [4/5 (80%)]	Loss: 0.11829 : 0.07796 :: 0.17450 (42.98 s/sec)
+0: validation loss for strategy=forecast at epoch 32 : 0.08695536851882935
+0: validation loss for temperature : 0.11127564311027527
+0: validation loss for t2m : 0.06263513118028641
+0: 33 : 13:50:36 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.43568912148475647; t2m: 0.10286366939544678; 
+0: temperature: 0.41605034470558167; t2m: 0.1351497322320938; 
+0: epoch: 33 [1/5 (20%)]	Loss: 0.11901 : 0.08903 :: 0.17890 (10.36 s/sec)
+0: temperature: 0.44663721323013306; t2m: 0.11558103561401367; 
+0: epoch: 33 [2/5 (40%)]	Loss: 0.11558 : 0.09629 :: 0.18443 (44.00 s/sec)
+0: temperature: 0.4560670256614685; t2m: 0.08924909681081772; 
+0: epoch: 33 [3/5 (60%)]	Loss: 0.08925 : 0.08187 :: 0.20205 (44.03 s/sec)
+0: temperature: 0.4003974497318268; t2m: 0.15345141291618347; 
+0: epoch: 33 [4/5 (80%)]	Loss: 0.15345 : 0.10778 :: 0.18129 (44.01 s/sec)
+0: validation loss for strategy=forecast at epoch 33 : 0.1112094521522522
+0: validation loss for temperature : 0.1447400003671646
+0: validation loss for t2m : 0.07767891138792038
+0: 34 : 13:51:03 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.3901804983615875; t2m: 0.13450080156326294; 
+0: temperature: 0.4683621823787689; t2m: 0.11743879318237305; 
+0: epoch: 34 [1/5 (20%)]	Loss: 0.12597 : 0.09598 :: 0.19463 (10.54 s/sec)
+0: temperature: 0.4270895719528198; t2m: 0.17241635918617249; 
+0: epoch: 34 [2/5 (40%)]	Loss: 0.17242 : 0.14053 :: 0.19559 (43.84 s/sec)
+0: temperature: 0.39194726943969727; t2m: 0.20068596303462982; 
+0: epoch: 34 [3/5 (60%)]	Loss: 0.20069 : 0.14145 :: 0.17745 (43.89 s/sec)
+0: temperature: 0.4084906280040741; t2m: 0.10291619598865509; 
+0: epoch: 34 [4/5 (80%)]	Loss: 0.10292 : 0.07291 :: 0.17658 (43.90 s/sec)
+0: validation loss for strategy=forecast at epoch 34 : 0.11484559625387192
+0: validation loss for temperature : 0.11697524040937424
+0: validation loss for t2m : 0.11271589994430542
+0: 35 : 13:51:31 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.3999805152416229; t2m: 0.10396194458007812; 
+0: temperature: 0.4316709041595459; t2m: 0.18020901083946228; 
+0: epoch: 35 [1/5 (20%)]	Loss: 0.14209 : 0.11325 :: 0.18158 (10.06 s/sec)
+0: temperature: 0.4073559641838074; t2m: 0.10805264115333557; 
+0: epoch: 35 [2/5 (40%)]	Loss: 0.10805 : 0.07667 :: 0.18093 (43.97 s/sec)
+0: temperature: 0.4281200170516968; t2m: 0.09555257856845856; 
+0: epoch: 35 [3/5 (60%)]	Loss: 0.09555 : 0.07937 :: 0.18720 (44.03 s/sec)
+0: temperature: 0.41306430101394653; t2m: 0.12097005546092987; 
+0: epoch: 35 [4/5 (80%)]	Loss: 0.12097 : 0.09585 :: 0.18084 (44.00 s/sec)
+0: validation loss for strategy=forecast at epoch 35 : 0.09999126940965652
+0: validation loss for temperature : 0.13693948090076447
+0: validation loss for t2m : 0.0630430206656456
+0: 36 : 13:51:59 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.43632772564888; t2m: 0.19259212911128998; 
+0: temperature: 0.4478883743286133; t2m: 0.18488731980323792; 
+0: epoch: 36 [1/5 (20%)]	Loss: 0.18874 : 0.14191 :: 0.20389 (11.45 s/sec)
+0: temperature: 0.4160817265510559; t2m: 0.12154105305671692; 
+0: epoch: 36 [2/5 (40%)]	Loss: 0.12154 : 0.07879 :: 0.18433 (43.99 s/sec)
+0: temperature: 0.4352467656135559; t2m: 0.147569939494133; 
+0: epoch: 36 [3/5 (60%)]	Loss: 0.14757 : 0.10785 :: 0.19829 (44.04 s/sec)
+0: temperature: 0.49800392985343933; t2m: 0.15560096502304077; 
+0: epoch: 36 [4/5 (80%)]	Loss: 0.15560 : 0.12133 :: 0.20815 (44.05 s/sec)
+0: validation loss for strategy=forecast at epoch 36 : 0.10621177405118942
+0: validation loss for temperature : 0.1129002794623375
+0: validation loss for t2m : 0.0995231494307518
+0: 37 : 13:52:25 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4867629408836365; t2m: 0.09993100166320801; 
+0: temperature: 0.44546952843666077; t2m: 0.15780548751354218; 
+0: epoch: 37 [1/5 (20%)]	Loss: 0.12887 : 0.10887 :: 0.18983 (12.56 s/sec)
+0: temperature: 0.3818427324295044; t2m: 0.17325174808502197; 
+0: epoch: 37 [2/5 (40%)]	Loss: 0.17325 : 0.11001 :: 0.17255 (43.97 s/sec)
+0: temperature: 0.4195897579193115; t2m: 0.12581470608711243; 
+0: epoch: 37 [3/5 (60%)]	Loss: 0.12581 : 0.09559 :: 0.18276 (44.05 s/sec)
+0: temperature: 0.400909960269928; t2m: 0.15852348506450653; 
+0: epoch: 37 [4/5 (80%)]	Loss: 0.15852 : 0.10339 :: 0.17413 (44.03 s/sec)
+0: validation loss for strategy=forecast at epoch 37 : 0.07889723032712936
+0: validation loss for temperature : 0.12112760543823242
+0: validation loss for t2m : 0.036666836589574814
+0: 38 : 13:52:51 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4383208453655243; t2m: 0.16426564753055573; 
+0: temperature: 0.4490283131599426; t2m: 0.12846507132053375; 
+0: epoch: 38 [1/5 (20%)]	Loss: 0.14637 : 0.09858 :: 0.20227 (13.04 s/sec)
+0: temperature: 0.4290182590484619; t2m: 0.1661190688610077; 
+0: epoch: 38 [2/5 (40%)]	Loss: 0.16612 : 0.11988 :: 0.18707 (43.97 s/sec)
+0: temperature: 0.43149393796920776; t2m: 0.1947692334651947; 
+0: epoch: 38 [3/5 (60%)]	Loss: 0.19477 : 0.13418 :: 0.19412 (44.01 s/sec)
+0: temperature: 0.45258474349975586; t2m: 0.1293591409921646; 
+0: epoch: 38 [4/5 (80%)]	Loss: 0.12936 : 0.10598 :: 0.19397 (44.03 s/sec)
+0: validation loss for strategy=forecast at epoch 38 : 0.0916614755988121
+0: validation loss for temperature : 0.13478516042232513
+0: validation loss for t2m : 0.04853779450058937
+0: 39 : 13:53:15 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.42889612913131714; t2m: 0.16975137591362; 
+0: temperature: 0.4473186731338501; t2m: 0.13501311838626862; 
+0: epoch: 39 [1/5 (20%)]	Loss: 0.15238 : 0.10466 :: 0.18983 (13.82 s/sec)
+0: temperature: 0.4021838903427124; t2m: 0.1666250228881836; 
+0: epoch: 39 [2/5 (40%)]	Loss: 0.16663 : 0.12521 :: 0.17569 (43.96 s/sec)
+0: temperature: 0.4083835482597351; t2m: 0.19377917051315308; 
+0: epoch: 39 [3/5 (60%)]	Loss: 0.19378 : 0.11994 :: 0.18018 (43.98 s/sec)
+0: temperature: 0.40690091252326965; t2m: 0.22622719407081604; 
+0: epoch: 39 [4/5 (80%)]	Loss: 0.22623 : 0.15884 :: 0.18029 (44.01 s/sec)
+0: validation loss for strategy=forecast at epoch 39 : 0.0722772404551506
+0: validation loss for temperature : 0.11146468669176102
+0: validation loss for t2m : 0.03308974578976631
+0: 40 : 13:53:40 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.46123841404914856; t2m: 0.2124316394329071; 
+0: temperature: 0.39996227622032166; t2m: 0.10516087710857391; 
+0: epoch: 40 [1/5 (20%)]	Loss: 0.15880 : 0.11577 :: 0.18017 (12.17 s/sec)
+0: temperature: 0.39616304636001587; t2m: 0.11360584944486618; 
+0: epoch: 40 [2/5 (40%)]	Loss: 0.11361 : 0.08039 :: 0.19017 (43.85 s/sec)
+0: temperature: 0.3759467899799347; t2m: 0.17884324491024017; 
+0: epoch: 40 [3/5 (60%)]	Loss: 0.17884 : 0.09874 :: 0.16680 (39.73 s/sec)
+0: temperature: 0.3995388150215149; t2m: 0.14107641577720642; 
+0: epoch: 40 [4/5 (80%)]	Loss: 0.14108 : 0.08992 :: 0.18257 (43.93 s/sec)
+0: validation loss for strategy=forecast at epoch 40 : 0.12104115635156631
+0: validation loss for temperature : 0.12047651410102844
+0: validation loss for t2m : 0.12160588055849075
+0: 41 : 13:54:07 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.39053425192832947; t2m: 0.1258295774459839; 
+0: temperature: 0.44525647163391113; t2m: 0.1563066840171814; 
+0: epoch: 41 [1/5 (20%)]	Loss: 0.14107 : 0.09643 :: 0.19442 (13.06 s/sec)
+0: temperature: 0.4313160181045532; t2m: 0.11920655518770218; 
+0: epoch: 41 [2/5 (40%)]	Loss: 0.11921 : 0.09111 :: 0.19473 (43.95 s/sec)
+0: temperature: 0.3915060758590698; t2m: 0.14153119921684265; 
+0: epoch: 41 [3/5 (60%)]	Loss: 0.14153 : 0.09116 :: 0.19187 (44.01 s/sec)
+0: temperature: 0.4357578754425049; t2m: 0.15508154034614563; 
+0: epoch: 41 [4/5 (80%)]	Loss: 0.15508 : 0.11847 :: 0.18613 (43.20 s/sec)
+0: validation loss for strategy=forecast at epoch 41 : 0.09104174375534058
+0: validation loss for temperature : 0.10897037386894226
+0: validation loss for t2m : 0.07311315089464188
+0: 42 : 13:54:32 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.3856017589569092; t2m: 0.1626317799091339; 
+0: temperature: 0.4032134413719177; t2m: 0.2058205008506775; 
+0: epoch: 42 [1/5 (20%)]	Loss: 0.18423 : 0.11799 :: 0.18414 (11.01 s/sec)
+0: temperature: 0.3762284517288208; t2m: 0.1415363997220993; 
+0: epoch: 42 [2/5 (40%)]	Loss: 0.14154 : 0.07156 :: 0.17764 (43.84 s/sec)
+0: temperature: 0.43375349044799805; t2m: 0.11776426434516907; 
+0: epoch: 42 [3/5 (60%)]	Loss: 0.11776 : 0.09325 :: 0.19191 (43.94 s/sec)
+0: temperature: 0.44637054204940796; t2m: 0.13674306869506836; 
+0: epoch: 42 [4/5 (80%)]	Loss: 0.13674 : 0.10757 :: 0.19783 (43.93 s/sec)
+0: validation loss for strategy=forecast at epoch 42 : 0.13342337310314178
+0: validation loss for temperature : 0.16430144011974335
+0: validation loss for t2m : 0.10254544764757156
+0: 43 : 13:54:59 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4026521146297455; t2m: 0.16880087554454803; 
+0: temperature: 0.36927059292793274; t2m: 0.17229750752449036; 
+0: epoch: 43 [1/5 (20%)]	Loss: 0.17055 : 0.10053 :: 0.16446 (10.12 s/sec)
+0: temperature: 0.38720569014549255; t2m: 0.14128203690052032; 
+0: epoch: 43 [2/5 (40%)]	Loss: 0.14128 : 0.09750 :: 0.17414 (43.85 s/sec)
+0: temperature: 0.45377200841903687; t2m: 0.1312616467475891; 
+0: epoch: 43 [3/5 (60%)]	Loss: 0.13126 : 0.10355 :: 0.20950 (43.89 s/sec)
+0: temperature: 0.39078906178474426; t2m: 0.09358610957860947; 
+0: epoch: 43 [4/5 (80%)]	Loss: 0.09359 : 0.06016 :: 0.17724 (43.93 s/sec)
+0: validation loss for strategy=forecast at epoch 43 : 0.10988334566354752
+0: validation loss for temperature : 0.12047602981328964
+0: validation loss for t2m : 0.09929066896438599
+0: 44 : 13:55:27 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.39157748222351074; t2m: 0.13380075991153717; 
+0: temperature: 0.4038229286670685; t2m: 0.13430897891521454; 
+0: epoch: 44 [1/5 (20%)]	Loss: 0.13405 : 0.09306 :: 0.18108 (12.46 s/sec)
+0: temperature: 0.3811747133731842; t2m: 0.1343981772661209; 
+0: epoch: 44 [2/5 (40%)]	Loss: 0.13440 : 0.07258 :: 0.17151 (43.89 s/sec)
+0: temperature: 0.4080025553703308; t2m: 0.12443578243255615; 
+0: epoch: 44 [3/5 (60%)]	Loss: 0.12444 : 0.08486 :: 0.18250 (43.97 s/sec)
+0: temperature: 0.405313104391098; t2m: 0.1367950588464737; 
+0: epoch: 44 [4/5 (80%)]	Loss: 0.13680 : 0.08396 :: 0.18474 (43.99 s/sec)
+0: validation loss for strategy=forecast at epoch 44 : 0.10071057081222534
+0: validation loss for temperature : 0.09161677956581116
+0: validation loss for t2m : 0.10980432480573654
+0: 45 : 13:55:52 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4626511335372925; t2m: 0.13252653181552887; 
+0: temperature: 0.3929251432418823; t2m: 0.10999072343111038; 
+0: epoch: 45 [1/5 (20%)]	Loss: 0.12126 : 0.08455 :: 0.18687 (11.43 s/sec)
+0: temperature: 0.4737558662891388; t2m: 0.14985492825508118; 
+0: epoch: 45 [2/5 (40%)]	Loss: 0.14985 : 0.11965 :: 0.19171 (43.94 s/sec)
+0: temperature: 0.40494802594184875; t2m: 0.15760041773319244; 
+0: epoch: 45 [3/5 (60%)]	Loss: 0.15760 : 0.09896 :: 0.18066 (43.98 s/sec)
+0: temperature: 0.4542330503463745; t2m: 0.23110604286193848; 
+0: epoch: 45 [4/5 (80%)]	Loss: 0.23111 : 0.18725 :: 0.19407 (43.99 s/sec)
+0: validation loss for strategy=forecast at epoch 45 : 0.08414318412542343
+0: validation loss for temperature : 0.14444896578788757
+0: validation loss for t2m : 0.023837387561798096
+0: 46 : 13:56:19 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4053295850753784; t2m: 0.14915943145751953; 
+0: temperature: 0.4452664256095886; t2m: 0.09839510917663574; 
+0: epoch: 46 [1/5 (20%)]	Loss: 0.12378 : 0.08365 :: 0.19249 (10.90 s/sec)
+0: temperature: 0.40817415714263916; t2m: 0.1606273502111435; 
+0: epoch: 46 [2/5 (40%)]	Loss: 0.16063 : 0.10903 :: 0.19412 (43.84 s/sec)
+0: temperature: 0.3769233524799347; t2m: 0.1592424213886261; 
+0: epoch: 46 [3/5 (60%)]	Loss: 0.15924 : 0.08604 :: 0.17721 (42.66 s/sec)
+0: temperature: 0.4577212631702423; t2m: 0.13275538384914398; 
+0: epoch: 46 [4/5 (80%)]	Loss: 0.13276 : 0.11033 :: 0.19640 (43.90 s/sec)
+0: validation loss for strategy=forecast at epoch 46 : 0.08443605899810791
+0: validation loss for temperature : 0.11614014953374863
+0: validation loss for t2m : 0.05273197218775749
+0: 47 : 13:56:46 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.38550975918769836; t2m: 0.12641310691833496; 
+0: temperature: 0.4192667603492737; t2m: 0.1769932210445404; 
+0: epoch: 47 [1/5 (20%)]	Loss: 0.15170 : 0.09195 :: 0.18856 (10.94 s/sec)
+0: temperature: 0.40077462792396545; t2m: 0.1398482471704483; 
+0: epoch: 47 [2/5 (40%)]	Loss: 0.13985 : 0.09000 :: 0.17723 (43.97 s/sec)
+0: temperature: 0.4038298726081848; t2m: 0.18546369671821594; 
+0: epoch: 47 [3/5 (60%)]	Loss: 0.18546 : 0.11388 :: 0.17960 (44.01 s/sec)
+0: temperature: 0.40666961669921875; t2m: 0.15076808631420135; 
+0: epoch: 47 [4/5 (80%)]	Loss: 0.15077 : 0.09602 :: 0.18661 (44.03 s/sec)
+0: validation loss for strategy=forecast at epoch 47 : 0.08377457410097122
+0: validation loss for temperature : 0.13394249975681305
+0: validation loss for t2m : 0.03360668942332268
+0: 48 : 13:57:13 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.4286654591560364; t2m: 0.10899511724710464; 
+0: temperature: 0.46633589267730713; t2m: 0.12516306340694427; 
+0: epoch: 48 [1/5 (20%)]	Loss: 0.11708 : 0.09065 :: 0.20702 (11.37 s/sec)
+0: temperature: 0.38923969864845276; t2m: 0.12222324311733246; 
+0: epoch: 48 [2/5 (40%)]	Loss: 0.12222 : 0.08103 :: 0.17344 (43.87 s/sec)
+0: temperature: 0.40759509801864624; t2m: 0.1079549789428711; 
+0: epoch: 48 [3/5 (60%)]	Loss: 0.10795 : 0.07796 :: 0.18253 (43.92 s/sec)
+0: temperature: 0.40779781341552734; t2m: 0.1430327296257019; 
+0: epoch: 48 [4/5 (80%)]	Loss: 0.14303 : 0.08716 :: 0.18049 (42.97 s/sec)
+0: validation loss for strategy=forecast at epoch 48 : 0.10021226853132248
+0: validation loss for temperature : 0.17238162457942963
+0: validation loss for t2m : 0.028042880818247795
+0: 49 : 13:57:39 :: batch_size = 96, lr = 4e-05
+0: temperature: 0.39743953943252563; t2m: 0.1180810034275055; 
+0: temperature: 0.4060262441635132; t2m: 0.11816880106925964; 
+0: epoch: 49 [1/5 (20%)]	Loss: 0.11812 : 0.08114 :: 0.19313 (10.43 s/sec)
+0: temperature: 0.4171903133392334; t2m: 0.12582913041114807; 
+0: epoch: 49 [2/5 (40%)]	Loss: 0.12583 : 0.09106 :: 0.19040 (43.85 s/sec)
+0: temperature: 0.5033496022224426; t2m: 0.17821182310581207; 
+0: epoch: 49 [3/5 (60%)]	Loss: 0.17821 : 0.15031 :: 0.21791 (43.93 s/sec)
+0: temperature: 0.38547322154045105; t2m: 0.15333957970142365; 
+0: epoch: 49 [4/5 (80%)]	Loss: 0.15334 : 0.08944 :: 0.17959 (43.20 s/sec)
+0: validation loss for strategy=forecast at epoch 49 : 0.09742573648691177
+0: validation loss for temperature : 0.13030460476875305
+0: validation loss for t2m : 0.06454680114984512
+0: Finished training at 13:58:06 with test loss = 0.09742573648691177.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250506_133531-lavlc9ol[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250506_133531-lavlc9ol/logs[0m
+0: l50042:1342718:1343083 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50042:1342718:1360100 [0] NCCL INFO comm 0x55555f2534c0 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

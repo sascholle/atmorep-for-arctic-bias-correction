@@ -1,0 +1,646 @@
+0: Wandb run: atmorep-yq933q1g-17398871
+0: l50054:572270:572270 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.142<0>
+0: l50054:572270:572270 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50054:572270:572270 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50054:572270:572270 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50054:572270:572270 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+2: l50066:136591:136591 [0] NCCL INFO cudaDriverVersion 12050
+1: l50057:3452501:3452501 [0] NCCL INFO cudaDriverVersion 12050
+2: l50066:136591:136591 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.150<0>
+1: l50057:3452501:3452501 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.144<0>
+2: l50066:136591:136591 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+2: l50066:136591:136591 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+2: l50066:136591:136591 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+1: l50057:3452501:3452501 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+1: l50057:3452501:3452501 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+1: l50057:3452501:3452501 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+3: l50069:2702864:2702864 [0] NCCL INFO cudaDriverVersion 12050
+3: l50069:2702864:2702864 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.152<0>
+3: l50069:2702864:2702864 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+3: l50069:2702864:2702864 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+3: l50069:2702864:2702864 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+3: l50069:2702864:2702955 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.152<0>
+3: l50069:2702864:2702955 [0] NCCL INFO Using non-device net plugin version 0
+3: l50069:2702864:2702955 [0] NCCL INFO Using network IB
+0: l50054:572270:572511 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.142<0>
+0: l50054:572270:572511 [0] NCCL INFO Using non-device net plugin version 0
+0: l50054:572270:572511 [0] NCCL INFO Using network IB
+1: l50057:3452501:3452593 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.144<0>
+1: l50057:3452501:3452593 [0] NCCL INFO Using non-device net plugin version 0
+1: l50057:3452501:3452593 [0] NCCL INFO Using network IB
+2: l50066:136591:136682 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.150<0>
+2: l50066:136591:136682 [0] NCCL INFO Using non-device net plugin version 0
+2: l50066:136591:136682 [0] NCCL INFO Using network IB
+2: l50066:136591:136682 [0] NCCL INFO ncclCommInitRank comm 0x55555ee18f10 rank 2 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init START
+0: l50054:572270:572511 [0] NCCL INFO ncclCommInitRank comm 0x55555f25d550 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init START
+3: l50069:2702864:2702955 [0] NCCL INFO ncclCommInitRank comm 0x55555ee188e0 rank 3 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init START
+1: l50057:3452501:3452593 [0] NCCL INFO ncclCommInitRank comm 0x55555ee17c30 rank 1 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init START
+2: l50066:136591:136682 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+1: l50057:3452501:3452593 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50054:572270:572511 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+3: l50069:2702864:2702955 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50054:572270:572511 [0] NCCL INFO comm 0x55555f25d550 rank 0 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+0: l50054:572270:572511 [0] NCCL INFO Channel 00/04 :    0   1   2   3
+0: l50054:572270:572511 [0] NCCL INFO Channel 01/04 :    0   1   2   3
+2: l50066:136591:136682 [0] NCCL INFO comm 0x55555ee18f10 rank 2 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+0: l50054:572270:572511 [0] NCCL INFO Channel 02/04 :    0   1   2   3
+0: l50054:572270:572511 [0] NCCL INFO Channel 03/04 :    0   1   2   3
+0: l50054:572270:572511 [0] NCCL INFO Trees [0] 2/-1/-1->0->-1 [1] 2/-1/-1->0->-1 [2] -1/-1/-1->0->1 [3] -1/-1/-1->0->1
+0: l50054:572270:572511 [0] NCCL INFO P2P Chunksize set to 131072
+1: l50057:3452501:3452593 [0] NCCL INFO comm 0x55555ee17c30 rank 1 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+2: l50066:136591:136682 [0] NCCL INFO Trees [0] 1/3/-1->2->0 [1] 1/3/-1->2->0 [2] -1/-1/-1->2->1 [3] -1/-1/-1->2->1
+2: l50066:136591:136682 [0] NCCL INFO P2P Chunksize set to 131072
+1: l50057:3452501:3452593 [0] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] -1/-1/-1->1->2 [2] 2/0/-1->1->3 [3] 2/0/-1->1->3
+1: l50057:3452501:3452593 [0] NCCL INFO P2P Chunksize set to 131072
+3: l50069:2702864:2702955 [0] NCCL INFO comm 0x55555ee188e0 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+3: l50069:2702864:2702955 [0] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] 1/-1/-1->3->-1 [3] 1/-1/-1->3->-1
+3: l50069:2702864:2702955 [0] NCCL INFO P2P Chunksize set to 131072
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 00/0 : 3[0] -> 0[0] [receive] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Channel 01/0 : 3[0] -> 0[0] [receive] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 02/0 : 3[0] -> 0[0] [receive] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Channel 03/0 : 3[0] -> 0[0] [receive] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [send] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [send] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 1[0] -> 2[0] [send] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 1[0] -> 2[0] [send] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 00/0 : 2[0] -> 3[0] [receive] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [receive] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [receive] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 01/0 : 2[0] -> 3[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 02/0 : 1[0] -> 2[0] [receive] via NET/IB/0
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 02/0 : 2[0] -> 3[0] [receive] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 03/0 : 1[0] -> 2[0] [receive] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 03/0 : 2[0] -> 3[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 2[0] -> 3[0] [send] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 2[0] -> 3[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 00/0 : 3[0] -> 0[0] [send] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 02/0 : 2[0] -> 3[0] [send] via NET/IB/0
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 01/0 : 3[0] -> 0[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 02/0 : 3[0] -> 0[0] [send] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 03/0 : 2[0] -> 3[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 03/0 : 3[0] -> 0[0] [send] via NET/IB/1
+2: l50066:136591:136685 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+2: l50066:136591:136685 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+3: l50069:2702864:2702958 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+3: l50069:2702864:2702958 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+1: l50057:3452501:3452596 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+1: l50057:3452501:3452596 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+0: l50054:572270:572514 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+0: l50054:572270:572514 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+1: l50057:3452501:3452593 [0] NCCL INFO Connected all rings
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 3[0] -> 1[0] [receive] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 3[0] -> 1[0] [receive] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 1[0] -> 3[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 1[0] -> 3[0] [send] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Connected all rings
+2: l50066:136591:136682 [0] NCCL INFO Connected all rings
+3: l50069:2702864:2702955 [0] NCCL INFO Connected all rings
+0: l50054:572270:572511 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [receive] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 01/0 : 2[0] -> 0[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 0[0] -> 2[0] [receive] via NET/IB/0
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 02/0 : 1[0] -> 3[0] [receive] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 00/0 : 0[0] -> 2[0] [send] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[0] [send] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [send] via NET/IB/0
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 03/0 : 1[0] -> 3[0] [receive] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 02/0 : 3[0] -> 1[0] [send] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 2[0] -> 0[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 03/0 : 3[0] -> 1[0] [send] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [receive] via NET/IB/0
+0: l50054:572270:572511 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [receive] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 3[0] -> 2[0] [receive] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 01/0 : 2[0] -> 1[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [send] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 01/0 : 2[0] -> 1[0] [send] via NET/IB/1
+3: l50069:2702864:2702955 [0] NCCL INFO Channel 01/0 : 3[0] -> 2[0] [send] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 2[0] -> 1[0] [receive] via NET/IB/0
+2: l50066:136591:136682 [0] NCCL INFO Channel 02/0 : 2[0] -> 1[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 2[0] -> 1[0] [receive] via NET/IB/1
+2: l50066:136591:136682 [0] NCCL INFO Channel 03/0 : 2[0] -> 1[0] [send] via NET/IB/1
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [send] via NET/IB/0
+1: l50057:3452501:3452593 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [send] via NET/IB/1
+0: l50054:572270:572511 [0] NCCL INFO Connected all trees
+3: l50069:2702864:2702955 [0] NCCL INFO Connected all trees
+0: l50054:572270:572511 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+0: l50054:572270:572511 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+3: l50069:2702864:2702955 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+3: l50069:2702864:2702955 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452593 [0] NCCL INFO Connected all trees
+2: l50066:136591:136682 [0] NCCL INFO Connected all trees
+2: l50066:136591:136682 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+2: l50066:136591:136682 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452593 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+1: l50057:3452501:3452593 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452593 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+1: l50057:3452501:3452593 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+1: l50057:3452501:3452593 [0] NCCL INFO ncclCommInitRank comm 0x55555ee17c30 rank 1 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init COMPLETE
+2: l50066:136591:136682 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+2: l50066:136591:136682 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+2: l50066:136591:136682 [0] NCCL INFO ncclCommInitRank comm 0x55555ee18f10 rank 2 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init COMPLETE
+3: l50069:2702864:2702955 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+3: l50069:2702864:2702955 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+3: l50069:2702864:2702955 [0] NCCL INFO ncclCommInitRank comm 0x55555ee188e0 rank 3 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init COMPLETE
+0: l50054:572270:572511 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50054:572270:572511 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50054:572270:572511 [0] NCCL INFO ncclCommInitRank comm 0x55555f25d550 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 3000 commId 0xf0ab258d83b6faef - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 4
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.1, 0, 0, 0]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.1, 0, 0, 0], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [1, 0, 0, 0]]]
+0: fields_prediction : [['velocity_u', 0.0], ['velocity_v', 0.0], ['specific_humidity', 0.0], ['velocity_z', 0.0], ['temperature', 0.0], ['total_precip', 1.0]]
+0: fields_targets : ['total_precip']
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[70.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17398871
+0: wandb_id : yq933q1g
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: sparse_target : True
+0: sparse_target_field : total_precip
+0: sparse_target_sparsity : 1
+0: years_test : [2021]
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+2: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+3: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+2: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+2: self.lats : (721,)
+2: self.lons : (1440,)
+3: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+3: self.lats : (721,)
+3: self.lons : (1440,)
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+2: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+3: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+2: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+2: self.lats : (721,)
+2: self.lons : (1440,)
+3: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+3: self.lats : (721,)
+3: self.lons : (1440,)
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+2: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+3: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+3: Loaded model id = wc5e2i3t at epoch = 0.
+3: Loaded run 'wc5e2i3t' at epoch 0.
+0: Loaded model id = wc5e2i3t at epoch = 0.
+0: Loaded run 'wc5e2i3t' at epoch 0.
+2: Loaded model id = wc5e2i3t at epoch = 0.
+2: Loaded run 'wc5e2i3t' at epoch 0.
+1: Loaded model id = wc5e2i3t at epoch = 0.
+1: Loaded run 'wc5e2i3t' at epoch 0.
+2: l50066:136591:136700 [1] NCCL INFO Using non-device net plugin version 0
+2: l50066:136591:136700 [1] NCCL INFO Using network IB
+3: l50069:2702864:2702973 [1] NCCL INFO Using non-device net plugin version 0
+3: l50069:2702864:2702973 [1] NCCL INFO Using network IB
+0: l50054:572270:572535 [1] NCCL INFO Using non-device net plugin version 0
+0: l50054:572270:572535 [1] NCCL INFO Using network IB
+1: l50057:3452501:3452611 [1] NCCL INFO Using non-device net plugin version 0
+1: l50057:3452501:3452611 [1] NCCL INFO Using network IB
+1: l50057:3452501:3452611 [1] NCCL INFO ncclCommInitRank comm 0x55556e6d9730 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init START
+3: l50069:2702864:2702973 [1] NCCL INFO ncclCommInitRank comm 0x5555a6b17c90 rank 3 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init START
+0: l50054:572270:572535 [1] NCCL INFO ncclCommInitRank comm 0x55556a303290 rank 0 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init START
+2: l50066:136591:136700 [1] NCCL INFO ncclCommInitRank comm 0x555569f32790 rank 2 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init START
+3: l50069:2702864:2702973 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+0: l50054:572270:572535 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+2: l50066:136591:136700 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+1: l50057:3452501:3452611 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+3: l50069:2702864:2702973 [1] NCCL INFO comm 0x5555a6b17c90 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+2: l50066:136591:136700 [1] NCCL INFO comm 0x555569f32790 rank 2 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+0: l50054:572270:572535 [1] NCCL INFO comm 0x55556a303290 rank 0 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+2: l50066:136591:136700 [1] NCCL INFO Trees [0] 1/3/-1->2->0 [1] -1/-1/-1->2->1
+0: l50054:572270:572535 [1] NCCL INFO Channel 00/02 :    0   1   2   3
+0: l50054:572270:572535 [1] NCCL INFO Channel 01/02 :    0   1   2   3
+2: l50066:136591:136700 [1] NCCL INFO P2P Chunksize set to 131072
+0: l50054:572270:572535 [1] NCCL INFO Trees [0] 2/-1/-1->0->-1 [1] -1/-1/-1->0->1
+0: l50054:572270:572535 [1] NCCL INFO P2P Chunksize set to 131072
+1: l50057:3452501:3452611 [1] NCCL INFO comm 0x55556e6d9730 rank 1 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+1: l50057:3452501:3452611 [1] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] 2/0/-1->1->3
+1: l50057:3452501:3452611 [1] NCCL INFO P2P Chunksize set to 131072
+3: l50069:2702864:2702973 [1] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] 1/-1/-1->3->-1
+3: l50069:2702864:2702973 [1] NCCL INFO P2P Chunksize set to 131072
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 00/0 : 2[1] -> 3[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 2[1] -> 3[1] [send] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 01/0 : 2[1] -> 3[1] [send] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 01/0 : 2[1] -> 3[1] [receive] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 00/0 : 3[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 00/0 : 0[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 01/0 : 3[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 0[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[1] [send] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 00/0 : 3[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 01/0 : 3[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 00/0 : 0[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 01/0 : 0[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Connected all rings
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 0[1] -> 2[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 2[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Connected all rings
+3: l50069:2702864:2702973 [1] NCCL INFO Connected all rings
+1: l50057:3452501:3452611 [1] NCCL INFO Connected all rings
+0: l50054:572270:572535 [1] NCCL INFO Channel 00/0 : 2[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[1] [receive] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 3[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 00/0 : 0[1] -> 2[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[1] [send] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 01/0 : 3[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 3[1] -> 2[1] [receive] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 00/0 : 2[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 00/0 : 2[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+3: l50069:2702864:2702973 [1] NCCL INFO Channel 00/0 : 3[1] -> 2[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 2[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+2: l50066:136591:136700 [1] NCCL INFO Channel 01/0 : 2[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+1: l50057:3452501:3452611 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+0: l50054:572270:572535 [1] NCCL INFO Connected all trees
+3: l50069:2702864:2702973 [1] NCCL INFO Connected all trees
+3: l50069:2702864:2702973 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+3: l50069:2702864:2702973 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452611 [1] NCCL INFO Connected all trees
+0: l50054:572270:572535 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+0: l50054:572270:572535 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452611 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+1: l50057:3452501:3452611 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+2: l50066:136591:136700 [1] NCCL INFO Connected all trees
+2: l50066:136591:136700 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+2: l50066:136591:136700 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+3: l50069:2702864:2702973 [1] NCCL INFO ncclCommInitRank comm 0x5555a6b17c90 rank 3 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init COMPLETE
+0: l50054:572270:572535 [1] NCCL INFO ncclCommInitRank comm 0x55556a303290 rank 0 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init COMPLETE
+2: l50066:136591:136700 [1] NCCL INFO ncclCommInitRank comm 0x555569f32790 rank 2 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init COMPLETE
+1: l50057:3452501:3452611 [1] NCCL INFO ncclCommInitRank comm 0x55556e6d9730 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 44000 commId 0x930688176ac5f5c3 - Init COMPLETE
+0: l50054:572270:572540 [2] NCCL INFO Using non-device net plugin version 0
+0: l50054:572270:572540 [2] NCCL INFO Using network IB
+1: l50057:3452501:3452615 [2] NCCL INFO Using non-device net plugin version 0
+1: l50057:3452501:3452615 [2] NCCL INFO Using network IB
+3: l50069:2702864:2702977 [2] NCCL INFO Using non-device net plugin version 0
+3: l50069:2702864:2702977 [2] NCCL INFO Using network IB
+2: l50066:136591:136704 [2] NCCL INFO Using non-device net plugin version 0
+2: l50066:136591:136704 [2] NCCL INFO Using network IB
+0: l50054:572270:572540 [2] NCCL INFO ncclCommInitRank comm 0x55557ebdfc40 rank 0 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init START
+3: l50069:2702864:2702977 [2] NCCL INFO ncclCommInitRank comm 0x55557e732590 rank 3 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init START
+1: l50057:3452501:3452615 [2] NCCL INFO ncclCommInitRank comm 0x55557e6fc020 rank 1 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init START
+2: l50066:136591:136704 [2] NCCL INFO ncclCommInitRank comm 0x55557e811030 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init START
+0: l50054:572270:572540 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+1: l50057:3452501:3452615 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+3: l50069:2702864:2702977 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+2: l50066:136591:136704 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+1: l50057:3452501:3452615 [2] NCCL INFO comm 0x55557e6fc020 rank 1 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+1: l50057:3452501:3452615 [2] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] 2/0/-1->1->3
+1: l50057:3452501:3452615 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50054:572270:572540 [2] NCCL INFO comm 0x55557ebdfc40 rank 0 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+0: l50054:572270:572540 [2] NCCL INFO Channel 00/02 :    0   1   2   3
+0: l50054:572270:572540 [2] NCCL INFO Channel 01/02 :    0   1   2   3
+0: l50054:572270:572540 [2] NCCL INFO Trees [0] 2/-1/-1->0->-1 [1] -1/-1/-1->0->1
+2: l50066:136591:136704 [2] NCCL INFO comm 0x55557e811030 rank 2 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+2: l50066:136591:136704 [2] NCCL INFO Trees [0] 1/3/-1->2->0 [1] -1/-1/-1->2->1
+2: l50066:136591:136704 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50054:572270:572540 [2] NCCL INFO P2P Chunksize set to 131072
+3: l50069:2702864:2702977 [2] NCCL INFO comm 0x55557e732590 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+3: l50069:2702864:2702977 [2] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] 1/-1/-1->3->-1
+3: l50069:2702864:2702977 [2] NCCL INFO P2P Chunksize set to 131072
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 00/0 : 0[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 00/0 : 3[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 0[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 00/0 : 1[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 01/0 : 3[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 1[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 00/0 : 0[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 01/0 : 0[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[2] [receive] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 1[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[2] [receive] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 01/0 : 1[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 00/0 : 3[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[2] [send] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 01/0 : 3[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[2] [send] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Connected all rings
+0: l50054:572270:572540 [2] NCCL INFO Channel 00/0 : 2[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 00/0 : 0[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Connected all rings
+1: l50057:3452501:3452615 [2] NCCL INFO Connected all rings
+2: l50066:136591:136704 [2] NCCL INFO Connected all rings
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 01/0 : 1[2] -> 3[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 3[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 0[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 1[2] -> 3[2] [send] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 2[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 01/0 : 3[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 3[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Channel 00/0 : 3[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+0: l50054:572270:572540 [2] NCCL INFO Channel 01/0 : 1[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+2: l50066:136591:136704 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+1: l50057:3452501:3452615 [2] NCCL INFO Channel 01/0 : 1[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+3: l50069:2702864:2702977 [2] NCCL INFO Connected all trees
+3: l50069:2702864:2702977 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+3: l50069:2702864:2702977 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50054:572270:572540 [2] NCCL INFO Connected all trees
+1: l50057:3452501:3452615 [2] NCCL INFO Connected all trees
+2: l50066:136591:136704 [2] NCCL INFO Connected all trees
+1: l50057:3452501:3452615 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+1: l50057:3452501:3452615 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+2: l50066:136591:136704 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+2: l50066:136591:136704 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50054:572270:572540 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+0: l50054:572270:572540 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50054:572270:572540 [2] NCCL INFO ncclCommInitRank comm 0x55557ebdfc40 rank 0 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init COMPLETE
+2: l50066:136591:136704 [2] NCCL INFO ncclCommInitRank comm 0x55557e811030 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init COMPLETE
+3: l50069:2702864:2702977 [2] NCCL INFO ncclCommInitRank comm 0x55557e732590 rank 3 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init COMPLETE
+1: l50057:3452501:3452615 [2] NCCL INFO ncclCommInitRank comm 0x55557e6fc020 rank 1 nranks 4 cudaDev 2 nvmlDev 2 busId 84000 commId 0x950b84b587279986 - Init COMPLETE
+0: l50054:572270:572545 [3] NCCL INFO Using non-device net plugin version 0
+0: l50054:572270:572545 [3] NCCL INFO Using network IB
+1: l50057:3452501:3452619 [3] NCCL INFO Using non-device net plugin version 0
+1: l50057:3452501:3452619 [3] NCCL INFO Using network IB
+3: l50069:2702864:2702981 [3] NCCL INFO Using non-device net plugin version 0
+3: l50069:2702864:2702981 [3] NCCL INFO Using network IB
+2: l50066:136591:136708 [3] NCCL INFO Using non-device net plugin version 0
+2: l50066:136591:136708 [3] NCCL INFO Using network IB
+1: l50057:3452501:3452619 [3] NCCL INFO ncclCommInitRank comm 0x5555872dcee0 rank 1 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init START
+3: l50069:2702864:2702981 [3] NCCL INFO ncclCommInitRank comm 0x555587312e50 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init START
+2: l50066:136591:136708 [3] NCCL INFO ncclCommInitRank comm 0x5555873f1e80 rank 2 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init START
+0: l50054:572270:572545 [3] NCCL INFO ncclCommInitRank comm 0x5555877c4940 rank 0 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init START
+0: l50054:572270:572545 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+1: l50057:3452501:3452619 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+2: l50066:136591:136708 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+3: l50069:2702864:2702981 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+1: l50057:3452501:3452619 [3] NCCL INFO comm 0x5555872dcee0 rank 1 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+1: l50057:3452501:3452619 [3] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] -1/-1/-1->1->2 [2] 2/0/-1->1->3 [3] 2/0/-1->1->3
+1: l50057:3452501:3452619 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50054:572270:572545 [3] NCCL INFO comm 0x5555877c4940 rank 0 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+0: l50054:572270:572545 [3] NCCL INFO Channel 00/04 :    0   1   2   3
+0: l50054:572270:572545 [3] NCCL INFO Channel 01/04 :    0   1   2   3
+0: l50054:572270:572545 [3] NCCL INFO Channel 02/04 :    0   1   2   3
+0: l50054:572270:572545 [3] NCCL INFO Channel 03/04 :    0   1   2   3
+0: l50054:572270:572545 [3] NCCL INFO Trees [0] 2/-1/-1->0->-1 [1] 2/-1/-1->0->-1 [2] -1/-1/-1->0->1 [3] -1/-1/-1->0->1
+0: l50054:572270:572545 [3] NCCL INFO P2P Chunksize set to 131072
+2: l50066:136591:136708 [3] NCCL INFO comm 0x5555873f1e80 rank 2 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+2: l50066:136591:136708 [3] NCCL INFO Trees [0] 1/3/-1->2->0 [1] 1/3/-1->2->0 [2] -1/-1/-1->2->1 [3] -1/-1/-1->2->1
+2: l50066:136591:136708 [3] NCCL INFO P2P Chunksize set to 131072
+3: l50069:2702864:2702981 [3] NCCL INFO comm 0x555587312e50 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+3: l50069:2702864:2702981 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] 1/-1/-1->3->-1 [3] 1/-1/-1->3->-1
+3: l50069:2702864:2702981 [3] NCCL INFO P2P Chunksize set to 131072
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 1[3] -> 2[3] [receive] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 00/0 : 0[3] -> 1[3] [receive] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 1[3] -> 2[3] [receive] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 01/0 : 0[3] -> 1[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 02/0 : 1[3] -> 2[3] [receive] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[3] [receive] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 0[3] -> 1[3] [receive] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 03/0 : 1[3] -> 2[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 2[3] -> 3[3] [send] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[3] [receive] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 0[3] -> 1[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 2[3] -> 3[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 02/0 : 3[3] -> 0[3] [receive] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 00/0 : 1[3] -> 2[3] [send] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 02/0 : 2[3] -> 3[3] [send] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 01/0 : 1[3] -> 2[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 03/0 : 3[3] -> 0[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 03/0 : 2[3] -> 3[3] [send] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 1[3] -> 2[3] [send] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 00/0 : 0[3] -> 1[3] [send] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 1[3] -> 2[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 01/0 : 0[3] -> 1[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 02/0 : 0[3] -> 1[3] [send] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 00/0 : 2[3] -> 3[3] [receive] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 03/0 : 0[3] -> 1[3] [send] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 01/0 : 2[3] -> 3[3] [receive] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 02/0 : 2[3] -> 3[3] [receive] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 03/0 : 2[3] -> 3[3] [receive] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[3] [send] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[3] [send] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 02/0 : 3[3] -> 0[3] [send] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 03/0 : 3[3] -> 0[3] [send] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Connected all rings
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 3[3] -> 1[3] [receive] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 3[3] -> 1[3] [receive] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 1[3] -> 3[3] [send] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 1[3] -> 3[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Connected all rings
+2: l50066:136591:136708 [3] NCCL INFO Connected all rings
+3: l50069:2702864:2702981 [3] NCCL INFO Connected all rings
+0: l50054:572270:572545 [3] NCCL INFO Channel 00/0 : 2[3] -> 0[3] [receive] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 01/0 : 2[3] -> 0[3] [receive] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 02/0 : 1[3] -> 3[3] [receive] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 0[3] -> 2[3] [receive] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 00/0 : 0[3] -> 2[3] [send] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 0[3] -> 2[3] [receive] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 01/0 : 0[3] -> 2[3] [send] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 2[3] -> 0[3] [send] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 2[3] -> 0[3] [send] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 03/0 : 1[3] -> 3[3] [receive] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 02/0 : 3[3] -> 1[3] [send] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 03/0 : 3[3] -> 1[3] [send] via NET/IB/0
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[3] [send] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[3] [receive] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 00/0 : 2[3] -> 1[3] [receive] via NET/IB/1
+0: l50054:572270:572545 [3] NCCL INFO Channel 02/0 : 1[3] -> 0[3] [receive] via NET/IB/1
+3: l50069:2702864:2702981 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[3] [send] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 01/0 : 2[3] -> 1[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[3] [receive] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Channel 03/0 : 1[3] -> 0[3] [receive] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 2[3] -> 1[3] [receive] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 00/0 : 2[3] -> 1[3] [send] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 2[3] -> 1[3] [receive] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 01/0 : 2[3] -> 1[3] [send] via NET/IB/0
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 02/0 : 1[3] -> 0[3] [send] via NET/IB/1
+2: l50066:136591:136708 [3] NCCL INFO Channel 02/0 : 2[3] -> 1[3] [send] via NET/IB/1
+1: l50057:3452501:3452619 [3] NCCL INFO Channel 03/0 : 1[3] -> 0[3] [send] via NET/IB/0
+2: l50066:136591:136708 [3] NCCL INFO Channel 03/0 : 2[3] -> 1[3] [send] via NET/IB/0
+0: l50054:572270:572545 [3] NCCL INFO Connected all trees
+3: l50069:2702864:2702981 [3] NCCL INFO Connected all trees
+3: l50069:2702864:2702981 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+3: l50069:2702864:2702981 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452619 [3] NCCL INFO Connected all trees
+0: l50054:572270:572545 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+0: l50054:572270:572545 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452619 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+1: l50057:3452501:3452619 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+2: l50066:136591:136708 [3] NCCL INFO Connected all trees
+2: l50066:136591:136708 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+2: l50066:136591:136708 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50057:3452501:3452619 [3] NCCL INFO ncclCommInitRank comm 0x5555872dcee0 rank 1 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init COMPLETE
+2: l50066:136591:136708 [3] NCCL INFO ncclCommInitRank comm 0x5555873f1e80 rank 2 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init COMPLETE
+3: l50069:2702864:2702981 [3] NCCL INFO ncclCommInitRank comm 0x555587312e50 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init COMPLETE
+0: l50054:572270:572545 [3] NCCL INFO ncclCommInitRank comm 0x5555877c4940 rank 0 nranks 4 cudaDev 3 nvmlDev 3 busId c4000 commId 0xec864cf73f422c33 - Init COMPLETE
+2: 1 : 18:18:40 :: batch_size = 96, lr = 1.5000000000000002e-05
+3: 1 : 18:18:40 :: batch_size = 96, lr = 1.5000000000000002e-05
+1: 1 : 18:18:40 :: batch_size = 96, lr = 1.5000000000000002e-05
+0: Number of trainable parameters: 741,136,272
+0: 1 : 18:18:40 :: batch_size = 96, lr = 1.5000000000000002e-05
+2: Created sparse mask for total_precip with 0.0% data retained
+3: Created sparse mask for total_precip with 0.0% data retained
+1: Created sparse mask for total_precip with 0.0% data retained
+0: Created sparse mask for total_precip with 0.0% data retained
+2: velocity_u: 0.07672104984521866; velocity_v: 0.11251778155565262; specific_humidity: 0.03925560787320137; velocity_z: 0.5425314903259277; temperature: 0.11008404940366745; total_precip: 0.0; 
+3: velocity_u: 0.07625983655452728; velocity_v: 0.11244475841522217; specific_humidity: 0.03937600553035736; velocity_z: 0.5428017973899841; temperature: 0.11022505164146423; total_precip: 0.0; 
+1: velocity_u: 0.0766480565071106; velocity_v: 0.11291616410017014; specific_humidity: 0.03943729028105736; velocity_z: 0.5420375466346741; temperature: 0.11018097400665283; total_precip: 0.0; 
+0: velocity_u: 0.07640988379716873; velocity_v: 0.11306948959827423; specific_humidity: 0.039419665932655334; velocity_z: 0.5435347557067871; temperature: 0.110033318400383; total_precip: 0.0; 
+1: Created sparse mask for total_precip with 0.0% data retained
+1: velocity_u: 0.05490151047706604; velocity_v: 0.08827440440654755; specific_humidity: 0.040096066892147064; velocity_z: 0.505041778087616; temperature: 0.08709264546632767; total_precip: 0.0; 
+0: Created sparse mask for total_precip with 0.0% data retained
+0: velocity_u: 0.05476178601384163; velocity_v: 0.08830941468477249; specific_humidity: 0.03998468816280365; velocity_z: 0.5064196586608887; temperature: 0.087305948138237; total_precip: 0.0; 
+3: Created sparse mask for total_precip with 0.0% data retained
+2: Created sparse mask for total_precip with 0.0% data retained
+1: Created sparse mask for total_precip with 0.0% data retained
+1: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py(1528)_pre_forward()
+1: -> if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+1: (Pdb) 
+3: velocity_u: 0.05455046519637108; velocity_v: 0.08847537636756897; specific_humidity: 0.039992742240428925; velocity_z: 0.506066620349884; temperature: 0.08718875795602798; total_precip: 0.0; 
+2: velocity_u: 0.05486325919628143; velocity_v: 0.08867617696523666; specific_humidity: 0.039871711283922195; velocity_z: 0.5058982372283936; temperature: 0.08700408041477203; total_precip: 0.0; 
+0: epoch: 1 [1/5 (20%)]	Loss: 0.00000 : 0.11322 :: 0.14057 (2.29 s/sec)
+0: Created sparse mask for total_precip with 0.0% data retained
+0: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py(1528)_pre_forward()
+0: -> if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+0: (Pdb) 
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250602_181816-yq933q1g[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250602_181816-yq933q1g/logs[0m
+1: l50057:3452501:3452616 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+1: l50057:3452501:3453062 [2] NCCL INFO comm 0x55557e6fc020 rank 1 nranks 4 cudaDev 2 busId 84000 - Abort COMPLETE
+1: l50057:3452501:3452620 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+3: Created sparse mask for total_precip with 0.0% data retained
+3: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py(1528)_pre_forward()
+3: -> if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+3: (Pdb) 
+1: l50057:3452501:3453062 [3] NCCL INFO comm 0x5555872dcee0 rank 1 nranks 4 cudaDev 3 busId c4000 - Abort COMPLETE
+1: l50057:3452501:3452612 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+2: Created sparse mask for total_precip with 0.0% data retained
+2: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/parallel/distributed.py(1528)_pre_forward()
+2: -> if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+2: (Pdb) 
+1: l50057:3452501:3453062 [1] NCCL INFO comm 0x55556e6d9730 rank 1 nranks 4 cudaDev 1 busId 44000 - Abort COMPLETE
+1: l50057:3452501:3452596 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50054:572270:572541 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50054:572270:572989 [2] NCCL INFO comm 0x55557ebdfc40 rank 0 nranks 4 cudaDev 2 busId 84000 - Abort COMPLETE
+1: l50057:3452501:3453062 [0] NCCL INFO comm 0x55555ee17c30 rank 1 nranks 4 cudaDev 0 busId 3000 - Abort COMPLETE
+0: l50054:572270:572546 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50054:572270:572989 [3] NCCL INFO comm 0x5555877c4940 rank 0 nranks 4 cudaDev 3 busId c4000 - Abort COMPLETE
+0: l50054:572270:572536 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50054:572270:572989 [1] NCCL INFO comm 0x55556a303290 rank 0 nranks 4 cudaDev 1 busId 44000 - Abort COMPLETE
+0: l50054:572270:572514 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50069:2702864:2702978 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50069:2702864:2703421 [2] NCCL INFO comm 0x55557e732590 rank 3 nranks 4 cudaDev 2 busId 84000 - Abort COMPLETE
+2: l50066:136591:136705 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+2: l50066:136591:137148 [2] NCCL INFO comm 0x55557e811030 rank 2 nranks 4 cudaDev 2 busId 84000 - Abort COMPLETE
+0: l50054:572270:572989 [0] NCCL INFO comm 0x55555f25d550 rank 0 nranks 4 cudaDev 0 busId 3000 - Abort COMPLETE
+3: l50069:2702864:2702982 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50069:2702864:2703421 [3] NCCL INFO comm 0x555587312e50 rank 3 nranks 4 cudaDev 3 busId c4000 - Abort COMPLETE
+3: l50069:2702864:2702974 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+2: l50066:136591:136709 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+2: l50066:136591:137148 [3] NCCL INFO comm 0x5555873f1e80 rank 2 nranks 4 cudaDev 3 busId c4000 - Abort COMPLETE
+2: l50066:136591:136701 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50069:2702864:2703421 [1] NCCL INFO comm 0x5555a6b17c90 rank 3 nranks 4 cudaDev 1 busId 44000 - Abort COMPLETE
+3: l50069:2702864:2702958 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+2: l50066:136591:137148 [1] NCCL INFO comm 0x555569f32790 rank 2 nranks 4 cudaDev 1 busId 44000 - Abort COMPLETE
+2: l50066:136591:136685 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50069:2702864:2703421 [0] NCCL INFO comm 0x55555ee188e0 rank 3 nranks 4 cudaDev 0 busId 3000 - Abort COMPLETE
+2: l50066:136591:137148 [0] NCCL INFO comm 0x55555ee18f10 rank 2 nranks 4 cudaDev 0 busId 3000 - Abort COMPLETE

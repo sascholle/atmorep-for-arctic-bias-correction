@@ -1,0 +1,12 @@
+1: > /work/ab1412/atmorep/atmorep_models_slurmid/atmorep_train_17665947/train.py(215)train_continue()
+1: -> cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
+0: > /work/ab1412/atmorep/atmorep_models_slurmid/atmorep_train_17665947/train.py(215)train_continue()
+0: -> cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
+2: > /work/ab1412/atmorep/atmorep_models_slurmid/atmorep_train_17665947/train.py(215)train_continue()
+2: -> cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
+3: > /work/ab1412/atmorep/atmorep_models_slurmid/atmorep_train_17665947/train.py(215)train_continue()
+3: -> cf.num_accs_per_task = len(devices)   # number of GPUs / accelerators per task
+1: (Pdb) 
+2: (Pdb) 
+3: (Pdb) 
+0: (Pdb) 

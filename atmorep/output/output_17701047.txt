@@ -1,0 +1,504 @@
+0: Wandb run: atmorep-gvgkwue4-17701047
+0: l50006:3367347:3367347 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.110<0>
+0: l50006:3367347:3367347 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50006:3367347:3367347 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50006:3367347:3367347 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50006:3367347:3367347 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+1: l50006:3367348:3367348 [1] NCCL INFO cudaDriverVersion 12050
+1: l50006:3367348:3367348 [1] NCCL INFO Bootstrap : Using ib0:10.128.11.110<0>
+3: l50006:3367350:3367350 [3] NCCL INFO cudaDriverVersion 12050
+1: l50006:3367348:3367348 [1] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+1: l50006:3367348:3367348 [1] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+1: l50006:3367348:3367348 [1] NCCL INFO NET/Plugin: Using internal network plugin.
+2: l50006:3367349:3367349 [2] NCCL INFO cudaDriverVersion 12050
+3: l50006:3367350:3367350 [3] NCCL INFO Bootstrap : Using ib0:10.128.11.110<0>
+3: l50006:3367350:3367350 [3] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+3: l50006:3367350:3367350 [3] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+3: l50006:3367350:3367350 [3] NCCL INFO NET/Plugin: Using internal network plugin.
+2: l50006:3367349:3367349 [2] NCCL INFO Bootstrap : Using ib0:10.128.11.110<0>
+2: l50006:3367349:3367349 [2] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+2: l50006:3367349:3367349 [2] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+2: l50006:3367349:3367349 [2] NCCL INFO NET/Plugin: Using internal network plugin.
+7: l50009:976959:976959 [3] NCCL INFO cudaDriverVersion 12050
+6: l50009:976958:976958 [2] NCCL INFO cudaDriverVersion 12050
+5: l50009:976957:976957 [1] NCCL INFO cudaDriverVersion 12050
+4: l50009:976956:976956 [0] NCCL INFO cudaDriverVersion 12050
+7: l50009:976959:976959 [3] NCCL INFO Bootstrap : Using ib0:10.128.11.112<0>
+6: l50009:976958:976958 [2] NCCL INFO Bootstrap : Using ib0:10.128.11.112<0>
+5: l50009:976957:976957 [1] NCCL INFO Bootstrap : Using ib0:10.128.11.112<0>
+4: l50009:976956:976956 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.112<0>
+5: l50009:976957:976957 [1] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+4: l50009:976956:976956 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+5: l50009:976957:976957 [1] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+5: l50009:976957:976957 [1] NCCL INFO NET/Plugin: Using internal network plugin.
+4: l50009:976956:976956 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+4: l50009:976956:976956 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+6: l50009:976958:976958 [2] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+6: l50009:976958:976958 [2] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+7: l50009:976959:976959 [3] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+7: l50009:976959:976959 [3] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+7: l50009:976959:976959 [3] NCCL INFO NET/Plugin: Using internal network plugin.
+6: l50009:976958:976958 [2] NCCL INFO NET/Plugin: Using internal network plugin.
+7: l50009:976959:977281 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.112<0>
+7: l50009:976959:977281 [3] NCCL INFO Using non-device net plugin version 0
+7: l50009:976959:977281 [3] NCCL INFO Using network IB
+4: l50009:976956:977280 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.112<0>
+4: l50009:976956:977280 [0] NCCL INFO Using non-device net plugin version 0
+4: l50009:976956:977280 [0] NCCL INFO Using network IB
+6: l50009:976958:977282 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.112<0>
+6: l50009:976958:977282 [2] NCCL INFO Using non-device net plugin version 0
+6: l50009:976958:977282 [2] NCCL INFO Using network IB
+5: l50009:976957:977279 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.112<0>
+5: l50009:976957:977279 [1] NCCL INFO Using non-device net plugin version 0
+5: l50009:976957:977279 [1] NCCL INFO Using network IB
+1: l50006:3367348:3367810 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.110<0>
+1: l50006:3367348:3367810 [1] NCCL INFO Using non-device net plugin version 0
+1: l50006:3367348:3367810 [1] NCCL INFO Using network IB
+0: l50006:3367347:3367803 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.110<0>
+0: l50006:3367347:3367803 [0] NCCL INFO Using non-device net plugin version 0
+0: l50006:3367347:3367803 [0] NCCL INFO Using network IB
+3: l50006:3367350:3367811 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.110<0>
+3: l50006:3367350:3367811 [3] NCCL INFO Using non-device net plugin version 0
+3: l50006:3367350:3367811 [3] NCCL INFO Using network IB
+2: l50006:3367349:3367812 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.110<0>
+2: l50006:3367349:3367812 [2] NCCL INFO Using non-device net plugin version 0
+2: l50006:3367349:3367812 [2] NCCL INFO Using network IB
+3: l50006:3367350:3367811 [3] NCCL INFO ncclCommInitRank comm 0x55555ee255b0 rank 3 nranks 8 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd3b1d17356fe729 - Init START
+7: l50009:976959:977281 [3] NCCL INFO ncclCommInitRank comm 0x55555ee25860 rank 7 nranks 8 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd3b1d17356fe729 - Init START
+0: l50006:3367347:3367803 [0] NCCL INFO ncclCommInitRank comm 0x55555f269340 rank 0 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdd3b1d17356fe729 - Init START
+2: l50006:3367349:3367812 [2] NCCL INFO ncclCommInitRank comm 0x55555ee25870 rank 2 nranks 8 cudaDev 2 nvmlDev 2 busId 84000 commId 0xdd3b1d17356fe729 - Init START
+4: l50009:976956:977280 [0] NCCL INFO ncclCommInitRank comm 0x55555ee25cd0 rank 4 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdd3b1d17356fe729 - Init START
+1: l50006:3367348:3367810 [1] NCCL INFO ncclCommInitRank comm 0x55555ee259b0 rank 1 nranks 8 cudaDev 1 nvmlDev 1 busId 44000 commId 0xdd3b1d17356fe729 - Init START
+6: l50009:976958:977282 [2] NCCL INFO ncclCommInitRank comm 0x55555ee25d60 rank 6 nranks 8 cudaDev 2 nvmlDev 2 busId 84000 commId 0xdd3b1d17356fe729 - Init START
+5: l50009:976957:977279 [1] NCCL INFO ncclCommInitRank comm 0x55555ee25f10 rank 5 nranks 8 cudaDev 1 nvmlDev 1 busId 44000 commId 0xdd3b1d17356fe729 - Init START
+2: l50006:3367349:3367812 [2] NCCL INFO NVLS multicast support is not available on dev 2
+3: l50006:3367350:3367811 [3] NCCL INFO NVLS multicast support is not available on dev 3
+1: l50006:3367348:3367810 [1] NCCL INFO NVLS multicast support is not available on dev 1
+0: l50006:3367347:3367803 [0] NCCL INFO NVLS multicast support is not available on dev 0
+4: l50009:976956:977280 [0] NCCL INFO NVLS multicast support is not available on dev 0
+5: l50009:976957:977279 [1] NCCL INFO NVLS multicast support is not available on dev 1
+6: l50009:976958:977282 [2] NCCL INFO NVLS multicast support is not available on dev 2
+7: l50009:976959:977281 [3] NCCL INFO NVLS multicast support is not available on dev 3
+6: l50009:976958:977282 [2] NCCL INFO comm 0x55555ee25d60 rank 6 nRanks 8 nNodes 2 localRanks 4 localRank 2 MNNVL 0
+7: l50009:976959:977281 [3] NCCL INFO comm 0x55555ee25860 rank 7 nRanks 8 nNodes 2 localRanks 4 localRank 3 MNNVL 0
+7: l50009:976959:977281 [3] NCCL INFO Trees [0] 4/-1/-1->7->6 [1] -1/-1/-1->7->5 [2] 4/-1/-1->7->6 [3] -1/-1/-1->7->5
+7: l50009:976959:977281 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50006:3367347:3367803 [0] NCCL INFO comm 0x55555f269340 rank 0 nRanks 8 nNodes 2 localRanks 4 localRank 0 MNNVL 0
+4: l50009:976956:977280 [0] NCCL INFO comm 0x55555ee25cd0 rank 4 nRanks 8 nNodes 2 localRanks 4 localRank 0 MNNVL 0
+1: l50006:3367348:3367810 [1] NCCL INFO comm 0x55555ee259b0 rank 1 nRanks 8 nNodes 2 localRanks 4 localRank 1 MNNVL 0
+6: l50009:976958:977282 [2] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 4/-1/-1->6->2 [2] 7/-1/-1->6->5 [3] 4/2/-1->6->-1
+6: l50009:976958:977282 [2] NCCL INFO P2P Chunksize set to 131072
+2: l50006:3367349:3367812 [2] NCCL INFO comm 0x55555ee25870 rank 2 nRanks 8 nNodes 2 localRanks 4 localRank 2 MNNVL 0
+4: l50009:976956:977280 [0] NCCL INFO Trees [0] -1/-1/-1->4->7 [1] 5/-1/-1->4->6 [2] -1/-1/-1->4->7 [3] 5/-1/-1->4->6
+4: l50009:976956:977280 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 00/04 :    0   3   2   5   4   7   6   1
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 01/04 :    0   3   6   5   4   7   2   1
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 02/04 :    0   3   2   5   4   7   6   1
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 03/04 :    0   3   6   5   4   7   2   1
+0: l50006:3367347:3367803 [0] NCCL INFO Trees [0] -1/-1/-1->0->3 [1] 1/-1/-1->0->2 [2] -1/-1/-1->0->3 [3] 1/-1/-1->0->2
+0: l50006:3367347:3367803 [0] NCCL INFO P2P Chunksize set to 131072
+5: l50009:976957:977279 [1] NCCL INFO comm 0x55555ee25f10 rank 5 nRanks 8 nNodes 2 localRanks 4 localRank 1 MNNVL 0
+3: l50006:3367350:3367811 [3] NCCL INFO comm 0x55555ee255b0 rank 3 nRanks 8 nNodes 2 localRanks 4 localRank 3 MNNVL 0
+3: l50006:3367350:3367811 [3] NCCL INFO Trees [0] 0/-1/-1->3->2 [1] -1/-1/-1->3->1 [2] 0/-1/-1->3->2 [3] -1/-1/-1->3->1
+3: l50006:3367350:3367811 [3] NCCL INFO P2P Chunksize set to 131072
+5: l50009:976957:977279 [1] NCCL INFO Trees [0] 6/-1/-1->5->1 [1] 7/-1/-1->5->4 [2] 6/1/-1->5->-1 [3] 7/-1/-1->5->4
+5: l50009:976957:977279 [1] NCCL INFO P2P Chunksize set to 131072
+1: l50006:3367348:3367810 [1] NCCL INFO Trees [0] 2/5/-1->1->-1 [1] 3/-1/-1->1->0 [2] 2/-1/-1->1->5 [3] 3/-1/-1->1->0
+1: l50006:3367348:3367810 [1] NCCL INFO P2P Chunksize set to 131072
+2: l50006:3367349:3367812 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 0/6/-1->2->-1 [2] 3/-1/-1->2->1 [3] 0/-1/-1->2->6
+2: l50006:3367349:3367812 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 00/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 00/0 : 4[0] -> 7[3] via P2P/CUMEM/read
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 01/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 02/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 01/0 : 4[0] -> 7[3] via P2P/CUMEM/read
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 03/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 02/0 : 4[0] -> 7[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 03/0 : 4[0] -> 7[3] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 00/0 : 6[2] -> 1[1] [receive] via NET/IB/0/GDRDMA
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 02/0 : 6[2] -> 1[1] [receive] via NET/IB/0/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 01/0 : 7[3] -> 2[2] [receive] via NET/IB/1/GDRDMA
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 01/0 : 3[3] -> 6[2] [send] via NET/IB/1(2)/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 03/0 : 7[3] -> 2[2] [receive] via NET/IB/1/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 01/0 : 3[3] -> 6[2] [receive] via NET/IB/1/GDRDMA
+7: l50009:976959:977281 [3] NCCL INFO Channel 01/0 : 7[3] -> 2[2] [send] via NET/IB/1(6)/GDRDMA
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 03/0 : 3[3] -> 6[2] [send] via NET/IB/1(2)/GDRDMA
+5: l50009:976957:977279 [1] NCCL INFO Channel 00/0 : 2[2] -> 5[1] [receive] via NET/IB/0/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 03/0 : 3[3] -> 6[2] [receive] via NET/IB/1/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 00/0 : 2[2] -> 5[1] [send] via NET/IB/0(1)/GDRDMA
+7: l50009:976959:977281 [3] NCCL INFO Channel 03/0 : 7[3] -> 2[2] [send] via NET/IB/1(6)/GDRDMA
+5: l50009:976957:977279 [1] NCCL INFO Channel 02/0 : 2[2] -> 5[1] [receive] via NET/IB/0/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 00/0 : 6[2] -> 1[1] [send] via NET/IB/0(5)/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 02/0 : 2[2] -> 5[1] [send] via NET/IB/0(1)/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 02/0 : 6[2] -> 1[1] [send] via NET/IB/0(5)/GDRDMA
+7: l50009:976959:977281 [3] NCCL INFO Channel 00/0 : 7[3] -> 6[2] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+7: l50009:976959:977281 [3] NCCL INFO Channel 02/0 : 7[3] -> 6[2] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 00/0 : 5[1] -> 4[0] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 01/0 : 6[2] -> 5[1] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 03/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 01/0 : 5[1] -> 4[0] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 03/0 : 6[2] -> 5[1] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 02/0 : 5[1] -> 4[0] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 03/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 03/0 : 5[1] -> 4[0] via P2P/CUMEM/read
+1: l50006:3367348:3367822 [1] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+1: l50006:3367348:3367822 [1] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+5: l50009:976957:977295 [1] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+5: l50009:976957:977295 [1] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+2: l50006:3367349:3367824 [2] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+2: l50006:3367349:3367824 [2] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+6: l50009:976958:977291 [2] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+6: l50009:976958:977291 [2] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+4: l50009:976956:977280 [0] NCCL INFO Connected all rings
+4: l50009:976956:977280 [0] NCCL INFO Channel 01/0 : 4[0] -> 5[1] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Connected all rings
+6: l50009:976958:977282 [2] NCCL INFO Connected all rings
+7: l50009:976959:977281 [3] NCCL INFO Connected all rings
+4: l50009:976956:977280 [0] NCCL INFO Channel 03/0 : 4[0] -> 5[1] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 00/0 : 5[1] -> 6[2] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 00/0 : 6[2] -> 7[3] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 02/0 : 5[1] -> 6[2] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 02/0 : 6[2] -> 7[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 01/0 : 4[0] -> 6[2] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 01/0 : 5[1] -> 7[3] via P2P/CUMEM/read
+4: l50009:976956:977280 [0] NCCL INFO Channel 03/0 : 4[0] -> 6[2] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 03/0 : 5[1] -> 7[3] via P2P/CUMEM/read
+7: l50009:976959:977281 [3] NCCL INFO Channel 00/0 : 7[3] -> 4[0] via P2P/CUMEM/read
+5: l50009:976957:977279 [1] NCCL INFO Channel 00/0 : 1[1] -> 5[1] [receive] via NET/IB/0/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 01/0 : 2[2] -> 6[2] [receive] via NET/IB/1/GDRDMA
+5: l50009:976957:977279 [1] NCCL INFO Channel 02/0 : 1[1] -> 5[1] [receive] via NET/IB/0/GDRDMA
+5: l50009:976957:977279 [1] NCCL INFO Channel 00/0 : 5[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 03/0 : 2[2] -> 6[2] [receive] via NET/IB/1/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 01/0 : 6[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+5: l50009:976957:977279 [1] NCCL INFO Channel 02/0 : 5[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+6: l50009:976958:977282 [2] NCCL INFO Channel 03/0 : 6[2] -> 2[2] [send] via NET/IB/1/GDRDMA
+7: l50009:976959:977281 [3] NCCL INFO Channel 02/0 : 7[3] -> 4[0] via P2P/CUMEM/read
+7: l50009:976959:977281 [3] NCCL INFO Channel 01/0 : 7[3] -> 5[1] via P2P/CUMEM/read
+7: l50009:976959:977281 [3] NCCL INFO Channel 03/0 : 7[3] -> 5[1] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Connected all rings
+3: l50006:3367350:3367811 [3] NCCL INFO Connected all rings
+0: l50006:3367347:3367803 [0] NCCL INFO Connected all rings
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Connected all rings
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 02/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 02/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+0: l50006:3367347:3367803 [0] NCCL INFO Channel 03/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 01/0 : 6[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 00/0 : 5[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 03/0 : 6[2] -> 2[2] [receive] via NET/IB/1/GDRDMA
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 02/0 : 5[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 01/0 : 2[2] -> 6[2] [send] via NET/IB/1/GDRDMA
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 00/0 : 1[1] -> 5[1] [send] via NET/IB/0/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 03/0 : 2[2] -> 6[2] [send] via NET/IB/1/GDRDMA
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 02/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+1: l50006:3367348:3367810 [1] NCCL INFO Channel 02/0 : 1[1] -> 5[1] [send] via NET/IB/0/GDRDMA
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 01/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 01/0 : 6[2] -> 4[0] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 03/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 01/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 03/0 : 6[2] -> 4[0] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 00/0 : 6[2] -> 5[1] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Channel 03/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+2: l50006:3367349:3367812 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+6: l50009:976958:977282 [2] NCCL INFO Channel 02/0 : 6[2] -> 5[1] via P2P/CUMEM/read
+3: l50006:3367350:3367811 [3] NCCL INFO Connected all trees
+3: l50006:3367350:3367811 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+3: l50006:3367350:3367811 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+4: l50009:976956:977280 [0] NCCL INFO Connected all trees
+0: l50006:3367347:3367803 [0] NCCL INFO Connected all trees
+4: l50009:976956:977280 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+4: l50009:976956:977280 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+0: l50006:3367347:3367803 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+0: l50006:3367347:3367803 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50006:3367348:3367810 [1] NCCL INFO Connected all trees
+2: l50006:3367349:3367812 [2] NCCL INFO Connected all trees
+2: l50006:3367349:3367812 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+2: l50006:3367349:3367812 [2] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+7: l50009:976959:977281 [3] NCCL INFO Connected all trees
+7: l50009:976959:977281 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+1: l50006:3367348:3367810 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+1: l50006:3367348:3367810 [1] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+7: l50009:976959:977281 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+5: l50009:976957:977279 [1] NCCL INFO Connected all trees
+6: l50009:976958:977282 [2] NCCL INFO Connected all trees
+6: l50009:976958:977282 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+6: l50009:976958:977282 [2] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+5: l50009:976957:977279 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+5: l50009:976957:977279 [1] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+0: l50006:3367347:3367803 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50006:3367347:3367803 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50006:3367347:3367803 [0] NCCL INFO ncclCommInitRank comm 0x55555f269340 rank 0 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+1: l50006:3367348:3367810 [1] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+1: l50006:3367348:3367810 [1] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+2: l50006:3367349:3367812 [2] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+2: l50006:3367349:3367812 [2] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+2: l50006:3367349:3367812 [2] NCCL INFO ncclCommInitRank comm 0x55555ee25870 rank 2 nranks 8 cudaDev 2 nvmlDev 2 busId 84000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+3: l50006:3367350:3367811 [3] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+3: l50006:3367350:3367811 [3] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+3: l50006:3367350:3367811 [3] NCCL INFO ncclCommInitRank comm 0x55555ee255b0 rank 3 nranks 8 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+1: l50006:3367348:3367810 [1] NCCL INFO ncclCommInitRank comm 0x55555ee259b0 rank 1 nranks 8 cudaDev 1 nvmlDev 1 busId 44000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+4: l50009:976956:977280 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+4: l50009:976956:977280 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+4: l50009:976956:977280 [0] NCCL INFO ncclCommInitRank comm 0x55555ee25cd0 rank 4 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+5: l50009:976957:977279 [1] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+5: l50009:976957:977279 [1] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+5: l50009:976957:977279 [1] NCCL INFO ncclCommInitRank comm 0x55555ee25f10 rank 5 nranks 8 cudaDev 1 nvmlDev 1 busId 44000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+7: l50009:976959:977281 [3] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+7: l50009:976959:977281 [3] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+7: l50009:976959:977281 [3] NCCL INFO ncclCommInitRank comm 0x55555ee25860 rank 7 nranks 8 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+6: l50009:976958:977282 [2] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+6: l50009:976958:977282 [2] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+6: l50009:976958:977282 [2] NCCL INFO ncclCommInitRank comm 0x55555ee25d60 rank 6 nranks 8 cudaDev 2 nvmlDev 2 busId 84000 commId 0xdd3b1d17356fe729 - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 8
+0: fields : [['velocity_u', [1, 2048, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 2048, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 2048, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 6, 12], [3, 9, 9], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1536, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1536, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]]]
+0: fields_prediction : [['velocity_u', 0.3], ['velocity_v', 0.3], ['specific_humidity', 0.15], ['velocity_z', 0.025], ['temperature', 0.2], ['total_precip', 0.025]]
+0: fields_targets : ['total_precip']
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[0.0, 360.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17701047
+0: wandb_id : gvgkwue4
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: sparse_target : False
+0: sparse_target_field : total_precip
+0: sparse_target_sparsity : 0.9
+0: years_test : [2021]
+7: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+4: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+5: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+6: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+2: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+3: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+2: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+2: self.lats : (721,)
+2: self.lons : (1440,)
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+4: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+4: self.lats : (721,)
+4: self.lons : (1440,)
+3: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+3: self.lats : (721,)
+3: self.lons : (1440,)
+5: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+5: self.lats : (721,)
+5: self.lons : (1440,)
+0: self.lons : (1440,)
+6: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+6: self.lats : (721,)
+6: self.lons : (1440,)
+7: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+7: self.lats : (721,)
+7: self.lons : (1440,)
+4: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+6: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+7: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+5: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+2: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+3: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+7: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+7: self.lats : (721,)
+7: self.lons : (1440,)
+4: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+4: self.lats : (721,)
+4: self.lons : (1440,)
+5: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+5: self.lats : (721,)
+5: self.lons : (1440,)
+6: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+6: self.lats : (721,)
+6: self.lons : (1440,)
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+2: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+2: self.lats : (721,)
+2: self.lons : (1440,)
+3: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+3: self.lats : (721,)
+3: self.lons : (1440,)
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+7: ['cuda:3'] 0
+0: ['cuda:0'] 0
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+2: ['cuda:2'] 0
+1: ['cuda:1'] 0
+7: ['cuda:3'] 0
+0: ['cuda:0'] 0
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+2: ['cuda:2'] 0
+7: ['cuda:3'] 0
+1: ['cuda:1'] 0
+0: ['cuda:0'] 0
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+2: ['cuda:2'] 0
+1: ['cuda:1'] 0
+7: ['cuda:3'] 0
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+0: ['cuda:0'] 0
+7: ['cuda:3'] 0
+0: ['cuda:0'] 0
+4: ['cuda:0'] 0
+5: ['cuda:1'] 0
+6: ['cuda:2'] 0
+3: ['cuda:3'] 0
+7: ['cuda:3'] 0
+2: ['cuda:2'] 0
+1: ['cuda:1'] 0
+0: ['cuda:0'] 0
+2: ['cuda:2'] 0
+1: ['cuda:1'] 0
+2: ['cuda:2'] 0
+1: ['cuda:1'] 0
+3: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+3: -> raise RuntimeError(
+0: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+0: -> raise RuntimeError(
+3: (Pdb) 
+0: (Pdb) 
+7: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+7: -> raise RuntimeError(
+4: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+4: -> raise RuntimeError(
+4: (Pdb) 
+7: (Pdb) 
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250617_185858-gvgkwue4[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250617_185858-gvgkwue4/logs[0m
+5: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+5: -> raise RuntimeError(
+5: (Pdb) 
+6: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+6: -> raise RuntimeError(
+6: (Pdb) 
+1: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+1: -> raise RuntimeError(
+1: (Pdb) 
+2: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/nn/modules/module.py(2584)load_state_dict()
+2: -> raise RuntimeError(
+2: (Pdb) 
+0: l50006:3367347:3367821 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+1: l50006:3367348:3367822 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+2: l50006:3367349:3367824 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+4: l50009:976956:977292 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+5: l50009:976957:977295 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+5: l50009:976957:977295 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+3: l50006:3367350:3367823 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+6: l50009:976958:977291 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+7: l50009:976959:977293 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+1: l50006:3367348:3367822 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+2: l50006:3367349:3367824 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+6: l50009:976958:977291 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+5: l50009:976957:977295 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+6: l50009:976958:977291 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+5: l50009:976957:977295 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+6: l50009:976958:977291 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+1: l50006:3367348:3367822 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+2: l50006:3367349:3367824 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+1: l50006:3367348:3367822 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+2: l50006:3367349:3367824 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+1: l50006:3367348:3368020 [1] NCCL INFO comm 0x55555ee259b0 rank 1 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+6: l50009:976958:977453 [2] NCCL INFO comm 0x55555ee25d60 rank 6 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE
+4: l50009:976956:977451 [0] NCCL INFO comm 0x55555ee25cd0 rank 4 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE
+0: l50006:3367347:3368018 [0] NCCL INFO comm 0x55555f269340 rank 0 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE
+7: l50009:976959:977452 [3] NCCL INFO comm 0x55555ee25860 rank 7 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+3: l50006:3367350:3368019 [3] NCCL INFO comm 0x55555ee255b0 rank 3 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+5: l50009:976957:977454 [1] NCCL INFO comm 0x55555ee25f10 rank 5 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+2: l50006:3367349:3368021 [2] NCCL INFO comm 0x55555ee25870 rank 2 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE

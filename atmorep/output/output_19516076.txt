@@ -1,0 +1,375 @@
+0: Wandb run: atmorep-k02p60gv-19516076
+0: l50081:3568546:3568546 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.160<0>
+0: l50081:3568546:3568546 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50081:3568546:3568546 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50081:3568546:3568546 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50081:3568546:3568546 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+0: l50081:3568546:3568948 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.160<0>
+0: l50081:3568546:3568948 [0] NCCL INFO Using non-device net plugin version 0
+0: l50081:3568546:3568948 [0] NCCL INFO Using network IB
+0: l50081:3568546:3568948 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l50081:3568546:3568948 [0] NCCL INFO ncclCommInitRank comm 0x55555f104e10 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x11097adfe3e4222a - Init START
+0: l50081:3568546:3568948 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+0: l50081:3568546:3568948 [0] NCCL INFO comm 0x55555f104e10 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 00/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 01/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 02/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 03/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 04/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 05/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 06/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 07/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 08/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 09/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 10/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 11/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 12/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 13/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 14/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 15/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 16/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 17/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 18/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 19/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 20/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 21/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 22/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 23/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 24/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 25/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 26/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 27/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 28/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 29/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 30/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Channel 31/32 :    0
+0: l50081:3568546:3568948 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50081:3568546:3568948 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50081:3568546:3568948 [0] NCCL INFO Connected all rings
+0: l50081:3568546:3568948 [0] NCCL INFO Connected all trees
+0: l50081:3568546:3568948 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50081:3568546:3568948 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50081:3568546:3568948 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50081:3568546:3568948 [0] NCCL INFO ncclCommInitRank comm 0x55555f104e10 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x11097adfe3e4222a - Init COMPLETE
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = zxipahjj
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = zxipahjj.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 12
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19516076
+0: wandb_id : k02p60gv
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : zxipahjj
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2021, 9, 26, 12]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [266.59534 266.59445 266.59348 266.59238 266.5915  266.5908  266.5901
+0:  266.58923 266.5882  266.58722 266.58627 266.58536 266.5846  266.58408
+0:  266.58383 266.58368 266.5835  266.58334 266.58322 266.58304]
+0: Target values (first 20):
+0: [262.54388 262.54468 262.54312 262.54077 262.53824 262.53525 262.5327
+0:  262.5311  262.52728 262.52032 262.51917 262.51947 262.52084 262.52203
+0:  262.52316 262.52536 262.5295  262.53516 262.5428  262.55096]
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 0
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([16, 2187])
+0:          min = -1.196, max = 0.633, mean = -0.221
+0:          sample (first 20): tensor([-0.9328, -0.9153, -0.9347, -0.9234, -0.8899, -0.8671, -0.8925, -0.9556, -0.9015, -0.9246, -0.9770, -0.8638,
+0:         -0.8510, -0.8676, -0.9106, -0.8628, -0.9459, -0.9091, -0.9358, -0.9312])
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 1
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 2
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 3
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 4
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 5
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 6
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 7
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 8
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 9
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 10
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 11
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 12
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 13
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 14
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 15
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 16
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 17
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 18
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 19
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 20
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 21
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 22
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 23
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 24
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 25
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 26
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 27
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 28
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 29
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 30
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 31
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 32
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 33
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 34
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 35
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 36
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 37
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 38
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 39
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 40
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 41
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 42
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 43
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 44
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 45
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 46
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 47
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 48
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 49
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 50
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 51
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 52
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 53
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 54
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 55
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 56
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 57
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 58
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 59
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 60
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 61
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 62
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 63
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 64
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 65
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 66
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 67
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 68
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 69
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 70
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 71
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 72
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 73
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 74
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 75
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 76
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 77
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 78
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 79
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 80
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 81
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 82
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 83
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 84
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 85
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 86
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 87
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 88
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 89
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 90
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 91
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 92
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 93
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 94
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 95
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 96
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 97
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 98
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 99
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 100
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 101
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 102
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 103
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 104
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 105
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 106
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 107
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 108
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 109
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 110
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 111
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 112
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 113
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 114
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 115
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 116
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 117
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 118
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 119
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 120
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 121
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 122
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 123
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 124
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 125
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 126
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 127
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 128
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 129
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 130
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 131
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 132
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 133
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 134
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 135
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 136
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 137
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 138
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 139
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 140
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 141
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 142
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 143
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 144
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 145
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 146
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 147
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 148
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 149
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 150
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 151
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 152
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 153
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 154
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 155
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 156
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 157
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 158
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 159
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 160
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 161
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 162
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 163
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 164
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 165
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 166
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 167
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 168
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 169
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 170
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 171
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 172
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 173
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 174
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 175
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 176
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 177
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 178
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 179
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 180
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 181
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 182
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 183
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 184
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 185
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 186
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 187
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 188
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 189
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 190
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 191
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 192
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 193
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 194
+0: validation forecast for strategy=global_forecast at epoch 0 : batch 195
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.029382076114416122
+0: validation loss for velocity_v : 0.05580716207623482
+0: validation loss for specific_humidity : 0.022052062675356865
+0: validation loss for velocity_z : 0.41706645488739014
+0: validation loss for temperature : 0.07333415001630783
+0: validation loss for total_precip : 0.635258138179779
+0: validation loss for t2m : 0.2972334027290344
+0: validation loss for corrected_t2m : nan
+0: time 384.98237800598145
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250909_062911-k02p60gv[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250909_062911-k02p60gv/logs[0m
+0: l50081:3568546:3568951 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50081:3568546:3570219 [0] NCCL INFO comm 0x55555f104e10 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

@@ -1,0 +1,860 @@
+0: FNAME HERE: /work/ab1412/atmorep/atmorep/config/../../models/idwc5e2i3t/model_idwc5e2i3t.json
+0: Field configuration:
+0: Number of fields: 6
+0: Fields: ['velocity_u', 'velocity_v', 'specific_humidity', 'velocity_z', 'temperature', 'total_precip']
+0: Coupling heads per field: 1
+0: Wandb run: atmorep-mgc2kbr7-16441376
+0: l50030:1113221:1113221 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.126<0>
+0: l50030:1113221:1113221 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50030:1113221:1113221 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50030:1113221:1113221 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50030:1113221:1113221 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50030:1113221:1113470 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.126<0>
+0: l50030:1113221:1113470 [0] NCCL INFO Using non-device net plugin version 0
+0: l50030:1113221:1113470 [0] NCCL INFO Using network IB
+0: l50030:1113221:1113470 [0] NCCL INFO ncclCommInitRank comm 0x55555f268e30 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x14a405f148d05d4a - Init START
+0: l50030:1113221:1113470 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50030:1113221:1113470 [0] NCCL INFO comm 0x55555f268e30 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 00/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 01/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 02/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 03/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 04/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 05/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 06/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 07/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 08/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 09/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 10/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 11/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 12/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 13/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 14/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 15/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 16/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 17/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 18/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 19/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 20/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 21/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 22/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 23/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 24/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 25/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 26/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 27/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 28/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 29/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 30/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Channel 31/32 :    0
+0: l50030:1113221:1113470 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50030:1113221:1113470 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50030:1113221:1113470 [0] NCCL INFO Connected all rings
+0: l50030:1113221:1113470 [0] NCCL INFO Connected all trees
+0: l50030:1113221:1113470 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50030:1113221:1113470 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50030:1113221:1113470 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50030:1113221:1113470 [0] NCCL INFO ncclCommInitRank comm 0x55555f268e30 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x14a405f148d05d4a - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [1, 0.9, 0.1, 0.05]]]
+0: fields_prediction : [['velocity_u', 0.0], ['velocity_v', 0.0], ['specific_humidity', 0.0], ['velocity_z', 0.0], ['temperature', 0.0], ['total_precip', 1.0]]
+0: fields_targets : ['total_precip']
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
+0: years_val : [2020]
+0: month : None
+0: geo_range_sampling : [[70.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 50
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : forecast
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 16441376
+0: wandb_id : mgc2kbr7
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: years_test : [2020]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t at epoch = 0.
+0: Loaded run 'wc5e2i3t' at epoch 0.
+0: l50030:1113221:1113489 [1] NCCL INFO Using non-device net plugin version 0
+0: l50030:1113221:1113489 [1] NCCL INFO Using network IB
+0: l50030:1113221:1113489 [1] NCCL INFO ncclCommInitRank comm 0x5555a6f5c6a0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x1c0ea844ff504221 - Init START
+0: l50030:1113221:1113489 [1] NCCL INFO Setting affinity for GPU 1 to 0f0000,00000000,00000000,00000000,000f0000
+0: l50030:1113221:1113489 [1] NCCL INFO comm 0x5555a6f5c6a0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 00/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 01/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 02/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 03/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 04/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 05/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 06/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 07/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 08/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 09/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 10/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 11/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 12/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 13/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 14/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 15/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 16/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 17/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 18/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 19/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 20/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 21/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 22/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 23/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 24/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 25/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 26/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 27/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 28/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 29/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 30/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Channel 31/32 :    0
+0: l50030:1113221:1113489 [1] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50030:1113221:1113489 [1] NCCL INFO P2P Chunksize set to 131072
+0: l50030:1113221:1113489 [1] NCCL INFO Connected all rings
+0: l50030:1113221:1113489 [1] NCCL INFO Connected all trees
+0: l50030:1113221:1113489 [1] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50030:1113221:1113489 [1] NCCL INFO ncclCommInitRank comm 0x5555a6f5c6a0 rank 0 nranks 1 cudaDev 1 nvmlDev 1 busId 44000 commId 0x1c0ea844ff504221 - Init COMPLETE
+0: l50030:1113221:1113494 [2] NCCL INFO Using non-device net plugin version 0
+0: l50030:1113221:1113494 [2] NCCL INFO Using network IB
+0: l50030:1113221:1113494 [2] NCCL INFO ncclCommInitRank comm 0x55557ebe6ca0 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0xf6d93bcea0eff8c7 - Init START
+0: l50030:1113221:1113494 [2] NCCL INFO Setting affinity for GPU 2 to 1f0000,00000000,00000000,00000000,001f0000,00000000,00000000,00000000
+0: l50030:1113221:1113494 [2] NCCL INFO comm 0x55557ebe6ca0 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 00/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 01/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 02/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 03/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 04/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 05/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 06/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 07/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 08/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 09/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 10/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 11/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 12/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 13/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 14/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 15/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 16/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 17/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 18/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 19/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 20/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 21/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 22/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 23/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 24/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 25/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 26/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 27/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 28/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 29/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 30/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Channel 31/32 :    0
+0: l50030:1113221:1113494 [2] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50030:1113221:1113494 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50030:1113221:1113494 [2] NCCL INFO Connected all rings
+0: l50030:1113221:1113494 [2] NCCL INFO Connected all trees
+0: l50030:1113221:1113494 [2] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50030:1113221:1113494 [2] NCCL INFO ncclCommInitRank comm 0x55557ebe6ca0 rank 0 nranks 1 cudaDev 2 nvmlDev 2 busId 84000 commId 0xf6d93bcea0eff8c7 - Init COMPLETE
+0: l50030:1113221:1113499 [3] NCCL INFO Using non-device net plugin version 0
+0: l50030:1113221:1113499 [3] NCCL INFO Using network IB
+0: l50030:1113221:1113499 [3] NCCL INFO ncclCommInitRank comm 0x5555877b5b80 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd77ae8e77b3b65c - Init START
+0: l50030:1113221:1113499 [3] NCCL INFO Setting affinity for GPU 3 to 0f0000,00000000,00000000,00000000,000f0000,00000000,00000000
+0: l50030:1113221:1113499 [3] NCCL INFO comm 0x5555877b5b80 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 00/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 01/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 02/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 03/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 04/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 05/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 06/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 07/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 08/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 09/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 10/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 11/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 12/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 13/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 14/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 15/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 16/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 17/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 18/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 19/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 20/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 21/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 22/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 23/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 24/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 25/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 26/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 27/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 28/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 29/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 30/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Channel 31/32 :    0
+0: l50030:1113221:1113499 [3] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50030:1113221:1113499 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50030:1113221:1113499 [3] NCCL INFO Connected all rings
+0: l50030:1113221:1113499 [3] NCCL INFO Connected all trees
+0: l50030:1113221:1113499 [3] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50030:1113221:1113499 [3] NCCL INFO ncclCommInitRank comm 0x5555877b5b80 rank 0 nranks 1 cudaDev 3 nvmlDev 3 busId c4000 commId 0xdd77ae8e77b3b65c - Init COMPLETE
+0: Number of trainable parameters: 741,136,272
+0: 2 : 19:14:59 :: batch_size = 96, lr = 2e-05
+0: epoch: 2 [1/5 (20%)]	Loss: 0.67340 : 0.25936 :: 0.14293 (2.52 s/sec)
+0: epoch: 2 [2/5 (40%)]	Loss: 0.59907 : 0.21354 :: 0.13722 (19.01 s/sec)
+0: epoch: 2 [3/5 (60%)]	Loss: 0.56002 : 0.21348 :: 0.14226 (18.44 s/sec)
+0: epoch: 2 [4/5 (80%)]	Loss: 0.53128 : 0.19685 :: 0.13811 (15.80 s/sec)
+0: validation loss for strategy=forecast at epoch 2 : 0.9557272791862488
+0: validation loss for velocity_u : 0.03845948725938797
+0: validation loss for velocity_v : 0.0836508646607399
+0: validation loss for specific_humidity : 0.02488039992749691
+0: validation loss for velocity_z : 0.5313606858253479
+0: validation loss for temperature : 0.09781486541032791
+0: validation loss for total_precip : 4.958197116851807
+0: 3 : 19:18:50 :: batch_size = 96, lr = 1.9512195121951222e-05
+0: epoch: 3 [1/5 (20%)]	Loss: 2.55701 : 0.80778 :: 0.14372 (2.27 s/sec)
+0: epoch: 3 [2/5 (40%)]	Loss: 2.61527 : 0.80182 :: 0.13072 (19.43 s/sec)
+0: epoch: 3 [3/5 (60%)]	Loss: 3.02352 : 0.95532 :: 0.14053 (19.20 s/sec)
+0: epoch: 3 [4/5 (80%)]	Loss: 2.77580 : 0.87330 :: 0.14172 (18.93 s/sec)
+0: validation loss for strategy=forecast at epoch 3 : 0.8198692798614502
+0: validation loss for velocity_u : 0.04057872295379639
+0: validation loss for velocity_v : 0.1078910306096077
+0: validation loss for specific_humidity : 0.022797217592597008
+0: validation loss for velocity_z : 0.4658963978290558
+0: validation loss for temperature : 0.07161848247051239
+0: validation loss for total_precip : 4.2104315757751465
+0: 4 : 19:22:57 :: batch_size = 96, lr = 1.903628792385485e-05
+0: epoch: 4 [1/5 (20%)]	Loss: 1.71353 : 0.52245 :: 0.13962 (3.12 s/sec)
+0: epoch: 4 [2/5 (40%)]	Loss: 1.05765 : 0.37189 :: 0.13897 (19.38 s/sec)
+0: epoch: 4 [3/5 (60%)]	Loss: 1.28742 : 0.52061 :: 0.14124 (19.13 s/sec)
+0: epoch: 4 [4/5 (80%)]	Loss: 0.92823 : 0.36739 :: 0.12638 (18.81 s/sec)
+0: validation loss for strategy=forecast at epoch 4 : 0.43750113248825073
+0: validation loss for velocity_u : 0.19906486570835114
+0: validation loss for velocity_v : 0.5721734166145325
+0: validation loss for specific_humidity : 0.23002386093139648
+0: validation loss for velocity_z : 0.5402281880378723
+0: validation loss for temperature : 0.11300749331712723
+0: validation loss for total_precip : 0.970508873462677
+0: 5 : 19:26:47 :: batch_size = 96, lr = 1.857198821839498e-05
+0: epoch: 5 [1/5 (20%)]	Loss: 1.10702 : 0.56029 :: 0.15082 (2.42 s/sec)
+0: epoch: 5 [2/5 (40%)]	Loss: 1.01929 : 0.54256 :: 0.15279 (19.49 s/sec)
+0: epoch: 5 [3/5 (60%)]	Loss: 0.85850 : 0.54255 :: 0.15932 (18.80 s/sec)
+0: epoch: 5 [4/5 (80%)]	Loss: 1.05856 : 0.67052 :: 0.15157 (18.93 s/sec)
+0: validation loss for strategy=forecast at epoch 5 : 0.631381630897522
+0: validation loss for velocity_u : 0.3168952763080597
+0: validation loss for velocity_v : 0.7526193261146545
+0: validation loss for specific_humidity : 0.4781883656978607
+0: validation loss for velocity_z : 0.634098470211029
+0: validation loss for temperature : 0.24942494928836823
+0: validation loss for total_precip : 1.357062816619873
+0: 6 : 19:30:39 :: batch_size = 96, lr = 1.8119012895995104e-05
+0: epoch: 6 [1/5 (20%)]	Loss: 0.84925 : 0.58441 :: 0.15872 (2.67 s/sec)
+0: epoch: 6 [2/5 (40%)]	Loss: 0.90498 : 0.63190 :: 0.16447 (19.78 s/sec)
+0: epoch: 6 [3/5 (60%)]	Loss: 0.95024 : 0.67329 :: 0.16940 (18.94 s/sec)
+0: epoch: 6 [4/5 (80%)]	Loss: 0.73718 : 0.69265 :: 0.16172 (18.83 s/sec)
+0: validation loss for strategy=forecast at epoch 6 : 0.5671555399894714
+0: validation loss for velocity_u : 0.341173380613327
+0: validation loss for velocity_v : 0.6945999264717102
+0: validation loss for specific_humidity : 0.6088468432426453
+0: validation loss for velocity_z : 0.5335987210273743
+0: validation loss for temperature : 0.29949358105659485
+0: validation loss for total_precip : 0.9252212047576904
+0: 7 : 19:34:28 :: batch_size = 96, lr = 1.7677085752190346e-05
+0: epoch: 7 [1/5 (20%)]	Loss: 0.72152 : 0.59167 :: 0.16501 (2.38 s/sec)
+0: epoch: 7 [2/5 (40%)]	Loss: 0.78161 : 0.59685 :: 0.18056 (19.62 s/sec)
+0: epoch: 7 [3/5 (60%)]	Loss: 1.06495 : 0.70369 :: 0.17690 (18.37 s/sec)
+0: epoch: 7 [4/5 (80%)]	Loss: 0.82672 : 0.61838 :: 0.17211 (18.89 s/sec)
+0: validation loss for strategy=forecast at epoch 7 : 0.628351092338562
+0: validation loss for velocity_u : 0.3665022552013397
+0: validation loss for velocity_v : 0.9929289221763611
+0: validation loss for specific_humidity : 0.5443232655525208
+0: validation loss for velocity_z : 0.5852519273757935
+0: validation loss for temperature : 0.2723068296909332
+0: validation loss for total_precip : 1.0087931156158447
+0: 8 : 19:38:20 :: batch_size = 96, lr = 1.7245937319210094e-05
+0: epoch: 8 [1/5 (20%)]	Loss: 0.69149 : 0.58939 :: 0.18189 (2.61 s/sec)
+0: epoch: 8 [2/5 (40%)]	Loss: 0.66709 : 0.61483 :: 0.18221 (19.64 s/sec)
+0: epoch: 8 [3/5 (60%)]	Loss: 0.69954 : 0.54888 :: 0.17132 (18.87 s/sec)
+0: epoch: 8 [4/5 (80%)]	Loss: 0.89600 : 0.69319 :: 0.18496 (18.94 s/sec)
+0: validation loss for strategy=forecast at epoch 8 : 0.6551739573478699
+0: validation loss for velocity_u : 0.39717140793800354
+0: validation loss for velocity_v : 0.7822720408439636
+0: validation loss for specific_humidity : 0.711506187915802
+0: validation loss for velocity_z : 0.618288516998291
+0: validation loss for temperature : 0.3050421178340912
+0: validation loss for total_precip : 1.1167625188827515
+0: 9 : 19:42:08 :: batch_size = 96, lr = 1.6825304701668386e-05
+0: epoch: 9 [1/5 (20%)]	Loss: 0.93237 : 0.69157 :: 0.18376 (2.62 s/sec)
+0: epoch: 9 [2/5 (40%)]	Loss: 1.01833 : 0.74561 :: 0.18769 (19.75 s/sec)
+0: epoch: 9 [3/5 (60%)]	Loss: 0.84074 : 0.65491 :: 0.18592 (18.88 s/sec)
+0: epoch: 9 [4/5 (80%)]	Loss: 0.92478 : 0.75413 :: 0.18986 (18.68 s/sec)
+0: validation loss for strategy=forecast at epoch 9 : 0.5523273348808289
+0: validation loss for velocity_u : 0.35107436776161194
+0: validation loss for velocity_v : 0.858041524887085
+0: validation loss for specific_humidity : 0.5406212210655212
+0: validation loss for velocity_z : 0.5988516211509705
+0: validation loss for temperature : 0.24478131532669067
+0: validation loss for total_precip : 0.7205929756164551
+0: 10 : 19:46:00 :: batch_size = 96, lr = 1.6414931416261842e-05
+0: epoch: 10 [1/5 (20%)]	Loss: 1.28379 : 0.89233 :: 0.18031 (2.36 s/sec)
+0: epoch: 10 [2/5 (40%)]	Loss: 0.81661 : 0.71624 :: 0.19299 (19.23 s/sec)
+0: epoch: 10 [3/5 (60%)]	Loss: 0.58195 : 0.55150 :: 0.19929 (18.79 s/sec)
+0: epoch: 10 [4/5 (80%)]	Loss: 0.55769 : 0.62510 :: 0.19098 (18.87 s/sec)
+0: validation loss for strategy=forecast at epoch 10 : 0.6411498785018921
+0: validation loss for velocity_u : 0.4185899496078491
+0: validation loss for velocity_v : 0.9163457751274109
+0: validation loss for specific_humidity : 0.6111848950386047
+0: validation loss for velocity_z : 0.7049453258514404
+0: validation loss for temperature : 0.2709357738494873
+0: validation loss for total_precip : 0.9248982071876526
+0: 11 : 19:49:54 :: batch_size = 96, lr = 1.601456723537741e-05
+0: epoch: 11 [1/5 (20%)]	Loss: 0.71494 : 0.58908 :: 0.18923 (2.73 s/sec)
+0: epoch: 11 [2/5 (40%)]	Loss: 0.80110 : 0.70639 :: 0.19588 (19.50 s/sec)
+0: epoch: 11 [3/5 (60%)]	Loss: 0.72663 : 0.61675 :: 0.19352 (19.06 s/sec)
+0: epoch: 11 [4/5 (80%)]	Loss: 0.74772 : 0.62630 :: 0.19410 (19.03 s/sec)
+0: validation loss for strategy=forecast at epoch 11 : 0.6011344194412231
+0: validation loss for velocity_u : 0.3627711236476898
+0: validation loss for velocity_v : 0.8272684216499329
+0: validation loss for specific_humidity : 0.6630253195762634
+0: validation loss for velocity_z : 0.6683235764503479
+0: validation loss for temperature : 0.2871242165565491
+0: validation loss for total_precip : 0.7982930541038513
+0: 12 : 19:53:46 :: batch_size = 96, lr = 1.5623968034514547e-05
+0: epoch: 12 [1/5 (20%)]	Loss: 0.62774 : 0.57427 :: 0.19205 (2.59 s/sec)
+0: epoch: 12 [2/5 (40%)]	Loss: 0.80566 : 0.71058 :: 0.19658 (19.92 s/sec)
+0: epoch: 12 [3/5 (60%)]	Loss: 0.61064 : 0.61291 :: 0.20045 (18.96 s/sec)
+0: epoch: 12 [4/5 (80%)]	Loss: 0.58949 : 0.54247 :: 0.19259 (19.17 s/sec)
+0: validation loss for strategy=forecast at epoch 12 : 0.5974186062812805
+0: validation loss for velocity_u : 0.37821462750434875
+0: validation loss for velocity_v : 0.8878452777862549
+0: validation loss for specific_humidity : 0.5864130854606628
+0: validation loss for velocity_z : 0.6698902249336243
+0: validation loss for temperature : 0.3004462420940399
+0: validation loss for total_precip : 0.7617032527923584
+0: 13 : 19:57:38 :: batch_size = 96, lr = 1.5242895643428828e-05
+0: epoch: 13 [1/5 (20%)]	Loss: 0.58314 : 0.60483 :: 0.18904 (2.41 s/sec)
+0: epoch: 13 [2/5 (40%)]	Loss: 0.67482 : 0.57237 :: 0.19924 (19.57 s/sec)
+0: epoch: 13 [3/5 (60%)]	Loss: 0.54939 : 0.54200 :: 0.19301 (19.13 s/sec)
+0: epoch: 13 [4/5 (80%)]	Loss: 0.86385 : 0.68103 :: 0.18984 (19.20 s/sec)
+0: validation loss for strategy=forecast at epoch 13 : 0.5794345140457153
+0: validation loss for velocity_u : 0.4407096803188324
+0: validation loss for velocity_v : 0.8965587019920349
+0: validation loss for specific_humidity : 0.668585479259491
+0: validation loss for velocity_z : 0.5592768788337708
+0: validation loss for temperature : 0.2768794596195221
+0: validation loss for total_precip : 0.6345975995063782
+0: 14 : 20:01:33 :: batch_size = 96, lr = 1.4871117700906175e-05
+0: epoch: 14 [1/5 (20%)]	Loss: 0.63426 : 0.57832 :: 0.19915 (2.62 s/sec)
+0: epoch: 14 [2/5 (40%)]	Loss: 0.62110 : 0.60414 :: 0.19391 (19.89 s/sec)
+0: epoch: 14 [3/5 (60%)]	Loss: 0.59764 : 0.62379 :: 0.19309 (19.49 s/sec)
+0: epoch: 14 [4/5 (80%)]	Loss: 0.74994 : 0.62300 :: 0.19557 (19.14 s/sec)
+0: validation loss for strategy=forecast at epoch 14 : 0.5868489742279053
+0: validation loss for velocity_u : 0.4424741268157959
+0: validation loss for velocity_v : 0.9140312671661377
+0: validation loss for specific_humidity : 0.5472725033760071
+0: validation loss for velocity_z : 0.6200329661369324
+0: validation loss for temperature : 0.3123188018798828
+0: validation loss for total_precip : 0.6849644184112549
+0: 15 : 20:05:22 :: batch_size = 96, lr = 1.4508407513079195e-05
+0: epoch: 15 [1/5 (20%)]	Loss: 0.62396 : 0.58772 :: 0.18879 (2.82 s/sec)
+0: epoch: 15 [2/5 (40%)]	Loss: 0.57155 : 0.60036 :: 0.19349 (19.61 s/sec)
+0: epoch: 15 [3/5 (60%)]	Loss: 0.74708 : 0.68157 :: 0.19225 (19.17 s/sec)
+0: epoch: 15 [4/5 (80%)]	Loss: 0.58307 : 0.52955 :: 0.19223 (18.46 s/sec)
+0: validation loss for strategy=forecast at epoch 15 : 0.5767691135406494
+0: validation loss for velocity_u : 0.41063162684440613
+0: validation loss for velocity_v : 0.835960865020752
+0: validation loss for specific_humidity : 0.6976131796836853
+0: validation loss for velocity_z : 0.5392889380455017
+0: validation loss for temperature : 0.23433411121368408
+0: validation loss for total_precip : 0.7427864670753479
+0: 16 : 20:09:14 :: batch_size = 96, lr = 1.4154543915199217e-05
+0: epoch: 16 [1/5 (20%)]	Loss: 0.59955 : 0.59224 :: 0.19362 (2.51 s/sec)
+0: epoch: 16 [2/5 (40%)]	Loss: 0.59237 : 0.56532 :: 0.19885 (19.25 s/sec)
+0: epoch: 16 [3/5 (60%)]	Loss: 0.55745 : 0.55276 :: 0.19071 (18.94 s/sec)
+0: epoch: 16 [4/5 (80%)]	Loss: 0.56798 : 0.56610 :: 0.19650 (18.73 s/sec)
+0: validation loss for strategy=forecast at epoch 16 : 0.6489190459251404
+0: validation loss for velocity_u : 0.4551413357257843
+0: validation loss for velocity_v : 0.9218712449073792
+0: validation loss for specific_humidity : 0.6657800078392029
+0: validation loss for velocity_z : 0.632696270942688
+0: validation loss for temperature : 0.28794172406196594
+0: validation loss for total_precip : 0.9300841689109802
+0: 17 : 20:13:05 :: batch_size = 96, lr = 1.3809311136779726e-05
+0: epoch: 17 [1/5 (20%)]	Loss: 0.56005 : 0.54227 :: 0.19304 (2.68 s/sec)
+0: epoch: 17 [2/5 (40%)]	Loss: 0.67151 : 0.60131 :: 0.20564 (19.58 s/sec)
+0: epoch: 17 [3/5 (60%)]	Loss: 0.78801 : 0.62467 :: 0.20851 (19.56 s/sec)
+0: epoch: 17 [4/5 (80%)]	Loss: 0.60560 : 0.53660 :: 0.18838 (18.98 s/sec)
+0: validation loss for strategy=forecast at epoch 17 : 0.6000828742980957
+0: validation loss for velocity_u : 0.3804161846637726
+0: validation loss for velocity_v : 0.805272102355957
+0: validation loss for specific_humidity : 0.7447871565818787
+0: validation loss for velocity_z : 0.563349187374115
+0: validation loss for temperature : 0.2705608308315277
+0: validation loss for total_precip : 0.836111843585968
+0: 18 : 20:16:53 :: batch_size = 96, lr = 1.3472498670029002e-05
+0: epoch: 18 [1/5 (20%)]	Loss: 0.57234 : 0.57146 :: 0.19685 (2.59 s/sec)
+0: epoch: 18 [2/5 (40%)]	Loss: 0.56285 : 0.61501 :: 0.19872 (19.79 s/sec)
+0: epoch: 18 [3/5 (60%)]	Loss: 0.73136 : 0.64086 :: 0.19164 (18.93 s/sec)
+0: epoch: 18 [4/5 (80%)]	Loss: 0.72034 : 0.66840 :: 0.19799 (18.40 s/sec)
+0: validation loss for strategy=forecast at epoch 18 : 0.5499756932258606
+0: validation loss for velocity_u : 0.4384731352329254
+0: validation loss for velocity_v : 0.8909227252006531
+0: validation loss for specific_humidity : 0.5105715394020081
+0: validation loss for velocity_z : 0.663036048412323
+0: validation loss for temperature : 0.22638894617557526
+0: validation loss for total_precip : 0.5704629421234131
+0: 19 : 20:20:45 :: batch_size = 96, lr = 1.3143901141491711e-05
+0: epoch: 19 [1/5 (20%)]	Loss: 0.58984 : 0.56905 :: 0.19585 (2.26 s/sec)
+0: epoch: 19 [2/5 (40%)]	Loss: 0.55177 : 0.58938 :: 0.19833 (19.18 s/sec)
+0: epoch: 19 [3/5 (60%)]	Loss: 0.65909 : 0.60814 :: 0.19900 (18.95 s/sec)
+0: epoch: 19 [4/5 (80%)]	Loss: 0.60788 : 0.56255 :: 0.19693 (19.27 s/sec)
+0: validation loss for strategy=forecast at epoch 19 : 0.6241543292999268
+0: validation loss for velocity_u : 0.42149582505226135
+0: validation loss for velocity_v : 0.81326824426651
+0: validation loss for specific_humidity : 0.6856296062469482
+0: validation loss for velocity_z : 0.7112721800804138
+0: validation loss for temperature : 0.24253906309604645
+0: validation loss for total_precip : 0.8707202076911926
+0: 20 : 20:24:42 :: batch_size = 96, lr = 1.2823318186821183e-05
+0: epoch: 20 [1/5 (20%)]	Loss: 0.60065 : 0.57596 :: 0.19452 (2.30 s/sec)
+0: epoch: 20 [2/5 (40%)]	Loss: 0.53587 : 0.51270 :: 0.20124 (19.41 s/sec)
+0: epoch: 20 [3/5 (60%)]	Loss: 0.67598 : 0.59585 :: 0.19669 (19.10 s/sec)
+0: epoch: 20 [4/5 (80%)]	Loss: 0.49781 : 0.57749 :: 0.19727 (18.93 s/sec)
+0: validation loss for strategy=forecast at epoch 20 : 0.54463791847229
+0: validation loss for velocity_u : 0.42000532150268555
+0: validation loss for velocity_v : 0.932889461517334
+0: validation loss for specific_humidity : 0.47899580001831055
+0: validation loss for velocity_z : 0.6164130568504333
+0: validation loss for temperature : 0.2494492381811142
+0: validation loss for total_precip : 0.5700758099555969
+0: 21 : 20:28:41 :: batch_size = 96, lr = 1.2510554328606033e-05
+0: epoch: 21 [1/5 (20%)]	Loss: 0.62895 : 0.63438 :: 0.19562 (2.51 s/sec)
+0: epoch: 21 [2/5 (40%)]	Loss: 0.68497 : 0.61336 :: 0.20302 (19.50 s/sec)
+0: epoch: 21 [3/5 (60%)]	Loss: 0.65165 : 0.58822 :: 0.19563 (18.96 s/sec)
+0: epoch: 21 [4/5 (80%)]	Loss: 0.56604 : 0.54200 :: 0.19870 (18.95 s/sec)
+0: validation loss for strategy=forecast at epoch 21 : 0.5871046185493469
+0: validation loss for velocity_u : 0.4911046326160431
+0: validation loss for velocity_v : 0.8379449248313904
+0: validation loss for specific_humidity : 0.5655539631843567
+0: validation loss for velocity_z : 0.6250557899475098
+0: validation loss for temperature : 0.2456919103860855
+0: validation loss for total_precip : 0.757276713848114
+0: 22 : 20:32:42 :: batch_size = 96, lr = 1.2205418857176618e-05
+0: epoch: 22 [1/5 (20%)]	Loss: 0.64471 : 0.65813 :: 0.20060 (2.42 s/sec)
+0: epoch: 22 [2/5 (40%)]	Loss: 0.40396 : 0.48467 :: 0.19774 (19.85 s/sec)
+0: epoch: 22 [3/5 (60%)]	Loss: 0.59861 : 0.60212 :: 0.19156 (19.33 s/sec)
+0: epoch: 22 [4/5 (80%)]	Loss: 0.56146 : 0.53867 :: 0.20123 (19.18 s/sec)
+0: validation loss for strategy=forecast at epoch 22 : 0.6185613870620728
+0: validation loss for velocity_u : 0.42444467544555664
+0: validation loss for velocity_v : 1.012808084487915
+0: validation loss for specific_humidity : 0.6107519865036011
+0: validation loss for velocity_z : 0.612791121006012
+0: validation loss for temperature : 0.22077947854995728
+0: validation loss for total_precip : 0.8297929763793945
+0: 23 : 20:36:43 :: batch_size = 96, lr = 1.1907725714318652e-05
+0: epoch: 23 [1/5 (20%)]	Loss: 0.53331 : 0.57686 :: 0.20149 (2.56 s/sec)
+0: epoch: 23 [2/5 (40%)]	Loss: 0.57239 : 0.54311 :: 0.19910 (19.42 s/sec)
+0: epoch: 23 [3/5 (60%)]	Loss: 0.60794 : 0.54968 :: 0.20140 (18.82 s/sec)
+0: epoch: 23 [4/5 (80%)]	Loss: 0.61735 : 0.56454 :: 0.19683 (19.47 s/sec)
+0: validation loss for strategy=forecast at epoch 23 : 0.5085476040840149
+0: validation loss for velocity_u : 0.4320378601551056
+0: validation loss for velocity_v : 0.8282595276832581
+0: validation loss for specific_humidity : 0.540440022945404
+0: validation loss for velocity_z : 0.5634799599647522
+0: validation loss for temperature : 0.2165326327085495
+0: validation loss for total_precip : 0.47053587436676025
+0: 24 : 20:40:35 :: batch_size = 96, lr = 1.1617293379823076e-05
+0: epoch: 24 [1/5 (20%)]	Loss: 0.65407 : 0.64085 :: 0.19817 (2.67 s/sec)
+0: epoch: 24 [2/5 (40%)]	Loss: 0.44534 : 0.46938 :: 0.19890 (18.94 s/sec)
+0: epoch: 24 [3/5 (60%)]	Loss: 0.62857 : 0.62456 :: 0.20082 (19.28 s/sec)
+0: epoch: 24 [4/5 (80%)]	Loss: 0.53357 : 0.53813 :: 0.20408 (19.17 s/sec)
+0: validation loss for strategy=forecast at epoch 24 : 0.5794690847396851
+0: validation loss for velocity_u : 0.44628360867500305
+0: validation loss for velocity_v : 0.7918230891227722
+0: validation loss for specific_humidity : 0.6197746992111206
+0: validation loss for velocity_z : 0.617709755897522
+0: validation loss for temperature : 0.22834110260009766
+0: validation loss for total_precip : 0.7728824615478516
+0: 25 : 20:44:31 :: batch_size = 96, lr = 1.1333944760803001e-05
+0: epoch: 25 [1/5 (20%)]	Loss: 0.64131 : 0.62518 :: 0.20526 (2.34 s/sec)
+0: epoch: 25 [2/5 (40%)]	Loss: 0.51734 : 0.56932 :: 0.19958 (19.71 s/sec)
+0: epoch: 25 [3/5 (60%)]	Loss: 0.61371 : 0.65007 :: 0.19774 (19.03 s/sec)
+0: epoch: 25 [4/5 (80%)]	Loss: 0.41991 : 0.51205 :: 0.20781 (18.64 s/sec)
+0: validation loss for strategy=forecast at epoch 25 : 0.5756023526191711
+0: validation loss for velocity_u : 0.4850536286830902
+0: validation loss for velocity_v : 0.853596031665802
+0: validation loss for specific_humidity : 0.5592010617256165
+0: validation loss for velocity_z : 0.6258420944213867
+0: validation loss for temperature : 0.2388792783021927
+0: validation loss for total_precip : 0.6910426020622253
+0: 26 : 20:48:21 :: batch_size = 96, lr = 1.1057507083710246e-05
+0: epoch: 26 [1/5 (20%)]	Loss: 0.57402 : 0.55644 :: 0.19675 (2.46 s/sec)
+0: epoch: 26 [2/5 (40%)]	Loss: 0.61316 : 0.55711 :: 0.19892 (19.63 s/sec)
+0: epoch: 26 [3/5 (60%)]	Loss: 0.55650 : 0.55698 :: 0.20538 (18.84 s/sec)
+0: epoch: 26 [4/5 (80%)]	Loss: 0.42472 : 0.54679 :: 0.20750 (18.68 s/sec)
+0: validation loss for strategy=forecast at epoch 26 : 0.48949459195137024
+0: validation loss for velocity_u : 0.442922979593277
+0: validation loss for velocity_v : 0.7521718144416809
+0: validation loss for specific_humidity : 0.6020956635475159
+0: validation loss for velocity_z : 0.42675814032554626
+0: validation loss for temperature : 0.21404628455638885
+0: validation loss for total_precip : 0.4989730417728424
+0: 27 : 20:52:13 :: batch_size = 96, lr = 1.0787811788985607e-05
+0: epoch: 27 [1/5 (20%)]	Loss: 0.45472 : 0.52823 :: 0.20442 (2.42 s/sec)
+0: epoch: 27 [2/5 (40%)]	Loss: 0.48345 : 0.49075 :: 0.20370 (19.29 s/sec)
+0: epoch: 27 [3/5 (60%)]	Loss: 0.45409 : 0.51448 :: 0.20300 (19.26 s/sec)
+0: epoch: 27 [4/5 (80%)]	Loss: 0.52531 : 0.57827 :: 0.20030 (18.80 s/sec)
+0: validation loss for strategy=forecast at epoch 27 : 0.552646279335022
+0: validation loss for velocity_u : 0.48363637924194336
+0: validation loss for velocity_v : 1.0368341207504272
+0: validation loss for specific_humidity : 0.5023484826087952
+0: validation loss for velocity_z : 0.5487366914749146
+0: validation loss for temperature : 0.2683040201663971
+0: validation loss for total_precip : 0.4760169982910156
+0: 28 : 20:56:01 :: batch_size = 96, lr = 1.0524694428278642e-05
+0: epoch: 28 [1/5 (20%)]	Loss: 0.51153 : 0.53999 :: 0.20269 (2.87 s/sec)
+0: epoch: 28 [2/5 (40%)]	Loss: 0.49224 : 0.52302 :: 0.20035 (19.69 s/sec)
+0: epoch: 28 [3/5 (60%)]	Loss: 0.59304 : 0.58635 :: 0.20276 (19.03 s/sec)
+0: epoch: 28 [4/5 (80%)]	Loss: 0.50435 : 0.58539 :: 0.20352 (18.50 s/sec)
+0: validation loss for strategy=forecast at epoch 28 : 0.5433112978935242
+0: validation loss for velocity_u : 0.4572865962982178
+0: validation loss for velocity_v : 1.0122531652450562
+0: validation loss for specific_humidity : 0.5607812404632568
+0: validation loss for velocity_z : 0.538966953754425
+0: validation loss for temperature : 0.18089789152145386
+0: validation loss for total_precip : 0.5096824765205383
+0: 29 : 20:59:47 :: batch_size = 96, lr = 1.0267994564174285e-05
+0: epoch: 29 [1/5 (20%)]	Loss: 0.54502 : 0.56612 :: 0.20052 (2.67 s/sec)
+0: epoch: 29 [2/5 (40%)]	Loss: 0.59660 : 0.57607 :: 0.19944 (19.41 s/sec)
+0: epoch: 29 [3/5 (60%)]	Loss: 0.53400 : 0.57868 :: 0.20166 (18.88 s/sec)
+0: epoch: 29 [4/5 (80%)]	Loss: 0.63765 : 0.59980 :: 0.19622 (18.60 s/sec)
+0: validation loss for strategy=forecast at epoch 29 : 0.4891820549964905
+0: validation loss for velocity_u : 0.42722222208976746
+0: validation loss for velocity_v : 0.7708083987236023
+0: validation loss for specific_humidity : 0.5609100461006165
+0: validation loss for velocity_z : 0.5270901322364807
+0: validation loss for temperature : 0.19897902011871338
+0: validation loss for total_precip : 0.4500829875469208
+0: 30 : 21:03:40 :: batch_size = 96, lr = 1.0017555672365157e-05
+0: epoch: 30 [1/5 (20%)]	Loss: 0.63277 : 0.61720 :: 0.19737 (2.55 s/sec)
+0: epoch: 30 [2/5 (40%)]	Loss: 0.53840 : 0.58941 :: 0.19642 (19.09 s/sec)
+0: epoch: 30 [3/5 (60%)]	Loss: 0.50923 : 0.57333 :: 0.19673 (19.04 s/sec)
+0: epoch: 30 [4/5 (80%)]	Loss: 0.49040 : 0.53870 :: 0.19521 (19.17 s/sec)
+0: validation loss for strategy=forecast at epoch 30 : 0.5465519428253174
+0: validation loss for velocity_u : 0.47430381178855896
+0: validation loss for velocity_v : 0.8355863094329834
+0: validation loss for specific_humidity : 0.6925588250160217
+0: validation loss for velocity_z : 0.5535737872123718
+0: validation loss for temperature : 0.21211077272891998
+0: validation loss for total_precip : 0.5111785531044006
+0: 31 : 21:07:29 :: batch_size = 96, lr = 1e-05
+0: epoch: 31 [1/5 (20%)]	Loss: 0.49885 : 0.52336 :: 0.20475 (2.37 s/sec)
+0: epoch: 31 [2/5 (40%)]	Loss: 0.43617 : 0.49796 :: 0.20824 (19.55 s/sec)
+0: epoch: 31 [3/5 (60%)]	Loss: 0.57158 : 0.54581 :: 0.20141 (18.84 s/sec)
+0: epoch: 31 [4/5 (80%)]	Loss: 0.41947 : 0.57463 :: 0.19836 (18.32 s/sec)
+0: validation loss for strategy=forecast at epoch 31 : 0.6109046339988708
+0: validation loss for velocity_u : 0.48790279030799866
+0: validation loss for velocity_v : 0.8467856049537659
+0: validation loss for specific_humidity : 0.6683812737464905
+0: validation loss for velocity_z : 0.6433128118515015
+0: validation loss for temperature : 0.1953524500131607
+0: validation loss for total_precip : 0.8236935138702393
+0: 32 : 21:11:19 :: batch_size = 96, lr = 1e-05
+0: epoch: 32 [1/5 (20%)]	Loss: 0.53556 : 0.54601 :: 0.20261 (2.57 s/sec)
+0: epoch: 32 [2/5 (40%)]	Loss: 0.57297 : 0.53706 :: 0.19878 (19.13 s/sec)
+0: epoch: 32 [3/5 (60%)]	Loss: 0.49774 : 0.53055 :: 0.20050 (18.90 s/sec)
+0: epoch: 32 [4/5 (80%)]	Loss: 0.44738 : 0.60266 :: 0.20793 (18.87 s/sec)
+0: validation loss for strategy=forecast at epoch 32 : 0.5921074748039246
+0: validation loss for velocity_u : 0.49477434158325195
+0: validation loss for velocity_v : 0.89166659116745
+0: validation loss for specific_humidity : 0.6956207156181335
+0: validation loss for velocity_z : 0.6092861890792847
+0: validation loss for temperature : 0.20315532386302948
+0: validation loss for total_precip : 0.6581414341926575
+0: 33 : 21:15:09 :: batch_size = 96, lr = 1e-05
+0: epoch: 33 [1/5 (20%)]	Loss: 0.52450 : 0.58244 :: 0.20332 (2.90 s/sec)
+0: epoch: 33 [2/5 (40%)]	Loss: 0.53831 : 0.56297 :: 0.20466 (16.79 s/sec)
+0: epoch: 33 [3/5 (60%)]	Loss: 0.36675 : 0.49098 :: 0.21029 (18.86 s/sec)
+0: epoch: 33 [4/5 (80%)]	Loss: 0.62785 : 0.55045 :: 0.20518 (19.01 s/sec)
+0: validation loss for strategy=forecast at epoch 33 : 0.5370198488235474
+0: validation loss for velocity_u : 0.5334461331367493
+0: validation loss for velocity_v : 1.0051852464675903
+0: validation loss for specific_humidity : 0.5451997518539429
+0: validation loss for velocity_z : 0.5529524683952332
+0: validation loss for temperature : 0.21602077782154083
+0: validation loss for total_precip : 0.3693147599697113
+0: 34 : 21:18:55 :: batch_size = 96, lr = 1e-05
+0: epoch: 34 [1/5 (20%)]	Loss: 0.59376 : 0.56614 :: 0.20088 (2.68 s/sec)
+0: epoch: 34 [2/5 (40%)]	Loss: 0.60496 : 0.62907 :: 0.21410 (18.79 s/sec)
+0: epoch: 34 [3/5 (60%)]	Loss: 0.54207 : 0.53753 :: 0.20601 (18.98 s/sec)
+0: epoch: 34 [4/5 (80%)]	Loss: 0.54158 : 0.57108 :: 0.20328 (18.87 s/sec)
+0: validation loss for strategy=forecast at epoch 34 : 0.6383906602859497
+0: validation loss for velocity_u : 0.5281351208686829
+0: validation loss for velocity_v : 0.962702751159668
+0: validation loss for specific_humidity : 0.7023612856864929
+0: validation loss for velocity_z : 0.6669092774391174
+0: validation loss for temperature : 0.19648337364196777
+0: validation loss for total_precip : 0.7737521529197693
+0: 35 : 21:22:55 :: batch_size = 96, lr = 1e-05
+0: epoch: 35 [1/5 (20%)]	Loss: 0.53849 : 0.58388 :: 0.20228 (2.59 s/sec)
+0: epoch: 35 [2/5 (40%)]	Loss: 0.55587 : 0.56156 :: 0.20786 (19.20 s/sec)
+0: epoch: 35 [3/5 (60%)]	Loss: 0.40115 : 0.48384 :: 0.20380 (18.98 s/sec)
+0: epoch: 35 [4/5 (80%)]	Loss: 0.70910 : 0.60615 :: 0.20284 (18.99 s/sec)
+0: validation loss for strategy=forecast at epoch 35 : 0.5887101888656616
+0: validation loss for velocity_u : 0.5239916443824768
+0: validation loss for velocity_v : 0.9783754348754883
+0: validation loss for specific_humidity : 0.6801934838294983
+0: validation loss for velocity_z : 0.5148040652275085
+0: validation loss for temperature : 0.19157378375530243
+0: validation loss for total_precip : 0.6433218717575073
+0: 36 : 21:26:49 :: batch_size = 96, lr = 1e-05
+0: epoch: 36 [1/5 (20%)]	Loss: 0.51331 : 0.52643 :: 0.20443 (2.57 s/sec)
+0: epoch: 36 [2/5 (40%)]	Loss: 0.65868 : 0.62062 :: 0.20651 (19.31 s/sec)
+0: epoch: 36 [3/5 (60%)]	Loss: 0.59780 : 0.64379 :: 0.20952 (19.22 s/sec)
+0: epoch: 36 [4/5 (80%)]	Loss: 0.57132 : 0.61051 :: 0.20250 (18.92 s/sec)
+0: validation loss for strategy=forecast at epoch 36 : 0.606365978717804
+0: validation loss for velocity_u : 0.5492079257965088
+0: validation loss for velocity_v : 0.8266473412513733
+0: validation loss for specific_humidity : 0.8183075785636902
+0: validation loss for velocity_z : 0.5905371308326721
+0: validation loss for temperature : 0.17675764858722687
+0: validation loss for total_precip : 0.6767370104789734
+0: 37 : 21:30:39 :: batch_size = 96, lr = 1e-05
+0: epoch: 37 [1/5 (20%)]	Loss: 0.49285 : 0.55326 :: 0.20547 (2.39 s/sec)
+0: epoch: 37 [2/5 (40%)]	Loss: 0.49917 : 0.59589 :: 0.20959 (19.31 s/sec)
+0: epoch: 37 [3/5 (60%)]	Loss: 0.56852 : 0.62444 :: 0.21037 (19.00 s/sec)
+0: epoch: 37 [4/5 (80%)]	Loss: 0.49206 : 0.56000 :: 0.21398 (19.12 s/sec)
+0: validation loss for strategy=forecast at epoch 37 : 0.6092547178268433
+0: validation loss for velocity_u : 0.5460145473480225
+0: validation loss for velocity_v : 0.8372025489807129
+0: validation loss for specific_humidity : 0.6659813523292542
+0: validation loss for velocity_z : 0.6801412105560303
+0: validation loss for temperature : 0.18493925034999847
+0: validation loss for total_precip : 0.7412493228912354
+0: 38 : 21:34:36 :: batch_size = 96, lr = 1e-05
+0: epoch: 38 [1/5 (20%)]	Loss: 0.46942 : 0.53403 :: 0.20756 (2.61 s/sec)
+0: epoch: 38 [2/5 (40%)]	Loss: 0.59127 : 0.59240 :: 0.20511 (19.00 s/sec)
+0: epoch: 38 [3/5 (60%)]	Loss: 0.68533 : 0.62377 :: 0.20737 (19.16 s/sec)
+0: epoch: 38 [4/5 (80%)]	Loss: 0.43787 : 0.52938 :: 0.20333 (19.09 s/sec)
+0: validation loss for strategy=forecast at epoch 38 : 0.6548231244087219
+0: validation loss for velocity_u : 0.6510552167892456
+0: validation loss for velocity_v : 0.8527514934539795
+0: validation loss for specific_humidity : 0.7449018359184265
+0: validation loss for velocity_z : 0.6669301986694336
+0: validation loss for temperature : 0.20840030908584595
+0: validation loss for total_precip : 0.8048989176750183
+0: 39 : 21:38:23 :: batch_size = 96, lr = 1e-05
+0: epoch: 39 [1/5 (20%)]	Loss: 0.55673 : 0.60786 :: 0.20741 (2.75 s/sec)
+0: epoch: 39 [2/5 (40%)]	Loss: 0.64957 : 0.55796 :: 0.19745 (19.33 s/sec)
+0: epoch: 39 [3/5 (60%)]	Loss: 0.50063 : 0.54478 :: 0.20290 (18.78 s/sec)
+0: epoch: 39 [4/5 (80%)]	Loss: 0.45055 : 0.58126 :: 0.20719 (18.80 s/sec)
+0: validation loss for strategy=forecast at epoch 39 : 0.5404776930809021
+0: validation loss for velocity_u : 0.5512300133705139
+0: validation loss for velocity_v : 0.8278509974479675
+0: validation loss for specific_humidity : 0.5528726577758789
+0: validation loss for velocity_z : 0.5696647763252258
+0: validation loss for temperature : 0.14736498892307281
+0: validation loss for total_precip : 0.5938833355903625
+0: 40 : 21:42:03 :: batch_size = 96, lr = 1e-05
+0: epoch: 40 [1/5 (20%)]	Loss: 0.51889 : 0.59662 :: 0.20987 (2.74 s/sec)
+0: epoch: 40 [2/5 (40%)]	Loss: 0.56599 : 0.59293 :: 0.20850 (19.57 s/sec)
+0: epoch: 40 [3/5 (60%)]	Loss: 0.64148 : 0.61112 :: 0.20877 (19.26 s/sec)
+0: epoch: 40 [4/5 (80%)]	Loss: 0.49817 : 0.56208 :: 0.20648 (19.10 s/sec)
+0: validation loss for strategy=forecast at epoch 40 : 0.6003254652023315
+0: validation loss for velocity_u : 0.5313345789909363
+0: validation loss for velocity_v : 0.9024028778076172
+0: validation loss for specific_humidity : 0.7550580501556396
+0: validation loss for velocity_z : 0.584858238697052
+0: validation loss for temperature : 0.21559764444828033
+0: validation loss for total_precip : 0.6127010583877563
+0: 41 : 21:45:57 :: batch_size = 96, lr = 1e-05
+0: epoch: 41 [1/5 (20%)]	Loss: 0.64464 : 0.65888 :: 0.20298 (2.72 s/sec)
+0: epoch: 41 [2/5 (40%)]	Loss: 0.61036 : 0.66095 :: 0.20819 (18.95 s/sec)
+0: epoch: 41 [3/5 (60%)]	Loss: 0.59011 : 0.58302 :: 0.19798 (19.37 s/sec)
+0: epoch: 41 [4/5 (80%)]	Loss: 0.73792 : 0.67978 :: 0.20522 (18.50 s/sec)
+0: validation loss for strategy=forecast at epoch 41 : 0.5753499865531921
+0: validation loss for velocity_u : 0.5731285810470581
+0: validation loss for velocity_v : 0.8229525089263916
+0: validation loss for specific_humidity : 0.7008240222930908
+0: validation loss for velocity_z : 0.6044857501983643
+0: validation loss for temperature : 0.1808604598045349
+0: validation loss for total_precip : 0.5698476433753967
+0: 42 : 21:49:49 :: batch_size = 96, lr = 1e-05
+0: epoch: 42 [1/5 (20%)]	Loss: 0.48076 : 0.61516 :: 0.21270 (2.70 s/sec)
+0: epoch: 42 [2/5 (40%)]	Loss: 0.47184 : 0.52789 :: 0.20817 (18.99 s/sec)
+0: epoch: 42 [3/5 (60%)]	Loss: 0.68082 : 0.63812 :: 0.20900 (18.20 s/sec)
+0: epoch: 42 [4/5 (80%)]	Loss: 0.65872 : 0.73581 :: 0.21750 (18.78 s/sec)
+0: validation loss for strategy=forecast at epoch 42 : 0.5846433043479919
+0: validation loss for velocity_u : 0.5822769403457642
+0: validation loss for velocity_v : 0.7787565588951111
+0: validation loss for specific_humidity : 0.7417194843292236
+0: validation loss for velocity_z : 0.5383184552192688
+0: validation loss for temperature : 0.16967110335826874
+0: validation loss for total_precip : 0.6971177458763123
+0: 43 : 21:53:45 :: batch_size = 96, lr = 1e-05
+0: epoch: 43 [1/5 (20%)]	Loss: 0.58638 : 0.60861 :: 0.21604 (2.42 s/sec)
+0: epoch: 43 [2/5 (40%)]	Loss: 0.42738 : 0.56757 :: 0.21132 (19.31 s/sec)
+0: epoch: 43 [3/5 (60%)]	Loss: 0.54557 : 0.57610 :: 0.21239 (19.45 s/sec)
+0: epoch: 43 [4/5 (80%)]	Loss: 0.66180 : 0.65999 :: 0.20796 (19.25 s/sec)
+0: validation loss for strategy=forecast at epoch 43 : 0.601975679397583
+0: validation loss for velocity_u : 0.5970087647438049
+0: validation loss for velocity_v : 0.8627423644065857
+0: validation loss for specific_humidity : 0.6486351490020752
+0: validation loss for velocity_z : 0.6009402871131897
+0: validation loss for temperature : 0.180085226893425
+0: validation loss for total_precip : 0.7224431037902832
+0: 44 : 21:57:38 :: batch_size = 96, lr = 1e-05
+0: epoch: 44 [1/5 (20%)]	Loss: 0.55753 : 0.59463 :: 0.21446 (2.60 s/sec)
+0: epoch: 44 [2/5 (40%)]	Loss: 0.39178 : 0.55265 :: 0.20844 (19.56 s/sec)
+0: epoch: 44 [3/5 (60%)]	Loss: 0.55235 : 0.61085 :: 0.20924 (19.14 s/sec)
+0: epoch: 44 [4/5 (80%)]	Loss: 0.50464 : 0.55272 :: 0.20088 (18.96 s/sec)
+0: validation loss for strategy=forecast at epoch 44 : 0.6382300853729248
+0: validation loss for velocity_u : 0.5895488858222961
+0: validation loss for velocity_v : 0.8461989760398865
+0: validation loss for specific_humidity : 0.7534970641136169
+0: validation loss for velocity_z : 0.611420214176178
+0: validation loss for temperature : 0.18316812813282013
+0: validation loss for total_precip : 0.8455474376678467
+0: 45 : 22:01:25 :: batch_size = 96, lr = 1e-05
+0: epoch: 45 [1/5 (20%)]	Loss: 0.55311 : 0.56440 :: 0.21241 (2.76 s/sec)
+0: epoch: 45 [2/5 (40%)]	Loss: 0.60901 : 0.60866 :: 0.20881 (19.19 s/sec)
+0: epoch: 45 [3/5 (60%)]	Loss: 0.42759 : 0.51032 :: 0.20651 (18.77 s/sec)
+0: epoch: 45 [4/5 (80%)]	Loss: 0.41318 : 0.48510 :: 0.19993 (18.90 s/sec)
+0: validation loss for strategy=forecast at epoch 45 : 0.6258028149604797
+0: validation loss for velocity_u : 0.5245806574821472
+0: validation loss for velocity_v : 0.874012291431427
+0: validation loss for specific_humidity : 0.8682512640953064
+0: validation loss for velocity_z : 0.5866127014160156
+0: validation loss for temperature : 0.16863508522510529
+0: validation loss for total_precip : 0.7327244877815247
+0: 46 : 22:05:26 :: batch_size = 96, lr = 1e-05
+0: epoch: 46 [1/5 (20%)]	Loss: 0.41096 : 0.50596 :: 0.20883 (2.55 s/sec)
+0: epoch: 46 [2/5 (40%)]	Loss: 0.60034 : 0.59217 :: 0.20945 (19.10 s/sec)
+0: epoch: 46 [3/5 (60%)]	Loss: 0.60695 : 0.61688 :: 0.20653 (19.13 s/sec)
+0: epoch: 46 [4/5 (80%)]	Loss: 0.53465 : 0.64255 :: 0.20919 (18.97 s/sec)
+0: validation loss for strategy=forecast at epoch 46 : 0.5820621252059937
+0: validation loss for velocity_u : 0.6349904537200928
+0: validation loss for velocity_v : 0.9305461049079895
+0: validation loss for specific_humidity : 0.6080800294876099
+0: validation loss for velocity_z : 0.5776792168617249
+0: validation loss for temperature : 0.2188059687614441
+0: validation loss for total_precip : 0.5222700834274292
+0: 47 : 22:09:17 :: batch_size = 96, lr = 1e-05
+0: epoch: 47 [1/5 (20%)]	Loss: 0.58748 : 0.59589 :: 0.21443 (2.61 s/sec)
+0: epoch: 47 [2/5 (40%)]	Loss: 0.58020 : 0.59886 :: 0.20890 (19.60 s/sec)
+0: epoch: 47 [3/5 (60%)]	Loss: 0.63575 : 0.63453 :: 0.21492 (18.97 s/sec)
+0: epoch: 47 [4/5 (80%)]	Loss: 0.53893 : 0.57626 :: 0.20017 (18.84 s/sec)
+0: validation loss for strategy=forecast at epoch 47 : 0.6033899784088135
+0: validation loss for velocity_u : 0.6052564382553101
+0: validation loss for velocity_v : 0.7824912071228027
+0: validation loss for specific_humidity : 0.8098748326301575
+0: validation loss for velocity_z : 0.5357644557952881
+0: validation loss for temperature : 0.1905188113451004
+0: validation loss for total_precip : 0.6964340209960938
+0: 48 : 22:13:09 :: batch_size = 96, lr = 1e-05
+0: epoch: 48 [1/5 (20%)]	Loss: 0.63028 : 0.64155 :: 0.20160 (2.42 s/sec)
+0: epoch: 48 [2/5 (40%)]	Loss: 0.47127 : 0.64435 :: 0.21326 (19.43 s/sec)
+0: epoch: 48 [3/5 (60%)]	Loss: 0.44889 : 0.59221 :: 0.21243 (18.92 s/sec)
+0: epoch: 48 [4/5 (80%)]	Loss: 0.40007 : 0.52474 :: 0.21442 (18.74 s/sec)
+0: validation loss for strategy=forecast at epoch 48 : 0.567636251449585
+0: validation loss for velocity_u : 0.7017722129821777
+0: validation loss for velocity_v : 0.8209071159362793
+0: validation loss for specific_humidity : 0.7108424305915833
+0: validation loss for velocity_z : 0.5203473567962646
+0: validation loss for temperature : 0.17332880198955536
+0: validation loss for total_precip : 0.47861921787261963
+0: 49 : 22:17:01 :: batch_size = 96, lr = 1e-05
+0: epoch: 49 [1/5 (20%)]	Loss: 0.57896 : 0.62405 :: 0.21087 (2.65 s/sec)
+0: epoch: 49 [2/5 (40%)]	Loss: 0.46554 : 0.55960 :: 0.21857 (19.85 s/sec)
+0: epoch: 49 [3/5 (60%)]	Loss: 0.44826 : 0.57855 :: 0.21145 (18.91 s/sec)
+0: epoch: 49 [4/5 (80%)]	Loss: 0.48973 : 0.55912 :: 0.20837 (19.13 s/sec)
+0: validation loss for strategy=forecast at epoch 49 : 0.6372410655021667
+0: validation loss for velocity_u : 0.6195338368415833
+0: validation loss for velocity_v : 0.9355533123016357
+0: validation loss for specific_humidity : 0.7110610604286194
+0: validation loss for velocity_z : 0.5952971577644348
+0: validation loss for temperature : 0.19343417882919312
+0: validation loss for total_precip : 0.7685678601264954
+0: Finished training at 22:20:48 with test loss = 0.6372410655021667.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250415_191428-mgc2kbr7[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250415_191428-mgc2kbr7/logs[0m
+0: l50030:1113221:1113495 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50030:1113221:1125413 [2] NCCL INFO comm 0x55557ebe6ca0 rank 0 nranks 1 cudaDev 2 busId 84000 - Abort COMPLETE
+0: l50030:1113221:1113500 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50030:1113221:1125413 [3] NCCL INFO comm 0x5555877b5b80 rank 0 nranks 1 cudaDev 3 busId c4000 - Abort COMPLETE
+0: l50030:1113221:1113490 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50030:1113221:1125413 [1] NCCL INFO comm 0x5555a6f5c6a0 rank 0 nranks 1 cudaDev 1 busId 44000 - Abort COMPLETE
+0: l50030:1113221:1113473 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50030:1113221:1125413 [0] NCCL INFO comm 0x55555f268e30 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

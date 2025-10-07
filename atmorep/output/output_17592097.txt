@@ -1,0 +1,174 @@
+0: Wandb run: atmorep-kfdej3w5-17592097
+0: l50030:442436:442436 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.126<0>
+0: l50030:442436:442436 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50030:442436:442436 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50030:442436:442436 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50030:442436:442436 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+1: l50030:442437:442437 [0] NCCL INFO cudaDriverVersion 12050
+2: l50030:442438:442438 [0] NCCL INFO cudaDriverVersion 12050
+3: l50030:442439:442439 [0] NCCL INFO cudaDriverVersion 12050
+1: l50030:442437:442437 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.126<0>
+2: l50030:442438:442438 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.126<0>
+2: l50030:442438:442438 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+2: l50030:442438:442438 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+2: l50030:442438:442438 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+1: l50030:442437:442437 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+1: l50030:442437:442437 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+1: l50030:442437:442437 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+3: l50030:442439:442439 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.126<0>
+3: l50030:442439:442439 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+3: l50030:442439:442439 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+3: l50030:442439:442439 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+5: l50142:1891106:1891106 [0] NCCL INFO cudaDriverVersion 12050
+7: l50142:1891108:1891108 [0] NCCL INFO cudaDriverVersion 12050
+4: l50142:1891105:1891105 [0] NCCL INFO cudaDriverVersion 12050
+6: l50142:1891107:1891107 [0] NCCL INFO cudaDriverVersion 12050
+5: l50142:1891106:1891106 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.190<0>
+7: l50142:1891108:1891108 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.190<0>
+4: l50142:1891105:1891105 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.190<0>
+6: l50142:1891107:1891107 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.190<0>
+4: l50142:1891105:1891105 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+4: l50142:1891105:1891105 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+4: l50142:1891105:1891105 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+7: l50142:1891108:1891108 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+5: l50142:1891106:1891106 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+5: l50142:1891106:1891106 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+5: l50142:1891106:1891106 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+6: l50142:1891107:1891107 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+6: l50142:1891107:1891107 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+6: l50142:1891107:1891107 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+7: l50142:1891108:1891108 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+7: l50142:1891108:1891108 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+1: l50030:442437:442605 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.126<0>
+3: l50030:442439:442606 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.126<0>
+1: l50030:442437:442605 [0] NCCL INFO Using non-device net plugin version 0
+1: l50030:442437:442605 [0] NCCL INFO Using network IB
+3: l50030:442439:442606 [0] NCCL INFO Using non-device net plugin version 0
+3: l50030:442439:442606 [0] NCCL INFO Using network IB
+0: l50030:442436:442599 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.126<0>
+2: l50030:442438:442604 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.126<0>
+0: l50030:442436:442599 [0] NCCL INFO Using non-device net plugin version 0
+0: l50030:442436:442599 [0] NCCL INFO Using network IB
+2: l50030:442438:442604 [0] NCCL INFO Using non-device net plugin version 0
+2: l50030:442438:442604 [0] NCCL INFO Using network IB
+6: l50142:1891107:1891180 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.190<0>
+6: l50142:1891107:1891180 [0] NCCL INFO Using non-device net plugin version 0
+6: l50142:1891107:1891180 [0] NCCL INFO Using network IB
+5: l50142:1891106:1891177 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.190<0>
+5: l50142:1891106:1891177 [0] NCCL INFO Using non-device net plugin version 0
+5: l50142:1891106:1891177 [0] NCCL INFO Using network IB
+7: l50142:1891108:1891178 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.190<0>
+7: l50142:1891108:1891178 [0] NCCL INFO Using non-device net plugin version 0
+7: l50142:1891108:1891178 [0] NCCL INFO Using network IB
+4: l50142:1891105:1891179 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.190<0>
+4: l50142:1891105:1891179 [0] NCCL INFO Using non-device net plugin version 0
+4: l50142:1891105:1891179 [0] NCCL INFO Using network IB
+3: l50030:442439:442606 [0] NCCL INFO ncclCommInitRank comm 0x55555ede27e0 rank 3 nranks 8 cudaDev 0 nvmlDev 0 busId c4000 commId 0xcd34a010734add7b - Init START
+2: l50030:442438:442604 [0] NCCL INFO ncclCommInitRank comm 0x55555ede1830 rank 2 nranks 8 cudaDev 0 nvmlDev 0 busId 84000 commId 0xcd34a010734add7b - Init START
+1: l50030:442437:442605 [0] NCCL INFO ncclCommInitRank comm 0x55555ede1d40 rank 1 nranks 8 cudaDev 0 nvmlDev 0 busId 44000 commId 0xcd34a010734add7b - Init START
+5: l50142:1891106:1891177 [0] NCCL INFO ncclCommInitRank comm 0x55555ede27f0 rank 5 nranks 8 cudaDev 0 nvmlDev 0 busId 44000 commId 0xcd34a010734add7b - Init START
+0: l50030:442436:442599 [0] NCCL INFO ncclCommInitRank comm 0x55555f229a50 rank 0 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xcd34a010734add7b - Init START
+6: l50142:1891107:1891180 [0] NCCL INFO ncclCommInitRank comm 0x55555ede1c70 rank 6 nranks 8 cudaDev 0 nvmlDev 0 busId 84000 commId 0xcd34a010734add7b - Init START
+7: l50142:1891108:1891178 [0] NCCL INFO ncclCommInitRank comm 0x55555ede1c10 rank 7 nranks 8 cudaDev 0 nvmlDev 0 busId c4000 commId 0xcd34a010734add7b - Init START
+4: l50142:1891105:1891179 [0] NCCL INFO ncclCommInitRank comm 0x55555ede2bc0 rank 4 nranks 8 cudaDev 0 nvmlDev 0 busId 3000 commId 0xcd34a010734add7b - Init START
+2: 
+2: l50030:442438:442604 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+3: 
+3: l50030:442439:442606 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+1: 
+1: l50030:442437:442605 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+1: l50030:442437:442605 [0] NCCL INFO graph/xml.cc:850 -> 2
+1: l50030:442437:442605 [0] NCCL INFO graph/topo.cc:696 -> 2
+2: l50030:442438:442604 [0] NCCL INFO graph/xml.cc:850 -> 2
+2: l50030:442438:442604 [0] NCCL INFO graph/topo.cc:696 -> 2
+2: l50030:442438:442604 [0] NCCL INFO init.cc:1012 -> 2
+2: l50030:442438:442604 [0] NCCL INFO init.cc:1548 -> 2
+2: l50030:442438:442604 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+1: l50030:442437:442605 [0] NCCL INFO init.cc:1012 -> 2
+1: l50030:442437:442605 [0] NCCL INFO init.cc:1548 -> 2
+1: l50030:442437:442605 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+2: l50030:442438:442438 [0] NCCL INFO group.cc:418 -> 2
+2: l50030:442438:442438 [0] NCCL INFO init.cc:1929 -> 2
+5: 
+5: l50142:1891106:1891177 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+5: l50142:1891106:1891177 [0] NCCL INFO graph/xml.cc:850 -> 2
+6: 
+6: l50142:1891107:1891180 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+6: l50142:1891107:1891180 [0] NCCL INFO graph/xml.cc:850 -> 2
+6: l50142:1891107:1891180 [0] NCCL INFO graph/topo.cc:696 -> 2
+6: l50142:1891107:1891180 [0] NCCL INFO init.cc:1012 -> 2
+6: l50142:1891107:1891180 [0] NCCL INFO init.cc:1548 -> 2
+5: l50142:1891106:1891177 [0] NCCL INFO graph/topo.cc:696 -> 2
+5: l50142:1891106:1891177 [0] NCCL INFO init.cc:1012 -> 2
+5: l50142:1891106:1891177 [0] NCCL INFO init.cc:1548 -> 2
+5: l50142:1891106:1891177 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+6: l50142:1891107:1891180 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+7: 
+7: l50142:1891108:1891178 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+7: l50142:1891108:1891178 [0] NCCL INFO graph/xml.cc:850 -> 2
+7: l50142:1891108:1891178 [0] NCCL INFO graph/topo.cc:696 -> 2
+7: l50142:1891108:1891178 [0] NCCL INFO init.cc:1012 -> 2
+7: l50142:1891108:1891178 [0] NCCL INFO init.cc:1548 -> 2
+7: l50142:1891108:1891178 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+5: l50142:1891106:1891106 [0] NCCL INFO group.cc:418 -> 2
+6: l50142:1891107:1891107 [0] NCCL INFO group.cc:418 -> 2
+6: l50142:1891107:1891107 [0] NCCL INFO init.cc:1929 -> 2
+5: l50142:1891106:1891106 [0] NCCL INFO init.cc:1929 -> 2
+7: l50142:1891108:1891108 [0] NCCL INFO group.cc:418 -> 2
+7: l50142:1891108:1891108 [0] NCCL INFO init.cc:1929 -> 2
+1: l50030:442437:442437 [0] NCCL INFO group.cc:418 -> 2
+1: l50030:442437:442437 [0] NCCL INFO init.cc:1929 -> 2
+3: l50030:442439:442606 [0] NCCL INFO graph/xml.cc:850 -> 2
+3: l50030:442439:442606 [0] NCCL INFO graph/topo.cc:696 -> 2
+3: l50030:442439:442606 [0] NCCL INFO init.cc:1012 -> 2
+3: l50030:442439:442606 [0] NCCL INFO init.cc:1548 -> 2
+3: l50030:442439:442606 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+3: l50030:442439:442439 [0] NCCL INFO group.cc:418 -> 2
+3: l50030:442439:442439 [0] NCCL INFO init.cc:1929 -> 2
+0: 
+0: l50030:442436:442599 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+0: l50030:442436:442599 [0] NCCL INFO graph/xml.cc:850 -> 2
+0: l50030:442436:442599 [0] NCCL INFO graph/topo.cc:696 -> 2
+0: l50030:442436:442599 [0] NCCL INFO init.cc:1012 -> 2
+0: l50030:442436:442599 [0] NCCL INFO init.cc:1548 -> 2
+0: l50030:442436:442599 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+0: l50030:442436:442436 [0] NCCL INFO group.cc:418 -> 2
+0: l50030:442436:442436 [0] NCCL INFO init.cc:1929 -> 2
+4: 
+4: l50142:1891105:1891179 [0] misc/nvmlwrap.cc:187 NCCL WARN nvmlDeviceGetHandleByPciBusId() failed: Not Found
+4: l50142:1891105:1891179 [0] NCCL INFO graph/xml.cc:850 -> 2
+4: l50142:1891105:1891179 [0] NCCL INFO graph/topo.cc:696 -> 2
+4: l50142:1891105:1891179 [0] NCCL INFO init.cc:1012 -> 2
+4: l50142:1891105:1891179 [0] NCCL INFO init.cc:1548 -> 2
+4: l50142:1891105:1891179 [0] NCCL INFO group.cc:64 -> 2 [Async thread]
+4: l50142:1891105:1891105 [0] NCCL INFO group.cc:418 -> 2
+4: l50142:1891105:1891105 [0] NCCL INFO init.cc:1929 -> 2
+0: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+2: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+2: -> work = group.allreduce([tensor], opts)
+0: -> work = group.allreduce([tensor], opts)
+3: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+3: -> work = group.allreduce([tensor], opts)
+1: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+1: -> work = group.allreduce([tensor], opts)
+3: (Pdb) 
+1: (Pdb) 
+2: (Pdb) 
+0: (Pdb) 
+4: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+4: -> work = group.allreduce([tensor], opts)
+5: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+5: -> work = group.allreduce([tensor], opts)
+7: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+7: -> work = group.allreduce([tensor], opts)
+6: > /work/ab1412/atmorep/pyenv/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py(2501)all_reduce()
+6: -> work = group.allreduce([tensor], opts)
+5: (Pdb) 
+6: (Pdb) 
+7: (Pdb) 
+4: (Pdb) 
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250612_130151-kfdej3w5[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250612_130151-kfdej3w5/logs[0m

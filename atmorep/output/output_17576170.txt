@@ -1,0 +1,352 @@
+0: Wandb run: atmorep-ci31fxnd-17576170
+0: l50027:1507169:1507169 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.124<0>
+0: l50027:1507169:1507169 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50027:1507169:1507169 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50027:1507169:1507169 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50027:1507169:1507169 [0] NCCL INFO cudaDriverVersion 12050
+0: NCCL version 2.21.5+cuda12.4
+0: l50027:1507169:1507419 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.124<0>
+0: l50027:1507169:1507419 [0] NCCL INFO Using non-device net plugin version 0
+0: l50027:1507169:1507419 [0] NCCL INFO Using network IB
+0: l50027:1507169:1507419 [0] NCCL INFO ncclCommInitRank comm 0x55555f290720 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x6ca3cfb50624a345 - Init START
+0: l50027:1507169:1507419 [0] NCCL INFO Setting affinity for GPU 0 to 0f0000,00000000,00000000,00000000,000f0000,00000000
+0: l50027:1507169:1507419 [0] NCCL INFO comm 0x55555f290720 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 00/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 01/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 02/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 03/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 04/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 05/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 06/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 07/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 08/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 09/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 10/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 11/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 12/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 13/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 14/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 15/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 16/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 17/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 18/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 19/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 20/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 21/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 22/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 23/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 24/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 25/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 26/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 27/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 28/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 29/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 30/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Channel 31/32 :    0
+0: l50027:1507169:1507419 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+0: l50027:1507169:1507419 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50027:1507169:1507419 [0] NCCL INFO Connected all rings
+0: l50027:1507169:1507419 [0] NCCL INFO Connected all trees
+0: l50027:1507169:1507419 [0] NCCL INFO 32 coll channels, 32 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+0: l50027:1507169:1507419 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50027:1507169:1507419 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50027:1507169:1507419 [0] NCCL INFO ncclCommInitRank comm 0x55555f290720 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 3000 commId 0x6ca3cfb50624a345 - Init COMPLETE
+0: Running Evaluate.evaluate with mode = BERT
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: Loaded model id = wc5e2i3t.
+0: with_ddp : True
+0: num_accs_per_task : 4
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]]]
+0: fields_prediction : [['velocity_u', 0.225], ['velocity_v', 0.225], ['specific_humidity', 0.15], ['velocity_z', 0.1], ['temperature', 0.2], ['total_precip', 0.1]]
+0: fields_targets : []
+0: years_train : [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[-90.0, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 96
+0: num_epochs : 128
+0: num_samples_per_epoch : 49152
+0: num_samples_validate : 96
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 4
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 17576170
+0: wandb_id : ci31fxnd
+0: file_path : /work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : wc5e2i3t
+0: with_pytest : True
+0: lat_sampling_weighted : False
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'total_precip' with shape: torch.Size([76, 243])
+0:          min = -0.000, max = 0.000, mean = 0.000
+0:          sample (first 20): tensor([1.0331e-06, 4.3861e-07, 6.8970e-07, 6.6286e-07, 6.9092e-07, 6.1221e-07, 6.1190e-07, 4.2790e-07, 5.1715e-07,
+0:         1.3493e-06, 9.5247e-07, 8.1283e-07, 8.8773e-07, 1.1859e-06, 1.2450e-06, 1.0801e-06, 8.4567e-07, 9.8309e-07,
+0:         1.4274e-06, 7.9007e-07])
+0: validation loss for strategy=BERT at epoch 0 : 0.07140648365020752
+0: validation loss for velocity_u : 0.00303850881755352
+0: validation loss for velocity_v : 0.004305741284042597
+0: validation loss for specific_humidity : 0.006558187305927277
+0: validation loss for velocity_z : 0.09843894839286804
+0: validation loss for temperature : 0.01890287920832634
+0: validation loss for total_precip : 0.29719454050064087
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 54, Level 96: Timestamp 2021-04-01 20:00:00, Shape (18, 18)
+0: Sample 29, Level 96: Timestamp 2021-11-15 00:00:00, Shape (18, 18)
+0: Sample 28, Level 96: Timestamp 2021-02-12 17:00:00, Shape (18, 18)
+0: Sample 63, Level 96: Timestamp 2021-08-29 00:00:00, Shape (18, 18)
+0: Sample 57, Level 96: Timestamp 2021-02-11 13:00:00, Shape (18, 18)
+0: ..F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_u', model_id = 'ci31fxnd', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             for s in samples:
+0:                 sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0:                 sample_pred, _, _, _ = get_data(pred,field, s, level_idx)
+0:     
+0: >               assert compute_RMSE(sample_target, sample_pred).mean() < get_max_RMSE(field)
+0: E               AssertionError: assert np.float32(0.7237717) < 0.55
+0: E                +  where np.float32(0.7237717) = <built-in method mean of numpy.float32 object at 0x7ffe812d3e50>()
+0: E                +    where <built-in method mean of numpy.float32 object at 0x7ffe812d3e50> = np.float32(0.7237717).mean
+0: E                +      where np.float32(0.7237717) = compute_RMSE(array([[ 5.3288784e+00,  5.4695034e+00,  5.7898159e+00,  6.1726284e+00,\n         6.4597378e+00,  6.6335659e+00,  6.782...3.8581753e+00,  4.2644253e+00,  4.6745815e+00,  4.7351284e+00,\n         4.6140347e+00,  4.6413784e+00]], dtype=float32), array([[ 6.2632794 ,  6.2539315 ,  6.341271  ,  6.511612  ,  6.6769395 ,\n         6.8350096 ,  6.9733224 ,  7.074297  ...3 ,  4.214102  ,  4.2344275 ,  4.1353464 ,  4.017647  ,\n         3.9404564 ,  3.9944966 ,  4.216955  ]], dtype=float32))
+0: E                +  and   0.55 = get_max_RMSE('velocity_u')
+0: 
+0: atmorep/tests/validation_test.py:196: AssertionError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - AssertionError: assert n...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 15.75s =========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 74, Level 96: Timestamp 2021-09-05 01:00:00, Shape (18, 18)
+0: Sample 18, Level 96: Timestamp 2021-11-07 05:00:00, Shape (18, 18)
+0: Sample 91, Level 96: Timestamp 2021-10-25 14:00:00, Shape (18, 18)
+0: Sample 86, Level 96: Timestamp 2021-07-09 21:00:00, Shape (18, 18)
+0: Sample 13, Level 96: Timestamp 2021-12-17 00:00:00, Shape (18, 18)
+0: ..F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_v', model_id = 'ci31fxnd', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             for s in samples:
+0:                 sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0:                 sample_pred, _, _, _ = get_data(pred,field, s, level_idx)
+0:     
+0: >               assert compute_RMSE(sample_target, sample_pred).mean() < get_max_RMSE(field)
+0: E               AssertionError: assert np.float32(0.7720985) < 0.2
+0: E                +  where np.float32(0.7720985) = <built-in method mean of numpy.float32 object at 0x7fffa1416a30>()
+0: E                +    where <built-in method mean of numpy.float32 object at 0x7fffa1416a30> = np.float32(0.7720985).mean
+0: E                +      where np.float32(0.7720985) = compute_RMSE(array([[-13.272594 , -13.696423 , -14.137829 , -14.553844 , -14.9132185,\n        -15.196422 , -15.393688 , -15.50111  ...9 ,  -9.538219 ,  -9.544079 ,  -9.456188 ,  -9.221813 ,\n         -8.807751 ,  -8.215954 ,  -7.5167346]], dtype=float32), array([[-13.070817 , -13.129448 , -13.207475 , -13.381271 , -13.628668 ,\n        -13.897432 , -14.18049  , -14.417497 ...5 ,  -9.747256 ,  -9.647429 ,  -9.444894 ,  -9.158543 ,\n         -8.770275 ,  -8.285969 ,  -7.717207 ]], dtype=float32))
+0: E                +  and   0.2 = get_max_RMSE('velocity_v')
+0: 
+0: atmorep/tests/validation_test.py:196: AssertionError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - AssertionError: assert n...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 3.28s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 16, Level 96: Timestamp 2021-09-27 13:00:00, Shape (18, 18)
+0: Sample 17, Level 96: Timestamp 2021-10-06 02:00:00, Shape (18, 18)
+0: Sample 65, Level 96: Timestamp 2021-04-27 02:00:00, Shape (18, 18)
+0: Sample 33, Level 96: Timestamp 2021-11-22 17:00:00, Shape (18, 18)
+0: Sample 92, Level 96: Timestamp 2021-12-27 03:00:00, Shape (18, 18)
+0: ...
+0: 
+0: ============================== 3 passed in 3.46s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 35, Level 96: Timestamp 2021-02-21 00:00:00, Shape (18, 18)
+0: Sample 1, Level 96: Timestamp 2021-07-26 14:00:00, Shape (18, 18)
+0: Sample 36, Level 96: Timestamp 2021-02-02 19:00:00, Shape (18, 18)
+0: Sample 88, Level 96: Timestamp 2021-06-26 20:00:00, Shape (18, 18)
+0: Sample 26, Level 96: Timestamp 2021-08-22 00:00:00, Shape (18, 18)
+0: ..F
+0: 
+0: =================================== FAILURES ===================================
+0: __________________________________ test_rmse ___________________________________
+0: 
+0: field = 'velocity_z', model_id = 'ci31fxnd', BERT = True, epoch = 0
+0: 
+0:     def test_rmse(field, model_id, BERT, epoch = 0):
+0:         """
+0:         Test that for each field the RMSE does not exceed a certain value.
+0:         50 random samples.
+0:         """
+0:         store_t = zarr.ZipStore(atmorep_target().format(model_id, model_id, str(epoch).zfill(5)))
+0:         target = zarr.group(store_t)
+0:     
+0:         store_p = zarr.ZipStore(atmorep_pred().format(model_id, model_id, str(epoch).zfill(5)))
+0:         pred = zarr.group(store_p)
+0:     
+0:         nsamples = min(len(target[field]), 50)
+0:         samples = rnd.sample(range(len(target[field])), nsamples)
+0:         levels = [int(f.split("=")[1]) for f in target[f"{field}/sample=00000"]] if BERT else target[f"{field}/sample=00000"].ml[:]
+0:     
+0:         get_data = get_BERT if BERT else get_forecast
+0:     
+0:         for level in levels:
+0:             level_idx = level if BERT else np.where(levels == level)[0].tolist()[0]
+0:             for s in samples:
+0:                 sample_target, _, _, _ = get_data(target,field, s, level_idx)
+0:                 sample_pred, _, _, _ = get_data(pred,field, s, level_idx)
+0:     
+0: >               assert compute_RMSE(sample_target, sample_pred).mean() < get_max_RMSE(field)
+0: E               AssertionError: assert np.float32(0.21169226) < 0.2
+0: E                +  where np.float32(0.21169226) = <built-in method mean of numpy.float32 object at 0x7fff93bb6cd0>()
+0: E                +    where <built-in method mean of numpy.float32 object at 0x7fff93bb6cd0> = np.float32(0.21169226).mean
+0: E                +      where np.float32(0.21169226) = compute_RMSE(array([[ 0.23366737,  0.29128456,  0.34548378,  0.39284706,  0.43190956,\n         0.46218297,  0.48415568,  0.4958744 ...06, -0.23068808, -0.24973105, -0.21310997, -0.14426231,\n        -0.07199669, -0.01877403,  0.00710487]], dtype=float32), array([[ 0.27189076,  0.32008436,  0.39387974,  0.44989198,  0.509685  ,\n         0.56270254,  0.5926212 ,  0.6059656 ...67, -0.23416954, -0.20221613, -0.13007666, -0.04861914,\n         0.01358161,  0.02987066,  0.02140845]], dtype=float32))
+0: E                +  and   0.2 = get_max_RMSE('velocity_z')
+0: 
+0: atmorep/tests/validation_test.py:196: AssertionError
+0: =========================== short test summary info ============================
+0: FAILED atmorep/tests/validation_test.py::test_rmse - AssertionError: assert n...
+0: !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+0: ========================= 1 failed, 2 passed in 1.93s ==========================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 43, Level 96: Timestamp 2021-08-03 12:00:00, Shape (27, 27)
+0: Sample 76, Level 96: Timestamp 2021-05-30 15:00:00, Shape (27, 27)
+0: Sample 52, Level 96: Timestamp 2021-01-06 01:00:00, Shape (27, 27)
+0: Sample 60, Level 96: Timestamp 2021-06-28 01:00:00, Shape (27, 27)
+0: Sample 39, Level 96: Timestamp 2021-03-31 21:00:00, Shape (27, 27)
+0: ...
+0: 
+0: ============================== 3 passed in 2.75s ===============================
+0: ============================= test session starts ==============================
+0: platform linux -- Python 3.10.10, pytest-8.3.4, pluggy-1.5.0
+0: rootdir: /work/ab1412
+0: collected 3 items
+0: 
+0: atmorep/tests/validation_test.py Sample 62, Level 0: Timestamp 2021-09-10 18:00:00, Shape (9, 9)
+0: Sample 94, Level 0: Timestamp 2021-01-21 21:00:00, Shape (9, 9)
+0: Sample 12, Level 0: Timestamp 2021-06-04 14:00:00, Shape (9, 9)
+0: Sample 11, Level 0: Timestamp 2021-07-25 00:00:00, Shape (9, 9)
+0: Sample 35, Level 0: Timestamp 2021-02-22 03:00:00, Shape (9, 9)
+0: ...
+0: 
+0: ============================== 3 passed in 1.26s ===============================
+0: time 347.43717312812805
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250611_184843-ci31fxnd[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250611_184843-ci31fxnd/logs[0m
+0: l50027:1507169:1507422 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+0: l50027:1507169:1508025 [0] NCCL INFO comm 0x55555f290720 rank 0 nranks 1 cudaDev 0 busId 3000 - Abort COMPLETE

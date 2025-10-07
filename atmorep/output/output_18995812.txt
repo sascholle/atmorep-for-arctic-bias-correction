@@ -1,0 +1,453 @@
+0: Wandb run: atmorep-fvlvttwm-18995812
+0: l50139:3432830:3432830 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.188<0>
+0: l50139:3432830:3432830 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+0: l50139:3432830:3432830 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+0: l50139:3432830:3432830 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+0: l50139:3432830:3432830 [0] NCCL INFO cudaDriverVersion 12060
+0: NCCL version 2.21.5+cuda12.4
+1: l50142:2932789:2932789 [0] NCCL INFO cudaDriverVersion 12060
+1: l50142:2932789:2932789 [0] NCCL INFO Bootstrap : Using ib0:10.128.11.190<0>
+1: l50142:2932789:2932789 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+1: l50142:2932789:2932789 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+1: l50142:2932789:2932789 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+1: l50142:2932789:2933036 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.190<0>
+1: l50142:2932789:2933036 [0] NCCL INFO Using non-device net plugin version 0
+1: l50142:2932789:2933036 [0] NCCL INFO Using network IB
+1: l50142:2932789:2933036 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l50139:3432830:3433348 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.128.11.188<0>
+0: l50139:3432830:3433348 [0] NCCL INFO Using non-device net plugin version 0
+0: l50139:3432830:3433348 [0] NCCL INFO Using network IB
+0: l50139:3432830:3433348 [0] NCCL INFO DMA-BUF is available on GPU device 0
+0: l50139:3432830:3433348 [0] NCCL INFO ncclCommInitRank comm 0x55555f0ed270 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 3000 commId 0xc4151aba4191bb22 - Init START
+1: l50142:2932789:2933036 [0] NCCL INFO ncclCommInitRank comm 0x55555eca2570 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 3000 commId 0xc4151aba4191bb22 - Init START
+0: l50139:3432830:3433348 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+1: l50142:2932789:2933036 [0] NCCL INFO Setting affinity for GPU 0 to ffff0000,00000000,00000000,00000000,ffff0000,00000000
+1: l50142:2932789:2933036 [0] NCCL INFO comm 0x55555eca2570 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+0: l50139:3432830:3433348 [0] NCCL INFO comm 0x55555f0ed270 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+1: l50142:2932789:2933036 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0 [2] 0/-1/-1->1->-1 [3] 0/-1/-1->1->-1
+1: l50142:2932789:2933036 [0] NCCL INFO P2P Chunksize set to 131072
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 00/04 :    0   1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 01/04 :    0   1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 02/04 :    0   1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 03/04 :    0   1
+0: l50139:3432830:3433348 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] -1/-1/-1->0->1 [3] -1/-1/-1->0->1
+0: l50139:3432830:3433348 [0] NCCL INFO P2P Chunksize set to 131072
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [receive] via NET/IB/1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/IB/0
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/IB/1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [send] via NET/IB/0
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/0
+1: l50142:2932789:2933036 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [send] via NET/IB/1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/1
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [send] via NET/IB/0
+0: l50139:3432830:3433348 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [send] via NET/IB/1
+0: l50139:3432830:3433351 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+0: l50139:3432830:3433351 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+1: l50142:2932789:2933039 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 250.
+1: l50142:2932789:2933039 [0] NCCL INFO NCCL_IB_RETRY_CNT set by environment to 50.
+0: l50139:3432830:3433348 [0] NCCL INFO Connected all rings
+0: l50139:3432830:3433348 [0] NCCL INFO Connected all trees
+1: l50142:2932789:2933036 [0] NCCL INFO Connected all rings
+1: l50142:2932789:2933036 [0] NCCL INFO Connected all trees
+1: l50142:2932789:2933036 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+1: l50142:2932789:2933036 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433348 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+0: l50139:3432830:3433348 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433348 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+0: l50139:3432830:3433348 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+0: l50139:3432830:3433348 [0] NCCL INFO ncclCommInitRank comm 0x55555f0ed270 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 3000 commId 0xc4151aba4191bb22 - Init COMPLETE
+1: l50142:2932789:2933036 [0] NCCL INFO TUNER/Plugin: Plugin load returned 11 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+1: l50142:2932789:2933036 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+1: l50142:2932789:2933036 [0] NCCL INFO ncclCommInitRank comm 0x55555eca2570 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 3000 commId 0xc4151aba4191bb22 - Init COMPLETE
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 2
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 1, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 2, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 3, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 3, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity'], 1], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 2], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : [[72.5, 90.0], [0.0, 360.0]]
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 64
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : BERT
+0: forecast_num_tokens : 2
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 0
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 18995812
+0: wandb_id : fvlvttwm
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : b9h8xdoz
+0: years_test : [2021]
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+1: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+1: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+1: self.lats : (721,)
+1: self.lons : (1440,)
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+1: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 3
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 0
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 1
+0: ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'] 2
+0: Loaded AtmoRep: ignoring 208 elements: ['embeds_token_info.7.weight', 'embeds_token_info.7.bias', 'embeds.7.weight', 'embeds.7.bias', 'encoders.7.embed.weight', 'encoders.7.embed.bias', 'encoders.7.heads.0.proj_out.weight', 'encoders.7.heads.0.proj_heads.weight', 'encoders.7.heads.0.proj_heads_other.0.weight', 'encoders.7.heads.0.proj_heads_other.1.weight', 'encoders.7.heads.0.proj_heads_other.2.weight', 'encoders.7.heads.0.proj_heads_other.3.weight', 'encoders.7.heads.0.proj_heads_other.4.weight', 'encoders.7.heads.1.proj_out.weight', 'encoders.7.heads.1.proj_heads.weight', 'encoders.7.heads.1.proj_heads_other.0.weight', 'encoders.7.heads.1.proj_heads_other.1.weight', 'encoders.7.heads.1.proj_heads_other.2.weight', 'encoders.7.heads.1.proj_heads_other.3.weight', 'encoders.7.heads.1.proj_heads_other.4.weight', 'encoders.7.heads.2.proj_out.weight', 'encoders.7.heads.2.proj_heads.weight', 'encoders.7.heads.2.proj_heads_other.0.weight', 'encoders.7.heads.2.proj_heads_other.1.weight', 'encoders.7.heads.2.proj_hea
+0: ds_other.2.weight', 'encoders.7.heads.2.proj_heads_other.3.weight', 'encoders.7.heads.2.proj_heads_other.4.weight', 'encoders.7.heads.3.proj_out.weight', 'encoders.7.heads.3.proj_heads.weight', 'encoders.7.heads.3.proj_heads_other.0.weight', 'encoders.7.heads.3.proj_heads_other.1.weight', 'encoders.7.heads.3.proj_heads_other.2.weight', 'encoders.7.heads.3.proj_heads_other.3.weight', 'encoders.7.heads.3.proj_heads_other.4.weight', 'encoders.7.heads.4.proj_out.weight', 'encoders.7.heads.4.proj_heads.weight', 'encoders.7.heads.4.proj_heads_other.0.weight', 'encoders.7.heads.4.proj_heads_other.1.weight', 'encoders.7.heads.4.proj_heads_other.2.weight', 'encoders.7.heads.4.proj_heads_other.3.weight', 'encoders.7.heads.4.proj_heads_other.4.weight', 'encoders.7.heads.5.proj_out.weight', 'encoders.7.heads.5.proj_heads.weight', 'encoders.7.heads.5.proj_heads_other.0.weight', 'encoders.7.heads.5.proj_heads_other.1.weight', 'encoders.7.heads.5.proj_heads_other.2.weight', 'encoders.7.heads.5.proj_heads_other.3.weight', 'e
+0: ncoders.7.heads.5.proj_heads_other.4.weight', 'encoders.7.mlps.0.blocks.0.weight', 'encoders.7.mlps.0.blocks.0.bias', 'encoders.7.mlps.0.blocks.3.weight', 'encoders.7.mlps.0.blocks.3.bias', 'encoders.7.mlps.1.blocks.0.weight', 'encoders.7.mlps.1.blocks.0.bias', 'encoders.7.mlps.1.blocks.3.weight', 'encoders.7.mlps.1.blocks.3.bias', 'encoders.7.mlps.2.blocks.0.weight', 'encoders.7.mlps.2.blocks.0.bias', 'encoders.7.mlps.2.blocks.3.weight', 'encoders.7.mlps.2.blocks.3.bias', 'encoders.7.mlps.3.blocks.0.weight', 'encoders.7.mlps.3.blocks.0.bias', 'encoders.7.mlps.3.blocks.3.weight', 'encoders.7.mlps.3.blocks.3.bias', 'encoders.7.mlps.4.blocks.0.weight', 'encoders.7.mlps.4.blocks.0.bias', 'encoders.7.mlps.4.blocks.3.weight', 'encoders.7.mlps.4.blocks.3.bias', 'encoders.7.mlps.5.blocks.0.weight', 'encoders.7.mlps.5.blocks.0.bias', 'encoders.7.mlps.5.blocks.3.weight', 'encoders.7.mlps.5.blocks.3.bias', 'decoders.7.blocks.0.proj_heads.weight', 'decoders.7.blocks.0.proj_heads_o_q.weight', 'decoders.7.blocks.0.proj_he
+0: ads_o_kv.weight', 'decoders.7.blocks.0.ln_q.weight', 'decoders.7.blocks.0.ln_q.bias', 'decoders.7.blocks.0.ln_k.weight', 'decoders.7.blocks.0.ln_k.bias', 'decoders.7.blocks.0.proj_out.weight', 'decoders.7.blocks.1.blocks.0.weight', 'decoders.7.blocks.1.blocks.0.bias', 'decoders.7.blocks.1.blocks.3.weight', 'decoders.7.blocks.1.blocks.3.bias', 'decoders.7.blocks.2.proj_heads.weight', 'decoders.7.blocks.2.proj_heads_o_q.weight', 'decoders.7.blocks.2.proj_heads_o_kv.weight', 'decoders.7.blocks.2.ln_q.weight', 'decoders.7.blocks.2.ln_q.bias', 'decoders.7.blocks.2.ln_k.weight', 'decoders.7.blocks.2.ln_k.bias', 'decoders.7.blocks.2.proj_out.weight', 'decoders.7.blocks.3.blocks.0.weight', 'decoders.7.blocks.3.blocks.0.bias', 'decoders.7.blocks.3.blocks.3.weight', 'decoders.7.blocks.3.blocks.3.bias', 'decoders.7.blocks.4.proj_heads.weight', 'decoders.7.blocks.4.proj_heads_o_q.weight', 'decoders.7.blocks.4.proj_heads_o_kv.weight', 'decoders.7.blocks.4.ln_q.weight', 'decoders.7.blocks.4.ln_q.bias', 'decoders.7.blocks.4
+0: .ln_k.weight', 'decoders.7.blocks.4.ln_k.bias', 'decoders.7.blocks.4.proj_out.weight', 'decoders.7.blocks.5.blocks.0.weight', 'decoders.7.blocks.5.blocks.0.bias', 'decoders.7.blocks.5.blocks.3.weight', 'decoders.7.blocks.5.blocks.3.bias', 'decoders.7.blocks.6.proj_heads.weight', 'decoders.7.blocks.6.proj_heads_o_q.weight', 'decoders.7.blocks.6.proj_heads_o_kv.weight', 'decoders.7.blocks.6.ln_q.weight', 'decoders.7.blocks.6.ln_q.bias', 'decoders.7.blocks.6.ln_k.weight', 'decoders.7.blocks.6.ln_k.bias', 'decoders.7.blocks.6.proj_out.weight', 'decoders.7.blocks.7.blocks.0.weight', 'decoders.7.blocks.7.blocks.0.bias', 'decoders.7.blocks.7.blocks.3.weight', 'decoders.7.blocks.7.blocks.3.bias', 'decoders.7.blocks.8.proj_heads.weight', 'decoders.7.blocks.8.proj_heads_o_q.weight', 'decoders.7.blocks.8.proj_heads_o_kv.weight', 'decoders.7.blocks.8.ln_q.weight', 'decoders.7.blocks.8.ln_q.bias', 'decoders.7.blocks.8.ln_k.weight', 'decoders.7.blocks.8.ln_k.bias', 'decoders.7.blocks.8.proj_out.weight', 'decoders.7.blocks.
+0: 9.blocks.0.weight', 'decoders.7.blocks.9.blocks.0.bias', 'decoders.7.blocks.9.blocks.3.weight', 'decoders.7.blocks.9.blocks.3.bias', 'decoders.7.blocks.10.proj_heads.weight', 'decoders.7.blocks.10.proj_heads_o_q.weight', 'decoders.7.blocks.10.proj_heads_o_kv.weight', 'decoders.7.blocks.10.ln_q.weight', 'decoders.7.blocks.10.ln_q.bias', 'decoders.7.blocks.10.ln_k.weight', 'decoders.7.blocks.10.ln_k.bias', 'decoders.7.blocks.10.proj_out.weight', 'decoders.7.blocks.11.blocks.0.weight', 'decoders.7.blocks.11.blocks.0.bias', 'decoders.7.blocks.11.blocks.3.weight', 'decoders.7.blocks.11.blocks.3.bias', 'tails.7.tail_nets.0.0.weight', 'tails.7.tail_nets.0.0.bias', 'tails.7.tail_nets.0.1.weight', 'tails.7.tail_nets.0.1.bias', 'tails.7.tail_nets.1.0.weight', 'tails.7.tail_nets.1.0.bias', 'tails.7.tail_nets.1.1.weight', 'tails.7.tail_nets.1.1.bias', 'tails.7.tail_nets.2.0.weight', 'tails.7.tail_nets.2.0.bias', 'tails.7.tail_nets.2.1.weight', 'tails.7.tail_nets.2.1.bias', 'tails.7.tail_nets.3.0.weight', 'tails.7.tail_ne
+0: ts.3.0.bias', 'tails.7.tail_nets.3.1.weight', 'tails.7.tail_nets.3.1.bias', 'tails.7.tail_nets.4.0.weight', 'tails.7.tail_nets.4.0.bias', 'tails.7.tail_nets.4.1.weight', 'tails.7.tail_nets.4.1.bias', 'tails.7.tail_nets.5.0.weight', 'tails.7.tail_nets.5.0.bias', 'tails.7.tail_nets.5.1.weight', 'tails.7.tail_nets.5.1.bias', 'tails.7.tail_nets.6.0.weight', 'tails.7.tail_nets.6.0.bias', 'tails.7.tail_nets.6.1.weight', 'tails.7.tail_nets.6.1.bias', 'tails.7.tail_nets.7.0.weight', 'tails.7.tail_nets.7.0.bias', 'tails.7.tail_nets.7.1.weight', 'tails.7.tail_nets.7.1.bias', 'tails.7.tail_nets.8.0.weight', 'tails.7.tail_nets.8.0.bias', 'tails.7.tail_nets.8.1.weight', 'tails.7.tail_nets.8.1.bias', 'tails.7.tail_nets.9.0.weight', 'tails.7.tail_nets.9.0.bias', 'tails.7.tail_nets.9.1.weight', 'tails.7.tail_nets.9.1.bias', 'tails.7.tail_nets.10.0.weight', 'tails.7.tail_nets.10.0.bias', 'tails.7.tail_nets.10.1.weight', 'tails.7.tail_nets.10.1.bias', 'tails.7.tail_nets.11.0.weight', 'tails.7.tail_nets.11.0.bias', 'tails.7.tai
+0: l_nets.11.1.weight', 'tails.7.tail_nets.11.1.bias', 'tails.7.tail_nets.12.0.weight', 'tails.7.tail_nets.12.0.bias', 'tails.7.tail_nets.12.1.weight', 'tails.7.tail_nets.12.1.bias', 'tails.7.tail_nets.13.0.weight', 'tails.7.tail_nets.13.0.bias', 'tails.7.tail_nets.13.1.weight', 'tails.7.tail_nets.13.1.bias', 'tails.7.tail_nets.14.0.weight', 'tails.7.tail_nets.14.0.bias', 'tails.7.tail_nets.14.1.weight', 'tails.7.tail_nets.14.1.bias', 'tails.7.tail_nets.15.0.weight', 'tails.7.tail_nets.15.0.bias', 'tails.7.tail_nets.15.1.weight', 'tails.7.tail_nets.15.1.bias']
+1: Loaded AtmoRep: ignoring 208 elements: ['embeds_token_info.7.weight', 'embeds_token_info.7.bias', 'embeds.7.weight', 'embeds.7.bias', 'encoders.7.embed.weight', 'encoders.7.embed.bias', 'encoders.7.heads.0.proj_out.weight', 'encoders.7.heads.0.proj_heads.weight', 'encoders.7.heads.0.proj_heads_other.0.weight', 'encoders.7.heads.0.proj_heads_other.1.weight', 'encoders.7.heads.0.proj_heads_other.2.weight', 'encoders.7.heads.0.proj_heads_other.3.weight', 'encoders.7.heads.0.proj_heads_other.4.weight', 'encoders.7.heads.1.proj_out.weight', 'encoders.7.heads.1.proj_heads.weight', 'encoders.7.heads.1.proj_heads_other.0.weight', 'encoders.7.heads.1.proj_heads_other.1.weight', 'encoders.7.heads.1.proj_heads_other.2.weight', 'encoders.7.heads.1.proj_heads_other.3.weight', 'encoders.7.heads.1.proj_heads_other.4.weight', 'encoders.7.heads.2.proj_out.weight', 'encoders.7.heads.2.proj_heads.weight', 'encoders.7.heads.2.proj_heads_other.0.weight', 'encoders.7.heads.2.proj_heads_other.1.weight', 'encoders.7.heads.2.proj_hea
+1: ds_other.2.weight', 'encoders.7.heads.2.proj_heads_other.3.weight', 'encoders.7.heads.2.proj_heads_other.4.weight', 'encoders.7.heads.3.proj_out.weight', 'encoders.7.heads.3.proj_heads.weight', 'encoders.7.heads.3.proj_heads_other.0.weight', 'encoders.7.heads.3.proj_heads_other.1.weight', 'encoders.7.heads.3.proj_heads_other.2.weight', 'encoders.7.heads.3.proj_heads_other.3.weight', 'encoders.7.heads.3.proj_heads_other.4.weight', 'encoders.7.heads.4.proj_out.weight', 'encoders.7.heads.4.proj_heads.weight', 'encoders.7.heads.4.proj_heads_other.0.weight', 'encoders.7.heads.4.proj_heads_other.1.weight', 'encoders.7.heads.4.proj_heads_other.2.weight', 'encoders.7.heads.4.proj_heads_other.3.weight', 'encoders.7.heads.4.proj_heads_other.4.weight', 'encoders.7.heads.5.proj_out.weight', 'encoders.7.heads.5.proj_heads.weight', 'encoders.7.heads.5.proj_heads_other.0.weight', 'encoders.7.heads.5.proj_heads_other.1.weight', 'encoders.7.heads.5.proj_heads_other.2.weight', 'encoders.7.heads.5.proj_heads_other.3.weight', 'e
+1: ncoders.7.heads.5.proj_heads_other.4.weight', 'encoders.7.mlps.0.blocks.0.weight', 'encoders.7.mlps.0.blocks.0.bias', 'encoders.7.mlps.0.blocks.3.weight', 'encoders.7.mlps.0.blocks.3.bias', 'encoders.7.mlps.1.blocks.0.weight', 'encoders.7.mlps.1.blocks.0.bias', 'encoders.7.mlps.1.blocks.3.weight', 'encoders.7.mlps.1.blocks.3.bias', 'encoders.7.mlps.2.blocks.0.weight', 'encoders.7.mlps.2.blocks.0.bias', 'encoders.7.mlps.2.blocks.3.weight', 'encoders.7.mlps.2.blocks.3.bias', 'encoders.7.mlps.3.blocks.0.weight', 'encoders.7.mlps.3.blocks.0.bias', 'encoders.7.mlps.3.blocks.3.weight', 'encoders.7.mlps.3.blocks.3.bias', 'encoders.7.mlps.4.blocks.0.weight', 'encoders.7.mlps.4.blocks.0.bias', 'encoders.7.mlps.4.blocks.3.weight', 'encoders.7.mlps.4.blocks.3.bias', 'encoders.7.mlps.5.blocks.0.weight', 'encoders.7.mlps.5.blocks.0.bias', 'encoders.7.mlps.5.blocks.3.weight', 'encoders.7.mlps.5.blocks.3.bias', 'decoders.7.blocks.0.proj_heads.weight', 'decoders.7.blocks.0.proj_heads_o_q.weight', 'decoders.7.blocks.0.proj_he
+1: ads_o_kv.weight', 'decoders.7.blocks.0.ln_q.weight', 'decoders.7.blocks.0.ln_q.bias', 'decoders.7.blocks.0.ln_k.weight', 'decoders.7.blocks.0.ln_k.bias', 'decoders.7.blocks.0.proj_out.weight', 'decoders.7.blocks.1.blocks.0.weight', 'decoders.7.blocks.1.blocks.0.bias', 'decoders.7.blocks.1.blocks.3.weight', 'decoders.7.blocks.1.blocks.3.bias', 'decoders.7.blocks.2.proj_heads.weight', 'decoders.7.blocks.2.proj_heads_o_q.weight', 'decoders.7.blocks.2.proj_heads_o_kv.weight', 'decoders.7.blocks.2.ln_q.weight', 'decoders.7.blocks.2.ln_q.bias', 'decoders.7.blocks.2.ln_k.weight', 'decoders.7.blocks.2.ln_k.bias', 'decoders.7.blocks.2.proj_out.weight', 'decoders.7.blocks.3.blocks.0.weight', 'decoders.7.blocks.3.blocks.0.bias', 'decoders.7.blocks.3.blocks.3.weight', 'decoders.7.blocks.3.blocks.3.bias', 'decoders.7.blocks.4.proj_heads.weight', 'decoders.7.blocks.4.proj_heads_o_q.weight', 'decoders.7.blocks.4.proj_heads_o_kv.weight', 'decoders.7.blocks.4.ln_q.weight', 'decoders.7.blocks.4.ln_q.bias', 'decoders.7.blocks.4
+1: .ln_k.weight', 'decoders.7.blocks.4.ln_k.bias', 'decoders.7.blocks.4.proj_out.weight', 'decoders.7.blocks.5.blocks.0.weight', 'decoders.7.blocks.5.blocks.0.bias', 'decoders.7.blocks.5.blocks.3.weight', 'decoders.7.blocks.5.blocks.3.bias', 'decoders.7.blocks.6.proj_heads.weight', 'decoders.7.blocks.6.proj_heads_o_q.weight', 'decoders.7.blocks.6.proj_heads_o_kv.weight', 'decoders.7.blocks.6.ln_q.weight', 'decoders.7.blocks.6.ln_q.bias', 'decoders.7.blocks.6.ln_k.weight', 'decoders.7.blocks.6.ln_k.bias', 'decoders.7.blocks.6.proj_out.weight', 'decoders.7.blocks.7.blocks.0.weight', 'decoders.7.blocks.7.blocks.0.bias', 'decoders.7.blocks.7.blocks.3.weight', 'decoders.7.blocks.7.blocks.3.bias', 'decoders.7.blocks.8.proj_heads.weight', 'decoders.7.blocks.8.proj_heads_o_q.weight', 'decoders.7.blocks.8.proj_heads_o_kv.weight', 'decoders.7.blocks.8.ln_q.weight', 'decoders.7.blocks.8.ln_q.bias', 'decoders.7.blocks.8.ln_k.weight', 'decoders.7.blocks.8.ln_k.bias', 'decoders.7.blocks.8.proj_out.weight', 'decoders.7.blocks.
+1: 9.blocks.0.weight', 'decoders.7.blocks.9.blocks.0.bias', 'decoders.7.blocks.9.blocks.3.weight', 'decoders.7.blocks.9.blocks.3.bias', 'decoders.7.blocks.10.proj_heads.weight', 'decoders.7.blocks.10.proj_heads_o_q.weight', 'decoders.7.blocks.10.proj_heads_o_kv.weight', 'decoders.7.blocks.10.ln_q.weight', 'decoders.7.blocks.10.ln_q.bias', 'decoders.7.blocks.10.ln_k.weight', 'decoders.7.blocks.10.ln_k.bias', 'decoders.7.blocks.10.proj_out.weight', 'decoders.7.blocks.11.blocks.0.weight', 'decoders.7.blocks.11.blocks.0.bias', 'decoders.7.blocks.11.blocks.3.weight', 'decoders.7.blocks.11.blocks.3.bias', 'tails.7.tail_nets.0.0.weight', 'tails.7.tail_nets.0.0.bias', 'tails.7.tail_nets.0.1.weight', 'tails.7.tail_nets.0.1.bias', 'tails.7.tail_nets.1.0.weight', 'tails.7.tail_nets.1.0.bias', 'tails.7.tail_nets.1.1.weight', 'tails.7.tail_nets.1.1.bias', 'tails.7.tail_nets.2.0.weight', 'tails.7.tail_nets.2.0.bias', 'tails.7.tail_nets.2.1.weight', 'tails.7.tail_nets.2.1.bias', 'tails.7.tail_nets.3.0.weight', 'tails.7.tail_ne
+1: ts.3.0.bias', 'tails.7.tail_nets.3.1.weight', 'tails.7.tail_nets.3.1.bias', 'tails.7.tail_nets.4.0.weight', 'tails.7.tail_nets.4.0.bias', 'tails.7.tail_nets.4.1.weight', 'tails.7.tail_nets.4.1.bias', 'tails.7.tail_nets.5.0.weight', 'tails.7.tail_nets.5.0.bias', 'tails.7.tail_nets.5.1.weight', 'tails.7.tail_nets.5.1.bias', 'tails.7.tail_nets.6.0.weight', 'tails.7.tail_nets.6.0.bias', 'tails.7.tail_nets.6.1.weight', 'tails.7.tail_nets.6.1.bias', 'tails.7.tail_nets.7.0.weight', 'tails.7.tail_nets.7.0.bias', 'tails.7.tail_nets.7.1.weight', 'tails.7.tail_nets.7.1.bias', 'tails.7.tail_nets.8.0.weight', 'tails.7.tail_nets.8.0.bias', 'tails.7.tail_nets.8.1.weight', 'tails.7.tail_nets.8.1.bias', 'tails.7.tail_nets.9.0.weight', 'tails.7.tail_nets.9.0.bias', 'tails.7.tail_nets.9.1.weight', 'tails.7.tail_nets.9.1.bias', 'tails.7.tail_nets.10.0.weight', 'tails.7.tail_nets.10.0.bias', 'tails.7.tail_nets.10.1.weight', 'tails.7.tail_nets.10.1.bias', 'tails.7.tail_nets.11.0.weight', 'tails.7.tail_nets.11.0.bias', 'tails.7.tai
+1: l_nets.11.1.weight', 'tails.7.tail_nets.11.1.bias', 'tails.7.tail_nets.12.0.weight', 'tails.7.tail_nets.12.0.bias', 'tails.7.tail_nets.12.1.weight', 'tails.7.tail_nets.12.1.bias', 'tails.7.tail_nets.13.0.weight', 'tails.7.tail_nets.13.0.bias', 'tails.7.tail_nets.13.1.weight', 'tails.7.tail_nets.13.1.bias', 'tails.7.tail_nets.14.0.weight', 'tails.7.tail_nets.14.0.bias', 'tails.7.tail_nets.14.1.weight', 'tails.7.tail_nets.14.1.bias', 'tails.7.tail_nets.15.0.weight', 'tails.7.tail_nets.15.0.bias', 'tails.7.tail_nets.15.1.weight', 'tails.7.tail_nets.15.1.bias']
+0: Loaded model id = b9h8xdoz.
+1: Loaded model id = b9h8xdoz.
+1: Loaded run 'b9h8xdoz' at epoch -2.
+0: Loaded run 'b9h8xdoz' at epoch -2.
+0: l50139:3432830:3433390 [1] NCCL INFO Using non-device net plugin version 0
+0: l50139:3432830:3433390 [1] NCCL INFO Using network IB
+0: l50139:3432830:3433390 [1] NCCL INFO DMA-BUF is available on GPU device 1
+1: l50142:2932789:2933057 [1] NCCL INFO Using non-device net plugin version 0
+1: l50142:2932789:2933057 [1] NCCL INFO Using network IB
+1: l50142:2932789:2933057 [1] NCCL INFO DMA-BUF is available on GPU device 1
+0: l50139:3432830:3433390 [1] NCCL INFO ncclCommInitRank comm 0x555589dde1c0 rank 0 nranks 2 cudaDev 1 nvmlDev 1 busId 44000 commId 0xef6171973d8b24cf - Init START
+1: l50142:2932789:2933057 [1] NCCL INFO ncclCommInitRank comm 0x55558bb68eb0 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 44000 commId 0xef6171973d8b24cf - Init START
+0: l50139:3432830:3433390 [1] NCCL INFO Setting affinity for GPU 1 to ffff0000,00000000,00000000,00000000,ffff0000
+1: l50142:2932789:2933057 [1] NCCL INFO Setting affinity for GPU 1 to ffff0000,00000000,00000000,00000000,ffff0000
+0: l50139:3432830:3433390 [1] NCCL INFO comm 0x555589dde1c0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+1: l50142:2932789:2933057 [1] NCCL INFO comm 0x55558bb68eb0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 00/02 :    0   1
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 01/02 :    0   1
+0: l50139:3432830:3433390 [1] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+0: l50139:3432830:3433390 [1] NCCL INFO P2P Chunksize set to 131072
+1: l50142:2932789:2933057 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+1: l50142:2932789:2933057 [1] NCCL INFO P2P Chunksize set to 131072
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[1] [receive] via NET/IB/0/GDRDMA
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 00/0 : 0[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+0: l50139:3432830:3433390 [1] NCCL INFO Channel 01/0 : 0[1] -> 1[1] [send] via NET/IB/0/GDRDMA
+1: l50142:2932789:2933057 [1] NCCL INFO Channel 00/0 : 0[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+1: l50142:2932789:2933057 [1] NCCL INFO Channel 01/0 : 0[1] -> 1[1] [receive] via NET/IB/0/GDRDMA
+1: l50142:2932789:2933057 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+1: l50142:2932789:2933057 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[1] [send] via NET/IB/0/GDRDMA
+0: l50139:3432830:3433390 [1] NCCL INFO Connected all rings
+0: l50139:3432830:3433390 [1] NCCL INFO Connected all trees
+1: l50142:2932789:2933057 [1] NCCL INFO Connected all rings
+1: l50142:2932789:2933057 [1] NCCL INFO Connected all trees
+1: l50142:2932789:2933057 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+1: l50142:2932789:2933057 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433390 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+0: l50139:3432830:3433390 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433390 [1] NCCL INFO ncclCommInitRank comm 0x555589dde1c0 rank 0 nranks 2 cudaDev 1 nvmlDev 1 busId 44000 commId 0xef6171973d8b24cf - Init COMPLETE
+1: l50142:2932789:2933057 [1] NCCL INFO ncclCommInitRank comm 0x55558bb68eb0 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 44000 commId 0xef6171973d8b24cf - Init COMPLETE
+0: l50139:3432830:3433395 [2] NCCL INFO Using non-device net plugin version 0
+0: l50139:3432830:3433395 [2] NCCL INFO Using network IB
+0: l50139:3432830:3433395 [2] NCCL INFO DMA-BUF is available on GPU device 2
+1: l50142:2932789:2933061 [2] NCCL INFO Using non-device net plugin version 0
+1: l50142:2932789:2933061 [2] NCCL INFO Using network IB
+1: l50142:2932789:2933061 [2] NCCL INFO DMA-BUF is available on GPU device 2
+0: l50139:3432830:3433395 [2] NCCL INFO ncclCommInitRank comm 0x55558c0c73e0 rank 0 nranks 2 cudaDev 2 nvmlDev 2 busId 84000 commId 0x442118e09200a865 - Init START
+1: l50142:2932789:2933061 [2] NCCL INFO ncclCommInitRank comm 0x55558de51a70 rank 1 nranks 2 cudaDev 2 nvmlDev 2 busId 84000 commId 0x442118e09200a865 - Init START
+1: l50142:2932789:2933061 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000,00000000,00000000,00000000,ffff0000,00000000,00000000,00000000
+0: l50139:3432830:3433395 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000,00000000,00000000,00000000,ffff0000,00000000,00000000,00000000
+1: l50142:2932789:2933061 [2] NCCL INFO comm 0x55558de51a70 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+1: l50142:2932789:2933061 [2] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+1: l50142:2932789:2933061 [2] NCCL INFO P2P Chunksize set to 131072
+0: l50139:3432830:3433395 [2] NCCL INFO comm 0x55558c0c73e0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 00/02 :    0   1
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 01/02 :    0   1
+0: l50139:3432830:3433395 [2] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+0: l50139:3432830:3433395 [2] NCCL INFO P2P Chunksize set to 131072
+1: l50142:2932789:2933061 [2] NCCL INFO Channel 00/0 : 0[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 00/0 : 1[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+1: l50142:2932789:2933061 [2] NCCL INFO Channel 01/0 : 0[2] -> 1[2] [receive] via NET/IB/1/GDRDMA
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 01/0 : 1[2] -> 0[2] [receive] via NET/IB/1/GDRDMA
+1: l50142:2932789:2933061 [2] NCCL INFO Channel 00/0 : 1[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 00/0 : 0[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+1: l50142:2932789:2933061 [2] NCCL INFO Channel 01/0 : 1[2] -> 0[2] [send] via NET/IB/1/GDRDMA
+0: l50139:3432830:3433395 [2] NCCL INFO Channel 01/0 : 0[2] -> 1[2] [send] via NET/IB/1/GDRDMA
+0: l50139:3432830:3433395 [2] NCCL INFO Connected all rings
+0: l50139:3432830:3433395 [2] NCCL INFO Connected all trees
+1: l50142:2932789:2933061 [2] NCCL INFO Connected all rings
+1: l50142:2932789:2933061 [2] NCCL INFO Connected all trees
+1: l50142:2932789:2933061 [2] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+1: l50142:2932789:2933061 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433395 [2] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+0: l50139:3432830:3433395 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433395 [2] NCCL INFO ncclCommInitRank comm 0x55558c0c73e0 rank 0 nranks 2 cudaDev 2 nvmlDev 2 busId 84000 commId 0x442118e09200a865 - Init COMPLETE
+1: l50142:2932789:2933061 [2] NCCL INFO ncclCommInitRank comm 0x55558de51a70 rank 1 nranks 2 cudaDev 2 nvmlDev 2 busId 84000 commId 0x442118e09200a865 - Init COMPLETE
+0: l50139:3432830:3433400 [3] NCCL INFO Using non-device net plugin version 0
+0: l50139:3432830:3433400 [3] NCCL INFO Using network IB
+0: l50139:3432830:3433400 [3] NCCL INFO DMA-BUF is available on GPU device 3
+1: l50142:2932789:2933065 [3] NCCL INFO Using non-device net plugin version 0
+1: l50142:2932789:2933065 [3] NCCL INFO Using network IB
+1: l50142:2932789:2933065 [3] NCCL INFO DMA-BUF is available on GPU device 3
+0: l50139:3432830:3433400 [3] NCCL INFO ncclCommInitRank comm 0x555594cc2d70 rank 0 nranks 2 cudaDev 3 nvmlDev 3 busId c4000 commId 0x1829584658b521e4 - Init START
+1: l50142:2932789:2933065 [3] NCCL INFO ncclCommInitRank comm 0x5555972b5fa0 rank 1 nranks 2 cudaDev 3 nvmlDev 3 busId c4000 commId 0x1829584658b521e4 - Init START
+1: l50142:2932789:2933065 [3] NCCL INFO Setting affinity for GPU 3 to ffff0000,00000000,00000000,00000000,ffff0000,00000000,00000000
+0: l50139:3432830:3433400 [3] NCCL INFO Setting affinity for GPU 3 to ffff0000,00000000,00000000,00000000,ffff0000,00000000,00000000
+0: l50139:3432830:3433400 [3] NCCL INFO comm 0x555594cc2d70 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 00/04 :    0   1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 01/04 :    0   1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 02/04 :    0   1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 03/04 :    0   1
+0: l50139:3432830:3433400 [3] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] -1/-1/-1->0->1 [3] -1/-1/-1->0->1
+1: l50142:2932789:2933065 [3] NCCL INFO comm 0x5555972b5fa0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+1: l50142:2932789:2933065 [3] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0 [2] 0/-1/-1->1->-1 [3] 0/-1/-1->1->-1
+1: l50142:2932789:2933065 [3] NCCL INFO P2P Chunksize set to 131072
+0: l50139:3432830:3433400 [3] NCCL INFO P2P Chunksize set to 131072
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 00/0 : 0[3] -> 1[3] [receive] via NET/IB/1
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 01/0 : 0[3] -> 1[3] [receive] via NET/IB/0
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 00/0 : 1[3] -> 0[3] [receive] via NET/IB/1
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 02/0 : 0[3] -> 1[3] [receive] via NET/IB/1
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 03/0 : 0[3] -> 1[3] [receive] via NET/IB/0
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 01/0 : 1[3] -> 0[3] [receive] via NET/IB/0
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 00/0 : 1[3] -> 0[3] [send] via NET/IB/1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 02/0 : 1[3] -> 0[3] [receive] via NET/IB/1
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 01/0 : 1[3] -> 0[3] [send] via NET/IB/0
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 02/0 : 1[3] -> 0[3] [send] via NET/IB/1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 03/0 : 1[3] -> 0[3] [receive] via NET/IB/0
+1: l50142:2932789:2933065 [3] NCCL INFO Channel 03/0 : 1[3] -> 0[3] [send] via NET/IB/0
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 00/0 : 0[3] -> 1[3] [send] via NET/IB/1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 01/0 : 0[3] -> 1[3] [send] via NET/IB/0
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 02/0 : 0[3] -> 1[3] [send] via NET/IB/1
+0: l50139:3432830:3433400 [3] NCCL INFO Channel 03/0 : 0[3] -> 1[3] [send] via NET/IB/0
+1: l50142:2932789:2933065 [3] NCCL INFO Connected all rings
+1: l50142:2932789:2933065 [3] NCCL INFO Connected all trees
+1: l50142:2932789:2933065 [3] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+1: l50142:2932789:2933065 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+0: l50139:3432830:3433400 [3] NCCL INFO Connected all rings
+0: l50139:3432830:3433400 [3] NCCL INFO Connected all trees
+0: l50139:3432830:3433400 [3] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+0: l50139:3432830:3433400 [3] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+1: l50142:2932789:2933065 [3] NCCL INFO ncclCommInitRank comm 0x5555972b5fa0 rank 1 nranks 2 cudaDev 3 nvmlDev 3 busId c4000 commId 0x1829584658b521e4 - Init COMPLETE
+0: l50139:3432830:3433400 [3] NCCL INFO ncclCommInitRank comm 0x555594cc2d70 rank 0 nranks 2 cudaDev 3 nvmlDev 3 busId c4000 commId 0x1829584658b521e4 - Init COMPLETE
+1: -1 : 14:16:47 :: batch_size = 64, lr = 1e-05
+0: Number of trainable parameters: 1,031,333,008
+0: -1 : 14:16:47 :: batch_size = 64, lr = 1e-05
+1: [DEBUG] TRAIN INPUT BATCH
+1: Epoch -1, first input batch shapes / sample data:
+1:   └─ Field: 'velocity_u' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+0: [DEBUG] TRAIN INPUT BATCH
+0: Epoch -1, first input batch shapes / sample data:
+0:   └─ Field: 'velocity_u' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.5639, -0.5789, -0.5972, -0.6182, -0.6414, -0.6665, -0.6933, -0.7215, -0.7501, -0.7785, -0.8053, -0.8296,
+0:         -0.8506, -0.8675, -0.8789, -0.8846, -0.8840, -0.8774, -0.6216, -0.6556, -0.6922, -0.7299, -0.7668, -0.8024,
+0:         -0.8358], device='cuda:0')
+0:   └─ Field: 'velocity_v' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([ 0.0059, -0.0038, -0.0121, -0.0199, -0.0272, -0.0349, -0.0426, -0.0491, -0.0536, -0.0546, -0.0519, -0.0459,
+0:         -0.0365, -0.0237, -0.0073,  0.0126,  0.0360,  0.0614, -0.0406, -0.0521, -0.0619, -0.0706, -0.0783, -0.0848,
+0:         -0.0893], device='cuda:1')
+0:   └─ Field: 'specific_humidity' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([-0.1156, -0.0029, -0.0903,  0.0264,  0.0836,  0.0305, -0.1069, -0.0025, -0.0144, -0.0026,  0.0173,  0.1385,
+0:          0.1910,  0.1536, -0.0712, -0.0357, -0.0882,  0.1076,  0.1003,  0.0765, -0.0053,  0.0526,  0.0622, -0.0190,
+0:         -0.0651], device='cuda:2')
+0:   └─ Field: 'velocity_z' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+0:      first 25 values: tensor([0.1434, 0.1180, 0.1191, 0.1323, 0.1500, 0.1787, 0.2241, 0.2848, 0.3489, 0.4031, 0.4440, 0.4837, 0.5368, 0.6175,
+0:         0.7180, 0.8153, 0.8816, 0.8970, 0.2473, 0.1754, 0.1401, 0.1268, 0.1290, 0.1489, 0.1931], device='cuda:3')
+0:   └─ Field: 'temperature' shape: torch.Size([64, 5, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([-1.3777, -1.3939, -1.4108, -1.4277, -1.4446, -1.4606, -1.4756, -1.4893, -1.5017, -1.5126, -1.5221, -1.5303,
+0:         -1.5372, -1.5438, -1.5502, -1.5571, -1.5647, -1.5729, -1.5813, -1.5902, -1.5985, -1.6067, -1.6141, -1.6206,
+0:         -1.6264], device='cuda:3')
+0:   └─ Field: 'total_precip' shape: torch.Size([64, 1, 12, 6, 12, 3, 9, 9])
+0:      first 25 values: tensor([ 0.0504,  0.0391,  0.0266, -0.0142, -0.0539, -0.0709, -0.0993, -0.1651, -0.2320, -0.1299, -0.1832, -0.2286,
+0:         -0.2286, -0.2297, -0.2309, -0.2332, -0.2354, -0.2366, -0.1866, -0.2116, -0.2366, -0.2366, -0.2366, -0.2366,
+0:         -0.2366], device='cuda:0')
+0:   └─ Field: 't2m' shape: torch.Size([64, 1, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([-0.9066, -0.8773, -0.8474, -0.7926, -0.7388, -0.7046, -0.7059, -0.6747, -0.6435, -0.6404, -0.6360, -0.6268,
+0:         -0.6258, -0.6443, -0.6621, -0.6621, -0.6622, -0.6771, -0.6947, -0.7132, -0.7299, -0.7741, -0.8144, -0.8351,
+0:         -0.9023], device='cuda:1')
+0:   └─ Field: 'corrected_t2m' shape: torch.Size([64, 1, 12, 2, 4, 3, 27, 27])
+0:      first 25 values: tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan],
+0:        device='cuda:2')
+0: [DEBUG] TRAIN TARGET BATCH
+0: Epoch -1, batch 0 - Sparse-masked 't2m' shape target data: torch.Size([1577, 2187])
+0:     First 25 batch values:
+0: tensor([1.1973, 1.1703, 1.1400, 1.1175, 1.0934, 1.0820, 1.1247, 1.1434, 1.1574, 1.1962, 1.2296, 1.2533, 1.3045, 1.3283,
+0:         1.3476, 1.3779, 1.4037, 1.4406, 1.4657, 1.4859, 1.5017, 1.4865, 1.4675, 1.4728, 1.4615])
+0: [DEBUG] TRAIN PREDICTIONS BATCH
+0: Epoch -1, first predictions sample:
+0:   └─ Predictions for 'velocity_u' shape: torch.Size([17265, 972])
+0:      first 25 pred values: tensor([-0.8316, -0.8230, -0.8245, -0.8305, -0.8379, -0.8486, -0.8529, -0.8640, -0.8796, -0.8968, -0.9127, -0.9243,
+0:         -0.9315, -0.9348, -0.9391, -0.9356, -0.9285, -0.9166, -0.8858, -0.8793, -0.8868, -0.9003, -0.9161, -0.9291,
+0:         -0.9406], device='cuda:0', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_v' shape: torch.Size([16940, 972])
+0:      first 25 pred values: tensor([1.0656, 1.0577, 1.0497, 1.0448, 1.0397, 1.0368, 1.0362, 1.0432, 1.0586, 1.0770, 1.1036, 1.1288, 1.1485, 1.1642,
+0:         1.1707, 1.1774, 1.1792, 1.1780, 1.0665, 1.0549, 1.0456, 1.0391, 1.0338, 1.0297, 1.0313], device='cuda:1',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'specific_humidity' shape: torch.Size([16362, 972])
+0:      first 25 pred values: tensor([-0.4460, -0.4452, -0.4438, -0.4413, -0.4346, -0.4279, -0.4219, -0.4169, -0.4137, -0.4112, -0.4091, -0.4072,
+0:         -0.4053, -0.4028, -0.3995, -0.3955, -0.3937, -0.3923, -0.4290, -0.4293, -0.4295, -0.4251, -0.4183, -0.4114,
+0:         -0.4049], device='cuda:2', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'velocity_z' shape: torch.Size([17899, 972])
+0:      first 25 pred values: tensor([0.8471, 0.8838, 0.9103, 0.9211, 0.9285, 0.8622, 0.8335, 0.8919, 0.8893, 0.8412, 0.7995, 0.7813, 0.7945, 0.8325,
+0:         0.8734, 0.8532, 0.8150, 0.7427, 0.8670, 0.9105, 0.9420, 0.9510, 0.9134, 0.7990, 0.7519], device='cuda:3',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'temperature' shape: torch.Size([8013, 2187])
+0:      first 25 pred values: tensor([-0.7960, -0.7753, -0.7568, -0.7455, -0.7399, -0.7397, -0.7364, -0.7307, -0.7222, -0.7131, -0.7060, -0.7016,
+0:         -0.6973, -0.6919, -0.6824, -0.6697, -0.6534, -0.6367, -0.6216, -0.6099, -0.6015, -0.5954, -0.5898, -0.5845,
+0:         -0.5796], device='cuda:3', grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'total_precip' shape: torch.Size([6597, 243])
+0:      first 25 pred values: tensor([1.0245, 0.9472, 0.8473, 0.7359, 0.6078, 0.5054, 0.4103, 0.3832, 0.3447, 1.0165, 0.9464, 0.8291, 0.7192, 0.6016,
+0:         0.5055, 0.4449, 0.4026, 0.3800, 0.9478, 0.8478, 0.7542, 0.6668, 0.5924, 0.5429, 0.4944], device='cuda:0',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 't2m' shape: torch.Size([1577, 2187])
+0:      first 25 pred values: tensor([1.0245, 0.9913, 1.0255, 1.0225, 0.9967, 1.0194, 1.0340, 1.1146, 1.0745, 1.1506, 1.0938, 1.1212, 1.1152, 1.1274,
+0:         1.1315, 1.2039, 1.1934, 1.1785, 1.1732, 1.1594, 1.2141, 1.2608, 1.2497, 1.2156, 1.2334], device='cuda:1',
+0:        grad_fn=<SliceBackward0>)
+0:   └─ Predictions for 'corrected_t2m' shape: torch.Size([1359, 2187])
+0:      first 25 pred values: tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan],
+0:        device='cuda:2', grad_fn=<SliceBackward0>)
+1:      first 25 values: tensor([-0.5639, -0.5789, -0.5972, -0.6182, -0.6414, -0.6665, -0.6933, -0.7215, -0.7501, -0.7785, -0.8053, -0.8296,
+1:         -0.8506, -0.8675, -0.8789, -0.8846, -0.8840, -0.8774, -0.6216, -0.6556, -0.6922, -0.7299, -0.7668, -0.8024,
+1:         -0.8358], device='cuda:0')
+1:   └─ Field: 'velocity_v' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+1:      first 25 values: tensor([ 0.0239,  0.1328,  0.0847,  0.0773,  0.0182,  0.2275,  0.0614, -0.1628,  0.0278, -0.0366, -0.0605, -0.0428,
+1:          0.0338, -0.0568,  0.1906, -0.2316, -0.1139,  0.0024, -0.1457,  0.0259,  0.0330,  0.1982,  0.0612,  0.0296,
+1:         -0.1809], device='cuda:1')
+1:   └─ Field: 'specific_humidity' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+1:      first 25 values: tensor([-0.5515, -0.5518, -0.5521, -0.5533, -0.5547, -0.5558, -0.5584, -0.5592, -0.5602, -0.5604, -0.5606, -0.5621,
+1:         -0.5658, -0.5681, -0.5703, -0.5727, -0.5750, -0.5785, -0.5492, -0.5480, -0.5492, -0.5510, -0.5521, -0.5530,
+1:         -0.5567], device='cuda:2')
+1:   └─ Field: 'velocity_z' shape: torch.Size([64, 5, 12, 3, 6, 3, 18, 18])
+1:      first 25 values: tensor([0.1434, 0.1180, 0.1191, 0.1323, 0.1500, 0.1787, 0.2241, 0.2848, 0.3489, 0.4031, 0.4440, 0.4837, 0.5368, 0.6175,
+1:         0.7180, 0.8153, 0.8816, 0.8970, 0.2473, 0.1754, 0.1401, 0.1268, 0.1290, 0.1489, 0.1931], device='cuda:3')
+1:   └─ Field: 'temperature' shape: torch.Size([64, 5, 12, 2, 4, 3, 27, 27])
+1:      first 25 values: tensor([-0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0.],
+1:        device='cuda:3')
+1:   └─ Field: 'total_precip' shape: torch.Size([64, 1, 12, 6, 12, 3, 9, 9])
+1:      first 25 values: tensor([ 0.0504,  0.0391,  0.0266, -0.0142, -0.0539, -0.0709, -0.0993, -0.1651, -0.2320, -0.1299, -0.1832, -0.2286,
+1:         -0.2286, -0.2297, -0.2309, -0.2332, -0.2354, -0.2366, -0.1866, -0.2116, -0.2366, -0.2366, -0.2366, -0.2366,
+1:         -0.2366], device='cuda:0')
+1:   └─ Field: 't2m' shape: torch.Size([64, 1, 12, 2, 4, 3, 27, 27])
+1:      first 25 values: tensor([-0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0., -0.],
+1:        device='cuda:1')
+1:   └─ Field: 'corrected_t2m' shape: torch.Size([64, 1, 12, 2, 4, 3, 27, 27])
+1:      first 25 values: tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan],
+1:        device='cuda:2')
+1: [DEBUG] TRAIN TARGET BATCH
+1: Epoch -1, batch 0 - Sparse-masked 't2m' shape target data: torch.Size([1590, 2187])
+1:     First 25 batch values:
+1: tensor([1.7994, 1.8840, 1.9447, 1.9720, 2.0053, 2.0448, 1.9714, 1.8345, 1.8830, 1.8234, 1.7730, 1.7467, 1.7332, 1.6886,
+1:         1.6388, 1.5467, 1.4614, 1.5199, 1.5648, 1.5305, 1.4390, 1.3579, 1.3251, 1.2930, 1.2801])
+1: [DEBUG] TRAIN PREDICTIONS BATCH
+1: Epoch -1, first predictions sample:
+1:   └─ Predictions for 'velocity_u' shape: torch.Size([17339, 972])
+1:      first 25 pred values: tensor([-0.5819, -0.5716, -0.5660, -0.5707, -0.5819, -0.5987, -0.6201, -0.6478, -0.6771, -0.7073, -0.7371, -0.7690,
+1:         -0.7999, -0.8306, -0.8562, -0.8686, -0.8654, -0.8468, -0.6072, -0.6032, -0.6060, -0.6170, -0.6315, -0.6515,
+1:         -0.6768], device='cuda:0', grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'velocity_v' shape: torch.Size([17020, 972])
+1:      first 25 pred values: tensor([0.9351, 0.9401, 0.9495, 0.9562, 0.9635, 0.9686, 0.9727, 0.9719, 0.9652, 0.9502, 0.9309, 0.9033, 0.8734, 0.8375,
+1:         0.7999, 0.7590, 0.7175, 0.6798, 0.9649, 0.9723, 0.9804, 0.9831, 0.9828, 0.9835, 0.9838], device='cuda:1',
+1:        grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'specific_humidity' shape: torch.Size([17096, 972])
+1:      first 25 pred values: tensor([-0.2857, -0.2734, -0.2630, -0.2523, -0.2465, -0.2445, -0.2458, -0.2470, -0.2476, -0.2469, -0.2453, -0.2432,
+1:         -0.2433, -0.2419, -0.2444, -0.2414, -0.2369, -0.2316, -0.2416, -0.2317, -0.2193, -0.2108, -0.2081, -0.2087,
+1:         -0.2105], device='cuda:2', grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'velocity_z' shape: torch.Size([18075, 972])
+1:      first 25 pred values: tensor([ 0.1854,  0.2509,  0.3862,  0.4798,  0.4866,  0.4422,  0.2295, -0.0848, -0.3605, -0.5626, -0.5857, -0.5141,
+1:         -0.3526, -0.0614,  0.1490,  0.2533,  0.2335,  0.0284,  0.3373,  0.4494,  0.6394,  0.7870,  0.7481,  0.6352,
+1:          0.3563], device='cuda:3', grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'temperature' shape: torch.Size([7879, 2187])
+1:      first 25 pred values: tensor([-0.2359, -0.3363, -0.4443, -0.5542, -0.6640, -0.7659, -0.8517, -0.9105, -0.9387, -0.9424, -0.9299, -0.9122,
+1:         -0.8956, -0.8850, -0.8760, -0.8705, -0.8661, -0.8623, -0.8586, -0.8572, -0.8594, -0.8677, -0.8813, -0.8994,
+1:         -0.9208], device='cuda:3', grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'total_precip' shape: torch.Size([6892, 243])
+1:      first 25 pred values: tensor([1.0290, 1.0450, 1.0361, 1.0284, 0.9735, 0.9321, 0.8832, 0.8656, 0.8285, 1.0274, 1.0505, 1.0316, 0.9965, 0.9545,
+1:         0.9196, 0.8891, 0.8419, 0.8354, 0.9457, 0.9665, 0.9401, 0.9135, 0.8757, 0.8571, 0.8350], device='cuda:0',
+1:        grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 't2m' shape: torch.Size([1590, 2187])
+1:      first 25 pred values: tensor([1.2968, 1.2855, 1.2505, 1.2727, 1.3169, 1.2635, 1.2596, 1.2738, 1.2768, 1.2856, 1.3151, 1.2815, 1.2583, 1.2333,
+1:         1.2786, 1.1957, 1.2095, 1.2219, 1.2454, 1.2556, 1.2242, 1.3073, 1.2165, 1.2800, 1.2604], device='cuda:1',
+1:        grad_fn=<SliceBackward0>)
+1:   └─ Predictions for 'corrected_t2m' shape: torch.Size([1640, 2187])
+1:      first 25 pred values: tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan],
+1:        device='cuda:2', grad_fn=<SliceBackward0>)
+0: epoch: -1 [1/7 (14%)]	Loss: nan : nan :: 0.06565 (1.38 s/sec)
+0: epoch: -1 [2/7 (29%)]	Loss: nan : nan :: 0.07088 (15.68 s/sec)
+0: epoch: -1 [3/7 (43%)]	Loss: nan : nan :: 0.06594 (15.57 s/sec)
+0: epoch: -1 [4/7 (57%)]	Loss: nan : nan :: 0.07041 (15.49 s/sec)
+0: epoch: -1 [5/7 (71%)]	Loss: nan : nan :: 0.06540 (15.51 s/sec)
+0: epoch: -1 [6/7 (86%)]	Loss: nan : nan :: 0.06946 (3.55 s/sec)
