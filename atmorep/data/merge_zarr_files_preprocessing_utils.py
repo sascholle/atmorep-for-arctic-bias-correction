@@ -427,7 +427,7 @@ def add_norm_sfc_to_t2m():
 
 def add_surface_norms_to_Akil_t2m():
     # t2m_path = "/work/ab1412/atmorep/data/t2m/era5_y2010_2021_res025_chunk8.zarr"
-    t2m_path = "/scratch/a/a270277/atmorep/data_t2m_Akil_padded_with_recalculated_norms.zarr"
+    t2m_path = "/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr"
     t2m_ds = xr.open_zarr(t2m_path, consolidated=False)
 
     # Assume data_sfc shape: (time, lat, lon) or (time, 1, lat, lon)
@@ -436,10 +436,10 @@ def add_surface_norms_to_Akil_t2m():
         # Add singleton dimension at axis=1
         data = data.expand_dims(dim={'field': [0]})
         data = data.transpose('time', 'field', 'lat', 'lon')
-    data = data.chunk({'time': 1000})
+    data = data.chunk({'time': 100})
     data = data.assign_coords(time=t2m_ds['time'])
 
-    # Get latitude values and indices for >=71N
+    # Get latitude values and indices for index 0-70
     lat_name = 'lat' if 'lats' in data.dims else 'latitude'
     lat_vals = data[lat_name].values
     #idx_71N = np.where(lat_vals >= 71)[0] 
@@ -450,19 +450,19 @@ def add_surface_norms_to_Akil_t2m():
     print(f"Last few lat values: {lat_vals[-10:]}")
     print(f"Data shape: {data.shape}")
 
-    # **CRITICAL FIX: Use latitude INDICES 0-71, not lat values ≥71**
-    # Akil's valid data is only in the first 72 latitude indices (0-71)
-    valid_lat_indices = slice(0, 72)  # Indices 0 through 71 (72 total)
+    # **CRITICAL FIX: Use latitude INDICES 0-70, not lat values ≥71**
+    # Akil's valid data is only in the first 71 latitude indices (0-70)
+    valid_lat_indices = slice(0, 71)  # Indices 0 through 70 (71 total)
     
-    print(f"Using latitude indices 0-71 for Arctic region")
-    print(f"This corresponds to lat values: {lat_vals[0]:.2f} to {lat_vals[71]:.2f}")
-    
-    sample_valid = data[0, 0, 0:72, 0:100].values  # First 72 lats
-    sample_padded = data[0, 0, 72:82, 0].values  # Next 10 lats (should be zeros)
-        
+    print(f"Using latitude indices 0-70 for Arctic region")
+    print(f"This corresponds to lat values: {lat_vals[0]:.2f} to {lat_vals[70]:.2f}")
+
+    sample_valid = data[0, 0, 0:71, 0:100].values  # First 71 lats
+    sample_padded = data[0, 0, 71:81, 0].values  # Next 10 lats (should be zeros)
+
     print(f"\nData verification:")
-    print(f"Valid region (lat idx 0-71) sample mean: {np.nanmean(sample_valid):.2f}")
-    print(f"Valid region (lat idx 0-71) sample range: {np.nanmin(sample_valid):.2f} to {np.nanmax(sample_valid):.2f}")
+    print(f"Valid region (lat idx 0-70) sample mean: {np.nanmean(sample_valid):.2f}")
+    print(f"Valid region (lat idx 0-70) sample range: {np.nanmin(sample_valid):.2f} to {np.nanmax(sample_valid):.2f}")
     print(f"Padded region: {sample_padded} at 0 longitude")
 
     # Calculate year and month indices for each time step
@@ -493,23 +493,23 @@ def add_surface_norms_to_Akil_t2m():
         
         print(f"Year {year} Month {month:2d}: {mask.sum()} timesteps, month_data shape: {month_data.shape}")
 
-        # **CRITICAL: Only calculate norms for VALID latitude indices (0-71)**
+        # **CRITICAL: Only calculate norms for VALID latitude indices (0-70)**
         # Extract only the valid Arctic region
-        valid_month_data = month_data[:, valid_lat_indices, :]  # (n_times, 72, lon)
+        valid_month_data = month_data[:, valid_lat_indices, :]  # (n_times, 71, lon)
         
         if valid_month_data.size == 0:
             print(f"  ⚠️  No valid data for {year}-{month}")
             continue
             
         # Calculate stats only for valid region
-        mean_valid = valid_month_data.mean(axis=0).compute()  # (72, lon)
-        std_valid = valid_month_data.std(axis=0).compute()    # (72, lon)
-        
+        mean_valid = valid_month_data.mean(axis=0).compute()  # (71, lon)
+        std_valid = valid_month_data.std(axis=0).compute()    # (71, lon)
+
         # Place results only in valid latitude indices
         norm_sfc[idx, 0, 0, valid_lat_indices, :] = mean_valid
         norm_sfc[idx, 1, 0, valid_lat_indices, :] = std_valid
         
-        # All other latitudes (72+) remain zero - DO NOT include padded zeros in global norms
+        # All other latitudes (71+) remain zero - DO NOT include padded zeros in global norms
         global_mean = valid_month_data.mean().compute()
         global_std = valid_month_data.std().compute()
         global_norm_sfc[idx, 0, 0] = global_mean
@@ -531,10 +531,10 @@ def add_surface_norms_to_Akil_t2m():
     print(f"Global_norm_sfc shape: {global_norm_sfc.shape}")
 
     # Check valid vs padded regions in final norms
-    valid_norms = norm_sfc[:, 0, 0, 0:72, :]  # Valid region norms
-    if lat_dim > 72:
-        padded_norms = norm_sfc[:, 0, 0, 72:, :]  # Padded region norms
-        
+    valid_norms = norm_sfc[:, 0, 0, 0:71, :]  # Valid region norms
+    if lat_dim > 71:
+        padded_norms = norm_sfc[:, 0, 0, 71:, :]  # Padded region norms
+
         print(f"Valid region norm stats:")
         print(f"  Mean range: {np.nanmin(valid_norms):.2f} to {np.nanmax(valid_norms):.2f}K")
         print(f"  Non-zero values: {np.count_nonzero(valid_norms)}")
@@ -553,7 +553,7 @@ def add_surface_norms_to_Akil_t2m():
     t2m_ds['global_norm_sfc'] = (('month', 'stat', 'field'), global_norm_sfc)
     t2m_ds.to_zarr(t2m_path, mode="a")
     print(f"\n✓ Added norm_sfc and global_norm_sfc to {t2m_path}")
-    print(f"✓ Normalization calculated ONLY for valid Arctic region (lat indices 0-71)")
+    print(f"✓ Normalization calculated ONLY for valid Arctic region (lat indices 0-70)")
 
 def add_t2m_into_era5(): 
 # Paths
@@ -632,7 +632,7 @@ def add_array_dimensions_attrs(zarr_path):
 
     print(f"Added _ARRAY_DIMENSIONS to arrays in {zarr_path}")
 
-def concat_data_sfc_and_norms_inplace(main_path, t2m_path, output_path, chunk_size=1000):
+def concat_data_sfc_and_norms_inplace(main_path, t2m_path, output_path, chunk_size=1000, replace_field_idx=2):
     """
     Concatenate data_sfc and norm_sfc from t2m_path into main_path.
     This modifies the main_path Zarr in place, adding T2M data to data_sfc and norm_sfc.
@@ -679,41 +679,65 @@ def concat_data_sfc_and_norms_inplace(main_path, t2m_path, output_path, chunk_si
     out_arr.attrs.update(arr_main.attrs)
     out_arr.attrs['_ARRAY_DIMENSIONS'] = ['time', 'field_sfc', 'latitude', 'longitude']
 
-    # # --- norm_sfc ---
-    # norm_main = z_main['normalization']['norm_sfc']
-    # norm_t2m = z_t2m['normalization']['norm_sfc']
-    # #assert norm_main.shape[0:3] == norm_t2m.shape[0:2] + (1,)
-    # # Remove and recreate norm_sfc
-    # del z_out['normalization']['norm_sfc']
-    # norm_shape = (norm_main.shape[0], norm_main.shape[1], norm_main.shape[2] + norm_t2m.shape[2], norm_main.shape[3], norm_main.shape[4])
-    # norm_chunks = (norm_main.chunks[0], norm_main.chunks[1], norm_main.chunks[2] + norm_t2m.chunks[2], norm_main.chunks[3], norm_main.chunks[4])
-    # norm_out = z_out['normalization'].create_dataset('norm_sfc', shape=norm_shape, chunks=norm_chunks, dtype=norm_main.dtype)
-    # # Chunked copy/concat
-    # for m in range(norm_main.shape[0]):
-    #     chunk_main = np.array(norm_main[m])
-    #     chunk_t2m = np.array(norm_t2m[m])
-    #     chunk_out = np.concatenate([chunk_main, chunk_t2m], axis=1)  # axis=2 is field, but after slicing axis=1
-    #     norm_out[m] = chunk_out
+ # --- norm_sfc (REPLACE instead of concatenate) ---
+    norm_main = z_main['normalization']['norm_sfc']
+    norm_t2m = z_t2m['normalization']['norm_sfc']
+    
+    print(f"norm_main shape: {norm_main.shape}")
+    print(f"norm_t2m shape: {norm_t2m.shape}")
+    print(f"Replacing field index {replace_field_idx} in norm_sfc")
+    
+    # Check that the field index exists in main norm array
+    if replace_field_idx >= norm_main.shape[2]:
+        raise ValueError(f"Field index {replace_field_idx} is out of bounds for norm_main shape {norm_main.shape}")
+    
+    # **REPLACE: Copy main norm array, then overwrite specific field**
+    norm_out = z_out['normalization']['norm_sfc']  # Already exists from copy
+    
+    # Replace field by field to avoid memory issues
+    for m in range(norm_main.shape[0]):  # For each month
+        print(f"Replacing norm_sfc month {m}, field {replace_field_idx}")
+        
+        # Load T2M norm for this month (shape: (2, 1, lat, lon))
+        t2m_month_norm = np.array(norm_t2m[m])  # (stat, field=1, lat, lon)
+        
+        # Replace the specific field in the output array
+        # norm_out[month, stat, field, lat, lon]
+        norm_out[m, :, replace_field_idx, :, :] = t2m_month_norm[:, 0, :, :]  # Take field 0 from T2M
 
-    # norm_out.attrs.update(norm_main.attrs)
-    # norm_out.attrs['_ARRAY_DIMENSIONS'] = ['month', 'stat', 'field', 'latitude', 'longitude']
+    norm_out.attrs.update(norm_main.attrs)
+    norm_out.attrs['_ARRAY_DIMENSIONS'] = ['month', 'stat', 'field', 'latitude', 'longitude']
 
-    # # --- global_norm_sfc ---
-    # gnorm_main = z_main['normalization']['global_norm_sfc']
-    # gnorm_t2m = z_t2m['normalization']['global_norm_sfc']
-    # del z_out['normalization']['global_norm_sfc']
-    # gnorm_shape = (gnorm_main.shape[0], gnorm_main.shape[1], gnorm_main.shape[2] + gnorm_t2m.shape[2])
-    # gnorm_chunks = (gnorm_main.chunks[0], gnorm_main.chunks[1], gnorm_main.chunks[2] + gnorm_t2m.chunks[2])
-    # gnorm_out = z_out['normalization'].create_dataset('global_norm_sfc', shape=gnorm_shape, chunks=gnorm_chunks, dtype=gnorm_main.dtype)
-    # for m in range(gnorm_main.shape[0]):
-    #     chunk_main = np.array(gnorm_main[m])
-    #     chunk_t2m = np.array(gnorm_t2m[m])
-    #     chunk_out = np.concatenate([chunk_main, chunk_t2m], axis=1)# axis=2 is field, after slicing axis=1
-    #     gnorm_out[m] = chunk_out
-    # gnorm_out.attrs.update(gnorm_main.attrs)
-    # gnorm_out.attrs['_ARRAY_DIMENSIONS'] = ['month', 'stat', 'field']
+    # --- global_norm_sfc (REPLACE instead of concatenate) ---
+    gnorm_main = z_main['normalization']['global_norm_sfc']
+    gnorm_t2m = z_t2m['normalization']['global_norm_sfc']
+    
+    print(f"gnorm_main shape: {gnorm_main.shape}")
+    print(f"gnorm_t2m shape: {gnorm_t2m.shape}")
+    print(f"Replacing field index {replace_field_idx} in global_norm_sfc")
+    
+    # Check that the field index exists in main global norm array
+    if replace_field_idx >= gnorm_main.shape[2]:
+        raise ValueError(f"Field index {replace_field_idx} is out of bounds for gnorm_main shape {gnorm_main.shape}")
+    
+    # **REPLACE: Copy main global norm array, then overwrite specific field**
+    gnorm_out = z_out['normalization']['global_norm_sfc']  # Already exists from copy
+    
+    # Replace field by field
+    for m in range(gnorm_main.shape[0]):  # For each month
+        print(f"Replacing global_norm_sfc month {m}, field {replace_field_idx}")
+        
+        # Load T2M global norm for this month (shape: (2, 1))
+        t2m_month_gnorm = np.array(gnorm_t2m[m])  # (stat, field=1)
+        
+        # Replace the specific field in the output array
+        # gnorm_out[month, stat, field]
+        gnorm_out[m, :, replace_field_idx] = t2m_month_gnorm[:, 0]  # Take field 0 from T2M
 
-    print("Finished updating data_sfc, norm_sfc, and global_norm_sfc in the copied ERA5 Zarr.")
+    gnorm_out.attrs.update(gnorm_main.attrs)
+    gnorm_out.attrs['_ARRAY_DIMENSIONS'] = ['month', 'stat', 'field']
+
+    print("Finished updating data_sfc (concatenated) and replacing norm_sfc/global_norm_sfc at specified field index.")
 
 def fast_rsync_copy(src, dst):
     """
@@ -787,8 +811,8 @@ def test_concat_data_sfc_and_norms_inplace(era5_path, t2m_path, test_dir, n_samp
     """
     t2m_keys = [
     "data_sfc",
-    #"normalization/norm_sfc",
-    #"normalization/global_norm_sfc"
+    "normalization/norm_sfc",
+    "normalization/global_norm_sfc"
     ]
 
     era5_keys = [
@@ -806,8 +830,8 @@ def test_concat_data_sfc_and_norms_inplace(era5_path, t2m_path, test_dir, n_samp
     era5_test = os.path.join(test_dir, "era5_test.zarr")
     t2m_test = os.path.join(test_dir, "t2m_test.zarr")
     out_test = os.path.join(test_dir, "era5_with_t2m_test.zarr")
-    create_zarr_subset(era5_path, era5_test, n_samples, keys=era5_keys)
-    create_zarr_subset(t2m_path, t2m_test, n_samples, keys=t2m_keys)
+    #create_zarr_subset(era5_path, era5_test, n_samples, keys=era5_keys)
+    #create_zarr_subset(t2m_path, t2m_test, n_samples, keys=t2m_keys)
     concat_data_sfc_and_norms_inplace(era5_test, t2m_test, out_test, chunk_size=100)
     print(f"Test pipeline completed. Output: {out_test}")
 
@@ -861,11 +885,96 @@ def check_for_nans(
         if print_samples:
             print("Sample global_norm_sfc values:", global_norm_subset.flatten()[:10])
 
+def check_longitude_boundary(zarr_path):
+    z = zarr.open(zarr_path, mode='r')
+    # --- data_sfc --
+    data_sfc = z['data_sfc']
+    print(f"data_sfc shape: {data_sfc.shape}")
+    # Before interpolation, check if original data is periodic
+    print("=== Original Arctic Data Boundary Check ===")
+    for i in list([0, 100, 1000, 50000, 100000]):
+        sample_data = data_sfc[i, :, :]  # First timestep, shape (71, 1280)
+
+        # Check boundary difference across all latitudes
+        boundary_diffs = np.abs(sample_data[:, 0] - sample_data[:, -1])  # Shape (71,)
+        max_boundary_diff = np.max(boundary_diffs)
+        mean_boundary_diff = np.mean(boundary_diffs)
+
+        print(f"Original longitude boundary differences:")
+        print(f"  Max difference: {max_boundary_diff:.3f}K")
+        print(f"  Mean difference: {mean_boundary_diff:.3f}K")
+        #print(f"  Per-latitude diffs: {boundary_diffs}")
+
+        # Show actual values at boundaries
+        print(f"First longitude (0°) sample: {sample_data[35, 0]:.2f}K")  # Middle latitude
+        print(f"Last longitude (359.72°) sample: {sample_data[35, -1]:.2f}K")
+
+        if max_boundary_diff > 2.0:
+            print("⚠️  Original Arctic data has large longitude boundary discontinuities!")
+            print("   This suggests the data isn't truly global/periodic")
+
+def update_zarr_metadata():
+
+    output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
+    z = zarr.open(output_path, mode='a')
+
+    # Check current metadata
+    print("Current fields_sfc:", z.attrs.get('fields_sfc', 'MISSING'))
+    print("Current data_sfc shape:", z['data_sfc'].shape)
+
+    # Update metadata to match your 3-field data_sfc
+    expected_fields_sfc = ['total_precip', 't2m', 'corrected_t2m']
+    z.attrs['fields_sfc'] = expected_fields_sfc
+
+    print("Updated fields_sfc:", z.attrs['fields_sfc'])
+
+def diagnose_missing_norms(zarr_path):
+    '''
+    Diagnose missing normalization values in a Zarr store. Currently only for first month and 0,0 lat and lon. 
+    To Do: check over wider range of lat/lon, and over all months.
+    '''
+    store = zarr.open(zarr_path, mode='r')
+    norm_array = store['normalization/norm']
+    
+    print(f"Norm array shape: {norm_array.shape}")
+    print(f"Fields: {store.attrs['fields']}")
+    print(f"Levels: {store.attrs['levels']}")
+    
+    # Check all field-level combinations
+    for field_idx, field_name in enumerate(store.attrs['fields']):
+        print(f"\n--- Field {field_idx}: {field_name} ---")
+        
+        for level_idx, level in enumerate(store.attrs['levels']):
+            # Check mean and std for this field-level combo
+            mean_val = norm_array[0, 0, field_idx, level_idx, 0, 0]  # month 0, mean
+            std_val = norm_array[0, 1, field_idx, level_idx, 0, 0]   # month 0, std
+            
+            if mean_val == 0 and std_val == 0:
+                print(f"  Level {level} (idx {level_idx}): ❌ MISSING (0.0, 0.0)")
+            else:
+                print(f"  Level {level} (idx {level_idx}): ✓ (mean={mean_val:.6f}, std={std_val:.6f})")
+    
+    # Check if any field has ALL zeros
+    for field_idx, field_name in enumerate(store.attrs['fields']):
+        field_norms = norm_array[:, :, field_idx, :, :, :]  # All months, stats, levels, lat, lon
+        nonzero_count = np.count_nonzero(field_norms)
+        total_count = field_norms.size
+        
+        if nonzero_count == 0:
+            print(f"\n⚠️  Field {field_idx} ({field_name}) has NO normalization data!")
+        elif nonzero_count < total_count * 0.1:  # Less than 10% non-zero
+            print(f"\n⚠️  Field {field_idx} ({field_name}) has sparse normalization data: {nonzero_count}/{total_count}")
+        else:
+            print(f"\n✓ Field {field_idx} ({field_name}) has good normalization data: {nonzero_count}/{total_count}")
+
+
 if __name__ == "__main__":
 
-    #add_array_dimensions_attrs("/scratch/a/a270277/atmorep/data_t2m_Akil_padded_with_recalculated_norms.zarr")
+    diagnose_missing_norms("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr")
 
-    add_surface_norms_to_Akil_t2m()
+    #add_array_dimensions_attrs("/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr")
+    #check_longitude_boundary("/scratch/a/a270277/atmorep/data_t2m_Akil.zarr")
+    #add_surface_norms_to_Akil_t2m()
     #add_norm_sfc_to_t2m()
 
     # concat_data_sfc_and_norms_inplace(
@@ -888,7 +997,6 @@ if __name__ == "__main__":
     #     n_samples=100
     # )
 
-
     #fast_rsync_copy("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr/", "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr/")
     #fast_rsync_copy("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr/", "/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr/")
 
@@ -898,6 +1006,9 @@ if __name__ == "__main__":
     #     "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr",
     #      chunk_size=100
     #  )
+    # update_zarr_metadata()
+
+    # examine_zarr.explore_zarr_structure("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr")
 
     # fast_rsync_copy("/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr", "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_copy.zarr"
     # )

@@ -6,7 +6,7 @@ import pandas as pd
 
 # source /work/ab1412/atmorep/pyenv/bin/activate
 
-output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr"
+output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
 #output_path = "/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
 # output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr/era5_y2010_2020_res25_corrected_t2m_new.zarr"
 #output_path = "/scratch/a/a270277/atmorep/test_concat_zarrs/era5_with_t2m_test.zarr"
@@ -15,15 +15,29 @@ output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_ne
 # output_path = "/scratch/a/a270277/atmorep/data_t2m_Akil.zarr"
 #output_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
 #output_path = "/scratch/a/a270277/atmorep/backup_norm_sfcs_of_3_fields_for_corrected_t2m_data.zarr"
-
+#output_path = "/scratch/a/a270277/atmorep/test_concat_zarrs/era5_with_t2m_test.zarr"
+#output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
 
 def explore_zarr_structure(zarr_path):
     print(f"Opening target dataset: {zarr_path}")
     output_zarr = zarr.open(zarr_path, mode='r')
     #print("Target arrays:", list(output_zarr.array_keys()))
     print(output_zarr.tree())
+    
+    # Check what fields are stored
+    print("Atmospheric fields (data):", output_zarr.attrs['fields'])
+    print("Surface fields (data_sfc):", output_zarr.attrs['fields_sfc'])
+    print("Vertical levels:", output_zarr.attrs['levels'])
 
-    print(f" norm sfc data: {output_zarr['normalization/norm_sfc'][0, 0, 2, 68:300, 0]}")  # Adjust axes as needed
+    # This will show you exactly which field names map to which indices
+    for i, field in enumerate(output_zarr.attrs['fields']):
+        print(f"data[:, {i}, :, :, :] = {field}")
+
+    for i, field in enumerate(output_zarr.attrs['fields_sfc']):
+        print(f"data_sfc[:, {i}, :, :] = {field}")
+
+    #print(f"data_sfc: {output_zarr['data_sfc'][:20, :3, 0, 0]}")  # Adjust axes as needed
+    print(f"normalization/norm: {output_zarr['normalization/norm'][0, 1, :, :, 0, 0]}")  # Adjust axes as needed
 
     if 'data' in output_zarr.array_keys():
         main_data = output_zarr['data']
@@ -38,14 +52,14 @@ def explore_zarr_structure(zarr_path):
         store = zarr.open(zarr_path, mode='r')
         data = store['normalization/norm_sfc'][0, :2, 0, :5, :5]  # Larger slice
     
-        for var_idx in range(data.shape[0]):
-            print(f"\n--- Variable {var_idx} ---")
-            df = pd.DataFrame(
-                data[var_idx, :, :], 
-                index=[f"lat_{i}" for i in range(data.shape[1])],
-                columns=[f"lon_{i}" for i in range(data.shape[2])]
-            )
-            print(df)
+        # for var_idx in range(data.shape[0]):
+        #     print(f"\n--- Variable {var_idx} ---")
+        #     df = pd.DataFrame(
+        #         data[var_idx, :, :], 
+        #         index=[f"lat_{i}" for i in range(data.shape[1])],
+        #         columns=[f"lon_{i}" for i in range(data.shape[2])]
+        #     )
+        #     print(df)
         
         # Check what type of object we have
         if isinstance(store, zarr.hierarchy.Group):
@@ -68,7 +82,7 @@ def explore_group(group, prefix=""):
         item = group[key]
         if isinstance(item, zarr.hierarchy.Group):
             print(f"{prefix}Group: {key}/")
-            explore_group(item, prefix + "  ")
+            #explore_group(item, prefix + "  ")
         else:
             try:
                 print(f"{prefix}Array: {key}")
@@ -77,7 +91,7 @@ def explore_group(group, prefix=""):
                 print(f"{prefix}  Chunks: {item.chunks}")
                 # Try to sample a bit of data
                 if len(item.shape) > 0 and item.shape[0] > 0:
-                    sample_indices = tuple(slice(-3, None) for s in item.shape) # sample last 3 entries in each dimension
+                    sample_indices = tuple(slice(None, 2) for s in item.shape) # sample last 3 entries in each dimension
                     print(f"{prefix}  Sample data: {item[sample_indices]}")
                 else:
                     print(f"{prefix}  Sample data: [] (empty array)")

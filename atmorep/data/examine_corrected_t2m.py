@@ -147,7 +147,7 @@ def check_normalization_consistency():
     # Select a few Arctic grid points to test
     def sample_arctic_points(num_points=100):
         # Arctic latitudes: 0 to 71 (inclusive)
-        lat_indices = np.random.randint(50, 72, num_points)
+        lat_indices = np.linspace(0, 72, num_points, dtype=int)
         lon_indices = np.linspace(0, 1439, num_points, dtype=int)
         points = []
         for lat, lon in zip(lat_indices, lon_indices):
@@ -155,10 +155,10 @@ def check_normalization_consistency():
             if len(points) >= num_points:
                 break
         return points
-    test_points = sample_arctic_points(num_points=100)
+    test_points = sample_arctic_points(num_points=30)
     
     print(f"Testing {len(test_points)} Arctic grid points across first few months...")
-    print(f"Grid points (lat_idx, lon_idx): {test_points}")
+    #print(f"Grid points (lat_idx, lon_idx): {test_points}")
     
     grid_point_results = []
     
