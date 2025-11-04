@@ -26,10 +26,35 @@ import atmorep.config.config as config
 def normalize( data, norm, dates, year_base = 1979) :
   corr_data = np.array([norm[12*(dt.year-year_base) + dt.month-1] for dt in dates])
   mean, var = corr_data[:, 0], corr_data[:, 1]
+  #print(f"[DEBUG] Normalizer: mean shape {mean.shape}, var shape {var.shape}, data shape {data.shape}")
   #print(f"[DEBUG] Normalizer: mean sample {mean.flatten()[:5]}, std sample {var.flatten()[:5]}")
-  if (var == 0.).all() :
-    print( f'Warning: var == 0') 
-    assert False
+  if (var == 0.).all():
+    zeros = np.argwhere(var == 0.)
+    nzeros = zeros.shape[0]
+    print(f"Warning: var contains {nzeros} zero entries")
+    maxmax_show = min(20, nzeros)
+    for zi in range(maxmax_show):
+      idx = tuple(int(x) for x in zeros[zi])
+      # idx corresponds to positions inside `var` which starts with date index
+      date_idx = idx[0] if len(idx) > 0 else None
+      date_dt = dates[date_idx] if (date_idx is not None and date_idx < len(dates)) else None
+      info = f"  zero #{zi+1}: indices(in var)={idx} date={date_dt}"
+      # try best-effort interpretation by dimensionality
+      try:
+        if var.ndim == 5:
+          # (n_dates, n_fields, n_levels, n_lats, n_lons)
+          _, field_idx, level_idx, lat_idx, lon_idx = idx
+          info += f" -> field_idx={field_idx} level={level_idx} lat={lat_idx} lon={lon_idx}"
+        elif var.ndim == 4:
+          # could be (n_dates, n_fields, n_lats, n_lons) or (n_dates, n_levels, n_lats, n_lons)
+          info += f" -> remaining_indices={idx[1:]}"
+        elif var.ndim == 3:
+          # (n_dates, n_lats, n_lons)
+          _, lat_idx, lon_idx = idx
+          info += f" -> lat={lat_idx} lon={lon_idx}"
+      except Exception:
+        pass
+      #print(info)
   if len(norm.shape) > 2 : #global norm
     return normalize_local(data, mean, var)
   else:

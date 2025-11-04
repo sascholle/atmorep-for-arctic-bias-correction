@@ -45,6 +45,7 @@ def analyze_t2m_seasonality(zarr_path):
     print("Calculating monthly statistics...")
     sample_data = data[time_sample, 0, arctic_lats, ::10]  # Sample every 10th longitude
     sample_months = months[time_sample] 
+    print(sample_months)
 
     # Group by month (approximate)
     hours_per_month = 24 * 30  # Approximate
@@ -95,8 +96,8 @@ def analyze_t2m_seasonality(zarr_path):
     ax2.set_xticks(range(1, 13))
     
     plt.tight_layout()
-    plt.savefig('/work/ab1412/atmorep/plotting/t2m_seasonality/t2m_seasonality.png', dpi=150, bbox_inches='tight')
-    print(f"Seasonality plot saved to: /work/ab1412/atmorep/plotting/t2m_seasonality/t2m_seasonality.png")
+    plt.savefig('/work/ab1412/atmorep/plotting/t2m_seasonality/t2m_seasonality2.png', dpi=150, bbox_inches='tight')
+    print(f"Seasonality plot saved to: /work/ab1412/atmorep/plotting/t2m_seasonality/t2m_seasonality2.png")
 
     return df_monthly
 
@@ -312,7 +313,7 @@ def check_normalization_consistency():
         plt.tight_layout()
         os.makedirs('/work/ab1412/atmorep/plotting', exist_ok=True)
         plt.savefig('/work/ab1412/atmorep/plotting/grid_point_norm_check_all_timesteps.png', dpi=150, bbox_inches='tight')
-        print(f"Grid point comparison plot saved to: /work/ab1412/atmorep/plotting/grid_point_norm_check.png")
+        print(f"Grid point comparison plot saved to: /work/ab1412/atmorep/plotting/grid_point_norm_check_between_old_and_new_norms.png")
         plt.close()
         
         return df_results
@@ -347,8 +348,8 @@ def quick_data_overview():
                 norm_sfc = store['normalization/norm_sfc']
                 print(f"  Norm sfc shape: {norm_sfc.shape}")
                 print(f"  Norm sfc dtype: {norm_sfc.dtype}")
-                sample_mean = norm_sfc[:, 0, -1, 0:105, 0:105]  # Last field (assumed corrected_t2m)
-                sample_std = norm_sfc[:, 1, -1, 0:105, 0:105]
+                sample_mean = norm_sfc[:, 0, -1, 0:70, 0:105] #[:, 0, -1, 0:105, 0:105]  # Last field (assumed corrected_t2m)
+                sample_std = norm_sfc[:, 0, -1, 0:70, 0:105] #[:, 1, -1, 0:105, 0:105]
                 print(f" corrected_t2m norm sfc sample mean: {np.nanmean(sample_mean):.2f}")
                 print(f" corrected_t2m norm sfc sample range: {np.nanmin(sample_mean):.2f} to {np.nanmax(sample_mean):.2f}")
                 print(f" corrected_t2m norm sfc sample std: {np.nanmean(sample_std):.2f}")
@@ -358,29 +359,30 @@ def quick_data_overview():
             print(f"  Error: {e}")
 
 def main():
-    # Create output directory if it doesn't exist
-    os.makedirs('/work/ab1412/atmorep/plotting', exist_ok=True)
+    # # Create output directory if it doesn't exist
+    # os.makedirs('/work/ab1412/atmorep/plotting', exist_ok=True)
     
-    print("Starting Corrected T2M Analysis...")
-    print("=" * 60)
+    # print("Starting Corrected T2M Analysis...")
+    # print("=" * 60)
     
-    # Quick overview
-    quick_data_overview()
+    # # Quick overview
+    # quick_data_overview()
     
-    # # Analyze seasonality
-    # try:
-    #     monthly_stats = analyze_t2m_seasonality("/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr")
-    # except Exception as e:
-    #     print(f"Error in seasonality analysis: {e}")
-    
-    # Check normalization consistency
+    # Analyze seasonality
     try:
-        norm_check = check_normalization_consistency()
-    except Exception as e:
-        print(f"Error in normalization check: {e}")
+        monthly_stats = analyze_t2m_seasonality("/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr")
     
-    print("\n" + "=" * 60)
-    print("Analysis complete!")
+    except Exception as e:
+        print(f"Error in seasonality analysis: {e}")
+    
+    # # Check normalization consistency
+    # try:
+    #     norm_check = check_normalization_consistency()
+    # except Exception as e:
+    #     print(f"Error in normalization check: {e}")
+    
+    # print("\n" + "=" * 60)
+    # print("Analysis complete!")
 
 if __name__ == "__main__":
     main()

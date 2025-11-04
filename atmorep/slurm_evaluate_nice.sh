@@ -7,8 +7,8 @@
 #SBATCH --cpus-per-task=127 # changed from 34
 #SBATCH --gres=gpu:1
 #SBATCH --chdir=.
-#SBATCH --output=logs/nice_eval_%j.out
-#SBATCH --error=logs/nice_eval_%j.err
+#SBATCH --output=logs/nice_eval_round2_%j.out
+#SBATCH --error=logs/nice_eval_round2_%j.err
 
 # import modules
 source pyenv/bin/activate
@@ -38,11 +38,15 @@ date
 
 export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
 
+# Process all 2099 samples or use command line args
+START_IDX=${1:-0}      # Default to 0 if not provided
+END_IDX=${2:-1}     # Default to 1 if not provided
+
 # CONFIG_DIR=${SLURM_SUBMIT_DIR}/atmorep_eval_${SLURM_JOBID}
 # mkdir ${CONFIG_DIR}
 # cp ${SLURM_SUBMIT_DIR}/atmorep/core/nice_evaluation.py ${CONFIG_DIR}
 # echo "${CONFIG_DIR}/nice_evaluation.py"
-srun --label --cpu-bind=v pyenv/bin/python -u ${SLURM_SUBMIT_DIR}/atmorep/core/nice_evaluation.py $1 $2 > output/output_${SLURM_JOBID}.txt
+srun --label --cpu-bind=v pyenv/bin/python -u ${SLURM_SUBMIT_DIR}/atmorep/core/nice_evaluation.py $START_IDX $END_IDX > output/output_${SLURM_JOBID}.txt
 
 echo "Finished job."    
 date

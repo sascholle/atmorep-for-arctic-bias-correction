@@ -7,6 +7,7 @@ import glob
 import pandas as pd
 import dask.array as da
 import examine_zarr
+from pathlib import Path
 
 import subprocess
 
@@ -843,7 +844,7 @@ def check_for_nans(
     time_slice=slice(0, 10),
     print_samples=True,
     norm_field='norm_sfc'
-):
+    ):
     """
     Check for NaNs and zeros in data_sfc and normalization arrays for a specific field and region.
     Parameters:
@@ -893,7 +894,8 @@ def check_longitude_boundary(zarr_path):
     # Before interpolation, check if original data is periodic
     print("=== Original Arctic Data Boundary Check ===")
     for i in list([0, 100, 1000, 50000, 100000]):
-        sample_data = data_sfc[i, :, :]  # First timestep, shape (71, 1280)
+        sample_data = data_sfc[i, :, :, :]  # First timestep, shape (71, 1280)
+        sample_data = np.squeeze(sample_data)  # Remove singleton field dimension if present
 
         # Check boundary difference across all latitudes
         boundary_diffs = np.abs(sample_data[:, 0] - sample_data[:, -1])  # Shape (71,)
@@ -967,13 +969,93 @@ def diagnose_missing_norms(zarr_path):
         else:
             print(f"\n✓ Field {field_idx} ({field_name}) has good normalization data: {nonzero_count}/{total_count}")
 
+def replace_zeros_with_nans_in_datasfc(zarr_path, field_idx=2, lat_start=71, time_block=128, dry_run=True):
+    """
+    Replace exact 0 -> NaN in data_sfc[:, field_idx, lat_start:, :] in-place (unless dry_run=True).
+    Processes the time axis in blocks to avoid loading the full slice into memory.
+    """
+
+    zp = Path(zarr_path)
+    if not zp.exists():
+        raise FileNotFoundError(f"{zarr_path} not found")
+
+    mode = 'r' if dry_run else 'r+'
+    z = zarr.open_group(str(zp), mode=mode)
+
+    if 'data_sfc' not in z:
+        raise KeyError("data_sfc not found in store")
+
+    arr = z['data_sfc']
+    shape = arr.shape
+    if len(shape) != 4:
+        raise ValueError(f"expected data_sfc rank 4, got shape={shape}")
+
+    # normalize negative field_idx
+    if field_idx < 0:
+        field_idx = shape[1] + field_idx
+    if not (0 <= field_idx < shape[1]):
+        raise IndexError(f"field_idx {field_idx} out of range (0..{shape[1]-1})")
+
+    if not (0 <= lat_start < shape[2]):
+        raise IndexError(f"lat_start {lat_start} out of range (0..{shape[2]-1})")
+
+    # dtype must be floating to store NaNs in-place
+    if not np.issubdtype(np.dtype(arr.dtype), np.floating):
+        raise TypeError(f"data_sfc dtype is {arr.dtype}; must be floating to hold NaN. Convert dataset dtype first.")
+
+    total_checked = 0
+    total_zeros = 0
+    total_replaced = 0
+
+    print(f"Opening {zarr_path}  data_sfc shape={shape} dtype={arr.dtype}  field_idx={field_idx} lat_start={lat_start}  dry_run={dry_run}")
+
+    for t0 in range(0, shape[0], time_block):
+        t1 = min(shape[0], t0 + time_block)
+        sl = (slice(t0, t1), field_idx, slice(lat_start, None), slice(None))
+        try:
+            block = arr[sl]  # returns numpy array
+        except Exception as e:
+            print(f"ERROR reading slice {sl}: {e}")
+            raise
+
+        total_checked += block.size
+        mask = (block == 0)
+        nzeros = int(np.count_nonzero(mask))
+        total_zeros += nzeros
+
+        if nzeros:
+            print(f"time {t0}:{t1}  zeros={nzeros}")
+            if not dry_run:
+                # ensure we keep float dtype
+                if block.dtype.kind != 'f':
+                    block = block.astype(np.float32)
+                block[mask] = np.nan
+                arr[sl] = block
+                total_replaced += nzeros
+
+    print("Finished scanning.")
+    print(f"Elements checked: {total_checked:,}")
+    print(f"Exact-zero entries found: {total_zeros:,}")
+    if not dry_run:
+        print(f"Exact-zero entries replaced: {total_replaced:,}")
+        try:
+            z.store.flush()
+        except Exception:
+            pass
+    else:
+        print("Dry-run: no changes written. Rerun with dry_run=False to apply changes.")
+
 
 if __name__ == "__main__":
 
-    diagnose_missing_norms("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr")
+    # replace_zeros_with_nans_in_datasfc("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr", 
+    #                                    dry_run=False
+    # )
+
+    #diagnose_missing_norms("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr")
 
     #add_array_dimensions_attrs("/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr")
-    #check_longitude_boundary("/scratch/a/a270277/atmorep/data_t2m_Akil.zarr")
+    #check_longitude_boundary("/scratch/a/a270277/atmorep/data_t2m_Akil_padded.zarr")
     #add_surface_norms_to_Akil_t2m()
     #add_norm_sfc_to_t2m()
 
@@ -1010,9 +1092,9 @@ if __name__ == "__main__":
 
     # examine_zarr.explore_zarr_structure("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr")
 
-    # fast_rsync_copy("/work/ab1412/atmorep/data/era5_y2010_2020_res25.zarr", "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_copy.zarr"
-    # )
-    #     
+    fast_rsync_copy("/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr/", "/work/ab1385/a270277/era5_y2010_2020_res25_with_t2m.zarr/"
+    )
+        
 
     # examine_zarr.explore_zarr_structure("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_t2m.zarr")
 
