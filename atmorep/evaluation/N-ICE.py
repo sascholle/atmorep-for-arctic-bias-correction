@@ -10,8 +10,11 @@ import numpy as np
 ERA5_data = xr.open_dataset("/work/ab1385/a270164/2024-sebai/data/E5sf121H_201501_201506_T2M_nice.nc")
 NICE_data = xr.open_dataset("/work/ab1385/a270164/2024-sebai/data/N-ICE_MetSebData_2015_olre.nc")
 
-#print era5 data indice slicing shape
+#check lat and lon
+print("ERA5 lat/lon:", ERA5_data['lat'].values, ERA5_data['lon'].values)
+print("NICE lat/lon:", NICE_data['latitude'].values, NICE_data['longitude'].values)
 print("ERA5 data shape:", ERA5_data['T2M'].shape)
+print("NICE data shape:", NICE_data['air_temperature_2m'].shape)
 
 # Select the same time range from N-ICE
 NICE_data = NICE_data.sel(time=ERA5_data.time)
@@ -34,6 +37,7 @@ NICE_T2M_clean = combined['NICE_T2M'] #.values
 
 print("ERA5 T2M values:", ERA5_T2M_clean.shape, ERA5_T2M_clean.values[:3], " ... ", ERA5_T2M_clean.values[-1:])
 print("NICE T2M values:", NICE_T2M_clean.shape, NICE_T2M_clean.values[:3], " ... ", NICE_T2M_clean.values[-1:])
+print("ERA5 lat/lon:", ERA5_T2M_clean['lat'].values, ERA5_T2M_clean['lon'].values)
 print("Date range:", combined.time.min().values, "to", combined.time.max().values)
 
 

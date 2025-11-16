@@ -11,7 +11,9 @@
 #/work/ab1412/atmorep/output/
 /work/ab1412/atmorep/pkgs/
 /work/ab1412/atmorep/wandb/
-/work/ab1412/atmorep/results/
+/work/ab1412/atmorep/results/id*/
+!/work/ab1412/atmorep/results/NICE_vs_atmorep_RMSE.py
+!/work/ab1412/atmorep/results/important_result_ids.txt
 /work/ab1412/atmorep/data/logs/
 
 #dataset files
@@ -33,7 +35,9 @@ atmorep/models
 #atmorep/output
 atmorep/pkgs
 atmorep/wandb
-atmorep/results 
+atmorep/results/id*/
+!atmorep/results/NICE_vs_atmorep_RMSE.py
+!atmorep/results/important_result_ids.txt
 a270294
 wandb/
 backup_files/

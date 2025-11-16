@@ -6,7 +6,7 @@ import pandas as pd
 
 # source /work/ab1412/atmorep/pyenv/bin/activate
 
-output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr"
+#output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr"
 #output_path = "/scratch/a/a270277/atmorep/backup_norm_sfcs_of_3_fields_for_corrected_t2m_data.zarr"
 #output_path = "/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
 # output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr/era5_y2010_2020_res25_corrected_t2m_new.zarr"
@@ -15,7 +15,7 @@ output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_ne
 #output_path = "/scratch/a/a270277/atmorep/data_t2m_Akil_padded_with_recalculated_interpolation.zarr"
 
 # output_path = "/scratch/a/a270277/atmorep/data_t2m_Akil.zarr"
-#output_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
+output_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
 #output_path = "/scratch/a/a270277/atmorep/backup_norm_sfcs_of_3_fields_for_corrected_t2m_data.zarr"
 #output_path = "/scratch/a/a270277/atmorep/test_concat_zarrs/era5_with_t2m_test.zarr"
 #output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
@@ -23,10 +23,10 @@ output_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_ne
 def explore_zarr_structure(zarr_path):
     print(f"Opening target dataset: {zarr_path}")
     output_zarr = zarr.open(zarr_path, mode='r')
-    print(output_zarr['normalization/norm_sfc'][0, :, 2, 65:75, 0])  # Adjust axes as needed
+    print(output_zarr['data_sfc'][99900, 0, 0, 0:10])  # Adjust axes as needed
     
-#     print("Target arrays:", list(output_zarr.array_keys()))
-#     print(output_zarr.tree())
+    print("Target arrays:", list(output_zarr.array_keys()))
+    print(output_zarr.tree())
     
 #     # Check what fields are stored
 #     print("Atmospheric fields (data):", output_zarr.attrs['fields'])
@@ -40,9 +40,6 @@ def explore_zarr_structure(zarr_path):
 #     for i, field in enumerate(output_zarr.attrs['fields_sfc']):
 #         print(f"data_sfc[:, {i}, :, :] = {field}")
 
-#     #print(f"data_sfc: {output_zarr['data_sfc'][:20, :3, 0, 0]}")  # Adjust axes as needed
-#     #print(f"normalization/norm: {output_zarr['normalization/norm'][0, 1, :, :, 0, 0]}")  # Adjust axes as needed
-
 #     if 'data' in output_zarr.array_keys():
 #         main_data = output_zarr['data']
 #         expected_shape = (main_data.shape[0], main_data.shape[1], main_data.shape[2])
@@ -54,8 +51,7 @@ def explore_zarr_structure(zarr_path):
 #     try:
 #         # Open the zarr store
 #         store = zarr.open(zarr_path, mode='r')
-#         data = store['normalization/norm_sfc'][0, :2, 0, :5, :5]  # Larger slice
-    
+#         #data = store['normalization/norm_sfc'][0, :2, 0, :5, :5]  # Larger slice
 #         # for var_idx in range(data.shape[0]):
 #         #     print(f"\n--- Variable {var_idx} ---")
 #         #     df = pd.DataFrame(
@@ -75,7 +71,7 @@ def explore_zarr_structure(zarr_path):
 #             print(f"Shape: {store.shape}")
 #             print(f"Dtype: {store.dtype}")
 #             print(f"Chunks: {store.chunks}")
-#             print(f"Sample data: {store[:2]}") # Sample first 2 entries
+#             print(f"Sample data: {store[:3]}") # Sample first 3 entries
 
 #     except Exception as e:
 #         print(f"Error exploring Zarr: {str(e)}")
@@ -95,7 +91,7 @@ def explore_zarr_structure(zarr_path):
 #                 print(f"{prefix}  Chunks: {item.chunks}")
 #                 # Try to sample a bit of data
 #                 if len(item.shape) > 0 and item.shape[0] > 0:
-#                     sample_indices = tuple(slice(None, 2) for s in item.shape) # sample first 2 entries in each dimension
+#                     sample_indices = tuple(slice(None, 3) for s in item.shape) # sample first 3 entries in each dimension
 #                     print(f"{prefix}  Sample data: {item[sample_indices]}")
 #                 else:
 #                     print(f"{prefix}  Sample data: [] (empty array)")

@@ -45,7 +45,7 @@ def main():
     p.add_argument("--dst", required=True, help="DST zarr root (rsync dest)")
     p.add_argument("--out", default="/scratch/a/a270277/atmorep/rsync_chunk_map.csv",
                    help="output CSV path (default in scratch)")
-    p.add_argument("--dump-first-outdir", default="/scratch/a/a270277/atmorep/first_chunk_dump",
+    p.add_argument("--dump-first-outdir", default="/scratch/a/a270277/atmorep/first_chunk_dump2",
                    help="directory to write the first src/dst chunk .npy and summary (default in scratch)")
     args = p.parse_args()
 
@@ -155,6 +155,7 @@ def main():
     # Non-CSV mode: parse raw rsync lines with regex (existing behavior)
     with outp.open('w', newline='') as fh:
         print(f"Writing output CSV to: {outp}")
+        print("first_dump_done =", first_dump_done)
         w = csv.writer(fh)
         w.writerow(["flag","relpath","array","chunk_tuple","index_ranges","time_start","time_end","lat_start","lat_end","lon_start","lon_end","note"])
         for L in raw_lines:
@@ -202,9 +203,9 @@ def main():
                 except Exception:
                     pass
                 w.writerow([flag, rel, arr_name, repr(tup), repr(ranges), time_start, time_end, lat_start, lat_end, lon_start, lon_end, note])
-
+                #print("flag =", flag, "rel =", rel, "first_dump_done =", first_dump_done)
                 if (flag == '*deleting') and (not first_dump_done):
-                    first_dump_done = True
+                    first_dump_done = False
                     sl = tuple(slice(r[0], r[1]+1) for r in ranges)
                     safe_name = rel.replace('/', '_').replace('"','').replace(' ','_')
                     src_path = dump_dir / f"{safe_name}_src.npy"
@@ -231,6 +232,30 @@ def main():
                             summary_lines.append("dst chunk not present")
                     except Exception as e:
                         summary_lines.append(f"dst read error: {e}")
+
+                    try:
+                        print(f"\n=== ACTUAL CHUNK VALUES FOR: {rel} ===")
+                        if src_present:
+                            print("SRC:", f"shape={src_block.shape}", f"dtype={src_block.dtype}")
+                            if src_block.size <= 200:
+                                print(src_block)
+                            else:
+                                print("SRC preview (first 200 values):", src_block.reshape(-1)[:200])
+                        else:
+                            print("SRC: <missing>")
+
+                        if dst_present:
+                            print("DST:", f"shape={dst_block.shape}", f"dtype={dst_block.dtype}")
+                            if dst_block.size <= 200:
+                                print(dst_block)
+                            else:
+                                print("DST preview (first 200 values):", dst_block.reshape(-1)[:200])
+                        else:
+                            print("DST: <missing>")
+                        print("=== END ACTUAL CHUNK VALUES ===\n")
+                    except Exception as e:
+                        print("Failed to print actual chunk values:", e)
+
                     if src_present and dst_present:
                         try:
                             sa = src_block.astype(np.float64); da = dst_block.astype(np.float64)
@@ -251,6 +276,7 @@ def main():
 
             except Exception as e:
                 w.writerow([flag, rel, arr_name, repr(tup), None, None, None, None, None, None, f"error:{e}"])
+    
     print(f"Wrote mapping to {outp}")
     if first_dump_done:
         print(f"First-deleting chunk saved to {dump_dir}. Check *_src.npy *_dst.npy and *_summary.txt")
@@ -265,5 +291,16 @@ rsync -avhn --itemize-changes --delete \
 | python /work/ab1412/atmorep/data/map_rsync_chunks.py - \
     --src /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr \
     --dst /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr \
-    --out /scratch/a/a270277/atmorep/rsync_chunk_map.csv
+    --out /scratch/a/a270277/atmorep/rsync_chunk_map2.csv
+    --dump-first-outdir /scratch/a/a270277/atmorep/first_chunk_dump2
+    '''
+'''
+    rsync -avhn --itemize-changes --delete \
+  /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr/ \
+  /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr/ \
+| python /work/ab1412/atmorep/data/map_rsync_chunks.py - \
+    --src /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr \
+    --dst /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr \
+    --out /scratch/a/a270277/atmorep/rsync_chunk_map2.csv
+    --dump-first-outdir /scratch/a/a270277/atmorep/first_chunk_dump2
     '''

@@ -16,7 +16,7 @@ parser.add_argument("--idx", type=int, default=0)
 args = parser.parse_args()
 
 model_id = 'iuw3ce3v_single_gpu'
-file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr'
+file_path = '/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr'
 results_folder = "/work/ab1412/atmorep/results/N-ICE_evaluations_round2"
 os.makedirs(results_folder, exist_ok=True)
 

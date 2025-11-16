@@ -55,21 +55,25 @@ def comprehensive_zarr_analysis(zarr_path):
     print(f"Data_sfc shape: {data_sfc.shape}")
     print(f"Norm shape: {norm.shape}")
     print(f"Norm_sfc shape: {norm_sfc.shape}")
-    
-    # **1. CHECK FOR ZEROS AND NaNs ACROSS ALL ARRAYS**
-    # Denser checks:
-    print(f"\n=== ZERO/NaN/CLIMATOLOGY ANALYSIS (denser sampling) ===")
-    check_zeros_nans_and_climatology(store, fields, fields_sfc, phys_limits=PHYSICAL_LIMITS)
 
-    print(f"\n=== SPATIAL AND TEMPORAL SAMPLING (denser) ===")
-    spatial_temporal_sampling(store, fields, fields_sfc, denser=True)
+    print(f"\n=== BASIC ZERO/NAN ANALYSIS ===")
+    check_zeros_and_nans_comprehensive(store, fields, fields_sfc)
 
-    print(f"\n=== NORMALIZATION ANALYSIS (sanity/climatology) ===")
-    check_normalization_consistency(store, fields, fields_sfc, phys_limits=PHYSICAL_LIMITS)
     
-    # **4. CORRECTED T2M SPECIFIC CHECKS**
-    print(f"\n=== CORRECTED T2M SPECIFIC ANALYSIS ===")
-    check_corrected_t2m_boundaries(store)
+    # # **1. CHECK FOR ZEROS AND NaNs ACROSS ALL ARRAYS**
+    # # Denser checks:
+    # print(f"\n=== ZERO/NaN/CLIMATOLOGY ANALYSIS (denser sampling) ===")
+    # check_zeros_nans_and_climatology(store, fields, fields_sfc, phys_limits=PHYSICAL_LIMITS)
+
+    # print(f"\n=== SPATIAL AND TEMPORAL SAMPLING (denser) ===")
+    # spatial_temporal_sampling(store, fields, fields_sfc, denser=True)
+
+    # print(f"\n=== NORMALIZATION ANALYSIS (sanity/climatology) ===")
+    # check_normalization_consistency(store, fields, fields_sfc, phys_limits=PHYSICAL_LIMITS)
+    
+    # # **4. CORRECTED T2M SPECIFIC CHECKS**
+    # print(f"\n=== CORRECTED T2M SPECIFIC ANALYSIS ===")
+    # check_corrected_t2m_boundaries(store)
 
     # #**4. Climatology plots**
     # print(f"\n=== CLIMATOLOGY PLOTS ===")
@@ -330,11 +334,11 @@ def check_zeros_and_nans_comprehensive(store, fields, fields_sfc):
     """Check for problematic zeros and NaNs across all arrays"""
     
     # Sample time indices (every ~8760 timesteps ≈ yearly)
-    time_samples = list(range(0, store['data'].shape[0], 8760))[:12]  # ~12 samples
+    time_samples = list(range(0, store['data'].shape[0], 1000))[:]  # ~12 samples
     
     # Spatial samples: Arctic, mid-lat, Antarctic
-    lat_samples = [10, 360, 710]  # Arctic, mid, Antarctic
-    lon_samples = [0, 360, 720, 1080, 1439]  # Various longitudes
+    lat_samples = list(range(0, store['lats'].shape[0], 100))[:]  # Arctic, mid, Antarctic
+    lon_samples = list(range(0, store['lons'].shape[0], 1000))[:]  # Various longitudes
     
     print("Sampling strategy:")
     print(f"  Time: {len(time_samples)} samples across {store['data'].shape[0]} timesteps")
@@ -711,8 +715,8 @@ def check_corrected_t2m_boundaries(store):
 
 if __name__ == "__main__":
     #zarr_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr"
-    zarr_path = "/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
-    #zarr_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
+    #zarr_path = "/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr"
+    zarr_path = "/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr"
     #zarr_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
     comprehensive_zarr_analysis(zarr_path)
 
