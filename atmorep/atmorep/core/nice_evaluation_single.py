@@ -32,7 +32,8 @@ options = {
     'token_overlap': [0, 0],
     'forecast_num_tokens': 1,
     'attention': False,
-    'with_pytest': False
+    'with_pytest': False,
+    'lat_range': (72.5, 90.0)  # Arctic only - where corrected_t2m data is valid
 }
 
 print(f"Running global_forecast for {args.year}-{args.month:02d}-{args.day:02d} {args.hour:02d}:00 ...")

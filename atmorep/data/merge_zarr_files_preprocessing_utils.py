@@ -969,12 +969,24 @@ def diagnose_missing_norms(zarr_path):
         else:
             print(f"\n✓ Field {field_idx} ({field_name}) has good normalization data: {nonzero_count}/{total_count}")
 
-def replace_zeros_with_nans_in_datasfc(zarr_path, field_idx=2, lat_start=71, time_block=128, dry_run=True):
+def replace_zeros_with_nans_in_norm_sfc(zarr_path, field_idx=2, lat_start=71, block_size=16, dry_run=True):
     """
-    Replace exact 0 -> NaN in data_sfc[:, field_idx, lat_start:, :] in-place (unless dry_run=True).
-    Processes the time axis in blocks to avoid loading the full slice into memory.
+    Replace exact 0 -> NaN in normalization/norm_sfc[:, :, field_idx, lat_start:, :] in-place.
+    
+    norm_sfc shape: (144, 2, 3, 721, 1440) float32
+      - axis 0: months (144)
+      - axis 1: mean/std (2)
+      - axis 2: fields (3)
+      - axis 3: lat (721)
+      - axis 4: lon (1440)
+    
+    Parameters:
+    - zarr_path: path to zarr group
+    - field_idx: index of field to process (default 2 = corrected_t2m)
+    - lat_start: start latitude index (inclusive) to begin replacement (default 71)
+    - block_size: number of month slices to process per iteration
+    - dry_run: if True, only report counts and do not write
     """
-
     zp = Path(zarr_path)
     if not zp.exists():
         raise FileNotFoundError(f"{zarr_path} not found")
@@ -982,38 +994,45 @@ def replace_zeros_with_nans_in_datasfc(zarr_path, field_idx=2, lat_start=71, tim
     mode = 'r' if dry_run else 'r+'
     z = zarr.open_group(str(zp), mode=mode)
 
-    if 'data_sfc' not in z:
-        raise KeyError("data_sfc not found in store")
+    arr_path = 'normalization/norm_sfc'
+    if arr_path not in z:
+        raise KeyError(f"{arr_path} not found in store")
 
-    arr = z['data_sfc']
+    arr = z[arr_path]
     shape = arr.shape
-    if len(shape) != 4:
-        raise ValueError(f"expected data_sfc rank 4, got shape={shape}")
+    print(f"norm_sfc shape: {shape} dtype: {arr.dtype}")
 
-    # normalize negative field_idx
+    if len(shape) != 5:
+        raise ValueError(f"expected norm_sfc rank 5, got shape={shape}")
+
+    # validate field_idx
     if field_idx < 0:
-        field_idx = shape[1] + field_idx
-    if not (0 <= field_idx < shape[1]):
-        raise IndexError(f"field_idx {field_idx} out of range (0..{shape[1]-1})")
+        field_idx = shape[2] + field_idx
+    if not (0 <= field_idx < shape[2]):
+        raise IndexError(f"field_idx {field_idx} out of range (0..{shape[2]-1})")
 
-    if not (0 <= lat_start < shape[2]):
-        raise IndexError(f"lat_start {lat_start} out of range (0..{shape[2]-1})")
+    # validate lat_start
+    if not (0 <= lat_start < shape[3]):
+        raise IndexError(f"lat_start {lat_start} out of range (0..{shape[3]-1})")
 
-    # dtype must be floating to store NaNs in-place
+    # dtype must be floating to store NaNs
     if not np.issubdtype(np.dtype(arr.dtype), np.floating):
-        raise TypeError(f"data_sfc dtype is {arr.dtype}; must be floating to hold NaN. Convert dataset dtype first.")
+        raise TypeError(f"norm_sfc dtype is {arr.dtype}; must be floating to hold NaN.")
 
     total_checked = 0
     total_zeros = 0
     total_replaced = 0
 
-    print(f"Opening {zarr_path}  data_sfc shape={shape} dtype={arr.dtype}  field_idx={field_idx} lat_start={lat_start}  dry_run={dry_run}")
+    print(f"Processing {zarr_path}  norm_sfc  field_idx={field_idx} lat_start={lat_start}  dry_run={dry_run}")
 
-    for t0 in range(0, shape[0], time_block):
-        t1 = min(shape[0], t0 + time_block)
-        sl = (slice(t0, t1), field_idx, slice(lat_start, None), slice(None))
+    # iterate over axis 0 (months) in blocks
+    n_months = shape[0]
+    for m0 in range(0, n_months, block_size):
+        m1 = min(n_months, m0 + block_size)
+        # slice: [m0:m1, :, field_idx, lat_start:, :]
+        sl = (slice(m0, m1), slice(None), field_idx, slice(lat_start, None), slice(None))
         try:
-            block = arr[sl]  # returns numpy array
+            block = np.asarray(arr[sl])
         except Exception as e:
             print(f"ERROR reading slice {sl}: {e}")
             raise
@@ -1024,16 +1043,14 @@ def replace_zeros_with_nans_in_datasfc(zarr_path, field_idx=2, lat_start=71, tim
         total_zeros += nzeros
 
         if nzeros:
-            print(f"time {t0}:{t1}  zeros={nzeros}")
+            print(f"months {m0}:{m1}  zeros={nzeros}")
             if not dry_run:
-                # ensure we keep float dtype
-                if block.dtype.kind != 'f':
-                    block = block.astype(np.float32)
+                block = block.copy()
                 block[mask] = np.nan
                 arr[sl] = block
                 total_replaced += nzeros
 
-    print("Finished scanning.")
+    print("Finished scanning norm_sfc.")
     print(f"Elements checked: {total_checked:,}")
     print(f"Exact-zero entries found: {total_zeros:,}")
     if not dry_run:
@@ -1046,11 +1063,14 @@ def replace_zeros_with_nans_in_datasfc(zarr_path, field_idx=2, lat_start=71, tim
         print("Dry-run: no changes written. Rerun with dry_run=False to apply changes.")
 
 
+
 if __name__ == "__main__":
 
-    # replace_zeros_with_nans_in_datasfc("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr", 
-    #                                    dry_run=False
-    # )
+    replace_zeros_with_nans_in_norm_sfc("/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr", 
+                                       dry_run=False 
+    )
+
+    # /work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr
 
     #diagnose_missing_norms("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_new.zarr")
 
@@ -1092,8 +1112,8 @@ if __name__ == "__main__":
 
     # examine_zarr.explore_zarr_structure("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr")
 
-    fast_rsync_copy("/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr/", "/work/ab1385/a270277/era5_y2010_2020_res25_with_t2m.zarr/"
-    )
+    # fast_rsync_copy("/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr/", "/work/ab1385/a270277/era5_y2010_2020_res25_with_t2m.zarr/"
+    # )
         
 
     # examine_zarr.explore_zarr_structure("/scratch/a/a270277/atmorep/era5_y2010_2020_res25_t2m.zarr")

@@ -179,12 +179,30 @@ class Evaluator( Trainer_BERT) :
     Evaluator.parse_args( cf, args)
 
     dates = args['dates']
+    # Support optional lat_range for Arctic-only forecasting
+    lat_range = args.get('lat_range', None)  # e.g. (72.5, 90.0) for Arctic
+    
     evaluator = Evaluator.load( cf, model_id, model_epoch, devices)
-    evaluator.model.set_global( NetMode.test, np.array( dates))
+    evaluator.model.set_global( NetMode.test, np.array( dates), lat_range = lat_range)
     if 0 == cf.par_rank :
       cf.print()
       cf.write_json( wandb)
     evaluator.validate( 0, cf.BERT_strategy)
+
+  ##############################################
+  @staticmethod
+  def arctic_forecast( cf, model_id, model_epoch, devices, args = {}) :
+    '''Forecast only for Arctic region (above specified latitude threshold)'''
+    
+    # Default to 72.5°N which is where corrected_t2m data is valid
+    arctic_min_lat = args.get('arctic_min_lat', 72.5)
+    args['lat_range'] = (arctic_min_lat, 90.0)
+    
+    if 0 == cf.par_rank:
+      print(f"Running Arctic-only forecast for latitudes {arctic_min_lat}°N to 90°N")
+    
+    # Use global_forecast with lat_range restriction
+    Evaluator.global_forecast(cf, model_id, model_epoch, devices, args)
 
   ##############################################
   @staticmethod

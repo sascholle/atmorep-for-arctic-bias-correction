@@ -4,11 +4,11 @@
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=127 # changed from 34
+#SBATCH --cpus-per-task=64 # changed from 34
 #SBATCH --gres=gpu:1
 #SBATCH --chdir=.
-#SBATCH --output=logs/nice_eval_round2_%j.out
-#SBATCH --error=logs/nice_eval_round2_%j.err
+#SBATCH --output=logs/nice_eval_round3_%j.out
+#SBATCH --error=logs/nice_eval_round3_%j.err
 
 # import modules
 source pyenv/bin/activate

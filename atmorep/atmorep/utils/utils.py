@@ -247,15 +247,28 @@ def setup_ddp( with_ddp = True) :
     rank = int(os.environ.get("SLURM_NODEID")) * ranks_per_node + local_rank
     size = int(os.environ.get("SLURM_NTASKS"))
 
-    # CHANGED THIS
-    master_node = os.environ.get('MASTER_ADDR', '1345')
-    #master_port = os.environ.get('MASTER_PORT', '1345')
-    dist.init_process_group( backend='nccl', init_method='tcp://' + master_node + ':1345',
+  #   # CHANGED THIS
+  #   master_node = os.environ.get('MASTER_ADDR', '1345')
+  #   #master_port = os.environ.get('MASTER_PORT', '1345')
+  #   dist.init_process_group( backend='nccl', init_method='tcp://' + master_node + ':1345',
+  #                             timeout=datetime.timedelta(seconds=10*8192),
+  #                             world_size = size, rank = rank) 
+  #   # dist.init_process_group( backend='nccl', init_method=f'tcp://{master_node}:{master_port}',
+  #   #                           timeout=datetime.timedelta(seconds=10*8192),
+  #   #                           world_size = size, rank = rank) 
+  #   logger.info( f'Using DDP with MASTER_ADDR={master_node}.' )
+  # else :
+  #   logger.info( 'DDP is not used.' )
+
+  # return rank, size
+
+    # Use MASTER_PORT from env, or derive a unique port from SLURM_JOB_ID to avoid collisions
+    slurm_job_id = os.environ.get('SLURM_JOB_ID', '0')
+    default_port = str(29500 + (int(slurm_job_id) % 1000))  # Range 29500-30499
+    master_port = os.environ.get('MASTER_PORT', default_port)
+    dist.init_process_group( backend='nccl', init_method=f'tcp://{master_node}:{master_port}',
                               timeout=datetime.timedelta(seconds=10*8192),
                               world_size = size, rank = rank) 
-    # dist.init_process_group( backend='nccl', init_method=f'tcp://{master_node}:{master_port}',
-    #                           timeout=datetime.timedelta(seconds=10*8192),
-    #                           world_size = size, rank = rank) 
     logger.info( f'Using DDP with MASTER_ADDR={master_node}.' )
   else :
     logger.info( 'DDP is not used.' )

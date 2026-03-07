@@ -334,10 +334,10 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
 
   #["velocity_u",0.225],["velocity_v",0.225],["specific_humidity",0.15],["velocity_z",0.1],["temperature",0.2],["total_precip",0.1] ]
 
-  ["velocity_u", 0.125], ["velocity_v", 0.125], ["specific_humidity", 0.05], ["velocity_z", 0.01], ["temperature", 0.1], ["total_precip", 0.01], ["t2m", 0.2], ["corrected_t2m", 0.38] ]
+  ["velocity_u", 0.074], ["velocity_v", 0.074], ["specific_humidity", 0.03], ["velocity_z", 0.006], ["temperature", 0.06], ["total_precip", 0.006], ["t2m", 0.2], ["corrected_t2m", 0.550] ]
 
   #cf.fields_targets = ["t2m"]
-  cf.losses = ['mse_ensemble', 'stats'] # mse, mse_ensemble, stats, crps, weighted_mse
+  cf.losses = ['mse_ensemble'] # mse, mse_ensemble, stats, crps, weighted_mse
 
  # target sparsity section
   # cf.sparse_target = True  # Enable sparse target masking - only necessary for forecasting 
@@ -358,17 +358,18 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.batch_size_validation = 1
   if not hasattr(cf, 'model_log_frequency'):
     cf.model_log_frequency = 256 #save checkpoint every X batches
-  if not hasattr(cf, 'forecast_num_tokens'):
-    cf.forecast_num_tokens = 2 #  only needed / used for BERT_strategy 'forecast'
+  #if not hasattr(cf, 'forecast_num_tokens'):
+  #  cf.forecast_num_tokens = 1 #  only needed / used for BERT_strategy 'forecast'
 
-  cf.BERT_strategy = 'BERT' #'forecast' #BERT
-  cf.years_train = list( range(2010, 2021))
-  cf.years_test = [2021]
-  cf.years_val = [2021] 
+  cf.BERT_strategy = 'forecast' 
+  cf.forecast_num_tokens = 1 
+  cf.years_train = list( range(2010, 2015))
+  cf.years_test = [2015]
+  cf.years_val = [2016] 
   #cf.geo_range_sampling = [[ 72.27, 90.], [ 0., 360.]] #[[ -90., 90.], [ 0., 360.]]
   cf.geo_range_sampling = [list(range(0, 71)), list(range(0, 1440))]
 
-  cf.file_path = '/scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr' 
+  cf.file_path = '/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr' 
   #cf.file_path = "/work/ab1412/atmorep/data/era5_y2010_2020_res25_with_t2m.zarr"
   
   setup_wandb( cf.with_wandb, cf, par_rank, project_name='train', mode='offline')  
@@ -414,9 +415,13 @@ if __name__ == '__main__':
     # 0: Wandb run: atmorep-iuy5bnth-19366232 trained on u9vvriz7 0.1 masking v1.1.5
     # 0: Wandb run: atmorep-iuw3ce3v-19413611 trained on iuy5bnth 0.1 masking v1.1.6
 
+    # fine-tuning forecast model with corrected t2m
+    # 0: Wandb run: atmorep-6kjr71hd-23246602
 
 
-    wandb_id, epoch, epoch_continue = 'iuy5bnth', -2, -2 
+
+
+    wandb_id, epoch, epoch_continue = 'iuw3ce3v', -2, -2 
     Trainer = Trainer_BERT  
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 

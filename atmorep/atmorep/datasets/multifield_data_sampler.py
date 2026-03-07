@@ -306,8 +306,16 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
     self.idxs_perm_t = np.array(self.idxs_perm_t).squeeze()
 
   ###################################################
-  def set_global( self, times, batch_size = None, token_overlap = [0, 0]) :
-    ''' generate patch/token positions for global grid '''
+  def set_global( self, times, batch_size = None, token_overlap = [0, 0], lat_range = None) :
+    ''' generate patch/token positions for global grid 
+    
+    Args:
+        times: list of datetime tuples
+        batch_size: batch size (optional)
+        token_overlap: overlap between tiles
+        lat_range: tuple (min_lat, max_lat) in degrees, e.g. (72.5, 90.0) for Arctic only
+                   If None, covers entire globe (-90 to 90)
+    '''
     token_overlap = np.array( token_overlap).astype(np.int64)
 
     # assumed that sanity checking that field data is consistent has been done 
@@ -320,39 +328,51 @@ class MultifieldDataSampler( torch.utils.data.IterableDataset):
     side_len_2 = side_len / 2.
     assert all( overlap <= side_len_2), 'token_overlap too large for #tokens, reduce if possible'
 
+    # Convert lat_range to colatitude bounds (0 = North Pole, 180 = South Pole)
+    if lat_range is not None:
+        min_lat, max_lat = lat_range  # in degrees, e.g. (72.5, 90.0)
+        # Colatitude: colat = 90 - lat, so lat=90 -> colat=0, lat=72.5 -> colat=17.5
+        colat_start = 90. - max_lat  # Start near North Pole
+        colat_end = 90. - min_lat    # End at min latitude
+        print(f'Arctic forecast: lat_range={lat_range}, colat_range=({colat_start}, {colat_end})')
+    else:
+        colat_start = 0.
+        colat_end = 180.
+
     # generate tiles
     times_pos = []
     for ctime in times :
 
-      lat = side_len_2[0].item()
+      # Start from colat_start + half tile size (so tile doesn't go beyond colat_start)
+      lat = max(side_len_2[0].item(), colat_start + side_len_2[0].item())
       num_tiles_lat = 0
-      while (lat + side_len_2[0].item()) < 180. :
+      while (lat + side_len_2[0].item()) <= colat_end + side_len_2[0].item() and (lat + side_len_2[0].item()) < 180.:
         num_tiles_lat += 1
         lon = side_len_2[1].item() - overlap[1].item()/2.
         num_tiles_lon = 0
         while (lon - side_len_2[1]) < 360. :
-          times_pos += [[*ctime, -lat + 90., np.mod(lon,360.) ]]
+          actual_lat = -lat + 90.  # Convert back to latitude
+          times_pos += [[*ctime, actual_lat, np.mod(lon,360.) ]]
           lon += side_len[1].item() - overlap[1].item()
           num_tiles_lon += 1
         lat += side_len[0].item() - overlap[0].item()
 
-      # add one additional row if no perfect tiling (sphere is toric in longitude so no special
-      # handling necessary but not in latitude)
-      # the added row is such that it goes exaclty down to the South pole and the offset North-wards
-      # is computed based on this
-      lat -= side_len[0] - overlap[0]
-      if lat - side_len_2[0] < 180. :
-        num_tiles_lat += 1
-        lat = 180. - side_len_2[0].item() + res[0]
-        lon = side_len_2[1].item() - overlap[1].item()/2.
-        while (lon - side_len_2[1]) < 360. :
-          times_pos += [[*ctime, -lat + 90., np.mod(lon,360.) ]]
-          lon += side_len[1].item() - overlap[1].item()
+      # Only add extra row for South Pole if we're doing global (not Arctic-restricted)
+      if lat_range is None:
+        lat -= side_len[0] - overlap[0]
+        if lat - side_len_2[0] < 180. :
+          num_tiles_lat += 1
+          lat = 180. - side_len_2[0].item() + res[0]
+          lon = side_len_2[1].item() - overlap[1].item()/2.
+          while (lon - side_len_2[1]) < 360. :
+            times_pos += [[*ctime, -lat + 90., np.mod(lon,360.) ]]
+            lon += side_len[1].item() - overlap[1].item()
 
     # adjust batch size if necessary so that the evaluations split up across batches of equal size
     batch_size = len(times_pos) #num_tiles_lon
     
-    print( 'Number of batches per global forecast: {}'.format( num_tiles_lat) )
+    region_str = f"Arctic ({lat_range[0]}° to {lat_range[1]}°N)" if lat_range else "Global"
+    print( 'Number of batches per {} forecast: {}'.format(region_str, num_tiles_lat) )
 
     self.set_data( times_pos, batch_size)
 

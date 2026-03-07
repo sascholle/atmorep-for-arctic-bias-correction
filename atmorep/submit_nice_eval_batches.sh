@@ -10,7 +10,7 @@
 #SBATCH --output=logs/nice_batch_wrapper%j.out
 #SBATCH --error=logs/nice_batch_wrapper%j.err
 
-dataset_length=1 #2099  # or detect this in Python and write to a file
+dataset_length=2099
 chunk_size=72
 num_chunks=$(( (dataset_length + chunk_size - 1) / chunk_size ))
 

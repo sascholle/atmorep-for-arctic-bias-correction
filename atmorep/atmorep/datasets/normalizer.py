@@ -56,10 +56,8 @@ def normalize( data, norm, dates, year_base = 1979) :
         pass
       #print(info)
   if len(norm.shape) > 2 : #global norm
-    print("Using global normalization")
     return normalize_local(data, mean, var)
   else:
-    print("Using local normalization")
     return normalize_global( data, mean, var)
   
 ######################################################

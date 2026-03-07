@@ -83,11 +83,11 @@ class Trainer_Base() :
   ###################################################
 ##### IVE ADDED THIS ####
   def MSELoss(self, x, target=None):
-      """MSE loss that ignores NaN values"""
+      """MSE loss that ignores NaN values in target"""
       if target is None:
         return torch.tensor(0., device=x.device)
   
-      # Create mask for valid (non-NaN) values
+      # Create mask for valid (non-NaN) values in target only
       valid_mask = ~torch.isnan(target)
       # If we have any valid points, compute loss on those only
       if torch.any(valid_mask):
@@ -249,6 +249,7 @@ class Trainer_Base() :
       _, _, _, tmksd_list, weight_list = batch_data[0]
       with torch.autocast(device_type='cuda', dtype=torch.float16, enabled=cf.with_mixed_precision):
         batch_data = self.prepare_batch( batch_data)
+        
         preds, _ = self.model_ddp( batch_data)
 
 
@@ -442,6 +443,18 @@ class Trainer_Base() :
     test_len = 0
 
     self.mode_test = True
+
+    ##### ADDED: Track corrected_t2m loss separately (non-NaN values only)
+    corrected_t2m_loss_sum = 0.
+    corrected_t2m_valid_count = 0
+    corrected_t2m_pred_idx = None
+    
+    # Find corrected_t2m index in predictions
+    for idx, field_idx in enumerate(self.fields_prediction_idx):
+        if cf.fields[field_idx][0] == 'corrected_t2m':
+            corrected_t2m_pred_idx = idx
+            break     
+    ###########################
       
     # run test set evaluation
     with torch.no_grad() : 
@@ -457,6 +470,29 @@ class Trainer_Base() :
         
         with torch.autocast(device_type='cuda',dtype=torch.float16,enabled=cf.with_mixed_precision):
           batch_data = self.prepare_batch( batch_data)
+
+          ###### ADDED DEBUG: Check which fields have NaN in targets (check ALL batches, report once)
+          # Track NaN across all batches for corrected_t2m
+          for i, field_idx in enumerate(self.fields_prediction_idx):
+              field_name = cf.fields[field_idx][0]
+              if field_name == 'corrected_t2m':
+                  nan_count = torch.isnan(self.targets[i]).sum().item()
+                  total = self.targets[i].numel()
+                  # Also check the SOURCE data for this field
+                  source_data = batch_data[field_idx][0]  # source tensor
+                  source_nan = torch.isnan(source_data).sum().item()
+                  source_total = source_data.numel()
+                  
+                  if it < 3 and cf.par_rank == 0:
+                      # Get latitude info from sources_info
+                      lats = self.sources_info[0][1] if len(self.sources_info) > 0 else None
+                      lat_range = f"{lats.min():.2f} to {lats.max():.2f}" if lats is not None else "unknown"
+                      
+                      print(f"\n[Input NaN check batch {it}] corrected_t2m (lat range: {lat_range}):")
+                      print(f"  Source (input):  {source_nan}/{source_total} NaN")
+                      print(f"  Target:          {nan_count}/{total} NaN")
+          ##################
+
           preds, atts = self.model( batch_data)
         loss = torch.tensor( 0.)
         ifield = 0
@@ -468,6 +504,41 @@ class Trainer_Base() :
 
           loss += cur_loss 
           total_losses[ifield] += cur_loss
+
+          ####### ADDED Track corrected_t2m separately with valid count
+          if ifield == corrected_t2m_pred_idx:
+              valid_mask = ~torch.isnan(target)
+              num_valid = valid_mask.sum().item()
+              
+              # Comprehensive NaN diagnostic for first few batches
+              if it < 3 and cf.par_rank == 0:
+                  lat_range = f"{lats.min():.2f} to {lats.max():.2f}" if lats is not None else "unknown"
+                  target_total = target.numel()
+                  target_nan = torch.isnan(target).sum().item()
+                  pred_total = pred[0].numel()
+                  pred_nan = torch.isnan(pred[0]).sum().item()
+                  
+                  # Check NaN at valid target positions (this is the key question!)
+                  pred_at_valid = pred[0][valid_mask]
+                  pred_nan_at_valid = torch.isnan(pred_at_valid).sum().item()
+                  
+                  print(f"[Predictions NaN batch {it}] corrected_t2m analysis:")
+                  print(f"  Target: {target_nan}/{target_total} NaN ({100*target_nan/target_total:.1f}%)")
+                  print(f"  Pred:   {pred_nan}/{pred_total} NaN ({100*pred_nan/pred_total:.1f}%)")
+                  print(f"  Pred NaN at VALID target positions: {pred_nan_at_valid}/{num_valid} \n")
+                  
+                  if pred_nan_at_valid > 0:
+                      print(f"  ⚠️  PROBLEM: Predictions have NaN where targets are valid!")
+                      print(f"      This explains why loss is NaN even with target masking.")
+                      print(f"      NaN may be propagating through attention from non-Arctic tokens.")
+              
+              if num_valid > 0:
+                  # Original computation (will be NaN if pred has NaN at valid positions)
+                  mse_valid = ((pred[0][valid_mask] - target[valid_mask]) ** 2).mean().cpu().item()
+                  corrected_t2m_loss_sum += mse_valid * num_valid
+                  corrected_t2m_valid_count += num_valid
+          ###########################
+
           ifield += 1
   
         total_loss += loss
@@ -482,10 +553,8 @@ class Trainer_Base() :
             self.log_attention( epoch, it, atts)
 
           ######## I'VE ADDED THIS ########
-          
           # after log_validate call, print a small subset of one predicted field
           if it == 0:  # only print once
-            print(f"it == 0 and starting val norms printouts")
 
             # Find field index
             pred_idx = None
@@ -497,11 +566,12 @@ class Trainer_Base() :
             if pred_idx is not None:
                 field_name = 'corrected_t2m'
                 pred_data = log_preds[pred_idx][0]  # the predicted mean
-                print(f"[DEBUG] PREDICTIONS VALIDATION BATCH")
-                print(f"Normalised validation prediction values for '{field_name}' with shape: {pred_data.shape}")
+                print(f"\n[DEBUG] NORMALISED PREDICTIONS IN VALIDATION")
+                print(f"=" * 70)
+                print(f"       \nNormalised validation prediction values for '{field_name}' with shape: {pred_data.shape}")
                 print(f"         min = {pred_data.min():.3f}, max = {pred_data.max():.3f}, mean = {pred_data.mean():.3f}")
-                print(f"         sample (first 20): {pred_data.flatten()[:20]}")
-                    
+                print(f"         sample (first 20): {pred_data.flatten()[:20]}")    
+                print(f"\n" + "=" * 70 + "\n") 
           ################################################
 
           
@@ -517,10 +587,27 @@ class Trainer_Base() :
       total_loss = total_loss_cuda.cpu()
       total_losses = total_losses_cuda.cpu()
 
+      #### ADDED reduce corrected_t2m stats across ranks
+      if corrected_t2m_pred_idx is not None:
+          ct2m_stats = torch.tensor([corrected_t2m_loss_sum, corrected_t2m_valid_count], device='cuda')
+          dist.all_reduce(ct2m_stats, op=torch.distributed.ReduceOp.SUM)
+          corrected_t2m_loss_sum = ct2m_stats[0].cpu().item()
+          corrected_t2m_valid_count = ct2m_stats[1].cpu().item()
+      ###################
+
     if 0 == cf.par_rank :
       print( 'validation loss for strategy={} at epoch {} : {}'.format( BERT_test_strategy,
                                                                   epoch, total_loss),
                                                                   flush=True)
+          
+    #### ADDED Print corrected_t2m loss (Arctic only, non-NaN values)
+      if corrected_t2m_pred_idx is not None and corrected_t2m_valid_count > 0:
+          corrected_t2m_avg_loss = corrected_t2m_loss_sum / corrected_t2m_valid_count
+          print(f'validation loss for corrected_t2m (Arctic, {corrected_t2m_valid_count:,} valid points) : {corrected_t2m_avg_loss:.6f}')
+      elif corrected_t2m_pred_idx is not None:
+          print('validation loss for corrected_t2m: NO VALID (non-NaN) VALUES FOUND')
+    #################
+
     if cf.with_wandb and (0 == cf.par_rank) :
       loss_dict = {"val. loss {}".format(BERT_test_strategy) : total_loss}
       total_losses = total_losses.cpu().detach()
@@ -584,11 +671,26 @@ class Trainer_Base() :
 
       # Generalized cross entroy loss for continuous distributions
       if 'stats' in self.cf.losses :
-        stats_loss = Gaussian( target, pred[0], pred[1])  
-        diff = (stats_loss-1.) 
-        # stats_loss = 0.01 * torch.mean( diff * diff) + torch.mean( torch.sqrt(torch.abs( pred[1])) )
-        stats_loss = torch.mean( diff * diff) + torch.mean( torch.sqrt( torch.abs( pred[1])) )
+        ##### ADDED ######
+        # Handle NaN values in target (due to Arctic only sparsity)
+        valid_mask = ~torch.isnan(target)
+        if torch.any(valid_mask):
+            target_valid = target[valid_mask]
+            pred0_valid = pred[0][valid_mask]
+            pred1_valid = pred[1][valid_mask]
+            stats_loss = Gaussian( target_valid, pred0_valid, pred1_valid)  
+            diff = (stats_loss-1.) 
+            stats_loss = torch.mean( diff * diff) + torch.mean( torch.sqrt( torch.abs( pred1_valid)) )
+        else:
+            stats_loss = torch.tensor(0., device=target.device)
         losses['stats'].append( stats_loss) 
+        #####
+
+        # stats_loss = Gaussian( target, pred[0], pred[1])  
+        # diff = (stats_loss-1.) 
+        # # stats_loss = 0.01 * torch.mean( diff * diff) + torch.mean( torch.sqrt(torch.abs( pred[1])) )
+        # stats_loss = torch.mean( diff * diff) + torch.mean( torch.sqrt( torch.abs( pred[1])) )
+        # losses['stats'].append( stats_loss) 
       
       # Generalized cross entroy loss for continuous distributions
       if 'stats_area' in self.cf.losses :
@@ -683,7 +785,6 @@ class Trainer_BERT( Trainer_Base) :
         self.targets[target_idx] = sparse_target
         
         #print(f"Created sparse mask for {target_field} with {(1-sparsity)*100:.1f}% data retained")
-
 
   ####################################################
 
@@ -818,6 +919,13 @@ class Trainer_BERT( Trainer_Base) :
       forecast_num_tokens = cf.forecast_num_tokens
   
     coords = []
+
+    # Store denormalized target for comparison with predictions later
+    debug_source_values = None
+    debug_target_values = None 
+    debug_dates = None
+    debug_dates_t = None
+    
     for fidx, field_info in enumerate(cf.fields) :
       # reshape from tokens to contiguous physical field
       num_levels = len(field_info[2])
@@ -842,11 +950,20 @@ class Trainer_BERT( Trainer_Base) :
           source[bidx,vidx] = denormalize( source[bidx,vidx], normalizer, dates, year_base)
           target[bidx,vidx] = denormalize( target[bidx,vidx], normalizer, dates_t, year_base)
 
-        # DENORMALISED Printing first 20 denormalized source/target values for first batch/level
+          # Store denormalized values for comparison with predictions
           if batch_idx == 0 and bidx == 0 and vidx == 0 and field_info[0] == 'corrected_t2m':
-              print(f"\n[DEBUG] Log Validate Forecast Denormalized values for {field_info[0]}:")
-              print(f"Source values (first 20):\n{source[bidx,vidx].flatten()[:20]}")
-              print(f"Target values (first 20):\n{target[bidx,vidx].flatten()[:20]}")
+              debug_target_values = target[bidx,vidx].copy()
+              debug_source_values = source[bidx,vidx].copy()
+              debug_dates = dates
+              debug_dates_t = dates_t
+
+        # # DENORMALISED Printing first 20 denormalized source/target values for first batch/level
+        #   if batch_idx == 0 and bidx == 0 and vidx == 0 and field_info[0] == 'corrected_t2m':
+        #       print(f"\n[DEBUG] DENORMALISED SOURCE, TARGET, PREDICTION FORECAST VALUES")
+        #       print(f"        field_info[0] is: {field_info[0]}:")
+        #       print(f"        Source values (first 20):\n{source[bidx,vidx].flatten()[:20]}")
+        #       print(f"        Target values (first 20):\n{target[bidx,vidx].flatten()[:20]}")
+        #       print(f"        Difference (first 20): {(pred[bidx,vidx] - target[bidx,vidx]).flatten()[:20]}")
 
         coords_b += [[dates, 90.-lats, lons, dates_t]]
 
@@ -881,9 +998,30 @@ class Trainer_BERT( Trainer_Base) :
         
         #######################
 
-          # # DENORMALISED: Print first 20 denormalized prediction values for first batch/level
-          # if bidx == 0 and vidx == 0 and fidx == 0:
-          #     print(f"Prediction values (first 20):\n{pred[bidx,vidx].flatten()[:20]}")
+         # Print full comparison: source context, target, prediction, difference
+          if batch_idx == 0 and bidx == 0 and vidx == 0 and fn[0] == 'corrected_t2m':
+              print(f"\n[DEBUG] DENORMALISED FORECAST COMPARISON FOR corrected_t2m")
+              print(f"=" * 70)
+              
+              # Temporal context info
+              print(f"\n--- TEMPORAL CONTEXT ---")
+              print(f"Source timesteps: {len(debug_dates)} total")
+              print(f"Target timesteps: {len(debug_dates_t)} (forecast window)")
+              print(f"Source dates range: {debug_dates[0]} to {debug_dates[-1]}")
+              print(f"Target dates range: {debug_dates_t[0]} to {debug_dates_t[-1]}")
+              print(f"Ratio: {len(debug_dates) - len(debug_dates_t)} source timesteps inform {len(debug_dates_t)} forecast timesteps")
+              
+              # Source values (the conditioning context - what model sees before forecast)
+              print(f"\n--- SOURCE (input context, shape={debug_source_values.shape}) ---")
+              print(f"First 20 values: {debug_source_values.flatten()[:20]}")
+              print(f"Last 20 values (closest to forecast): {debug_source_values.flatten()[-20:]}")
+              
+              # Target vs Prediction comparison
+              print(f"\n--- TARGET vs PREDICTION (shape of target values={debug_target_values.shape}) ---")
+              print(f"Target (first 20):     {debug_target_values.flatten()[:20]}")
+              print(f"Prediction (first 20): {pred[bidx,vidx].flatten()[:20]}")
+              print(f"Difference (Prediction-Target): {(pred[bidx,vidx] - debug_target_values).flatten()[:20]}")
+              print(f"RMSE (all): {np.sqrt(np.mean((pred[bidx,vidx] - debug_target_values)**2)):.4f} K")
 
         #################################
 
