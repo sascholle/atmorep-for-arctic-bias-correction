@@ -337,12 +337,14 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
   ["velocity_u", 0.074], ["velocity_v", 0.074], ["specific_humidity", 0.03], ["velocity_z", 0.006], ["temperature", 0.06], ["total_precip", 0.006], ["t2m", 0.2], ["corrected_t2m", 0.550] ]
 
   #cf.fields_targets = ["t2m"]
-  cf.losses = ['mse_ensemble'] # mse, mse_ensemble, stats, crps, weighted_mse
+  cf.losses = ['mse_ensemble', 'stats'] # mse, mse_ensemble, stats, crps, weighted_mse
 
- # target sparsity section
-  # cf.sparse_target = True  # Enable sparse target masking - only necessary for forecasting 
-  # cf.sparse_target_field = 't2m'  # Field to apply sparsity to
-  # cf.sparse_target_sparsity = 0.9  # ratio of data that will be masked
+ #target sparsity section
+  cf.sparse_target = True  # Enable sparse target masking
+  cf.sparse_target_field = 'corrected_t2m'  # Field to apply sparsity to
+  cf.sparse_target_sparsity = 0.25  # ratio of data that will be masked
+  cf.decoder_cross_att_ratio = 0.5
+
 
   # mask input field section
   # cf.mask_input_field = 't2m'  # or True to use default 'total_precip'
@@ -350,7 +352,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
 
   cf.batch_size = 64
   cf.num_loader_workers = 5
-  cf.num_samples_per_epoch = 480 #1024 train continue 4096*12 train 1024 and I have an OOM error 
+  cf.num_samples_per_epoch = 1024 #1024 train continue 4096*12 train 1024 and I have an OOM error 
   cf.num_samples_validate = 128 #128 train continue 128*12 train
   cf.num_epochs = 128 # 400 / 128
   
@@ -360,12 +362,13 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     cf.model_log_frequency = 256 #save checkpoint every X batches
   #if not hasattr(cf, 'forecast_num_tokens'):
   #  cf.forecast_num_tokens = 1 #  only needed / used for BERT_strategy 'forecast'
+  
 
-  cf.BERT_strategy = 'forecast' 
+  cf.BERT_strategy = 'BERT' 
   cf.forecast_num_tokens = 1 
-  cf.years_train = list( range(2010, 2015))
-  cf.years_test = [2015]
-  cf.years_val = [2016] 
+  cf.years_train = list( range(2010, 2021))
+  cf.years_test = [2021]
+  cf.years_val = [2021] 
   #cf.geo_range_sampling = [[ 72.27, 90.], [ 0., 360.]] #[[ -90., 90.], [ 0., 360.]]
   cf.geo_range_sampling = [list(range(0, 71)), list(range(0, 1440))]
 
@@ -416,12 +419,11 @@ if __name__ == '__main__':
     # 0: Wandb run: atmorep-iuw3ce3v-19413611 trained on iuy5bnth 0.1 masking v1.1.6
 
     # fine-tuning forecast model with corrected t2m
-    # 0: Wandb run: atmorep-6kjr71hd-23246602
+    # 0: Wandb run: atmorep-6kjr71hd-23246602 trained on iuw3ce3v
 
 
-
-
-    wandb_id, epoch, epoch_continue = 'iuw3ce3v', -2, -2 
+    #wandb_id, epoch, epoch_continue = 'j2l0sz9j', -2, -2 
+    wandb_id, epoch, epoch_continue ='ecdyq7vs', -2, -2 # another 0.25 masking rerun from 80 epochs
     Trainer = Trainer_BERT  
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 

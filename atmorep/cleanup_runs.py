@@ -154,13 +154,11 @@ class RunCleaner:
         
         for job_id in job_ids:
             output_file = output_dir / f"output_{job_id}.txt"
+            # Extract wandb IDs from this file for later use
+            if output_file.exists() and not self.dry_run:
+                self._extract_wandb_ids(output_file)
             if self.move_file(output_file, 'output'):
                 self.stats['output'] += 1
-                # Extract wandb IDs from this file for later use
-                if output_file.exists() and not self.dry_run:
-                    pass  # File already moved
-                elif output_file.exists():
-                    self._extract_wandb_ids(output_file)
         
         # For dry run, extract wandb IDs before "moving"
         if self.dry_run:

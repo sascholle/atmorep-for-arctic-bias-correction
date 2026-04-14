@@ -15,7 +15,7 @@ parser.add_argument("--hour", type=int, required=True)
 parser.add_argument("--idx", type=int, default=0)
 args = parser.parse_args()
 
-model_id = 'iuw3ce3v_single_gpu'
+model_id = '6kjr71hd_single_gpu'  #'iuw3ce3v_single_gpu' #'6kjr71hd_single_gpu' 
 file_path = '/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr'
 results_folder = "/work/ab1412/atmorep/results/N-ICE_evaluations_round2"
 os.makedirs(results_folder, exist_ok=True)

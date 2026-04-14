@@ -276,25 +276,25 @@ class Trainer_Base() :
               else:
                   print(f"  └─ Field: '{field_info[0]}' is not a prediction target.")
 
-        # # Print an example of the sparse-masked target data 
-        # # only once per epoch (i.e., batch_idx == 0)
-        # if batch_idx == 0:
-        #     target_field = 't2m'
-        #     # Find index of the precip field in prediction targets
-        #     field_idx = None
-        #     for i, field in enumerate(self.cf.fields):
-        #         if field[0] == target_field:
-        #             field_idx = i
-        #             break
+        # Print an example of the sparse-masked target data 
+        # only once per epoch (i.e., batch_idx == 0)
+        if batch_idx == 0:
+            target_field = 'corrected_t2m'
+            # Find index of the precip field in prediction targets
+            field_idx = None
+            for i, field in enumerate(self.cf.fields):
+                if field[0] == target_field:
+                    field_idx = i
+                    break
 
-        #     if field_idx is not None and field_idx in self.fields_prediction_idx:
-        #         target_idx = self.fields_prediction_idx.index(field_idx)
-        #         target_data = self.targets[target_idx].detach().cpu()  # shape: [batch, level, ...]
+            if field_idx is not None and field_idx in self.fields_prediction_idx:
+                target_idx = self.fields_prediction_idx.index(field_idx)
+                target_data = self.targets[target_idx].detach().cpu()  # shape: [batch, level, ...]
 
-        #         # Print target shape and first 25 elements, just as an example
-        #         print(f"[DEBUG] TRAIN TARGET BATCH")
-        #         print(f"Epoch {epoch}, batch {batch_idx} - Sparse-masked '{target_field}' shape target data: {target_data.shape}")
-        #         print(f"    First 25 batch values:\n{target_data.flatten()[:25]}")
+                # Print target shape and first 25 elements, just as an example
+                print(f"[DEBUG] TRAIN TARGET BATCH")
+                print(f"Epoch {epoch}, batch {batch_idx} - Sparse-masked '{target_field}' shape target data: {target_data.shape}")
+                print(f"    First 25 batch values:\n{target_data.flatten()[:25]}")
 
 
         # Print first predictions of each epoch
@@ -488,7 +488,7 @@ class Trainer_Base() :
                       lats = self.sources_info[0][1] if len(self.sources_info) > 0 else None
                       lat_range = f"{lats.min():.2f} to {lats.max():.2f}" if lats is not None else "unknown"
                       
-                      print(f"\n[Input NaN check batch {it}] corrected_t2m (lat range: {lat_range}):")
+                      print(f"\n[ValidationInput NaN check batch {it}] corrected_t2m (lat range: {lat_range}):")
                       print(f"  Source (input):  {source_nan}/{source_total} NaN")
                       print(f"  Target:          {nan_count}/{total} NaN")
           ##################
@@ -818,7 +818,7 @@ class Trainer_BERT( Trainer_Base) :
                   # Mask all tokens
                   sources[i].fill_(mask_value)
               break
-  
+
     ##############
 
 

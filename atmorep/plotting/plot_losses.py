@@ -10,10 +10,10 @@ python /work/ab1412/atmorep/plotting/plot_losses.py
 '''
 
   
-output_id = 19413611
+output_id = 24025102
 
 set_ylim=False
-ylim_max=1.2
+ylim_max=0.24
 
 plot_window=False
 
@@ -471,9 +471,9 @@ if corrected_t2m_values.size > 0:  # Check if there are any corrected T2M values
 
 # Plot all training stats per batch (x = epoch + batch_idx/total_batches)
 training_x = [e + (b-1)/5 for e, b in zip(training_loss_epochs, training_batch_indices)]  # adjust denominator if not 5 batches/epoch
-ax.plot(training_x, training_loss_stddev, 'o-', label='Training Stddev', color='lightgray', markersize=1)
-ax.plot(training_x, training_loss_values, marker='o', label='Training Grad Loss', color='black', linewidth=0.75, linestyle='--', markersize=1)
-ax.plot(training_x, training_loss_mse, marker='o', label='Training MSE', color='gray', linewidth=0.75, linestyle='--', markersize=1)
+#ax.plot(training_x, training_loss_stddev, 'o-', label='Training Stddev', color='lightgray', markersize=1)
+#ax.plot(training_x, training_loss_values, marker='o', label='Training Grad Loss', color='black', linewidth=0.75, linestyle='--', markersize=1)
+#ax.plot(training_x, training_loss_mse, marker='o', label='Training MSE', color='gray', linewidth=0.75, linestyle='--', markersize=1)
 if plot_window==True:
     window = 20  # Choose window size (number of points to average)
     if len(training_loss_values) >= window:

@@ -136,15 +136,3 @@ if __name__ == '__main__':
   print("time", time.time() - now)
 
 
-'''
-
-To Do: 
-
-1. evaluate only the samples from jan to june 2015 that are found in NICE. 
-- fixed location 
-- fixed time 
-2. Use Dask to parallelise the evaluation.
-3. compute the mean and standard deviation of the corrected t2m values for the evaluation period
-
-
-'''

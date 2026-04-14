@@ -15,15 +15,6 @@
 module load python3/2023.01-gcc-11.2.0 nvhpc/23.9-gcc-11.2.0
 source pyenv/bin/activate
 
-####### Attempts to fix DDP Issue ######
-#env | grep CUDA
-#echo "Helloooooo CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-UNSET}"
-
-# export OMP_NUM_THREADS=1
-# export CUDA_VISIBLE_DEVICES=${SLURM_LOCALID}
-
-##########################################
-
 export UCX_TLS="^cma"
 export UCX_NET_DEVICES=mlx5_0:1,mlx5_1:1,mlx5_4:1,mlx5_5:1
 
