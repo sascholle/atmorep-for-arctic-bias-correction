@@ -1,0 +1,921 @@
+0: Evaluating the following times: (2099,)
+0: Running global_forecast for 2015-01-21 21:00 ...
+0: Wandb run: atmorep-d96bqr66-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094619-d96bqr66[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094619-d96bqr66/logs[0m
+0: Running global_forecast for 2015-01-21 22:00 ...
+0: Wandb run: atmorep-0wevebe5-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094635-0wevebe5[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094635-0wevebe5/logs[0m
+0: Running global_forecast for 2015-01-21 23:00 ...
+0: Wandb run: atmorep-zjz3age1-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094644-zjz3age1[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094644-zjz3age1/logs[0m
+0: Running global_forecast for 2015-01-22 00:00 ...
+0: Wandb run: atmorep-t7onee56-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094652-t7onee56[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094652-t7onee56/logs[0m
+0: Running global_forecast for 2015-01-22 01:00 ...
+0: Wandb run: atmorep-t7ks0c4q-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094700-t7ks0c4q[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094700-t7ks0c4q/logs[0m
+0: Running global_forecast for 2015-01-22 02:00 ...
+0: Wandb run: atmorep-cbczhfba-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094708-cbczhfba[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094708-cbczhfba/logs[0m
+0: Running global_forecast for 2015-01-22 03:00 ...
+0: Wandb run: atmorep-z6rcvoi4-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094716-z6rcvoi4[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094716-z6rcvoi4/logs[0m
+0: Running global_forecast for 2015-01-22 04:00 ...
+0: Wandb run: atmorep-7wm97i0g-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094725-7wm97i0g[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094725-7wm97i0g/logs[0m
+0: Running global_forecast for 2015-01-22 05:00 ...
+0: Wandb run: atmorep-tiuq9rk8-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094733-tiuq9rk8[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094733-tiuq9rk8/logs[0m
+0: Running global_forecast for 2015-01-22 06:00 ...
+0: Wandb run: atmorep-ezectues-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094742-ezectues[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094742-ezectues/logs[0m
+0: Running global_forecast for 2015-01-22 07:00 ...
+0: Wandb run: atmorep-rkyvm61e-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094750-rkyvm61e[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094750-rkyvm61e/logs[0m
+0: Running global_forecast for 2015-01-22 08:00 ...
+0: Wandb run: atmorep-wejubo4d-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094758-wejubo4d[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094758-wejubo4d/logs[0m
+0: Running global_forecast for 2015-01-22 09:00 ...
+0: Wandb run: atmorep-1ubw9zid-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094806-1ubw9zid[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094806-1ubw9zid/logs[0m
+0: Running global_forecast for 2015-01-22 10:00 ...
+0: Wandb run: atmorep-d49a2yxb-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094815-d49a2yxb[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094815-d49a2yxb/logs[0m
+0: Running global_forecast for 2015-01-22 11:00 ...
+0: Wandb run: atmorep-5dqgqmqm-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094823-5dqgqmqm[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094823-5dqgqmqm/logs[0m
+0: Running global_forecast for 2015-01-22 12:00 ...
+0: Wandb run: atmorep-7ns9xh79-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094831-7ns9xh79[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094831-7ns9xh79/logs[0m
+0: Running global_forecast for 2015-01-22 13:00 ...
+0: Wandb run: atmorep-x3z742u4-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094839-x3z742u4[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094839-x3z742u4/logs[0m
+0: Running global_forecast for 2015-01-22 14:00 ...
+0: Wandb run: atmorep-gmsdb1qw-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094847-gmsdb1qw[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094847-gmsdb1qw/logs[0m
+0: Running global_forecast for 2015-01-22 15:00 ...
+0: Wandb run: atmorep-tyed6siz-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094856-tyed6siz[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094856-tyed6siz/logs[0m
+0: Running global_forecast for 2015-01-22 16:00 ...
+0: Wandb run: atmorep-192dnnix-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094904-192dnnix[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094904-192dnnix/logs[0m
+0: Running global_forecast for 2015-01-22 17:00 ...
+0: Wandb run: atmorep-odef6x8w-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094913-odef6x8w[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094913-odef6x8w/logs[0m
+0: Running global_forecast for 2015-01-22 18:00 ...
+0: Wandb run: atmorep-9j4d41s3-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094921-9j4d41s3[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094921-9j4d41s3/logs[0m
+0: Running global_forecast for 2015-01-22 19:00 ...
+0: Wandb run: atmorep-ns3db2jn-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094930-ns3db2jn[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094930-ns3db2jn/logs[0m
+0: Running global_forecast for 2015-01-22 20:00 ...
+0: Wandb run: atmorep-6rxgif6g-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094938-6rxgif6g[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094938-6rxgif6g/logs[0m
+0: Running global_forecast for 2015-01-22 21:00 ...
+0: Wandb run: atmorep-7vldfied-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094947-7vldfied[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094947-7vldfied/logs[0m
+0: Running global_forecast for 2015-01-22 22:00 ...
+0: Wandb run: atmorep-gr588m2r-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_094955-gr588m2r[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_094955-gr588m2r/logs[0m
+0: Running global_forecast for 2015-01-22 23:00 ...
+0: Wandb run: atmorep-pgr5bobj-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095003-pgr5bobj[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095003-pgr5bobj/logs[0m
+0: Running global_forecast for 2015-01-23 00:00 ...
+0: Wandb run: atmorep-gvl2b818-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095012-gvl2b818[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095012-gvl2b818/logs[0m
+0: Running global_forecast for 2015-01-23 01:00 ...
+0: Wandb run: atmorep-eooxlpy6-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095020-eooxlpy6[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095020-eooxlpy6/logs[0m
+0: Running global_forecast for 2015-01-23 02:00 ...
+0: Wandb run: atmorep-3bd9myyr-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095028-3bd9myyr[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095028-3bd9myyr/logs[0m
+0: Running global_forecast for 2015-01-23 03:00 ...
+0: Wandb run: atmorep-fibktwi1-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095036-fibktwi1[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095036-fibktwi1/logs[0m
+0: Running global_forecast for 2015-01-23 04:00 ...
+0: Wandb run: atmorep-ja2lkua2-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095045-ja2lkua2[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095045-ja2lkua2/logs[0m
+0: Running global_forecast for 2015-01-23 05:00 ...
+0: Wandb run: atmorep-an3hz8v9-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095053-an3hz8v9[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095053-an3hz8v9/logs[0m
+0: Running global_forecast for 2015-01-23 06:00 ...
+0: Wandb run: atmorep-snins17f-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095101-snins17f[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095101-snins17f/logs[0m
+0: Running global_forecast for 2015-01-23 07:00 ...
+0: Wandb run: atmorep-i2xawr11-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095109-i2xawr11[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095109-i2xawr11/logs[0m
+0: Running global_forecast for 2015-01-23 08:00 ...
+0: Wandb run: atmorep-noe3ox8s-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095118-noe3ox8s[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095118-noe3ox8s/logs[0m
+0: Running global_forecast for 2015-01-23 09:00 ...
+0: Wandb run: atmorep-17odifz8-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095126-17odifz8[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095126-17odifz8/logs[0m
+0: Running global_forecast for 2015-01-23 10:00 ...
+0: Wandb run: atmorep-bgw6worx-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095134-bgw6worx[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095134-bgw6worx/logs[0m
+0: Running global_forecast for 2015-01-23 11:00 ...
+0: Wandb run: atmorep-i4w8r7yj-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095142-i4w8r7yj[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095142-i4w8r7yj/logs[0m
+0: Running global_forecast for 2015-01-23 12:00 ...
+0: Wandb run: atmorep-ufhoe4ej-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095151-ufhoe4ej[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095151-ufhoe4ej/logs[0m
+0: Running global_forecast for 2015-01-23 13:00 ...
+0: Wandb run: atmorep-b3k3q9h1-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095158-b3k3q9h1[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095158-b3k3q9h1/logs[0m
+0: Running global_forecast for 2015-01-23 14:00 ...
+0: Wandb run: atmorep-9450blo1-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095206-9450blo1[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095206-9450blo1/logs[0m
+0: Running global_forecast for 2015-01-23 15:00 ...
+0: Wandb run: atmorep-ebg1x3zn-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095215-ebg1x3zn[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095215-ebg1x3zn/logs[0m
+0: Running global_forecast for 2015-01-23 16:00 ...
+0: Wandb run: atmorep-9ou46h23-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095223-9ou46h23[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095223-9ou46h23/logs[0m
+0: Running global_forecast for 2015-01-23 17:00 ...
+0: Wandb run: atmorep-4d5c6v51-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095231-4d5c6v51[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095231-4d5c6v51/logs[0m
+0: Running global_forecast for 2015-01-23 18:00 ...
+0: Wandb run: atmorep-kz5qqhac-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095240-kz5qqhac[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095240-kz5qqhac/logs[0m
+0: Running global_forecast for 2015-01-23 19:00 ...
+0: Wandb run: atmorep-4twubsw7-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095247-4twubsw7[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095247-4twubsw7/logs[0m
+0: Running global_forecast for 2015-01-23 20:00 ...
+0: Wandb run: atmorep-9jpp7j7r-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095256-9jpp7j7r[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095256-9jpp7j7r/logs[0m
+0: Running global_forecast for 2015-01-23 21:00 ...
+0: Wandb run: atmorep-dvzyhb80-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095304-dvzyhb80[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095304-dvzyhb80/logs[0m
+0: Running global_forecast for 2015-01-23 22:00 ...
+0: Wandb run: atmorep-mxo9zgiv-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095312-mxo9zgiv[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095312-mxo9zgiv/logs[0m
+0: Running global_forecast for 2015-01-23 23:00 ...
+0: Wandb run: atmorep-jjz4qvit-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095322-jjz4qvit[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095322-jjz4qvit/logs[0m
+0: Running global_forecast for 2015-01-24 00:00 ...
+0: Wandb run: atmorep-aqqzqtos-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095333-aqqzqtos[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095333-aqqzqtos/logs[0m
+0: Running global_forecast for 2015-01-24 01:00 ...
+0: Wandb run: atmorep-rfpiakzb-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095341-rfpiakzb[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095341-rfpiakzb/logs[0m
+0: Running global_forecast for 2015-01-24 02:00 ...
+0: Wandb run: atmorep-jsbje93a-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095349-jsbje93a[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095349-jsbje93a/logs[0m
+0: Running global_forecast for 2015-01-24 03:00 ...
+0: Wandb run: atmorep-0g9uhca0-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095358-0g9uhca0[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095358-0g9uhca0/logs[0m
+0: Running global_forecast for 2015-01-24 04:00 ...
+0: Wandb run: atmorep-byk662s2-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095405-byk662s2[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095405-byk662s2/logs[0m
+0: Running global_forecast for 2015-01-24 05:00 ...
+0: Wandb run: atmorep-8ygog6bz-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095414-8ygog6bz[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095414-8ygog6bz/logs[0m
+0: Running global_forecast for 2015-01-24 06:00 ...
+0: Wandb run: atmorep-8ot8zox3-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095422-8ot8zox3[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095422-8ot8zox3/logs[0m
+0: Running global_forecast for 2015-01-24 07:00 ...
+0: Wandb run: atmorep-e4a5ztco-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095431-e4a5ztco[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095431-e4a5ztco/logs[0m
+0: Running global_forecast for 2015-01-24 08:00 ...
+0: Wandb run: atmorep-dvw580dg-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095439-dvw580dg[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095439-dvw580dg/logs[0m
+0: Running global_forecast for 2015-01-24 09:00 ...
+0: Wandb run: atmorep-shovz33f-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095447-shovz33f[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095447-shovz33f/logs[0m
+0: Running global_forecast for 2015-01-24 10:00 ...
+0: Wandb run: atmorep-eeqjsqxu-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095455-eeqjsqxu[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095455-eeqjsqxu/logs[0m
+0: Running global_forecast for 2015-01-24 11:00 ...
+0: Wandb run: atmorep-swhbtgyq-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095503-swhbtgyq[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095503-swhbtgyq/logs[0m
+0: Running global_forecast for 2015-01-24 12:00 ...
+0: Wandb run: atmorep-mxouy10q-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095512-mxouy10q[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095512-mxouy10q/logs[0m
+0: Running global_forecast for 2015-01-24 13:00 ...
+0: Wandb run: atmorep-h52f6btn-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095520-h52f6btn[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095520-h52f6btn/logs[0m
+0: Running global_forecast for 2015-01-24 14:00 ...
+0: Wandb run: atmorep-iqw0imen-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095528-iqw0imen[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095528-iqw0imen/logs[0m
+0: Running global_forecast for 2015-01-24 15:00 ...
+0: Wandb run: atmorep-nitm32pq-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095538-nitm32pq[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095538-nitm32pq/logs[0m
+0: Running global_forecast for 2015-01-24 16:00 ...
+0: Wandb run: atmorep-kfqf91i8-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095547-kfqf91i8[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095547-kfqf91i8/logs[0m
+0: Running global_forecast for 2015-01-24 17:00 ...
+0: Wandb run: atmorep-v1o6szbb-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095555-v1o6szbb[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095555-v1o6szbb/logs[0m
+0: Running global_forecast for 2015-01-24 18:00 ...
+0: Wandb run: atmorep-vuuruq2o-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095603-vuuruq2o[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095603-vuuruq2o/logs[0m
+0: Running global_forecast for 2015-01-24 19:00 ...
+0: Wandb run: atmorep-l2sm2nxs-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095612-l2sm2nxs[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095612-l2sm2nxs/logs[0m
+0: Running global_forecast for 2015-01-24 20:00 ...
+0: Wandb run: atmorep-1pbmre7r-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095620-1pbmre7r[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095620-1pbmre7r/logs[0m
+0: Running global_forecast for 2015-01-24 21:00 ...
+0: Wandb run: atmorep-9ff0d041-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095628-9ff0d041[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095628-9ff0d041/logs[0m
+0: Running global_forecast for 2015-01-24 22:00 ...
+0: Wandb run: atmorep-2wzs12u3-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095636-2wzs12u3[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095636-2wzs12u3/logs[0m
+0: Running global_forecast for 2015-01-24 23:00 ...
+0: Wandb run: atmorep-w8uyh5mz-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095645-w8uyh5mz[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095645-w8uyh5mz/logs[0m
+0: Running global_forecast for 2015-01-25 00:00 ...
+0: Wandb run: atmorep-2a932s2c-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095653-2a932s2c[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095653-2a932s2c/logs[0m
+0: Running global_forecast for 2015-01-25 01:00 ...
+0: Wandb run: atmorep-5gbhvs02-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095701-5gbhvs02[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095701-5gbhvs02/logs[0m
+0: Running global_forecast for 2015-01-25 02:00 ...
+0: Wandb run: atmorep-ewrcyhlq-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095709-ewrcyhlq[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095709-ewrcyhlq/logs[0m
+0: Running global_forecast for 2015-01-25 03:00 ...
+0: Wandb run: atmorep-h91j1119-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095717-h91j1119[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095717-h91j1119/logs[0m
+0: Running global_forecast for 2015-01-25 04:00 ...
+0: Wandb run: atmorep-9hzm54hk-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095725-9hzm54hk[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095725-9hzm54hk/logs[0m
+0: Running global_forecast for 2015-01-25 05:00 ...
+0: Wandb run: atmorep-uzprxzv8-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095733-uzprxzv8[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095733-uzprxzv8/logs[0m
+0: Running global_forecast for 2015-01-25 06:00 ...
+0: Wandb run: atmorep-vtwni2fa-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095742-vtwni2fa[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095742-vtwni2fa/logs[0m
+0: Running global_forecast for 2015-01-25 07:00 ...
+0: Wandb run: atmorep-ptip7uh9-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095750-ptip7uh9[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095750-ptip7uh9/logs[0m
+0: Running global_forecast for 2015-01-25 08:00 ...
+0: Wandb run: atmorep-wl8kq0wn-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095758-wl8kq0wn[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095758-wl8kq0wn/logs[0m
+0: Running global_forecast for 2015-01-25 09:00 ...
+0: Wandb run: atmorep-fd4d7zmh-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095807-fd4d7zmh[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095807-fd4d7zmh/logs[0m
+0: Running global_forecast for 2015-01-25 10:00 ...
+0: Wandb run: atmorep-hr0bm514-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095815-hr0bm514[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095815-hr0bm514/logs[0m
+0: Running global_forecast for 2015-01-25 11:00 ...
+0: Wandb run: atmorep-b23hstdt-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095823-b23hstdt[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095823-b23hstdt/logs[0m
+0: Running global_forecast for 2015-01-25 12:00 ...
+0: Wandb run: atmorep-dy6qj92l-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095831-dy6qj92l[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095831-dy6qj92l/logs[0m
+0: Running global_forecast for 2015-01-25 13:00 ...
+0: Wandb run: atmorep-vz0l9uhz-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095839-vz0l9uhz[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095839-vz0l9uhz/logs[0m
+0: Running global_forecast for 2015-01-25 14:00 ...
+0: Wandb run: atmorep-57dyxo7e-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095847-57dyxo7e[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095847-57dyxo7e/logs[0m
+0: Running global_forecast for 2015-01-25 15:00 ...
+0: Wandb run: atmorep-b7nx2els-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095855-b7nx2els[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095855-b7nx2els/logs[0m
+0: Running global_forecast for 2015-01-25 16:00 ...
+0: Wandb run: atmorep-oy4cxa1q-20144088
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251020_095903-oy4cxa1q[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251020_095903-oy4cxa1q/logs[0m

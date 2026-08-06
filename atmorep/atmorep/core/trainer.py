@@ -14,6 +14,8 @@
 #
 ####################################################################################################
 
+import math
+
 import torch
 import torchinfo
 import numpy as np
@@ -448,6 +450,11 @@ class Trainer_Base() :
     corrected_t2m_loss_sum = 0.
     corrected_t2m_valid_count = 0
     corrected_t2m_pred_idx = None
+
+    # Denormalized (Kelvin) accumulation for corrected_t2m.
+    # Filled inside log_validate_BERT / log_validate_forecast.
+    self._ct2m_denorm_sse = 0.0
+    self._ct2m_denorm_count = 0
     
     # Find corrected_t2m index in predictions
     for idx, field_idx in enumerate(self.fields_prediction_idx):
@@ -593,6 +600,15 @@ class Trainer_Base() :
           dist.all_reduce(ct2m_stats, op=torch.distributed.ReduceOp.SUM)
           corrected_t2m_loss_sum = ct2m_stats[0].cpu().item()
           corrected_t2m_valid_count = ct2m_stats[1].cpu().item()
+
+      # Reduce denormalized Kelvin stats as well.
+      ct2m_k_stats = torch.tensor(
+        [float(self._ct2m_denorm_sse), float(self._ct2m_denorm_count)],
+          device='cuda'
+      )
+      dist.all_reduce(ct2m_k_stats, op=torch.distributed.ReduceOp.SUM)
+      self._ct2m_denorm_sse = ct2m_k_stats[0].cpu().item()
+      self._ct2m_denorm_count = int(ct2m_k_stats[1].cpu().item())
       ###################
 
     if 0 == cf.par_rank :
@@ -606,6 +622,16 @@ class Trainer_Base() :
           print(f'validation loss for corrected_t2m (Arctic, {corrected_t2m_valid_count:,} valid points) : {corrected_t2m_avg_loss:.6f}')
       elif corrected_t2m_pred_idx is not None:
           print('validation loss for corrected_t2m: NO VALID (non-NaN) VALUES FOUND')
+      
+      if self._ct2m_denorm_count > 0:
+          corrected_t2m_rmse_k = math.sqrt(self._ct2m_denorm_sse / self._ct2m_denorm_count)
+          print(
+              f'validation RMSE for corrected_t2m (Arctic, denormalized, K, '
+              f'{self._ct2m_denorm_count:,} valid points) : {corrected_t2m_rmse_k:.6f}'
+          )
+      else:
+          print('validation RMSE for corrected_t2m (denormalized, K): NO VALID VALUES FOUND')
+    
     #################
 
     if cf.with_wandb and (0 == cf.par_rank) :
@@ -1078,6 +1104,11 @@ class Trainer_BERT( Trainer_Base) :
     sources_out, targets_out, preds_out, ensembles_out = [ ], [ ], [ ], [ ]
     coords = []
 
+    def _to_numpy(x):
+      if isinstance(x, torch.Tensor):
+        return x.detach().cpu().numpy()
+      return np.asarray(x)
+
     for fidx, field_info in enumerate(cf.fields) : 
 
       # reconstruct coordinates
@@ -1148,7 +1179,17 @@ class Trainer_BERT( Trainer_Base) :
               targets_b[vidx][bidx][ii]   = denormalize(t, normalizer_ii, da, year_base)  
               preds_mu_b[vidx][bidx][ii]  = denormalize(p, normalizer_ii, da, year_base) 
               preds_ens_b[vidx][bidx][ii] = denormalize(e, normalizer_ii, da, year_base)
-            
+
+              # Accumulate corrected_t2m denormalized RMSE stats in Kelvin.
+              if field_info[0] == 'corrected_t2m':
+                t_k = _to_numpy(targets_b[vidx][bidx][ii])
+                p_k = _to_numpy(preds_mu_b[vidx][bidx][ii])
+                valid_k = np.isfinite(t_k) & np.isfinite(p_k)
+                if np.any(valid_k):
+                  diff_k = p_k[valid_k] - t_k[valid_k]
+                  self._ct2m_denorm_sse += float(np.sum(diff_k * diff_k))
+                  self._ct2m_denorm_count += int(np.sum(valid_k))
+                  
             coords_mskd_l += [[dates_mskd, 90.-lats_mskd, lons_mskd] ]
        
         coords_b += [ [dates, 90. - lats, lons] + coords_mskd_l ]

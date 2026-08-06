@@ -424,7 +424,6 @@ if __name__ == '__main__':
     # 0: Wandb run: atmorep-v3gn2q2u-19295934 ALSO trained on tjsw9hor 0.1 masking v0.1.8.2
     # 0: Wandb run: atmorep-j2l0sz9j-19300146 trained on tjsw9hor 0.1 masking v0.1.8
 
-
     wandb_id, epoch, epoch_continue = 'wc5e2i3t', -2, -2
     Trainer = Trainer_BERT
     train_continue( wandb_id, epoch, Trainer, epoch_continue)

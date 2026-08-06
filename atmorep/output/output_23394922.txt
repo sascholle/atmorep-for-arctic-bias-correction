@@ -1,0 +1,27 @@
+0: Evaluating the following times: (2099,)
+0: Running global_forecast for 2015-01-21 21:00 ...
+0: Wandb run: atmorep-gss8jq9k-23394922
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = 6kjr71hd_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20260312_175928-gss8jq9k[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20260312_175928-gss8jq9k/logs[0m

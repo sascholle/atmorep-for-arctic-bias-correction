@@ -21,6 +21,7 @@ import datetime
 if __name__ == '__main__':
 
   model_id = 'iuw3ce3v'
+  model_epoch = -2
   # 'j2l0sz9j' # repretrained model v8
   # 'iuw3ce3v' # t2m corrected v2.6
 
@@ -62,7 +63,13 @@ if __name__ == '__main__':
   #Add 'attention' : True to options to store the attention maps. NB. supported only for single field runs. 
   
   # BERT masked token model
-  #mode, options = 'BERT', {'years_val' : [2015], 'num_samples_validate' : 96, 'with_pytest' : True}
+  mode, options = 'BERT', {
+    'years_val' : [2021], 
+    'num_samples_validate' : 256,
+    'batch_size_validation': 1, 
+    'with_pytest' : False, 
+    'geo_range_sampling': [list(range(0, 71)), list(range(0, 1440))],
+    }
 
   # BERT forecast mode
   #mode, options = 'forecast', {'forecast_num_tokens' : 2, 'num_samples_validate' : 128, 'with_pytest' : True }
@@ -84,14 +91,14 @@ if __name__ == '__main__':
   #                                     'forecast_num_tokens' : 2,
   #                                     'with_pytest' : True }
 
-  mode, options = 'global_forecast', { #'fields[0][2]' : [0],
-                                     #'fields_prediction' : [['t2m', 1.0]],
-                                     'geo_range_sampling' :  None, #[71, 1440],
-                                     'dates' : [ [2021, 9, 26, 12] ],
-                                     'token_overlap' : [0, 0],
-                                     'forecast_num_tokens' : 2, 
-                                     'attention' : False, 
-                                     'with_pytest' : False}
+  # mode, options = 'global_forecast', { #'fields[0][2]' : [0],
+  #                                    #'fields_prediction' : [['t2m', 1.0]],
+  #                                    'geo_range_sampling' :  None, #[71, 1440],
+  #                                    'dates' : [ [2021, 9, 26, 12] ],
+  #                                    'token_overlap' : [0, 0],
+  #                                    'forecast_num_tokens' : 2, 
+  #                                    'attention' : False, 
+  #                                    'with_pytest' : False}
 
   # mode, options = 'global_forecast_range', {
   #                                    #'dates' : [ [2021, 9, 26, 12] ], 

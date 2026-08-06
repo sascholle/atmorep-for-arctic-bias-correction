@@ -10,10 +10,10 @@ python /work/ab1412/atmorep/plotting/plot_losses.py
 '''
 
   
-output_id = 24025102
+output_id = 24168063
 
 set_ylim=False
-ylim_max=0.24
+ylim_max=0.5
 
 plot_window=False
 

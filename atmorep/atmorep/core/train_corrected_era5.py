@@ -320,7 +320,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
     ], 
     [
         'corrected_t2m',  # Name
-        [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 2],  # Field Properties # was 1024 / 1536
+        [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 2],  # Field Properties # was 1024 / 1536 #'velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'
         [0],  # Vertical Levels
         [12, 2, 4],  # Number of Tokens
         [3, 27, 27],  # Token Size
@@ -342,7 +342,7 @@ def train_continue( wandb_id, epoch, Trainer, epoch_continue = -1) :
  #target sparsity section
   cf.sparse_target = True  # Enable sparse target masking
   cf.sparse_target_field = 'corrected_t2m'  # Field to apply sparsity to
-  cf.sparse_target_sparsity = 0.25  # ratio of data that will be masked
+  cf.sparse_target_sparsity = 0.999  # ratio of data that will be masked
   cf.decoder_cross_att_ratio = 0.5
 
 
@@ -422,8 +422,8 @@ if __name__ == '__main__':
     # 0: Wandb run: atmorep-6kjr71hd-23246602 trained on iuw3ce3v
 
 
-    #wandb_id, epoch, epoch_continue = 'j2l0sz9j', -2, -2 
-    wandb_id, epoch, epoch_continue ='ecdyq7vs', -2, -2 # another 0.25 masking rerun from 80 epochs
+    wandb_id, epoch, epoch_continue = 'j2l0sz9j', -2, -2 
+    #wandb_id, epoch, epoch_continue ='8vusviw5', -2, -2 # another 0.75 masking rerun
     Trainer = Trainer_BERT  
     train_continue( wandb_id, epoch, Trainer, epoch_continue)
 

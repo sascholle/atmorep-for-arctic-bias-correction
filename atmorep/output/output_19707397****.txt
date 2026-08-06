@@ -1,0 +1,1343 @@
+0: Evaluating the following times: (2099,)
+0: Running global_forecast for 2015-06-12 13:00 ...
+0: Wandb run: atmorep-8dgi3kal-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : 8dgi3kal
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 13]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.061, max = -0.312, mean = -0.999
+0:          sample (first 20): tensor([-0.6920, -0.7277, -0.7685, -0.7867, -0.7535, -0.7387, -0.8231, -0.7860, -0.7848, -0.7490, -0.7473, -0.8284,
+0:         -0.7390, -0.7443, -0.8101, -0.7830, -0.8179, -0.7988, -0.8403, -0.8837])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.0004916269681416452
+0: validation loss for velocity_v : 0.0006908284849487245
+0: validation loss for specific_humidity : 5.540337224374525e-05
+0: validation loss for velocity_z : 0.0012328659649938345
+0: validation loss for temperature : 47601.8671875
+0: validation loss for total_precip : 0.00033579737646505237
+0: validation loss for t2m : 78813.328125
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 393.31 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_090641-8dgi3kal[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_090641-8dgi3kal/logs[0m
+0: Running global_forecast for 2015-06-12 14:00 ...
+0: Wandb run: atmorep-8l713hgx-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : 8l713hgx
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 14]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.066, max = -0.312, mean = -1.001
+0:          sample (first 20): tensor([-0.6921, -0.7277, -0.7688, -0.7867, -0.7532, -0.7389, -0.8234, -0.7860, -0.7847, -0.7490, -0.7472, -0.8285,
+0:         -0.7392, -0.7449, -0.8102, -0.7830, -0.8184, -0.7987, -0.8407, -0.8839])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00047208304749801755
+0: validation loss for velocity_v : 0.0006940230377949774
+0: validation loss for specific_humidity : 5.499684630194679e-05
+0: validation loss for velocity_z : 0.0012214044108986855
+0: validation loss for temperature : 47595.26171875
+0: validation loss for total_precip : 0.00032934287446551025
+0: validation loss for t2m : 78813.265625
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 389.92 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_091326-8l713hgx[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_091326-8l713hgx/logs[0m
+0: Running global_forecast for 2015-06-12 15:00 ...
+0: Wandb run: atmorep-7h32d7l9-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : 7h32d7l9
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 15]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.067, max = -0.310, mean = -1.002
+0:          sample (first 20): tensor([-0.6924, -0.7286, -0.7686, -0.7866, -0.7541, -0.7395, -0.8236, -0.7866, -0.7850, -0.7496, -0.7481, -0.8290,
+0:         -0.7394, -0.7448, -0.8107, -0.7835, -0.8185, -0.7998, -0.8410, -0.8843])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00036311818985268474
+0: validation loss for velocity_v : 0.0007062629447318614
+0: validation loss for specific_humidity : 6.0622453020187095e-05
+0: validation loss for velocity_z : 0.0012191914720460773
+0: validation loss for temperature : 47594.734375
+0: validation loss for total_precip : 0.0003328066668473184
+0: validation loss for t2m : 78813.21875
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 385.64 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_092015-7h32d7l9[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_092015-7h32d7l9/logs[0m
+0: Running global_forecast for 2015-06-12 16:00 ...
+0: Wandb run: atmorep-zlzd34w9-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : zlzd34w9
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 16]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.076, max = -0.310, mean = -1.005
+0:          sample (first 20): tensor([-0.6933, -0.7292, -0.7701, -0.7875, -0.7547, -0.7400, -0.8245, -0.7870, -0.7861, -0.7504, -0.7484, -0.8299,
+0:         -0.7404, -0.7453, -0.8114, -0.7844, -0.8193, -0.8008, -0.8418, -0.8851])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00034980414784513414
+0: validation loss for velocity_v : 0.0007106607081368566
+0: validation loss for specific_humidity : 6.0138740082038566e-05
+0: validation loss for velocity_z : 0.0012079151347279549
+0: validation loss for temperature : 47588.1953125
+0: validation loss for total_precip : 0.0003265579871367663
+0: validation loss for t2m : 78813.171875
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 386.05 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_092648-zlzd34w9[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_092648-zlzd34w9/logs[0m
+0: Running global_forecast for 2015-06-12 17:00 ...
+0: Wandb run: atmorep-2jsnz7ub-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : 2jsnz7ub
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 17]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.085, max = -0.309, mean = -1.007
+0:          sample (first 20): tensor([-0.6937, -0.7299, -0.7707, -0.7880, -0.7547, -0.7403, -0.8257, -0.7874, -0.7865, -0.7510, -0.7491, -0.8303,
+0:         -0.7411, -0.7459, -0.8120, -0.7846, -0.8198, -0.8011, -0.8422, -0.8855])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.0003380228008609265
+0: validation loss for velocity_v : 0.0007156098145060241
+0: validation loss for specific_humidity : 5.963618605164811e-05
+0: validation loss for velocity_z : 0.0011966396123170853
+0: validation loss for temperature : 47581.84765625
+0: validation loss for total_precip : 0.00032041064696386456
+0: validation loss for t2m : 78813.1328125
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 383.94 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_093321-2jsnz7ub[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_093321-2jsnz7ub/logs[0m
+0: Running global_forecast for 2015-06-12 18:00 ...
+0: Wandb run: atmorep-34dzfzhi-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : 34dzfzhi
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 18]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.091, max = -0.309, mean = -1.009
+0:          sample (first 20): tensor([-0.6950, -0.7315, -0.7720, -0.7898, -0.7565, -0.7418, -0.8269, -0.7894, -0.7881, -0.7523, -0.7509, -0.8322,
+0:         -0.7427, -0.7476, -0.8136, -0.7864, -0.8216, -0.8031, -0.8442, -0.8870])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00035612648935057223
+0: validation loss for velocity_v : 0.0007109483703970909
+0: validation loss for specific_humidity : 5.995975516270846e-05
+0: validation loss for velocity_z : 0.0012028526980429888
+0: validation loss for temperature : 47582.9453125
+0: validation loss for total_precip : 0.0003363350115250796
+0: validation loss for t2m : 78813.09375
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 381.09 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_093955-34dzfzhi[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_093955-34dzfzhi/logs[0m
+0: Running global_forecast for 2015-06-12 19:00 ...
+0: Wandb run: atmorep-datt0bug-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : datt0bug
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 19]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.101, max = -0.308, mean = -1.011
+0:          sample (first 20): tensor([-0.6943, -0.7312, -0.7717, -0.7889, -0.7559, -0.7411, -0.8267, -0.7887, -0.7876, -0.7521, -0.7504, -0.8314,
+0:         -0.7421, -0.7471, -0.8129, -0.7856, -0.8210, -0.8024, -0.8435, -0.8867])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00034327813773415983
+0: validation loss for velocity_v : 0.0007158117368817329
+0: validation loss for specific_humidity : 5.9509249695111066e-05
+0: validation loss for velocity_z : 0.001191338524222374
+0: validation loss for temperature : 47576.63671875
+0: validation loss for total_precip : 0.0003299885429441929
+0: validation loss for t2m : 78813.0625
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 279.16 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_094625-datt0bug[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_094625-datt0bug/logs[0m
+0: Running global_forecast for 2015-06-12 20:00 ...
+0: Wandb run: atmorep-i5r2xx7r-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : i5r2xx7r
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 20]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.112, max = -0.307, mean = -1.014
+0:          sample (first 20): tensor([-0.6951, -0.7312, -0.7725, -0.7894, -0.7560, -0.7414, -0.8275, -0.7890, -0.7878, -0.7526, -0.7508, -0.8318,
+0:         -0.7429, -0.7474, -0.8130, -0.7863, -0.8217, -0.8026, -0.8438, -0.8871])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.0003319766547065228
+0: validation loss for velocity_v : 0.0007214308134280145
+0: validation loss for specific_humidity : 5.908908133278601e-05
+0: validation loss for velocity_z : 0.001180108287371695
+0: validation loss for temperature : 47570.5625
+0: validation loss for total_precip : 0.00032372030545957386
+0: validation loss for t2m : 78813.0078125
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 365.71 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_095113-i5r2xx7r[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_095113-i5r2xx7r/logs[0m
+0: Running global_forecast for 2015-06-12 21:00 ...
+0: Wandb run: atmorep-a5dpwasx-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : a5dpwasx
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 21]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.116, max = -0.307, mean = -1.016
+0:          sample (first 20): tensor([-0.6948, -0.7320, -0.7723, -0.7896, -0.7563, -0.7418, -0.8271, -0.7896, -0.7876, -0.7528, -0.7510, -0.8321,
+0:         -0.7426, -0.7474, -0.8131, -0.7866, -0.8216, -0.8029, -0.8442, -0.8870])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.0003714080958161503
+0: validation loss for velocity_v : 0.0006821363349445164
+0: validation loss for specific_humidity : 5.908013918087818e-05
+0: validation loss for velocity_z : 0.001199271879158914
+0: validation loss for temperature : 47571.6484375
+0: validation loss for total_precip : 0.00033724098466336727
+0: validation loss for t2m : 78812.921875
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 391.54 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_095732-a5dpwasx[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_095732-a5dpwasx/logs[0m
+0: Running global_forecast for 2015-06-12 22:00 ...
+0: Wandb run: atmorep-myibkayb-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : myibkayb
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 22]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.128, max = -0.307, mean = -1.019
+0:          sample (first 20): tensor([-0.6960, -0.7328, -0.7735, -0.7905, -0.7573, -0.7424, -0.8285, -0.7904, -0.7888, -0.7538, -0.7521, -0.8332,
+0:         -0.7439, -0.7486, -0.8146, -0.7877, -0.8231, -0.8044, -0.8454, -0.8883])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.00035679404390975833
+0: validation loss for velocity_v : 0.0006868091295473278
+0: validation loss for specific_humidity : 5.869556844118051e-05
+0: validation loss for velocity_z : 0.0011878805235028267
+0: validation loss for temperature : 47565.6484375
+0: validation loss for total_precip : 0.0003308899758849293
+0: validation loss for t2m : 78812.875
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 379.84 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_100415-myibkayb[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_100415-myibkayb/logs[0m
+0: Running global_forecast for 2015-06-12 23:00 ...
+0: Wandb run: atmorep-d2ei7c89-19707397
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 19707397
+0: wandb_id : d2ei7c89
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 6, 12, 23]]
+0: token_overlap : [0, 0]
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: Target values (first 20):
+0: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -2.133, max = -0.307, mean = -1.021
+0:          sample (first 20): tensor([-0.6960, -0.7327, -0.7740, -0.7907, -0.7573, -0.7423, -0.8289, -0.7901, -0.7888, -0.7543, -0.7519, -0.8333,
+0:         -0.7442, -0.7487, -0.8146, -0.7876, -0.8229, -0.8044, -0.8453, -0.8884])
+0: validation loss for strategy=global_forecast at epoch 0 : nan
+0: validation loss for velocity_u : 0.0003439300926402211
+0: validation loss for velocity_v : 0.0006918485159985721
+0: validation loss for specific_humidity : 5.833214891026728e-05
+0: validation loss for velocity_z : 0.0011767711257562041
+0: validation loss for temperature : 47559.80078125
+0: validation loss for total_precip : 0.00032456457847729325
+0: validation loss for t2m : 78812.8359375
+0: validation loss for corrected_t2m : nan
+0: Evaluation completed in 343.34 seconds.
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20250926_101041-d2ei7c89[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250926_101041-d2ei7c89/logs[0m

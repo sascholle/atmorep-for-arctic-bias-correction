@@ -1,0 +1,354 @@
+0: Evaluating the following times: (2099,)
+0: Running global_forecast for 2015-01-21 21:00 ...
+0: Wandb run: atmorep-7ui4605p-20360151
+0: Running Evaluate.evaluate with mode = global_forecast
+0: With config:
+0: model_id = iuw3ce3v_single_gpu
+0: time_pos = N/A
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: Available keys in the Zarr dataset: ['data', 'data_sfc', 'lats', 'lons', 'time']
+0: self.ds['data'] : (105192, 7, 5, 721, 1440) :: (105192,)
+0: self.lats : (721,)
+0: self.lons : (1440,)
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: ['cuda:0'] 0
+0: Loaded model id = iuw3ce3v_single_gpu.
+0: Number of batches per global forecast: 14
+0: with_ddp : True
+0: num_accs_per_task : 1
+0: par_rank : 0
+0: par_size : 1
+0: fields : [['velocity_u', [1, 1024, ['velocity_v', 'temperature'], 0, ['j8dwr5qj', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_v', [1, 1024, ['velocity_u', 'temperature'], 0, ['0tlnm5up', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['specific_humidity', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['v63l01zu', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['velocity_z', [1, 1024, ['velocity_u', 'velocity_v', 'temperature'], 0, ['9l1errbo', -2]], [96, 105, 114, 123, 137], [12, 3, 6], [3, 18, 18], [0.5, 0.9, 0.2, 0.05]], ['temperature', [1, 1024, ['velocity_u', 'velocity_v', 'specific_humidity'], 0, ['7ojls62c', -2]], [96, 105, 114, 123, 137], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['total_precip', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity'], 0], [0], [12, 6, 12], [3, 9, 9], [0.25, 0.9, 0.1, 0.05]], ['t2m', [1, 1024, ['velocity_u', '
+0: velocity_v', 'velocity_z', 'specific_humidity', 'temperature'], 0], [0], [12, 2, 4], [3, 27, 27], [0.5, 0.9, 0.2, 0.05], 'Local'], ['corrected_t2m', [1, 1024, ['velocity_u', 'velocity_v', 'velocity_z', 'specific_humidity', 't2m'], 0], [0], [12, 2, 4], [3, 27, 27], [0.1, 0.9, 0.2, 0.05], 'Local']]
+0: fields_prediction : [['velocity_u', 0.125], ['velocity_v', 0.125], ['specific_humidity', 0.05], ['velocity_z', 0.01], ['temperature', 0.1], ['total_precip', 0.01], ['t2m', 0.2], ['corrected_t2m', 0.38]]
+0: fields_targets : []
+0: years_train : [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+0: years_val : [2021]
+0: month : None
+0: geo_range_sampling : None
+0: time_sampling : 1
+0: torch_seed : 5521420987310380410
+0: batch_size_validation : 1
+0: batch_size : 1
+0: num_epochs : 128
+0: num_samples_per_epoch : 480
+0: num_samples_validate : 128
+0: num_loader_workers : 5
+0: size_token_info : 8
+0: size_token_info_net : 16
+0: grad_checkpointing : True
+0: with_cls : False
+0: with_mixed_precision : True
+0: with_layernorm : True
+0: coupling_num_heads_per_field : 1
+0: dropout_rate : 0.05
+0: with_qk_lnorm : True
+0: encoder_num_layers : 6
+0: encoder_num_heads : 16
+0: encoder_num_mlp_layers : 2
+0: encoder_att_type : dense
+0: decoder_num_layers : 6
+0: decoder_num_heads : 16
+0: decoder_num_mlp_layers : 2
+0: decoder_self_att : False
+0: decoder_cross_att_ratio : 0.5
+0: decoder_cross_att_rate : 1.0
+0: decoder_att_type : dense
+0: net_tail_num_nets : 16
+0: net_tail_num_layers : 0
+0: losses : ['mse_ensemble', 'stats']
+0: optimizer_zero : False
+0: lr_start : 1e-05
+0: lr_max : 2e-05
+0: lr_min : 1e-05
+0: weight_decay : 0.025
+0: lr_decay_rate : 1.025
+0: lr_start_epochs : 3
+0: model_log_frequency : 256
+0: BERT_strategy : global_forecast
+0: forecast_num_tokens : 1
+0: BERT_fields_synced : False
+0: BERT_mr_max : 2
+0: log_test_num_ranks : 1
+0: save_grads : False
+0: profile : False
+0: test_initial : False
+0: attention : False
+0: rng_seed : None
+0: with_wandb : True
+0: slurm_job_id : 20360151
+0: wandb_id : 7ui4605p
+0: file_path : /scratch/a/a270277/atmorep/era5_y2010_2020_res25_corrected_t2m_copy.zarr
+0: n_size : [36, 13.5, 27.0]
+0: model_id : dhap4i9v
+0: years_test : [2021]
+0: with_pytest : False
+0: batch_size_test : 24
+0: dates : [[2015, 1, 21, 21]]
+0: token_overlap : [0, 0]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [6.848252 6.848252 6.848252 6.848252 6.848252], std sample [12.750452 12.750452 12.750452 12.750452 12.750452]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [3.9584782 3.9584782 3.9584782 3.9584782 3.9584782], std sample [9.679262 9.679262 9.679262 9.679262 9.679262]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [1.7682463 1.7682463 1.7682463 1.7682463 1.7682463], std sample [8.483041 8.483041 8.483041 8.483041 8.483041]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.59613603 0.59613603 0.59613603 0.59613603 0.59613603], std sample [8.279376 8.279376 8.279376 8.279376 8.279376]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.02891432 -0.02891432 -0.02891432 -0.02891432 -0.02891432], std sample [5.4624295 5.4624295 5.4624295 5.4624295 5.4624295]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00459009 0.00459009 0.00459009 0.00459009 0.00459009], std sample [9.616621 9.616621 9.616621 9.616621 9.616621]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00837361 -0.00837361 -0.00837361 -0.00837361 -0.00837361], std sample [7.267903 7.267903 7.267903 7.267903 7.267903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.16024135 -0.16024135 -0.16024135 -0.16024135 -0.16024135], std sample [6.532022 6.532022 6.532022 6.532022 6.532022]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.28801987 -0.28801987 -0.28801987 -0.28801987 -0.28801987], std sample [6.924782 6.924782 6.924782 6.924782 6.924782]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.18038268 -0.18038268 -0.18038268 -0.18038268 -0.18038268], std sample [4.67283 4.67283 4.67283 4.67283 4.67283]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00080603 0.00080603 0.00080603 0.00080603 0.00080603], std sample [0.00111538 0.00111538 0.00111538 0.00111538 0.00111538]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00208184 0.00208184 0.00208184 0.00208184 0.00208184], std sample [0.00242411 0.00242411 0.00242411 0.00242411 0.00242411]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.0041117 0.0041117 0.0041117 0.0041117 0.0041117], std sample [0.00403536 0.00403536 0.00403536 0.00403536 0.00403536]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00600149 0.00600149 0.00600149 0.00600149 0.00600149], std sample [0.00544005 0.00544005 0.00544005 0.00544005 0.00544005]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00669467 0.00669467 0.00669467 0.00669467 0.00669467], std sample [0.00603903 0.00603903 0.00603903 0.00603903 0.00603903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00011584 0.00011584 0.00011584 0.00011584 0.00011584], std sample [0.22092667 0.22092667 0.22092667 0.22092667 0.22092667]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00041521 -0.00041521 -0.00041521 -0.00041521 -0.00041521], std sample [0.23691553 0.23691553 0.23691553 0.23691553 0.23691553]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00049875 -0.00049875 -0.00049875 -0.00049875 -0.00049875], std sample [0.23894916 0.23894916 0.23894916 0.23894916 0.23894916]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00424555 0.00424555 0.00424555 0.00424555 0.00424555], std sample [0.21244873 0.21244873 0.21244873 0.21244873 0.21244873]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.01885494 0.01885494 0.01885494 0.01885494 0.01885494], std sample [0.12621523 0.12621523 0.12621523 0.12621523 0.12621523]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [247.6418  247.64162 247.64307 247.64708 247.6538 ], std sample [5.6827316 5.672691  5.661227  5.6497226 5.639002 ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [260.4291  260.43423 260.43884 260.44202 260.44373], std sample [5.4868298 5.484827  5.4832244 5.481272  5.4788394]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [266.69043 266.67905 266.6661  266.6524  266.63843], std sample [4.3445253 4.3352566 4.3255777 4.315894  4.306065 ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [270.27762 270.267   270.25287 270.23743 270.22186], std sample [2.1994038 2.198575  2.196828  2.1929266 2.18589  ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [274.01932 274.01407 274.00714 274.00098 273.99472], std sample [0.76887083 0.76896906 0.7686347  0.7671416  0.7653362 ]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05], std sample [0.00042034 0.00042034 0.00042034 0.00042034 0.00042034]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [274.0904  274.0879  274.0834  274.08252 274.07675], std sample [0.6970454  0.69624865 0.69774234 0.6972199  0.6970389 ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0. 0. 0. 0. 0.], std sample [0. 0. 0. 0. 0.]
+0: Warning: var == 0
+0: Warning: var contains 209952 zero entries (showing up to 20 samples)
+0:   zero #1: indices (in var) = (0, 0, 0)
+0:   zero #2: indices (in var) = (0, 0, 1)
+0:   zero #3: indices (in var) = (0, 0, 2)
+0:   zero #4: indices (in var) = (0, 0, 3)
+0:   zero #5: indices (in var) = (0, 0, 4)
+0:   zero #6: indices (in var) = (0, 0, 5)
+0:   zero #7: indices (in var) = (0, 0, 6)
+0:   zero #8: indices (in var) = (0, 0, 7)
+0:   zero #9: indices (in var) = (0, 0, 8)
+0:   zero #10: indices (in var) = (0, 0, 9)
+0:   zero #11: indices (in var) = (0, 0, 10)
+0:   zero #12: indices (in var) = (0, 0, 11)
+0:   zero #13: indices (in var) = (0, 0, 12)
+0:   zero #14: indices (in var) = (0, 0, 13)
+0:   zero #15: indices (in var) = (0, 0, 14)
+0:   zero #16: indices (in var) = (0, 0, 15)
+0:   zero #17: indices (in var) = (0, 0, 16)
+0:   zero #18: indices (in var) = (0, 0, 17)
+0:   zero #19: indices (in var) = (0, 0, 18)
+0:   zero #20: indices (in var) = (0, 0, 19)
+0:     date=2015-01-20 10:00:00  lat_idx=0  lon_idx=19
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [6.848252 6.848252 6.848252 6.848252 6.848252], std sample [12.750452 12.750452 12.750452 12.750452 12.750452]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [3.9584782 3.9584782 3.9584782 3.9584782 3.9584782], std sample [9.679262 9.679262 9.679262 9.679262 9.679262]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [1.7682463 1.7682463 1.7682463 1.7682463 1.7682463], std sample [8.483041 8.483041 8.483041 8.483041 8.483041]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.59613603 0.59613603 0.59613603 0.59613603 0.59613603], std sample [8.279376 8.279376 8.279376 8.279376 8.279376]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.02891432 -0.02891432 -0.02891432 -0.02891432 -0.02891432], std sample [5.4624295 5.4624295 5.4624295 5.4624295 5.4624295]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00459009 0.00459009 0.00459009 0.00459009 0.00459009], std sample [9.616621 9.616621 9.616621 9.616621 9.616621]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00837361 -0.00837361 -0.00837361 -0.00837361 -0.00837361], std sample [7.267903 7.267903 7.267903 7.267903 7.267903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.16024135 -0.16024135 -0.16024135 -0.16024135 -0.16024135], std sample [6.532022 6.532022 6.532022 6.532022 6.532022]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.28801987 -0.28801987 -0.28801987 -0.28801987 -0.28801987], std sample [6.924782 6.924782 6.924782 6.924782 6.924782]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.18038268 -0.18038268 -0.18038268 -0.18038268 -0.18038268], std sample [4.67283 4.67283 4.67283 4.67283 4.67283]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00080603 0.00080603 0.00080603 0.00080603 0.00080603], std sample [0.00111538 0.00111538 0.00111538 0.00111538 0.00111538]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00208184 0.00208184 0.00208184 0.00208184 0.00208184], std sample [0.00242411 0.00242411 0.00242411 0.00242411 0.00242411]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.0041117 0.0041117 0.0041117 0.0041117 0.0041117], std sample [0.00403536 0.00403536 0.00403536 0.00403536 0.00403536]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00600149 0.00600149 0.00600149 0.00600149 0.00600149], std sample [0.00544005 0.00544005 0.00544005 0.00544005 0.00544005]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00669467 0.00669467 0.00669467 0.00669467 0.00669467], std sample [0.00603903 0.00603903 0.00603903 0.00603903 0.00603903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00011584 0.00011584 0.00011584 0.00011584 0.00011584], std sample [0.22092667 0.22092667 0.22092667 0.22092667 0.22092667]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00041521 -0.00041521 -0.00041521 -0.00041521 -0.00041521], std sample [0.23691553 0.23691553 0.23691553 0.23691553 0.23691553]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00049875 -0.00049875 -0.00049875 -0.00049875 -0.00049875], std sample [0.23894916 0.23894916 0.23894916 0.23894916 0.23894916]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00424555 0.00424555 0.00424555 0.00424555 0.00424555], std sample [0.21244873 0.21244873 0.21244873 0.21244873 0.21244873]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.01885494 0.01885494 0.01885494 0.01885494 0.01885494], std sample [0.12621523 0.12621523 0.12621523 0.12621523 0.12621523]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [269.10608 269.09595 269.09677 269.0695  269.057  ], std sample [1.3823211 1.3607959 1.3424946 1.3289825 1.3222338]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [281.91522 281.8929  281.88715 281.8396  281.82373], std sample [1.2601848 1.2517197 1.2392524 1.2411311 1.2496867]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [291.8459  291.8448  291.87497 291.8513  291.8743 ], std sample [1.4314567 1.3999293 1.3771539 1.3469114 1.3321106]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [297.8407  297.86545 297.9174  297.9055  297.92697], std sample [2.6105402 2.5748894 2.5546339 2.540774  2.53909  ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [300.96774 300.9792  301.08307 301.18665 301.3142 ], std sample [3.1404023 3.1253128 3.1376746 3.2069483 3.2513015]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05], std sample [0.00042034 0.00042034 0.00042034 0.00042034 0.00042034]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [301.50717 301.51657 301.65457 301.84283 301.9317 ], std sample [3.5578842 3.5771737 3.5772097 3.639182  3.6740484]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0. 0. 0. 0. 0.], std sample [0. 0. 0. 0. 0.]
+0: Warning: var == 0
+0: Warning: var contains 209952 zero entries (showing up to 20 samples)
+0:   zero #1: indices (in var) = (0, 0, 0)
+0:   zero #2: indices (in var) = (0, 0, 1)
+0:   zero #3: indices (in var) = (0, 0, 2)
+0:   zero #4: indices (in var) = (0, 0, 3)
+0:   zero #5: indices (in var) = (0, 0, 4)
+0:   zero #6: indices (in var) = (0, 0, 5)
+0:   zero #7: indices (in var) = (0, 0, 6)
+0:   zero #8: indices (in var) = (0, 0, 7)
+0:   zero #9: indices (in var) = (0, 0, 8)
+0:   zero #10: indices (in var) = (0, 0, 9)
+0:   zero #11: indices (in var) = (0, 0, 10)
+0:   zero #12: indices (in var) = (0, 0, 11)
+0:   zero #13: indices (in var) = (0, 0, 12)
+0:   zero #14: indices (in var) = (0, 0, 13)
+0:   zero #15: indices (in var) = (0, 0, 14)
+0:   zero #16: indices (in var) = (0, 0, 15)
+0:   zero #17: indices (in var) = (0, 0, 16)
+0:   zero #18: indices (in var) = (0, 0, 17)
+0:   zero #19: indices (in var) = (0, 0, 18)
+0:   zero #20: indices (in var) = (0, 0, 19)
+0:     date=2015-01-20 10:00:00  lat_idx=0  lon_idx=19
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [6.848252 6.848252 6.848252 6.848252 6.848252], std sample [12.750452 12.750452 12.750452 12.750452 12.750452]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [3.9584782 3.9584782 3.9584782 3.9584782 3.9584782], std sample [9.679262 9.679262 9.679262 9.679262 9.679262]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [1.7682463 1.7682463 1.7682463 1.7682463 1.7682463], std sample [8.483041 8.483041 8.483041 8.483041 8.483041]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.59613603 0.59613603 0.59613603 0.59613603 0.59613603], std sample [8.279376 8.279376 8.279376 8.279376 8.279376]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.02891432 -0.02891432 -0.02891432 -0.02891432 -0.02891432], std sample [5.4624295 5.4624295 5.4624295 5.4624295 5.4624295]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00459009 0.00459009 0.00459009 0.00459009 0.00459009], std sample [9.616621 9.616621 9.616621 9.616621 9.616621]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00837361 -0.00837361 -0.00837361 -0.00837361 -0.00837361], std sample [7.267903 7.267903 7.267903 7.267903 7.267903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.16024135 -0.16024135 -0.16024135 -0.16024135 -0.16024135], std sample [6.532022 6.532022 6.532022 6.532022 6.532022]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.28801987 -0.28801987 -0.28801987 -0.28801987 -0.28801987], std sample [6.924782 6.924782 6.924782 6.924782 6.924782]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.18038268 -0.18038268 -0.18038268 -0.18038268 -0.18038268], std sample [4.67283 4.67283 4.67283 4.67283 4.67283]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00080603 0.00080603 0.00080603 0.00080603 0.00080603], std sample [0.00111538 0.00111538 0.00111538 0.00111538 0.00111538]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00208184 0.00208184 0.00208184 0.00208184 0.00208184], std sample [0.00242411 0.00242411 0.00242411 0.00242411 0.00242411]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.0041117 0.0041117 0.0041117 0.0041117 0.0041117], std sample [0.00403536 0.00403536 0.00403536 0.00403536 0.00403536]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00600149 0.00600149 0.00600149 0.00600149 0.00600149], std sample [0.00544005 0.00544005 0.00544005 0.00544005 0.00544005]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00669467 0.00669467 0.00669467 0.00669467 0.00669467], std sample [0.00603903 0.00603903 0.00603903 0.00603903 0.00603903]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00011584 0.00011584 0.00011584 0.00011584 0.00011584], std sample [0.22092667 0.22092667 0.22092667 0.22092667 0.22092667]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00041521 -0.00041521 -0.00041521 -0.00041521 -0.00041521], std sample [0.23691553 0.23691553 0.23691553 0.23691553 0.23691553]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [-0.00049875 -0.00049875 -0.00049875 -0.00049875 -0.00049875], std sample [0.23894916 0.23894916 0.23894916 0.23894916 0.23894916]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.00424555 0.00424555 0.00424555 0.00424555 0.00424555], std sample [0.21244873 0.21244873 0.21244873 0.21244873 0.21244873]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0.01885494 0.01885494 0.01885494 0.01885494 0.01885494], std sample [0.12621523 0.12621523 0.12621523 0.12621523 0.12621523]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [230.82541 230.86179 230.88638 230.91267 230.95015], std sample [2.8347902 2.889586  2.9466536 3.006553  3.0693524]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [242.83629 242.93398 243.01183 243.0836  243.16135], std sample [2.7325673 2.7717612 2.8129463 2.8508434 2.88266  ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [247.1859  247.34988 247.52003 247.70859 247.91899], std sample [3.6200957 3.6556728 3.6932888 3.7331617 3.777015 ]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [248.72166 248.80565 248.88698 248.9912  249.13098], std sample [2.903324  2.9854434 3.0741866 3.172412  3.2825391]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [252.17616 252.25107 252.26791 252.26968 252.34554], std sample [2.2904918 2.301241  2.3347712 2.3882656 2.4559252]
+0: [DEBUG] Normalizer: mean shape (36,), var shape (36,), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05 9.943423e-05], std sample [0.00042034 0.00042034 0.00042034 0.00042034 0.00042034]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [251.74011 251.77281 251.8626  251.98015 252.05434], std sample [2.1973329 2.217734  2.2473538 2.2904687 2.3463414]
+0: [DEBUG] Normalizer: mean shape (36, 54, 108), var shape (36, 54, 108), data shape (36, 54, 108)
+0: [DEBUG] Normalizer: mean sample [0. 0. 0. 0. 0.], std sample [0. 0. 0. 0. 0.]
+0: Warning: var == 0
+0: Warning: var contains 209952 zero entries (showing up to 20 samples)
+0:   zero #1: indices (in var) = (0, 0, 0)
+0:   zero #2: indices (in var) = (0, 0, 1)
+0:   zero #3: indices (in var) = (0, 0, 2)
+0:   zero #4: indices (in var) = (0, 0, 3)
+0:   zero #5: indices (in var) = (0, 0, 4)
+0:   zero #6: indices (in var) = (0, 0, 5)
+0:   zero #7: indices (in var) = (0, 0, 6)
+0:   zero #8: indices (in var) = (0, 0, 7)
+0:   zero #9: indices (in var) = (0, 0, 8)
+0:   zero #10: indices (in var) = (0, 0, 9)
+0:   zero #11: indices (in var) = (0, 0, 10)
+0:   zero #12: indices (in var) = (0, 0, 11)
+0:   zero #13: indices (in var) = (0, 0, 12)
+0:   zero #14: indices (in var) = (0, 0, 13)
+0:   zero #15: indices (in var) = (0, 0, 14)
+0:   zero #16: indices (in var) = (0, 0, 15)
+0:   zero #17: indices (in var) = (0, 0, 16)
+0:   zero #18: indices (in var) = (0, 0, 17)
+0:   zero #19: indices (in var) = (0, 0, 18)
+0:   zero #20: indices (in var) = (0, 0, 19)
+0:     date=2015-01-20 10:00:00  lat_idx=0  lon_idx=19
+0: 
+0: [DEBUG] Log Validate Forecast Denormalized values for corrected_t2m:
+0: Source values (first 20):
+0: [240.59636 241.26372 241.34677 241.34633 241.34576 241.34512 241.3445
+0:  241.3439  241.3434  241.34302 241.34267 241.34232 241.34195 241.34158
+0:  241.3412  241.34079 241.34041 241.34007 241.33987 241.33975]
+0: Target values (first 20):
+0: [242.79282 242.79309 242.7933  242.79347 242.7936  242.79375 242.7939
+0:  242.794   242.79404 242.79422 242.79442 242.79451 242.79451 242.79456
+0:  242.7947  242.7951  242.7958  242.79642 242.79707 242.79778]
+0: it == 0 and starting val norms printouts
+0: [DEBUG] PREDICTIONS VALIDATION BATCH
+0: Normalised validation prediction values for 'corrected_t2m' with shape: torch.Size([8, 2187])
+0:          min = -0.671, max = 1.998, mean = 0.398
+0:          sample (first 20): tensor([-0.5145, -0.5247, -0.5166, -0.5382, -0.5248, -0.5428, -0.5142, -0.5306, -0.5122, -0.5265, -0.5173, -0.5535,
+0:         -0.5379, -0.5333, -0.5304, -0.5436, -0.5362, -0.5596, -0.5334, -0.5248])
+0: [1;34mwandb[0m:
+0: [1;34mwandb[0m: You can sync this run to the cloud by running:
+0: [1;34mwandb[0m: [1mwandb sync /work/ab1412/atmorep/wandb/offline-run-20251030_142545-7ui4605p[0m
+0: [1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251030_142545-7ui4605p/logs[0m

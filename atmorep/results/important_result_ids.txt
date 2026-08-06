@@ -1,3 +1,6 @@
+## ROUND:FINE-TUNING ##
+
+
 # 0: Wandb run: atmorep-5k7qf095-19238962 0: Loaded model id = wc5e2i3t. original 6 field model
 
 # 0: Wandb run: atmorep-to9m4vuf-18687042 re-trained t2m model hjbmsjft
@@ -24,9 +27,53 @@
 # 0: Wandb run: atmorep-igdw4ghm-19514068 0: Loaded model id = iuw3ce3v. Sept 26
 
 
+    # 4nvwbetz - Vorticity
+    # 3cizyl1q - multi3-uv
+    # 3qou60es - temperature
+    # 1v4qk0qx - forecasting 3 hours 
+    # wc5e2i3t - multi6 
+    # 3l087mw4 - t2m fine-tuned, original 
+    # hjbmsjft - v0.0.1 t2m fine-tuned 0: Wandb run: atmorep-hjbmsjft-18543509
+    # nqqyqr15 - v0.0.2 t2m fine-tuned on hjbmsjft again to find convergence  0: Wandb run: atmorep-nqqyqr15-18584657
+    # 58ipo6bs - v0.0.3 t2m fine-tuned on nqqyqr15 again to find convergence  0: Wandb run: atmorep-58ipo6bs-18612021
+    # 0rmiio09 - v0.0.4 t2m fine-tuned on 58ipo6bs again to find convergence  0: Wandb run: atmorep-0rmiio09-18677812
+    # qw047nnt - v0.0.5 t2m fine_tuned on 0rmiio09 again to find convergence  0: Wandb run: atmorep-qw047nnt-18909849
+    # b9h8xdoz - v0.0.6 t2m trained on qw047nnt       0: Wandb run: atmorep-b9h8xdoz-18941949
+    # ugqn2s9m - v0.0.7 t2m trained on b9h8xdoz       0: Wandb run: atmorep-ugqn2s9m-19031053
+    # df9i2pq3 - v0.0.8.3 t2m fine-tuned on ugqn2s9m  0: Wandb run: atmorep-df9i2pq3-19062136
+    # 0: Wandb run: atmorep-17p69lul-19094477 v0.0.9
 
 
-#### EVAL ROUND 1 ####
+    # adding temp cross attention to t2m field   
+    # 0: Wandb run: atmorep-uo2r80k8-19111065 trained on wc5e2i3t 0.9 masking v0.1.1
+    # 0: Wandb run: atmorep-dhap4i9v-19133753 trained on uo2r80k8 0.9 masking v0.1.2
+    # 0: Wandb run: atmorep-wldctg77-19155880 trained on dhap4i9v 0.9 masking v0.1.3
+    # 0: Wandb run: atmorep-zid4h599-19210229 trained on wldctg77 0.5 masking v0.1.4
+    # 0: Wandb run: atmorep-q5o0n7ku-19255183 trained on zid4h599 0.5 masking v0.1.5
+    # 0: Wandb run: atmorep-4786qlyo-19272003 trained on q5o0n7ku 0.5 masking v0.1.6
+    # 0: Wandb run: atmorep-tjsw9hor-19285543 trained on 4786qlyo 0.1 masking v0.1.7
+    # 0: Wandb run: atmorep-v3gn2q2u-19295934 ALSO trained on tjsw9hor 0.1 masking v0.1.8.2
+    # 0: Wandb run: atmorep-j2l0sz9j-19300146 trained on tjsw9hor 0.1 masking v0.1.8
+
+    # corrected training 
+    # 0: Wandb run: atmorep-eg3ztaai-19017100 on b9h8xdoz v1.0.1
+    # 0: Wandb run: atmorep-zxipahjj-19062614 on ugqn2s9m v1.0.2 - ugqn2s9m is an b9h8xdoz 6 field model 
+    
+    # second round
+    # 0: Wandb run: atmorep-6mb1bcla-19305085 trained on j2l0sz9j 0.9 masking v1.1.1
+    # 0: Wandb run: atmorep-qb7ksr0h-19309940 trained on 6mb1bcla 0.5 masking v1.1.2
+    # 0: Wandb run: atmorep-y1gpdgaa-19313842 trained on qb7ksr0h 0.5 masking v1.1.3
+    # 0: Wandb run: atmorep-u9vvriz7-19337083 trained on y1gpdgaa 0.5 masking v1.1.4
+    # 0: Wandb run: atmorep-iuy5bnth-19366232 trained on u9vvriz7 0.1 masking v1.1.5
+    # 0: Wandb run: atmorep-iuw3ce3v-19413611 trained on iuy5bnth 0.1 masking v1.1.6
+
+    # fine-tuning forecast model with corrected t2m
+    # 0: Wandb run: atmorep-6kjr71hd-23246602 trained on iuw3ce3v
+
+
+
+
+## ROUND1 ##
 
 ### from /work/ab1412/atmorep/output/output_19707366.txt to 0: Wandb run: atmorep-d2ei7c89-19707397
 
@@ -55,6 +102,7 @@ Extracted model IDs: ['cjtlxcuc', 'us1hzz9o', '7xpjmvbk', '9grf1cmr', 'muh8rr7j'
 0: kxb305x', 'sqjfdtos', 'o2nji6sx', 'zbupctjj', 'c9b2vil4', '5zksvucf', 'gzoxc1no', '5hk7w1m4', 'l0k9762u', 'tiiwd22n', 'ttscote2', 'ccjygbbo', 'snsi3iiq', 'ykpdh9sj', 'mo0ul79j', '776erix2', 'hju27n9s', 'kz8hsv2y', '67785viy', '4ze2hd03', '927igxm7', '18d8b31f', 'x8alr2hs', '639nxaba', 'cdvc77sg', 'qv4o9051', 'flpl3s1w', 'xuusm2hc', 'alh6jojo', 'sfvdta96', 'b1l2soz0', '2ws5c966', 'gusuki5z', 'vj5avf5l', 'f0x0csvn', '8rufop7e', 'vnw7n8h0', 'l9u1nmsf', '6no19kyv', 'qjlw1xsg', 'cdv9aaou', 'dl1d6213', 'ilqiph4t', '2ktxdnme', 'elgmdbvg', 'lybxnc5w', '5bbp46ws', '9spbn6en', 'jigflgg3', 's036y8xk', '3ywlazw9', 'f42hhavf', 'qk9pdqb6', 'jit9dkg2', 'lxg8snt3', '0cyf9fuq', 'd50ugobx', '3z8qe13q', '4e2wk5c1', 'g3sskk1y', 'q5dl03j1', 'ns1aq7wc', '9z88l0qn', 'azjmflsg', 'e7higdam', 'pvj1lm79', 'ga3zg002', 'ab82nn27', 'bs9yyius', 'rok49com', '3yjhkjlf', 'f3f50hq5', 'bs2zucma', 'jlc0vesh', '6dqg3qdy', '0kt7zp7z', 'kxjqb761', 'nfmbl6l8', '9sg7mm5y', 'njqrk7h4', '9eli0iz5', '2kmgcxlx', 'j77ubj67', 'nnv1q8o8', 'x97zqlrg', 'x2skd
 0: teh', 'ty6yzgyn', 'davpawxa', 'kczdps6b', 'plo28ypg', 'v9mdacdg', 'b1rdelkt', '12qzdcl7', 'rtt4xw3e', 'mtie5jwa', 'c5tv02vb', '78ceejy6', 'rieqghyb', '35vl0tzk', 'hhgmk75y', 'am4go9k8', '2fel33kb', 'daifk0qr', '0za0hyj1', 'hdnsgdpx', 'o7csafsa', 'r5s99cp5', 'h975uz0u', '8lxzk0hx', '1d8yh6da', '6ppizehg', 'l2xx5rgv', 'fa9vmagg', 'bpm7o6v8', 'jp28kg8t', 'hfxzklv5', 'v6l2fbbq', 'zrt0j2i9', '8909ifdj', 'ztr46u5c', 'nxfigubf', '2nixpc08', 'bphicwrw', 'iw5hrrdv', 'dib9y80e', '18equ9xx', 'gdlxgi8g', '9x6bvups', 'hwgv5s7w', 'b9zr50ed', 'x81hgnz5', 'ua5mf6xu', 'vgihlqei', 'ey7q5pkf', 'mxt3mzgq', 'mgz9v9rr', 'l2iywdsa', 'v52v6j85', 'n719vo18', 'mg2wzfxl', 'lcovi98g', '8u4cteje', 'wk06n49w', 'mlmd3npo', 'ltkvuxah', '5cplnwmk', '8vazeait', 'sh6xf842', '1bogim0x', 'v6now1nk', 'lxa2rnkg', 'kxd92ja6', 'uwmotruq', '18d2781d', 'lf3nmbyw', 'enr643cc', '79k0s4cy', 'x286unt4', 'runbirrt', '7zfu64ea', 'zzx5xo4x', 'rgo1lwk2', 'no5hmgwo', 'r172008o', 'x9rolxfd', '1sa9gim4', '7078bibn', '8k9od3lw', 'vamd4wm4', '188wr7fz', 'p0laaers'
 0: , 'j1guzw0l', 'c9dikzgd', 'o1q73yr8', '9kp61vf4', 'prq3saps', '8mfl8kgo', 'qir41p74', 'mvhnill9', 'u5gn5wei', '0ydvenh2', 'mea9np0k', 'kooxdefg', 'wqk2jtg8', 'j5lb7fqm', '0ar60rva', 'ti3bi91w', '8ubzq5p6', 'ufamlx0o', 'jj0nmqw5', 'q7ilcyqp', 'q6x262k2', 'ifs9adtt', 'pu5aou6g', 'n6nrbza8', 'uecf05jn', 'a7zgci7j', 't1owgsz9', 'kjqzm2rx', 'd59r4lcb', 'gj0s3q9n', 'pvd7xvrd', 'aonxvnox', 'qxq69m4b', 'ocw4t20y', 'qhzbvq9y', 'q6yurc5u', 'bwhxlpnl', 'gy57iqf7', '2zoyy86m', 'xjb99g5y', '7y71zb1u', 'ucc72ggh', 'fwna2jqu', 'yqrulubq', 'uhiudkmr', 'd4ib67bs', 'oigwhqz7', '019sa48g', 'k46cuvcb', 'c8bwm06v', '6j0x88lc', 'fxh8b0rn', '9nk2q9gm', '49v7lzsm', 'vayjdqcm', 'on4xcflm', 'k1zu451z', 'opwelqr8', '6hlhzvum', 'r7ugnxt2', 'pfjzy0s4', 'buvaawur', 'efihk2dt', '0dvg5ntb', '8dgi3kal', '8l713hgx', '7h32d7l9', 'zlzd34w9', '2jsnz7ub', '34dzfzhi', 'datt0bug', 'i5r2xx7r', 'a5dpwasx', 'myibkayb', 'd2ei7c89']
+
 
 
 
@@ -95,3 +143,276 @@ Extracted model IDs: ['cjtlxcuc', 'us1hzz9o', '7xpjmvbk', '9grf1cmr', 'muh8rr7j'
 [20466838, 20466837, 20466836, 20466835, 20466834, 20466833, 20466832, 20466831, 20466830, 20466829, 20466828, 20466827, 20466826, 20466825, 20466824, 20466823, 20466822, 20466821, 20466820, 20466819, 20466818, 20466817, 20466816, 20466815, 20466814, 20466813, 20466808, 20466810, 20466811, 20466807]
 
 ['lw58ugi0', '57fxbw7e', '6raohe6l', 'xw6qzf1x', 'yk3ywy4a', 'ag1fnf36', 'twaet4q0', 'wz0se2ko', 'zkgk5ch2', 'y06lpbi2', 'l7vuc0ah', '0b8sa55a', '5h7lxx0s', '8puh0wg4', 'cniafwnm', 'm1d811y6', 'y2v0ec8z', 'ch9z8tci', '14cpknsa', 'yhce7xxn', 'fytmbuz2', '81vub09w', '3qorat20', 'asncn42l', 'z8no2n1p', 'zv94utpg', '4ft9plbn', 'u63erpff', '5lyrn7st', '5934ghfm', 'aep6cttn', 'wq52gmyc', '9iw69rdr', 'rellpzom', 'k2sewpm9', 'vrwki967', 'k2hlrwuo', 'a5l7q4ji', 'a32ifnsb', '2w4c088s', 'xg3te693', '5nnlp51m', 'jlycq0qy', '74k5ol6t', 'e7mlgxwt', 'dgq1gjf6', 'kw4x38ku', 'hqjkamqa', 'shod3w4l', '0m851sno', 'e2i5xywl', 'kn62ty5e', '6ybc8w0r', 'y9gv4msh', 'er99atwo', 'k4c3f9jb', 'vw3cwif6', 'u5xrs74l', 'pkdd3fz6', 'tbu6t30x', 'czybxb8v', 'jdujpmsj', 'qv0q866u', 'pq329x7t', 'ci8j709d', 'iwgma40x', '935v62m9', 'h3oftz51', 'cqeg0xuz', 's0wmx4h0', 'u7i7n1k3', '2r78pu3z', 'pokyxj72', '30x6c7i6', '9bd0bd24', '7tk4uzxi', 'uy5n7gmc', 'kex3gr7q', 'aqbi1jcc', 'c2siim90', '5s2edtah', 'nxsl8tkj', '116sox7e', 'ntzcgg42', 'xw00g3bm', 'rmh6bb4k', 's5voijnd', 'e55mx3tw', 'z7z5p55y', '0dfupm1j', '6pu5s6cm', 'ily5chco', 'xutsbucq', 'o1wnxa9r', 'ui931toj', 'i7kxvjmy', '3s4c62cj', 'vc9dygw8', '8q68snnf', 'c2n8frx1', '1qqfttew', '5h504or2', '4pwznnb1', 'mjx5jbyg', 'v5ppelio', '70mdgrvs', '3d395a2c', 'fb228yfb', 'afe3z3ai', 'by2iwyma', 'qg1donpi', 'imv3nsww', 'yhjl7lkk', '7s1bwarp', '2mblo20r', 'dncezjvy', '3no728uw', '054gqrkh', 'fsjw06k3', 'zpxq70h0', 'zltqhcqa', '3esetri4', 'rpdzyses', 's225y5ap', '7y72sdyn', 'g6erk4ep', 'vxvw52as', 'nnf6kj3j', 'abqme5vo', '5xfxhcgm', '032jor6p', 'y5lvsuxw', 'rrfkjuu8', 's9t59m4e', 'u8fzgusa', 'jqeks9yo', '123x2uaf', 'fuwdyp7l', '85qukid6', '8d07ud8r', 'peqn67dc', 'vpw0io8h', '0zw63csr', 'ia4z1tba', 'i7xtd6kv', '8sdu999p', 'bw5ys04g', 'vgbkdk9o', '3xdi3gri', '990kk98y', 'ygyv8oyb', 'cooaafg5', 'hgrxtjcq', 'whlftdqr', 'b0w2jv5g', 'tw406atr', 'dugv1qph', '1gw47bv7', 'd3iovckz', 'yf41rekf', 'f0n9sk1j', '112inlcb', '26zi932j', '8n9wy1wi', 'i68f9da3', 'ex7yfy3r', 'l0zsjyf9', 'toz4i7c2', 'ir76e0w3', '9m7rag0x', '5esstddu', 'tkr35857', 'ino1gcfz', 'k2o3a23b', '0k3e5uz5', '37h4po7d', 'j45rmf47', '0u873tq0', '85xbt1je', 'sr0eocun', 'l7tng7dp', 'tskx8hfr', 'j4eyj8ki', 'r8f56s2k', 'niacbure', '42r0xoxk', 'zdjr5sct', 'qtde5r7m', 'l8lpkbrk', 'cmq5p6wi', 'kwkn8cku', '0zpsvl9g', 'wq3si9bb', 'bd49ca6j', 'zvtqwkf5', 'iz9ga73r', 'mj8g6vdx', 'u79s5qib', 'ufpzgyvk', 'bkb2wpij', '3asvg9l5', '80w20iut', 'yu9ogqgo', '2fq1mh9o', '1usnfxiy', '0dsm1rqz', '004ytepk', '5ic1t559', 'isnpukdk', '70uanv77', 'izbqecf7', 'tiapnyr4', 'rkini4uw', '88umhmxc', '3u2i0062', 'dk1d7071', 'lr7pqx9e', 'bemdi6ht', 'z3il65fm', '1g5s4a7i', 'u2hl8akk', 'yngnnfly', '01g83dq2', 'k90559b7', 'zzhqsvzy', 'pd85awa0', 'ln0q9gg1', 'cvb5e8bu', 'hu2tqmvj', '2v8o0elr', '0h8bytpk', 'mo99iko4', 'cd1kh03a', 'bx6aqcmv', 'jdliwwtf', '8ryypbf1', 'dphxk9mk', '2ugl2vlg', 'qydqaf2p', 'jse2m6rw', 'jbgo3xii', 'fx0jbjyq', 'le8g5jwr', '2a9hba7m', 'djk6w6i2', 'bqsfs3dw', 'j0bu077s', '1f18r3jq', '7ondcuqs', 'ktwru7my', '8z8obi3r', 'tg3rvsdw', 'iezn3p4a', 'p7k4430l', 'uxe4nrv6', 'qthyl4sc', 'wffwmb7c', 'hdtyfi9d', 'i4hh002d', 'hy4mwv00', 'asi64a10', 'wslekakb', '6ctj7gvd', '19dyuy0e', 'ipvh7owc', '45mi74oo', 'yerrz4ff', 's8f4k7bx', 'equ41k9w', 'y1c5mq9y', '647lh6fn', '38jb9dy8', 'd25z31lh', 'qlb7alrv', 'pnyvx8w6', 'yfm494b4', '9bl7i6mp', 'cmpimnvl', 'zsgod2me', 'je6co4xx', 'knf8ilt4', 'jlue7ipu', '2prxqd18', 'dinmyv7v', '539vu0mf', '9ejuy9le', 'utf8k1tm', 'dlv4ugzx', '4fgoy4cw', 'o3oq34vo', 'a3icubot', '5xuxpn0f', 'epvw4lcz', '0oz69vx6', 'uiqspq1y', 'bwn9wgif', 'ghm07pml', 'jb5lenom', 'sxwfghtz', '9wb1u629', '88tapvnu', 'vj1id2ge', 'gggnb8jj', '902hsg2x', 'rg5r1fxf', 'y266f3dt', 'sj5ofv83', 'fqe85dyv', 'm7me2n6o', 'f6w1jyud', 'imltrfx9', 'zgdq439v', 'vrzbys07', 'dbs1ereu', 'qy0zj9ji', 'c2ag4k82', 'aaewhsxs', 'o4xy6rg4', '9t5ef6m4', 'ylzixau4', '4qwp7ze2', '1zfirx7h', '25wrmgyt', 'jaklm6tb', '4afn8o61', 'dngn58p5', 'kiqfbbxx', 'hxgwg3f5', '29c3m1on', 'ufi2z0di', 'ma0sdem3', 'vd6hdxti', '270osd58', 'xjtjbpop', 'y3wx6pox', '8hup4b0f', 'hnw3sf7f', 'dfs9yj0n', '53faxgo8', 'm2kzbzju', 'q4o4uorv', 'wbxumoef', '4tfjpta9', '5jk2pl6c', 'lxddxhsh', 'coarykes', 'c880vrya', '3u2tx5g2', '7ajbjmkg', '98995z66', 'hu24pcbr', '2tt71sqh', '3sb4jnba', 'vwgc1ei1', 'vozkrut7', 'az3sm511', 'okzsf578', '5cpdg8me', '8np0hpjq', 'mxqtesh3', 'jr2edvi0', '9iaxlmxz', 'nr2d4wep', '91jfdjbn', 'n8cmafe0', '27z5349k', 'ydzhihcs', 'b3d287ox', 'ztomsdvf', 'w2lt6w1o', '3xun1kim', 'o59ny3zj', 'bkfuvqln', '7ia5lveo', 'y2gkebge', 'sq8xnyap', 's12llm89', 'z9nlzgp6', 'mhct431z', 'tgby608w', '1lvvgbgw', 'y3mg78ki', 'mn0b2zkm', 'ytkf1pkb', 'k1oyfa60', 'wbvkvl3g', 'xh88jid1', '0pdlhhf5', 'vbjig7ou', 'b3g6j94j', 'nr4wwctv', '7q7obg4c', 'pouq85kv', 'xw5w290v', 'r3j84amk', 'n198w8fe', 'u9d1wnu2', 'u49twbo0', 'wwid7rdq', 'pcg9l9k1', 'nvcfnr7t', 'dor164vr', 'cs2m0p8l', '81ydhad3', 'fa05v9a2', 'shmrm382', '81j4bxlb', '96yg836b', '7n439qen', '1k788z86', 'tj1gw04z', 'y1ladcah', 'p8pnwike', '243hntc7', '0ai9mvad', 'xt1tcniq', 'm935oghd', 'i7yihc58', 'sxof46vn', 'd0gegow7', '61puk5gy', 'sngg4s73', '30wglzgd', 'xoj8z1tc', 'c67p1t0s', 'bd3ee16c', '23nfwkaq', '6xmpticc', 'jkqkrc3e', 'b8347jy8', 'l1gqsy1q', 'wuk8x17x', 'yck5828q', 'i1sumx7l', 'y7oefi6u', 'na2s9m5j', 'vi6lbpsh', 'yhie1k92', '2fyx3gp7', 'uy8jb91r', 'iqfvb275', '60bc4dxb', '5trho4ji', 'a3j0hq8i', 'qwhuj4aa', '8ns8iii8', 'cwm4b8d0', 'uuttdpku', '8uptfnle', 'z0p4npt5', 'ulz0j0gf', 'lqs3mqq0', 'awoq31za', '4p3gbngn', '2yo9mjp8', 's48earn2', 'bg24ocyt', '41b8i1sk', 'nfrt8t9l', 'rj5scel0', '1jqkhdqm', 'uv7ubry4', 'qgk88yhe', 'tetybygk', 'fwfxgvgt', '685wkjnq', 'eepw62a4', '5w0zgmn6', '3em9mk6i', 'k2y4s7v0', 'zxak3a8c', 'flyg4jgs', '3w989g6s', '8vhjmq46', '77u08lik', 'nsstr1vl', 'rn3ctrx2', 'jd93j25s', 'whdkcqlp', 'ecm767g9', '41593pqz', 'mxkv4vmb', 'gropb111', '569th14d', 'jqs97uju', '2hphjemh', 'w7jwboj9', '24r26jr4', '792ftbat', 'mju5p3cq', 'e6rcl0f4', 'c8rqxcg3', 'zhybnoat', 'inbkahhv', 'k1540rjj', 'nzrpj0k3', 'or3jzzxu', 'hatmmstw', 'hy9xs3i6', 'oudmue84', '4q2oct13', 'c9j83eg1', '24bxgn5r', 'znlyjjfe', 'k4banhzs', '1hsoalyv', 'l3i4fwjg', 'ejgv06lf', 'wz76etmi', '71apw3jn', 'y5hd9yhk', '0wrklmed', 'ctk5o6lc', 'fhbio4fl', '2u6j3yjm', 'qscpf573', 'j2wv97zz', 'if7mkb9l', 'v3islyds', 'styk85o3', '5j6ikmh6', 'xeo6l96j', '3zegh375', 'udd6k1yt', 'xq0kqyg0', '0zjvefnf', 'i58958h7', 'a2j7ugza', 'adng4bhk', 'zmlvx3nl', 'g159a1tl', 'ox409q7a', 'yo2mr96o', 'qwllz1cg', '4fp93b3v', '0jqxm0oa', 'w25rfmu3', 'evww5ys2', 'gdi98juj', 'q2hazbpd', 'yyur2pui', 'fdx5g3zs', 'z6s9xl96', 'ujyyt7y5', 'tcfkrl43', 'zx5ppapq', 'tvip4rck', 'pun07j3a', 'm7k9l52u', '9vip88hv', 'bvr4oe24', 'zzxrufl5', '3nbu5cd9', 'q5qjziew', 'tuh2kvy5', '88rsnfds', 'd0fzgqxu', '6qdeg7aj', '1p3aj9xl', '4799cotn', 'faul2oao', '8wn6eer0', 'xdum6fe5', 'wvgcbkp8', 'ncnuerj4', 'wwhdebng', '1o7xdauc', '62197olg', 'i6wsk3sv', 'j1e01ue9', '4rfllmht', '7vpyne39', '7xlxdxwy', '28ud5int', 'fjn01fof', 'smavqvzq', '9tfinruc', 'djdom72x', '61r5usav', 'wl6mqojp', 'o9bd613h', '2tx70tki', 'n4x8042v', 'bj3q88l7', '9anne86i', 'zr1cfpfg', 'uhy1qjsf', 'mcd5ownd', 'wq8adr99', '7ax56k9m', '9sgvtkk0', 'x4ei2egd', 'b5c93ivw', '7s1teut0', '88oepa9p', 'pi3p9d0v', 'vp6bamhb', '11p9519r', 'jjkc87yo', '3l2friry', 'kufimmtc', 's7q9l0q2', 'dpyqeus2', '38eu2xad', 'umoxyu7d', 'crfyqrp6', 'pwnm5w81', 'cwnumg2k', 'cvmpwqb0', 'i7jy8m9r', '7lmtv5lp', 'ss7d0cz2', 'goxkzq0n', '33viack7', 'e0gnmfim', 'umihm7vt', 'trmkxaz9', 'z1y15huv', 'pvt8x5lc', 'na3buhfr', '7nm96zoh', 'dpvkc543', 'mi2qkgct', '8omhue36', 'b725fpvt', 'hv71mb3i', 'tn6jezzq', 'j3d9ul95', 'zbyqxvom', 'f3n11xdd', 'wece8zli', '9hnbjalh', '2nqcunzs', 'jvtc3lil', '4g373rkp', '20fnf2fy', 'voavk76l', 'x05emdl2', 'zk3sqs70', '2v0zpppm', '94whvyco', '4gee0h89', 'jef46m5w', 't7ts61lb', 'rwg0yfwj', '4jbwym5s']
+
+
+
+## ROUND3 ##
+
+          JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          21584930       gpu submit_n  a270277 CG       0:13      1 l50057
+          21584963       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584962       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584961       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584960       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584958       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584957       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584956       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584955       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584954       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584953       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584952       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584951       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584950       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584949       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584948       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584947       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584946       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584945       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584944       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584943       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584942       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584941       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584940       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584939       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584938       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584937       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584936       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584935       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584934       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21584933       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+
+
+
+
+## ROUND4 ##
+
+     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          21588315       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588317       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588318       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588319       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588320       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588321       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588322       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588323       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588343       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588342       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588341       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588340       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588339       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588338       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588337       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588336       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588335       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588334       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588333       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588332       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588331       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588330       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588329       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588328       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588327       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588326       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588325       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588324       gpu slurm_ev  a270277 PD       0:00      1 (Priority)
+          21588313       gpu slurm_ev  a270277  R       0:23      1 l40366
+          21588314       gpu slurm_ev  a270277  R       0:23      1 l40369
+
+
+## ROUND5 ##
+
+
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          21658205       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658204       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658203       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658202       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658201       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658200       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658199       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658198       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658197       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658196       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658195       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658194       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658193       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658192       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658191       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658190       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658189       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658188       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658187       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658186       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658185       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658184       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658183       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658182       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658181       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          21658180       gpu slurm_ev  a270277  R       0:00      1 l50003
+          21658176       gpu slurm_ev  a270277  R       0:10      1 l50003
+          21658177       gpu slurm_ev  a270277  R       0:10      1 l50003
+          21658178       gpu slurm_ev  a270277  R       0:10      1 l50003
+          21658179       gpu slurm_ev  a270277  R       0:10      1 l50148
+
+
+## ROUND6 ##
+
+       JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          23386186       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386185       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386184       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386183       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386182       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386181       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386180       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386179       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386178       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386177       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386176       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386175       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386174       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386173       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386172       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386171       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386169       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386168       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386167       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386166       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386165       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386164       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386163       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386162       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386161       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23386160       gpu slurm_ev  a270277  R       0:03      1 l40369
+          23386156       gpu slurm_ev  a270277  R       0:12      1 l50072
+          23386157       gpu slurm_ev  a270277  R       0:12      1 l50187
+          23386158       gpu slurm_ev  a270277  R       0:12      1 l40360
+          23386159       gpu slurm_ev  a270277  R       0:12      1 l40360
+
+
+## ROUND 7 ##
+
+y 2.0s: squeue --me                                             levante3.lvt.dkrz.de: Thu Mar 12 18:20:11 2026
+
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          23395374       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395373       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395372       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395371       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395370       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395369       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395368       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395367       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395366       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395364       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395363       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395362       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395361       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395360       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395359       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395358       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395357       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395356       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395355       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395354       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395353       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395352       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395351       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395350       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395349       gpu slurm_ev  a270277 PD       0:00      1 (AssocMaxJobsLimit)
+          23395348       gpu slurm_ev  a270277  R       0:23      1 l50021
+          23395344       gpu slurm_ev  a270277  R       0:33      1 l40360
+          23395345       gpu slurm_ev  a270277  R       0:33      1 l40369
+          23395346       gpu slurm_ev  a270277  R       0:33      1 l40369
+          23395347       gpu slurm_ev  a270277  R       0:33      1 l40369
+
+
+## ROUND 8 ##
+# sparsity checks #
+
+         23418369       xx fail
+         23444133       gpu slurm_at  a270277  R       1:00      2 l[50018,50021] fail
+         23444208       gpu slurm_at  a270277  R       1:53      2 l[50018,50021] test to 10 epochs 
+         23646906       xx fail 
+         23693996       gpu slurm_at  a270277 PD       0:00      2 (Resources) # 0.75 fail
+         23693998       gpu slurm_at  a270277 PD       0:00      2 (Priority) # 1.0 fail
+         23693993       gpu slurm_at  a270277  R       0:48      2 l[50003,50130] # 0.25 fail
+         23693990       gpu slurm_at  a270277  R       1:22      2 l[40363,40366] # 0 sparsity fail
+         23993135       gpu slurm_at  a270277  R       0:10      2 l[50175,50178] 0.25 failed 
+         23998083       gpu slurm_at  a270277  R       0:09      2 l[50057,50078] 1 failed
+         24012835       gpu slurm_at  a270277  R       0:03      2 l[40363,40369] 0.95 failed 
+         24075121       gpu slurm_at  a270277 PD       0:00      2 (Resources)    0.25 failed
+         24090261       gpu slurm_at  a270277 PD       0:00      2 (Priority)     0.25 failed
+         24106475       gpu slurm_at  a270277  R       0:06      2 l[50112,50115] 0.95 failed at 6
+         24106673       gpu slurm_at  a270277 PD       0:00      2 (AssocMaxJobsLimit) 0.95 failed at 12
+         24147189                                                                 0.75 failed at 4
+         24349963       gpu slurm_at  a270277  R       0:13      2 l[50154,50157] wrong sparsity  
+         24352378       gpu slurm_at  a270277  R       0:03      2 l[50172,50175] failed
+         24354408       gpu slurm_at  a270277  R       0:17      2 l[50124,50127] 0 sparsity, no corrt2m cross attention failed at 14
+         24518372       gpu slurm_at  a270277  R       0:23      2 l[50006,50009] 0.25 wrong
+         24518379       gpu slurm_at  a270277  R       0:03      2 l[50054,50072] 0.75 wrong
+         24518383       gpu slurm_at  a270277  R       0:00      2 l[50075,50078] 0.95 wrong
+         24106669       gpu slurm_at  a270277  R       0:43      2 l[50145,50148] 0.5 36
+         24106672       gpu slurm_at  a270277 PD       0:00      2 (AssocMaxJobsLimit) 0.95 45 
+         24518399       gpu slurm_at  a270277  R       0:02      2 l[50075,50078] 0.95 epoch 65
+         24539809       running
+
+
+
+
+## ROUND 9 ##
+0 - 2
+0.25 - 1 
+0.5 - 3
+0.75 - 3
+0.85 - 2
+0.95 - 1
+
+         23978827       gpu slurm_at  a270277  R       0:32      2 l[50175,50178] 0 working to 103
+         24518395       gpu slurm_at  a270277  R       0:20      2 l[50003,50009] 0 epoch 113
+
+         24075112       gpu slurm_at  a270277  R       1:44      2 l[50054,50057] 0.25 worked till 80~
+
+         23647012       gpu slurm_at  a270277  R       0:38      2 l[40366,40369] 0.5 working to 112
+         24106052       gpu slurm_at  a270277  R       0:22      2 l[50003,50006] 0.5 113
+         24518397       gpu slurm_at  a270277  R       0:13      2 l[50006,50024] 0.5 epoch 114
+
+         23995579       gpu slurm_at  a270277  R    3:11:05      2 l[40366,40369] 0.75 worked to 100
+         24075176       gpu slurm_at  a270277 PD       0:00      2 (Priority)     0.75 worked to 114
+         24518398       gpu slurm_at  a270277  R       0:07      2 l[50054,50072] 0.75 epoch 95
+
+
+         24012088       gpu slurm_at  a270277  R      28:16      2 l[50103,50106] 0.85 worked to 112
+         24106063       gpu slurm_at  a270277  R       0:04      2 l[50009,50024] 0.85 113
+
+         24106671       gpu slurm_at  a270277 PD       0:00      2 (AssocMaxJobsLimit) 0.95 113
+         24549676       gpu slurm_at  a270277 PD       0:00      2 (Priority) 0.95  worked until 107 
+
+
+         Baselines: 
+         24358859       gpu slurm_at  a270277  R       0:10      2 l[50100,50127] false sparsity no cross attention run to 105
+         24518419       gpu slurm_at  a270277  R       0:04      2 l[50115,50118] no cross attention 0 sparsity worked to 85
+
+         24589450       gpu slurm_at  a270277 PD       0:00      2 (PartitionDown) 
+         24589449       gpu slurm_at  a270277 PD       0:00      2 (PartitionDown)
+         24589447       gpu slurm_at  a270277 PD       0:00      2 (PartitionDown)
+         24589754
+
+
+
+         
+         # combined and outliers
+         23994917       gpu slurm_at  a270277  R      34:12      2 l[40360,40363] 0.25 failed to ~60 something 0: Wandb run: atmorep-9wnd22wg-23994917
+            24164757       gpu slurm_at  a270277  R    1:40:29      2 l[40366,50142] 0.25 continued from atmorep-9wnd22wg-23994917 worked to 30 combined
+         24025102                                                                 0.95 worked to ~80 something
+            24352249       gpu slurm_at  a270277  R       0:31      2 l[50012,50015] worked to 115 combined
+            
+         24168063       gpu slurm_at  a270277 PD       0:00      2                0 worked to 55
+            24352203       gpu slurm_at  a270277  R       1:05      2 l[50154,50157] worked to 114 combined 
+         24106664       gpu slurm_at  a270277  R       0:52      2 l[50121,50133] 0.25 80
+            24174642       gpu slurm_at  a270277 PD       0:00      2              0.25 worked till 101 combined
+         24169650       gpu slurm_at  a270277 PD       0:00      2 (Priority) 0.75 worked to 34 8vusviw5
+            24354343       gpu slurm_at  a270277  R       0:03      2 l[50106,50109] 0.75 worked to 116 combined
+         
+         24549675       gpu slurm_at  a270277 PD       0:00      2 (Priority) 0.25 worked to 45
+
