@@ -1,59 +1,63 @@
 # AtmoRep
 
-This repository contains the source code for the [AtmoRep](https://www.atmorep.org) models for large scale representation learning of atmospheric dynamics as well as links to the pre-trained models and the required model input data.
+This repository contains the source code for fine-tuning the [AtmoRep](https://www.atmorep.org) models for Arctic t2m bias-correction as part of an internship completed in 2025 at AWI Atmospheric Physics by Sabine Scholle under the supervision of Felix Pithan. 
 
-The pre-print for the work is available on ArXiv: https://arxiv.org/abs/2308.13280.
+# Project Outline
+We use the original 6-field AtmoRep model (wc5e2i3t) which was trained on wind velocity (or vorticity and divergence), vertical velocity, temperature, specific humidity and total precipitation. We then fine-tune it with ERA5 t2m data (new, unseen field) using BERT style masked token modelling. Finally, we apply this t2m-adapted model for continued fine-tuning using Akil Hoissain's corrected Arctic t2m data. In essence, introduce the model to ERA5 2m temperature, and then try nudge it to a better constrained Arctic environment for t2m bias-correction. 
 
-```
-@misc{Lessig2023atmorep,
-  title = {AtmoRep: A stochastic model of atmosphere dynamics using large scale representation learning},
-	author = {Christian Lessig and Ilaria Luise and Bing Gong and Michael Langguth and Scarlet Stadler and Martin Schultz},
-  eprint = {2308.13280},
-  primaryclass = {physics.ao-ph},
-  url = {https://arxiv.org/abs/2308.13280},
-  year = {2023},
-```
+A follow-up of this work, presented at EGU26 was an analysis of model performance as a function of increasing dataset sparsity. We simulated the effect of sparse observational Arctic t2m data, and analysed the effect on MSE token prediction of the model. 
+
 
 # Starter README
 
-## 1. Pull code
+## 1. Codebase structure in project ab1412
 
-`````
-%> wget git@github.com:clessig/atmorep.git
-`````
-This creates a directory ``atmorep`` with the code that contains the source code including the python scripts for model training and evaluation.
+Below are the scripts specifically used in the context of the fine-tuning and sparsity evaluation experiments. For a description of the original codebase see https://github.com/clessig/atmorep. 
 
-After following the steps described below, the final directory structure will look as follows:
+
 ````
+├── a270277                                       <- other project subdirectories
+├── a270294
+├── ...
 └── atmorep/
     ├── atmorep/
-    │     └── ... 
-    ├── data/                         <- top level data directory
-    │    ├── normalisation/           <- directory for data normalisations 
-    │    ├── vorticity/
-    │    │       ├── ml105/           <- model levels with monthly GRIB files
-    │    │       │     ├── era5_vorticity_y2021_m03_ml137.grib   <- grib data file
-    │    │       │     ├── ...
-    │    │       ├── ml114/
-    │    │       ├── ml123/
-    │    │       ├── ml137/
-    │    │       ├── ml96/
-    .    .       .
-    │    ├── temperature/
+    │     ├── core
+                ├── nice_evaluation.py             <- evaluation script using N-ICE expedition data - this runs nice_evalution_single.py automatically
+                └── train_corrected_era5.py       <- training script for fine-tuning on Akils's dataset
+          ├── transformer             
+          └── ...
+    ├── data/                         <- helper and job scripts. Actual data at /work/ab1385/a270277
+    │    ├── normalisation/           <- directory for data normalisations
     .    .
     ├── models
-    │    ├── id4nvwbetz   <- Directory containing model weights and config
-    │    │       ├──  model_id4nvwbetz.json     
-    │    │       └──  AtmoRep_id4nvwbetz.mod
+    │    ├── idiuw3ce3v               <- Directory containing model weights and config
+    │    │       ├──  model_idiuw3ce3v.json     
+    │    │       └──  AtmoRep_idiuw3ce3v.mod
     │    ├── id<model_id>
     .    .
-    └── results
-         ├── id4nvwbetz
+    ├── plotting                       <- various scripts for plotting purposes
+    .    .
+    ├── results
+         ├── idiuw3ce3v
          ...
-````
-The directories ``data``, ``models``, and ``results`` need to be created if they do not exist. All directories might be large and should thus be on a directory with sufficient storage space; in this case they can be soft-linked to the default ones above or they can be set in ``atmorep/config/config``. 
+    .    .
+    └── universal_cleanup_runs.py      <- cleaning script for unwanted output files, logs, wandb runs, results, and models with associated job IDs to trash
 
-## 2. Download the data 
+````
+
+## 2. Most important paths
+
+Data: 
+cf.file_path = '/work/ab1385/a270277/era5_y2010_2020_res25_corrected_t2m_copy.zarr' 
+
+Models: 
+- wc5e2i3t = original multi6 model from original codebase
+- j2l0sz9j-19300146 = 6 field pretrained AtmoRep model, now fine-tuned on NEW era5 field, t2m, with cross attention between temp and t2m.
+- iuw3ce3v-19413611 = 7 field Atmorep (with t2m above) fine-tuned on Akil's corrected t2m data 
+- 6kjr71hd-23246602 = fine-tuning forecast model with corrected t2m
+
+
+
 
 ### 2.1 Download pre-trained models
 
