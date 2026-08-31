@@ -1,11 +1,9 @@
 # AtmoRep
 
-This repository contains the source code for fine-tuning the [AtmoRep](https://www.atmorep.org) models for Arctic t2m bias-correction as part of an internship completed in 2025 at AWI Atmospheric Physics by Sabine Scholle under the supervision of Felix Pithan. 
+This repository contains the source code for fine-tuning the [AtmoRep](https://www.atmorep.org) models for Arctic t2m sparsity ablation study and bias-correction. 
 
 # Project Outline
-We use the original 6-field AtmoRep model (wc5e2i3t) which was trained on wind velocity (or vorticity and divergence), vertical velocity, temperature, specific humidity and total precipitation. We then fine-tune it with ERA5 t2m data (new, unseen field) using BERT style masked token modelling. Finally, we apply this t2m-adapted model for continued fine-tuning using Akil Hoissain's corrected Arctic t2m data. In essence, introduce the model to ERA5 2m temperature, and then try nudge it to a better constrained Arctic environment for t2m bias-correction. 
-
-A follow-up of this work, presented at EGU26 was an analysis of model performance as a function of increasing dataset sparsity. We simulated the effect of sparse observational Arctic t2m data, and analysed the effect on MSE token prediction of the model. 
+We use the original 6-field AtmoRep model (wc5e2i3t) which was trained on wind velocity (or vorticity and divergence), vertical velocity, temperature, specific humidity and total precipitation. We then fine-tune it with ERA5 t2m data (new, unseen field) using BERT style masked token modelling. Finally, we apply this t2m-adapted model for continued fine-tuning using Akil Hoissain's corrected Arctic t2m data. In essence, introduce the model to ERA5 2m temperature, and then try nudge it to a better constrained Arctic environment for t2m bias-correction. We finally perform an analysis of model performance as a function of increasing t2m dataset sparsity. We simulated the effect of sparse observational Arctic t2m data, and analysed the effect on MSE token prediction of the model. 
 
 
 # Starter README
